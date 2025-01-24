@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\fecher.Common.csproj": {}
+  },
+  "projects": {
+    "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\fecher.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\fecher.Common.csproj",
+        "projectName": "fecher.Common",
+        "projectPath": "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\fecher.Common.csproj",
+        "packagesPath": "C:\\Users\\Gongue\\.nuget\\packages\\",
+        "outputPath": "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Gongue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\PPJ-Framework.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Text Control GmbH\\NuGetPackages": {},
+          "C:\\Program Files\\IceTeaGroup\\PPJ\\Framework\\2023\\nuget\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "PPJ-WinForms-2023": {
+              "target": "Package",
+              "version": "[4.9.6, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

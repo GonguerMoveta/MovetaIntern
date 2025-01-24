@@ -1,0 +1,420 @@
+[File Card description]
+[Description]
+ Text=? (default)
+ FileVersion=10
+ Units=SCM-Units
+ Metric=0
+ TextQuote.Start=1
+ TextQuote.End=1
+ RepresentationCode.CondStart=171
+ RepresentationCode.CondSep=166
+ RepresentationCode.CondEnd=187
+ RepresentationCode.Tab=247
+ RepresentationCode.Ret=182
+ RepresentationCode.PhantomSpace=2
+ RepresentationCode.LockNextChar=3
+ RepresentationCode.ExprSep=164
+ LCID=1031
+ UserVars.ManualSortOrder=1
+ Created=12.12.2006, 11:44:27
+ CreatedByApp=cbi30.exe [3.0.0-PTF3, Build 13344]
+ CreatedByDLL=CMLL11.DLL [11,15,0,0 (06-04-24 10:35)]
+ CreatedByUser=Keuer on KEUER
+ LastModified=06.12.2016, 11:14:06
+ LastModifiedByApp=CBI61.EXE [6.1-SP4, Build 38114M]
+ LastModifiedByDLL=CMLL17.DLL [17.3.2012.9809 (12-04-05 09:06)F]
+ LastModifiedByUser=keuer on PCKEUER
+ CreatedByCallFrom=comctl32.dll
+[Layout]
+ P1.Template=
+ xGrid=2000
+ yGrid=2000
+ GridShow=FALSE
+ GridSnap=TRUE
+ EnhancedExpressions=TRUE
+ EnhancedOldExpressions=FALSE
+ Decimals=2
+ RealDataPreviewPageLimit=2
+ DefFont={(0,0,0),10.000000,-13,0,0,0,400,0,0,0,0,3,2,1,49,Courier New}
+ HelpLines.Horizontal=
+ HelpLines.Vertical=
+ PDF.MaxOutlineDepth=2
+ PDF.MaxOutlineDepth.IDX=3
+ DefaultSize.Objecttype1=(0,0,29000,8000)
+ DefaultSize.Objecttype2=(0,0,7500,104900)
+ DefaultSize.Objecttype10=(0,0,174900,152500)
+ ObjectCount=17
+[UserSection]
+
+[SumVariables]
+[Layer]
+ Name=Basis
+ Condition=
+ WorkspaceColor=(102,102,102)
+ Visible=TRUE
+ LayerID=0
+[Layer]
+ Name=Erste Seite
+ Condition=Page() = 1
+ WorkspaceColor=(197,207,10)
+ Visible=TRUE
+ LayerID=1
+[Layer]
+ Name=Folgeseiten
+ Condition=Page() <> 1
+ WorkspaceColor=(161,203,243)
+ Visible=TRUE
+ LayerID=2
+[ProjectTemplates]
+ [@ProjectTemplates]
+  {
+  [ProjectTemplates]
+   {
+   [ProjectTemplate]
+	{
+	Identifier=
+	bVisible=True
+	Condition=True
+	Filename=ProjectPath$() + "PrintMachine-Infos ohne Kundennummer.crd"
+	}
+   [ProjectTemplate]
+	{
+	Identifier=
+	bVisible=True
+	Condition=True
+	Filename=ProjectPath$() + "Grundbaustein A4 Brief alsFax.crd"
+	}
+   }
+  }
+[Object]
+ ObjectID=1
+ ObjectName=Text
+ Locked=FALSE
+ LinkID=1
+ LinkToID=0
+ LinkMode=32
+ LayerID=0
+ GroupID=0
+ Identifier=Anschrift
+ Condition=True
+ UserLocked=False
+ WrapBefore=False
+ ExportAsPicture=False
+ Position/Left=21000
+ Position/Top=53000
+ Position/Width=100000
+ Position/Height=20000
+ Direction=0
+ bFill=False
+ Frame/Layout=0
+ Frame/Left/Spacing=0
+ Frame/Left/Line=False
+ Frame/Top/Spacing=0
+ Frame/Top/Line=False
+ Frame/Right/Spacing=0
+ Frame/Right/Line=False
+ Frame/Bottom/Spacing=0
+ Frame/Bottom/Line=False
+ PDFLevel=0
+ PDFText=
+ IndexPDFLevel=0
+ IndexPDFText=
+ IssueCondition=True
+ bPageWrap=False
+ bBottomAligned=False
+ [@Lines]
+  {
+  [Lines]
+   {
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=False
+	 FaceName="Droid Sans Mono"
+	 GdiCharSet=0
+	 Size=10.0
+	 Width=0
+	 Bold=False
+	 Italic=False
+	 Underline=False
+	 Strikeout=False
+	 Color=LL.Color.Black
+	 PitchAndFamily=49
+	 OutPrecision=3
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=1
+	PageWrapAllowed=True
+	ForceWrap=False
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Bericht.Name1 + Cond(Bericht.Name2="", "", Chr$ (13)) + Bericht.Name2 + Cond(Bericht.Strasse="", "", Chr$ (13)) + Bericht.Strasse + Cond(Bericht.Ort="", "", Chr$ (13)) + Bericht.Ort + Cond(Bericht.Land="", "", Chr$ (13)) + Bericht.Land
+	Tab=0
+	TabAlign=0
+	}
+   }
+  }
+[Object]
+ ObjectID=1
+ ObjectName=Text
+ Locked=FALSE
+ LinkID=20
+ LinkToID=0
+ LinkMode=32
+ LayerID=0
+ GroupID=0
+ Identifier=DruckDatum
+ Condition=True
+ UserLocked=False
+ WrapBefore=False
+ ExportAsPicture=False
+ Position/Left=165000
+ Position/Top=85000
+ Position/Width=27000
+ Position/Height=6300
+ Direction=0
+ bFill=False
+ Frame/Layout=0
+ Frame/Left/Spacing=0
+ Frame/Left/Line=False
+ Frame/Top/Spacing=0
+ Frame/Top/Line=False
+ Frame/Right/Spacing=0
+ Frame/Right/Line=False
+ Frame/Bottom/Spacing=0
+ Frame/Bottom/Line=False
+ PDFLevel=0
+ PDFText=
+ IndexPDFLevel=0
+ IndexPDFText=
+ IssueCondition=True
+ bPageWrap=False
+ bBottomAligned=False
+ [@Lines]
+  {
+  [Lines]
+   {
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=False
+	 FaceName="Corbel"
+	 GdiCharSet=0
+	 Size=8.0
+	 Width=0
+	 Bold=False
+	 Italic=False
+	 Underline=False
+	 Strikeout=False
+	 Color=LL.Color.Black
+	 PitchAndFamily=49
+	 OutPrecision=3
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=1
+	PageWrapAllowed=True
+	ForceWrap=False
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Now ()
+	Tab=0
+	TabAlign=0
+	}
+   }
+  }
+[Object]
+ ObjectID=1
+ ObjectName=Text
+ Locked=FALSE
+ LinkID=75
+ LinkToID=0
+ LinkMode=32
+ LayerID=0
+ GroupID=0
+ Identifier=Mitglied.Nr
+ Condition=True
+ UserLocked=False
+ WrapBefore=False
+ ExportAsPicture=False
+ Position/Left=165000
+ Position/Top=56000
+ Position/Width=29000
+ Position/Height=8000
+ Direction=0
+ bFill=False
+ Frame/Layout=0
+ Frame/Left/Spacing=0
+ Frame/Left/Line=False
+ Frame/Top/Spacing=0
+ Frame/Top/Line=False
+ Frame/Right/Spacing=0
+ Frame/Right/Line=False
+ Frame/Bottom/Spacing=0
+ Frame/Bottom/Line=False
+ PDFLevel=0
+ PDFText=
+ IndexPDFLevel=0
+ IndexPDFText=
+ IssueCondition=True
+ bPageWrap=False
+ bBottomAligned=False
+ [@Lines]
+  {
+  [Lines]
+   {
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=False
+	 FaceName="Corbel"
+	 GdiCharSet=0
+	 Size=8.0
+	 Width=0
+	 Bold=False
+	 Italic=False
+	 Underline=False
+	 Strikeout=False
+	 Color=LL.Color.Black
+	 PitchAndFamily=49
+	 OutPrecision=3
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=1
+	PageWrapAllowed=True
+	ForceWrap=False
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Str$(Mitglied.Nr,0,0) + Cond(Bericht.HalterNr>0, "/H"+Str$(Bericht.HalterNr,0,0),"") + Cond(RZNr>0, "/RZ"+Str$(RZNr,0,0),"")
+	Tab=0
+	TabAlign=0
+	}
+   }
+  }
+[Object]
+ ObjectID=10
+ ObjectName=Formatierter Text
+ Locked=FALSE
+ LinkID=33
+ LinkToID=0
+ LinkMode=8224
+ LayerID=0
+ GroupID=0
+ Identifier=
+ Condition=True
+ UserLocked=False
+ WrapBefore=False
+ ExportAsPicture=False
+ Position/Left=21000
+ Position/Top=102000
+ Position/Width=174900
+ Position/Height=152500
+ Direction=0
+ Frame/Layout=0
+ Frame/Left/Spacing=0
+ Frame/Left/Line=False
+ Frame/Top/Spacing=0
+ Frame/Top/Line=False
+ Frame/Right/Spacing=0
+ Frame/Right/Line=False
+ Frame/Bottom/Spacing=0
+ Frame/Bottom/Line=False
+ PDFLevel=0
+ PDFText=
+ IndexPDFLevel=0
+ IndexPDFText=
+ IssueCondition=True
+ bAllowPageBreak=True
+ bFormatFromVar=FALSE
+ Compression=Z
+ Contents=$VggAAHjanVXbbtNAEJ1nJP5hFS4tYEwKKUJCArUUKEJFqEUgob44tXMRiRO8Tipa9d85c3Y2ddr4pYpi7+7czpyZWV/KqVRSy0B2sMqkFC/jxupM5jKE7KXs4n8quRTQHUh3tZ5QV3W68grPS0gGMsNZjV8f8nDS5XMKidpVkOt+jtVfxh4g1gi+KsQtYNkVJwfYzYAix/rEMDk5oveZvJUr8x3sS2hOWjztYTfG2YRWV3Jf7tH2DH4m+FeG1UGujBSIqYiHXBfwrTvVWGDXpZfo4yn1VEfzyuBJ/SlODyw1fY3xduAwlR7QpuAyPHfJm3o7lSW0CjmXP3iXsOnhbAGEmt2c+eQNJj2sNbNj2GSwqWEVPFSw0oo4Y1p1MuIo5QKrEbNQDQ+LghlqxD5jBEmMqDm2rU9gN6L/ITkakcWCdctQaY3n6E/rd8hIFU+TVp9j2izJYB+6F8Sm9SxZy5DPHjEWyKMw5kfUU45LIonRz3GqFvv0tSArGd4DQ+Yt/00cqeS5fAW+LfZUyToOV+wqyineKs+A9sA8PJRtWC3oK7fTBHodeYR9iueUz384eULrPn4pNBShk5+MXLOXNM43rNJGnBPKNMqx/KY0QR8l6IZrbw6ZzZi95vaFtQmMKHeVMfCCzFTUivuPrME5py1v1K9P/hWTVqM2b2MyMFzVwVsdxraP/pY2883a5IzribCdZZ1ZfyNGbeg8Z9cbO9dd9MuqXm2YjRg7vDdXfXmHCrgNNRhZzKn1ZuTSk4d1JLcnsW7FuLD+V+m8wZxmOrF5cZTXDd4csYeI01UuH3ib5sjlOydDse3Dh5d3yEx7aBs5JejVjnWx4929Bb0eI3lD11nL/TZXS/lBPhPcXOtMpXdAk1hPDslYadPmVlyHLAPeZ3Ynxem86Ttpmc2Q73pe4YY6NNZfs47hLigt6ze8l2NGn8hPZCDWUiO+l8eI9QC/zg0urjvZtd6UR5bngF0TOivWPlT7MySxN/SdY1Wwdps96rd5ySnPODspbqIUPRXe+q2MX9qd1Reot+YhfBNF/gPiT2hp
+ bWYSIWYGDialog=TRUE
+[UserVariables]
+[Parameters]
+ [@Parameters]
+  {
+  [Parameters]
+   {
+   LL.ProjectDescription=? (default)
+   }
+  }
+[UsedIdentifiers]
+ Variables=alsFax;Benutzer.Durchwahl;Benutzer.Zeichen;Bericht.anDritte;Bericht.Deckblatt;Bericht.HalterNr;Bericht.Land;Bericht.MitgliedNr;Bericht.MitgliedNrL;Bericht.Name;Bericht.Name1;Bericht.Name2;Bericht.Ort;Bericht.RechnungNr;Bericht.Strasse;KündDatum;Mitglied.Nr;PauseBis;Rate;RZNr;Tag;RaZaNr;KuendDat;vTag;vRate;Bericht.GUID;Benutzer.EMail;IBAN;PMEmail;Bericht.auf blanco;Halter.Nr
+[PageLayouts]
+ [@PageLayouts]
+  {
+  [PageLayouts]
+   {
+   [PageLayout]
+	{
+	DisplayName=
+	Condition=True
+	SourceTray=7
+	ForcePaperFormat=True
+	UsePhysicalPaper=False
+	PaperFormat=9
+	PaperFormat.cx=210000
+	PaperFormat.cy=296900
+	PaperFormat.Orientation=1
+	Copies=1
+	Duplex=1
+	Collate=0
+	FitPage=False
+	Layout.Size.cx=199500
+	Layout.Size.cy=286600
+	Layout.Distance.cx=0
+	Layout.Distance.cy=0
+	Layout.Count.x=1
+	Layout.Count.y=1
+	Layout.Offset.x=0
+	Layout.Offset.y=0
+	LayoutPrintOrder=0
+	ShowInPrintDialog=True
+	}
+   }
+  }
+[ExtendedInfo]
+ [@ExtendedInfos]
+  {
+  [UserDefinedDesignScheme]
+   {
+   [Foreground]
+	{
+	Color=(173,215,227)
+	Color=(167,195,209)
+	Color=(165,170,199)
+	Color=(155,122,153)
+	Color=(135,95,119)
+	Color=(255,230,179)
+	Color=(238,190,93)
+	Color=(242,167,17)
+	Color=(166,178,102)
+	Color=(102,204,199)
+	}
+   [Background]
+	{
+	Color=(240,249,255)
+	Color=(255,230,179)
+	Color=(173,215,227)
+	Color=(167,195,209)
+	FillMode=1
+	}
+   }
+  }

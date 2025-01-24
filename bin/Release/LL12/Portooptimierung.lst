@@ -1,0 +1,235 @@
+[List description]
+[Description]
+ Text=PrintMachine-Infos
+ FileVersion=7
+ Units=SCM-Units
+ Metric=0
+ TextQuote.Start=1
+ TextQuote.End=1
+ RepresentationCode.CondStart=171
+ RepresentationCode.CondSep=166
+ RepresentationCode.CondEnd=187
+ RepresentationCode.Tab=247
+ RepresentationCode.Ret=182
+ RepresentationCode.PhantomSpace=2
+ RepresentationCode.LockNextChar=3
+ RepresentationCode.ExprSep=164
+ LCID=7
+ Created=01.08.2008, 13:05:40
+ CreatedByApp=CBI30.EXE [3.0.0-PTF3, Build 13344]
+ CreatedByDLL=CMLL12.DLL [12,11,0,0 (07-05-11 09:32)]
+ CreatedByUser=Keuer on KEUER
+ LastModified=01.08.2008, 13:42:43
+ LastModifiedByApp=CBI30.EXE [3.0.0-PTF3, Build 13344]
+ LastModifiedByDLL=CMLL12.DLL [12,11,0,0 (07-05-11 09:32)]
+ LastModifiedByUser=Keuer on KEUER
+ CreatedByCallFrom=cmll12o.ocx
+[Layout]
+ P1.Template=
+ P2.Template=
+ xOffset=0
+ yOffset=0
+ xSize=210000
+ ySize=297000
+ P1.xOffset=0
+ P1.yOffset=0
+ P1.xSize=210000
+ P1.ySize=297000
+ P2.xOffset=0
+ P2.yOffset=0
+ P2.xSize=210000
+ P2.ySize=297000
+ P1.nPaperFormat=9
+ P1.xPaperSize=210000
+ P1.yPaperSize=297000
+ P1.ForcePaperFormat=TRUE
+ P2.nPaperFormat=9
+ P2.xPaperSize=210000
+ P2.yPaperSize=297000
+ P2.ForcePaperFormat=TRUE
+ xGrid=1000
+ yGrid=1000
+ GridShow=FALSE
+ GridSnap=FALSE
+ PhysicalPage=TRUE
+ P1.PhysicalPage=TRUE
+ P2.PhysicalPage=TRUE
+ Orientation=1
+ P1.Orientation=1
+ P2.Orientation=1
+ EnhancedExpressions=TRUE
+ EnhancedOldExpressions=FALSE
+ Decimals=2
+ DefFont={(0,0,0),12.000000,-16,0,0,0,400,0,0,0,0,4,0,0,0,Calibri}
+ HelpLines.Horizontal=
+ HelpLines.Vertical=
+ PDF.MaxOutlineDepth=2
+ DefaultSize.Objecttype6=(0,0,197500,194000)
+ ObjectCount=3
+[UserSection]
+
+[SumVariables]
+[Layer]
+ Name=Basis
+ Condition=
+ WorkspaceColor=(0,0,0)
+ Visible=TRUE
+ LayerID=0
+[Layer]
+ Name=Erste Seite
+ Condition=Page() = 1
+ WorkspaceColor=(0,128,64)
+ Visible=TRUE
+ LayerID=1
+[Layer]
+ Name=Folgeseiten
+ Condition=Page() <> 1
+ WorkspaceColor=(0,0,255)
+ Visible=TRUE
+ LayerID=2
+[Template]
+ Filename=PrintMachine-Infos.lst
+ bRelPath=TRUE
+[Object]
+ ObjectID=6
+ ObjectName=Tabelle
+ Locked=FALSE
+ LinkID=1
+ LinkToID=0
+ LinkMode=32
+ LinkTest=-16649
+ LayerID=0
+ GroupID=0
+ Identifier=
+ Condition=True
+ UserLocked=False
+ WrapBefore=False
+ Position/Left=3200
+ Position/Top=15000
+ Position/Width=197500
+ Position/Height=194000
+ Direction=0
+ bFooterOnBottom=False
+ bFillBottom=False
+ DefaultFont=default
+ FgColor=LL.Color.Black
+ bFill=0
+ Raster=1
+ BkColor=LL.Color.White
+ BkColor2=LL.Color.White
+ BkColor3=LL.Color.White
+ BkColor.Alpha=50
+ [@Tables]
+  {
+  [Tables]
+   {
+   [Table]
+	{
+	TableType=List
+	TableID=
+	RelationID=
+	[GroupHeaderLines]
+	 {
+	 bConcatDataLines=True
+	 }
+	[GroupFooterLines]
+	 {
+	 bAlsoOnEmptyGroup=False
+	 }
+	[DataLines]
+	 {
+	 bKeepTogether=True
+	 bSuppress=False
+	 bForceSumCalculation=True
+	 }
+	ZebraPattern=0
+	[ZebraPattern]
+	 {
+	 Pattern=6
+	 Color=LL.Color.Black
+	 Color2=LL.Color.White
+	 Color3=LL.Color.White
+	 Color.Alpha=50
+	 }
+	[FooterLines]
+	 {
+	 bKeepTogether=False
+	 }
+	PageBreakCondition=False
+	[DefaultFrame]
+	 {
+	 Layout=1
+	 [Left]
+	  {
+	  Spacing=1000
+	  Line=True
+	  [Line]
+	   {
+	   Color=LL.Color.Black
+	   LineType=0
+	   }
+	  LineWidth=0
+	  }
+	 [Top]
+	  {
+	  Spacing=500
+	  Line=True
+	  [Line]
+	   {
+	   Color=LL.Color.Black
+	   LineType=0
+	   }
+	  LineWidth=0
+	  }
+	 [Right]
+	  {
+	  Spacing=1000
+	  Line=True
+	  [Line]
+	   {
+	   Color=LL.Color.Black
+	   LineType=0
+	   }
+	  LineWidth=0
+	  }
+	 [Bottom]
+	  {
+	  Spacing=500
+	  Line=True
+	  [Line]
+	   {
+	   Color=LL.Color.Black
+	   LineType=0
+	   }
+	  LineWidth=0
+	  }
+	 }
+	[Body]
+	 {
+	 }
+	[Header]
+	 {
+	 }
+	[Footer]
+	 {
+	 }
+	[GroupHeader]
+	 {
+	 }
+	[GroupFooter]
+	 {
+	 }
+	}
+   }
+  }
+[UserVariables]
+[Parameters]
+ [@Parameters]
+  {
+  [Parameters]
+   {
+   LL.ProjectDescription=PrintMachine-Infos
+   }
+  }
+[UsedIdentifiers]
+ Variables=Bericht.Deckblatt;Bericht.HalterNr;Bericht.Land;Bericht.MitgliedNr;Bericht.MitgliedNrL;Bericht.Name;Bericht.Name1;Bericht.Name2;Bericht.Ort;Bericht.RechnungNr;Bericht.Strasse

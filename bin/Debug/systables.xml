@@ -1,0 +1,2393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSystables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ABSCHLVOR</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>83</SNUM>
+    <Remarks>Abschlagsvorschlag (temporär)</Remarks>
+    <Label>Abschlagsvorschlag</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>AERZTE</Name>
+    <Type>T</Type>
+    <Colcount>142</Colcount>
+    <System>N</System>
+    <SNUM>70</SNUM>
+    <Remarks>Mitglieder</Remarks>
+    <Label>Mitglieder</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>AERZTEANSPRECH</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>176</SNUM>
+    <Remarks />
+    <Label>ANSPRECHPARTNER</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>AERZTEPERSONEN</Name>
+    <Type>T</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>175</SNUM>
+    <Remarks />
+    <Label>PERSONEN</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>AKTIONEN</Name>
+    <Type>T</Type>
+    <Colcount>18</Colcount>
+    <System>N</System>
+    <SNUM>90</SNUM>
+    <Remarks>Tagebuch</Remarks>
+    <Label>Tagebuch</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>AKTIONENA</Name>
+    <Type>T</Type>
+    <Colcount>16</Colcount>
+    <System>N</System>
+    <SNUM>167</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ANWEISUNGSBELEGE</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>177</SNUM>
+    <Remarks />
+    <Label>ANWEISUNGSBELEGE</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>AUFSCHLAG</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>71</SNUM>
+    <Remarks>Rechnungsaufschläge</Remarks>
+    <Label>AUFSCHLAG</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BANKCLEARING</Name>
+    <Type>T</Type>
+    <Colcount>25</Colcount>
+    <System>N</System>
+    <SNUM>82</SNUM>
+    <Remarks>Tabelle enthält die beim letzten Bank-Clearing erhaltenen Daten. Arzt-, Halter und Rechnungsnummer ist 0, falls keine Rechnung gefunden wurde  (temporär)</Remarks>
+    <Label>BANKCLEARING</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BANKEINZUG</Name>
+    <Type>T</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>111</SNUM>
+    <Remarks>alle noch zu verarbeitenden Bankeinzüge werden hier gespeichert, bis sie als Liste ausgedruckt werden.(temporär)</Remarks>
+    <Label>Bankeinzuege</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BANKENSTAMM</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>66</SNUM>
+    <Remarks>TVN-Bankkonten</Remarks>
+    <Label>Banken</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BASISZINSEN</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>141</SNUM>
+    <Remarks />
+    <Label>Basiszinsen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BATCHBUCH</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>88</SNUM>
+    <Remarks>noch nicht "ausgebatchte" Buchungen im Buchungsstapel (temporär)</Remarks>
+    <Label>Batchbuchungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BATCHPROT</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>92</SNUM>
+    <Remarks>Daten des Batchprotokolls (temporär)</Remarks>
+    <Label>Batchprotokoll (temporaer)</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BEHANDLUNGSIDS</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>183</SNUM>
+    <Remarks />
+    <Label>Behandlungs-Ids fuer MovetaON</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BEIHILFEN</Name>
+    <Type>T</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>187</SNUM>
+    <Remarks />
+    <Label>Beihilfen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BENUTZER</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>139</SNUM>
+    <Remarks>Benutzer des TVN-Programmes</Remarks>
+    <Label>Mitarbeiter</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BEZDATEN</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>161</SNUM>
+    <Remarks />
+    <Label>Bankeinzug-Daten</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BEZSTAMM</Name>
+    <Type>T</Type>
+    <Colcount>17</Colcount>
+    <System>N</System>
+    <SNUM>160</SNUM>
+    <Remarks />
+    <Label>Bankeinzug-Stammdaten</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BLZ</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>163</SNUM>
+    <Remarks />
+    <Label>Banken in D</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BUCHART</Name>
+    <Type>T</Type>
+    <Colcount>18</Colcount>
+    <System>N</System>
+    <SNUM>68</SNUM>
+    <Remarks>Buchungsarten mit Kontierungen für a-, b- und c-Kosten der Mahnbescheide (siehe Anwenderhandbuch)</Remarks>
+    <Label>Buchungsarten</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>BUCHBEL</Name>
+    <Type>T</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>117</SNUM>
+    <Remarks>dient dem Druck von Buchungsbelegen bei Überweisung von Vorschüssen und Guthaben im Zuge einer Abrechnung</Remarks>
+    <Label>Buchungsbelege</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>DATEVSTAMM</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>179</SNUM>
+    <Remarks />
+    <Label>DATEV-Stammdaten</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>DBGUIDS</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>156</SNUM>
+    <Remarks />
+    <Label>Pegasus Datenbank IDs</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>DOPPDRUCK</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>162</SNUM>
+    <Remarks />
+    <Label>Extradruck-Adressen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>DRUKON</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>109</SNUM>
+    <Remarks>Tabelle, mit der verhindert wird, daß mehrere Benutzer gleichzeitig Rechnungen mit Logos drucken können (temporäre Datensätze)</Remarks>
+    <Label>Druckkontrolle</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>DRULISTE</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>155</SNUM>
+    <Remarks />
+    <Label>Druckliste</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>DRUTEMP</Name>
+    <Type>T</Type>
+    <Colcount>15</Colcount>
+    <System>N</System>
+    <SNUM>106</SNUM>
+    <Remarks>-nicht verwendet-</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>DUMMY</Name>
+    <Type>T</Type>
+    <Colcount>1</Colcount>
+    <System>N</System>
+    <SNUM>89</SNUM>
+    <Remarks>Hilfstabelle (temporär)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ERINNERUNGSLISTE</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>112</SNUM>
+    <Remarks>Liste aller Anfragen beim Mitglied. Es wird jeden Monat eine Liste aller Datensätze mit ELERLDATUM = NULL an die Mitglieder mit Bitte um Erledigung geschickt.</Remarks>
+    <Label>Erinnerungsliste</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ETIDRU</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>118</SNUM>
+    <Remarks>Tabelle der noch zu druckenden Adreß-Etiketten (temporäre Datensätze) - wird nicht mehr verwendet -</Remarks>
+    <Label>-</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>EURO</Name>
+    <Type>T</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>119</SNUM>
+    <Remarks>Protokolltabelle der Euroumstellung</Remarks>
+    <Label>-</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>EWA</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>173</SNUM>
+    <Remarks />
+    <Label>EWAs</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>EWAERINNERUNG</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>169</SNUM>
+    <Remarks />
+    <Label>EWA-Erinnerungsliste</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>FEIERTAGE</Name>
+    <Type>T</Type>
+    <Colcount>1</Colcount>
+    <System>N</System>
+    <SNUM>180</SNUM>
+    <Remarks />
+    <Label>Feiertage</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>FIBU</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>134</SNUM>
+    <Remarks>Übergabetabelle zur Sage Classic Line. Bei Übergabe wird FIUEBDAT mit dem aktuellen Datum und Uhrzeit gefüllt.</Remarks>
+    <Label>Sachkontenbuchungen fuer Sage</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>FORDAUFS</Name>
+    <Type>T</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>108</SNUM>
+    <Remarks>Tabelle zum Datensammeln für die Forderungsaufstellung (temporär)</Remarks>
+    <Label>temp. für Forderungsaufstellun</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>GELESEN</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>115</SNUM>
+    <Remarks>Mitteilungen der Geschäftsführung und der Software-Entwicklung an alle Benutzer (bezgl. Softwareänderungen) werden von jedem Benutzer als gelesen bestätigt. Dies wird hier festgehalten. - nicht mehr verwendet -</Remarks>
+    <Label>-</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>GERICHTE</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>133</SNUM>
+    <Remarks>Tabelle der Amts- und Landgerichte</Remarks>
+    <Label>Liste der Gerichte</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>HABU</Name>
+    <Type>T</Type>
+    <Colcount>16</Colcount>
+    <System>N</System>
+    <SNUM>147</SNUM>
+    <Remarks />
+    <Label>Halterkonto</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>HALTER</Name>
+    <Type>T</Type>
+    <Colcount>77</Colcount>
+    <System>N</System>
+    <SNUM>85</SNUM>
+    <Remarks>Tierhalter (Rechnungsempfänger)</Remarks>
+    <Label>Halter</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>INITIALISIERUNG</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>168</SNUM>
+    <Remarks />
+    <Label>Einstellungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>INVAD</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>138</SNUM>
+    <Remarks>Adressen unserer Computerhändler</Remarks>
+    <Label>Computerhaendler</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>INVKO</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>136</SNUM>
+    <Remarks>Inventarbuch (Kopfsätze) über Gestellungen an Mitglieder</Remarks>
+    <Label>Inventarkopfzeilen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>INVPO</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>137</SNUM>
+    <Remarks>Inventarbuch (Positionssätze)</Remarks>
+    <Label>Inventarpsotiionen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>KONTIERUNGEN</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>188</SNUM>
+    <Remarks />
+    <Label>Kontierungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>LAENDERCODES</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>142</SNUM>
+    <Remarks>nach ISO 3166</Remarks>
+    <Label>Ländercodes</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>LEISERF</Name>
+    <Type>T</Type>
+    <Colcount>49</Colcount>
+    <System>N</System>
+    <SNUM>74</SNUM>
+    <Remarks>Rechnungen (Kopfsätze) im Bearbeitungsstatus</Remarks>
+    <Label>Kopfsaetze Abrechnung</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>LEISERFPOS</Name>
+    <Type>T</Type>
+    <Colcount>19</Colcount>
+    <System>N</System>
+    <SNUM>75</SNUM>
+    <Remarks>manuelle Erfassung der Rechnungen (Positionen) (temporär)</Remarks>
+    <Label>Positionen Abrechnungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>LEISTUNGEN</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>63</SNUM>
+    <Remarks>Stammdaten der Rechnungspositionen. Dient der Arbeitsvereinfachung, indem häufige Texte per Code aufgerufen werden können.</Remarks>
+    <Label>Leistungen Stamm</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>LOESCHTEMP</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>164</SNUM>
+    <Remarks />
+    <Label>-</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>LOG</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>78</SNUM>
+    <Remarks>Logbuch</Remarks>
+    <Label>Logbuch</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>LOGBUG</Name>
+    <Type>T</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>131</SNUM>
+    <Remarks>nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MAHNBESCH</Name>
+    <Type>T</Type>
+    <Colcount>21</Colcount>
+    <System>N</System>
+    <SNUM>81</SNUM>
+    <Remarks>Erfassung der Mahnbescheidsanträge</Remarks>
+    <Label>Mahnbescheide (temp)</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MAHNDATEN</Name>
+    <Type>T</Type>
+    <Colcount>14</Colcount>
+    <System>N</System>
+    <SNUM>135</SNUM>
+    <Remarks>Archivierte Mahndaten</Remarks>
+    <Label>Mahndaten (fuer Mahnungen)</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MAHNGEB</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>69</SNUM>
+    <Remarks>Mahngebührensätze</Remarks>
+    <Label>Mahngebuehren Stamm</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MAHNINT</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>64</SNUM>
+    <Remarks>Mahnintervalle mit Nummer</Remarks>
+    <Label>Mahnintervalle Stamm</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MAHNTEXTE</Name>
+    <Type>T</Type>
+    <Colcount>16</Colcount>
+    <System>N</System>
+    <SNUM>80</SNUM>
+    <Remarks>Texte auf Mahnungen. Falls zu einer Arztnummer kein Datensatz vorhanden ist, wird der Datensatz mit Arztnummer 0 verwendet.</Remarks>
+    <Label>Mahntexte Stamm</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MAHNUNGEN</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>103</SNUM>
+    <Remarks>Mahnungen</Remarks>
+    <Label>Liste der Mahnungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MAHNVOR</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>79</SNUM>
+    <Remarks>Mahnvorschlag (temporär)</Remarks>
+    <Label>Mahnvorschlag (temp)</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MBINFOTEMP</Name>
+    <Type>T</Type>
+    <Colcount>14</Colcount>
+    <System>N</System>
+    <SNUM>94</SNUM>
+    <Remarks>Hilfstabelle (temporär) für Zinsaufstellungen und MB-Info-Liste</Remarks>
+    <Label>Hilfstabelle</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MBKALENDER</Name>
+    <Type>T</Type>
+    <Colcount>79</Colcount>
+    <System>N</System>
+    <SNUM>107</SNUM>
+    <Remarks>Hilfstabelle zum Datensammeln beim Druck von Anträgen zu Vollstreckungsbescheiden und Pfändungsbeschlüssen (temporär)</Remarks>
+    <Label>Daten zu MB-Bescheiden (temp)</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MBKOSTEN</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>72</SNUM>
+    <Remarks>Hilfstabelle zum MB-Kostenprotokoll (temporär)</Remarks>
+    <Label>MB-Kosten (temp)</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MCGEM</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>130</SNUM>
+    <Remarks>Tabelle der Gemeinden in Deutschland (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MCKREIS</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>129</SNUM>
+    <Remarks>Tabelle der Kreise in Deutschland (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MCLAND</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>128</SNUM>
+    <Remarks>Tabelle der Bundesländer (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MCORT</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>127</SNUM>
+    <Remarks>Tabelle der Orte in Deutschland (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MCORTT</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>126</SNUM>
+    <Remarks>Tabelle der Ortsteile in Deutschland (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MCPLZ</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>123</SNUM>
+    <Remarks>Tabelle der Postleitzahlen in Deutschland (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MCSTR</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>125</SNUM>
+    <Remarks>Tabelle der Straßen in Deutschland (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>MD1</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>110</SNUM>
+    <Remarks>nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>NUMMERN</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>154</SNUM>
+    <Remarks />
+    <Label>lfd.Nummern</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PACKINFO</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>148</SNUM>
+    <Remarks />
+    <Label>PackInfo</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PEGASUSNUTZUNG</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>170</SNUM>
+    <Remarks />
+    <Label>Pegasus-Nutzung</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PEGASUSNUTZUNGDATEN</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>171</SNUM>
+    <Remarks />
+    <Label>Pegasus-Nutzungsdaten</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PERSONEN</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>114</SNUM>
+    <Remarks>nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PLAN_TABLE</Name>
+    <Type>T</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>101</SNUM>
+    <Remarks>Systemtabelle (nicht verwendet)</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PORTO</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>143</SNUM>
+    <Remarks />
+    <Label>-</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PREDA</Name>
+    <Type>T</Type>
+    <Colcount>151</Colcount>
+    <System>N</System>
+    <SNUM>132</SNUM>
+    <Remarks>Tabelle der Mahnbescheidsanträge zur Datenträgererstellung Die Datenbankfelder entsprechen genau den Namen der Felder der Schnittstellenbeschreibung (liegt bei)</Remarks>
+    <Label>Daten zu MB-Antraegen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PRINTIDS</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>185</SNUM>
+    <Remarks />
+    <Label>PrintIds</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PROZREG</Name>
+    <Type>T</Type>
+    <Colcount>33</Colcount>
+    <System>N</System>
+    <SNUM>104</SNUM>
+    <Remarks>Prozessregister (Köpfe)</Remarks>
+    <Label>Prozessregister</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>PROZREGDET</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>122</SNUM>
+    <Remarks>Prozessregister (Positionen)</Remarks>
+    <Label>Details zu Prozessregister</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RATEN</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>172</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RAZA</Name>
+    <Type>T</Type>
+    <Colcount>19</Colcount>
+    <System>N</System>
+    <SNUM>151</SNUM>
+    <Remarks />
+    <Label>Ratenzahlervereinbarungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RAZAPOS</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>152</SNUM>
+    <Remarks />
+    <Label>Ratenzahler-Rechnungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RECHAB</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>120</SNUM>
+    <Remarks>an Inkasso bzw. Anwalt abgegebene Rechnungen</Remarks>
+    <Label>abgegebene Rechnungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RECHBUCH</Name>
+    <Type>T</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>181</SNUM>
+    <Remarks />
+    <Label>Rechnungsbuchungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RECHKO</Name>
+    <Type>T</Type>
+    <Colcount>48</Colcount>
+    <System>N</System>
+    <SNUM>86</SNUM>
+    <Remarks>Rechnungsköpfe</Remarks>
+    <Label>Rechnungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RECHKO2</Name>
+    <Type>T</Type>
+    <Colcount>35</Colcount>
+    <System>N</System>
+    <SNUM>157</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RECHPO</Name>
+    <Type>T</Type>
+    <Colcount>16</Colcount>
+    <System>N</System>
+    <SNUM>87</SNUM>
+    <Remarks>Rechnungspositionen</Remarks>
+    <Label>Rechnungspositionen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RECHTEXTE</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>65</SNUM>
+    <Remarks>nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RISER</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>174</SNUM>
+    <Remarks />
+    <Label>RISER</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RUECKERST</Name>
+    <Type>T</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>113</SNUM>
+    <Remarks>Rückerstattungen an Mitglieder</Remarks>
+    <Label>Rueckerstattungen an Mitgliede</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>RUECKRUF</Name>
+    <Type>T</Type>
+    <Colcount>16</Colcount>
+    <System>N</System>
+    <SNUM>159</SNUM>
+    <Remarks />
+    <Label>Rueckrufbitten</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SPERREN</Name>
+    <Type>T</Type>
+    <Colcount>1</Colcount>
+    <System>N</System>
+    <SNUM>116</SNUM>
+    <Remarks>Buchungssperren (temporär)</Remarks>
+    <Label>Buchungssperren</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>STAFFELN</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>67</SNUM>
+    <Remarks>Gebührensätze der TVN</Remarks>
+    <Label>Gebuehrenstaffeln</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>STEUERBERATER</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>158</SNUM>
+    <Remarks />
+    <Label>Steuerberaterexport</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SUPPORTLOG</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>178</SNUM>
+    <Remarks />
+    <Label>Supportmemos</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSCOLAUTH</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>Y</System>
+    <SNUM>5</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSCOLUMNS</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>Y</System>
+    <SNUM>2</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSCOMMANDS</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>Y</System>
+    <SNUM>11</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSCOMMITORDER</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>U</System>
+    <SNUM>23</SNUM>
+    <Remarks>nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSDEPENDENCIES</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>Y</System>
+    <SNUM>22</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSEVENTS</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>Y</System>
+    <SNUM>18</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSEXECUTEAUTH</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>Y</System>
+    <SNUM>15</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSEXTFUN</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>Y</System>
+    <SNUM>20</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSEXTPARAM</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>Y</System>
+    <SNUM>21</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSFKCONSTRAINTS</Name>
+    <Type>T</Type>
+    <Colcount>8</Colcount>
+    <System>Y</System>
+    <SNUM>13</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSINDEXES</Name>
+    <Type>T</Type>
+    <Colcount>21</Colcount>
+    <System>Y</System>
+    <SNUM>3</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSKEYS</Name>
+    <Type>T</Type>
+    <Colcount>8</Colcount>
+    <System>Y</System>
+    <SNUM>4</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSOBJAUTH</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>Y</System>
+    <SNUM>25</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSOBJSYN</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>Y</System>
+    <SNUM>24</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSPARTTRANS</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>Y</System>
+    <SNUM>19</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSPKCONSTRAINTS</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>Y</System>
+    <SNUM>14</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSROWIDLISTS</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>Y</System>
+    <SNUM>10</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSSYNONYMS</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>Y</System>
+    <SNUM>8</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSTABAUTH</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>Y</System>
+    <SNUM>6</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSTABCONSTRAINTS</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>Y</System>
+    <SNUM>12</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSTABLES</Name>
+    <Type>T</Type>
+    <Colcount>21</Colcount>
+    <System>Y</System>
+    <SNUM>1</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSTRGCOLS</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>Y</System>
+    <SNUM>17</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSTRIGGERS</Name>
+    <Type>T</Type>
+    <Colcount>14</Colcount>
+    <System>Y</System>
+    <SNUM>16</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSUSERAUTH</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>Y</System>
+    <SNUM>7</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSUSERROLE</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>Y</System>
+    <SNUM>26</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>SYSVIEWS</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>Y</System>
+    <SNUM>9</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TAKONTO</Name>
+    <Type>T</Type>
+    <Colcount>29</Colcount>
+    <System>N</System>
+    <SNUM>77</SNUM>
+    <Remarks>Tierarztbuchhaltung (lfd.Monat) (temporär)</Remarks>
+    <Label>Kontoauszuege lfd.Monat</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TAUSER</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>93</SNUM>
+    <Remarks>TVN-Online Benutzer</Remarks>
+    <Label>Anmeldedaten MovetaME</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TELEFON</Name>
+    <Type>T</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>124</SNUM>
+    <Remarks>gespeicherte Telefonnummern von Mitgliedern und Haltern</Remarks>
+    <Label>-</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TEMPDATEURO</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>149</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TKALT</Name>
+    <Type>T</Type>
+    <Colcount>31</Colcount>
+    <System>N</System>
+    <SNUM>102</SNUM>
+    <Remarks>Tierarztbuchhaltung (Vormonate) Feldnamen sind identisch mit TAKONTO bis auf die letzten beiden Felder.</Remarks>
+    <Label>Kontoauszuege Vormonate</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TRABGBEL</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>100</SNUM>
+    <Remarks>Tabelle wird nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TRBEHKO</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>96</SNUM>
+    <Remarks>Tabelle wird nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TRBEHPO</Name>
+    <Type>T</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>97</SNUM>
+    <Remarks>Tabelle wird nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TRIMPFKO</Name>
+    <Type>T</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>98</SNUM>
+    <Remarks>Tabelle wird nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TRIMPFPO</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>99</SNUM>
+    <Remarks>Tabelle wird nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TRKUNDEN</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>95</SNUM>
+    <Remarks>Tabelle wird nicht verwendet</Remarks>
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TSEBUCH</Name>
+    <Type>T</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>184</SNUM>
+    <Remarks />
+    <Label>verwendete TSE je Monat</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TSKKOPF</Name>
+    <Type>T</Type>
+    <Colcount>18</Colcount>
+    <System>N</System>
+    <SNUM>145</SNUM>
+    <Remarks />
+    <Label>Kopftabelle für TSK-Abrechnung</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TSKMERKLISTE</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>150</SNUM>
+    <Remarks />
+    <Label>TSK-Merkliste</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>TSKPOS</Name>
+    <Type>T</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>146</SNUM>
+    <Remarks />
+    <Label>Positionstabele für TSK-Abrech</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>UEBERW</Name>
+    <Type>T</Type>
+    <Colcount>24</Colcount>
+    <System>N</System>
+    <SNUM>84</SNUM>
+    <Remarks>noch an SFirm32 zu übergebende Banküberweisungen (temporär)</Remarks>
+    <Label>Ueberweisungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>UEBFIBU</Name>
+    <Type>T</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>76</SNUM>
+    <Remarks>Hilfstabelle zur Gebührenspeicherung während der Abrechnung (temporär)</Remarks>
+    <Label>temp. zur Abrechnung</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>UEEMPF</Name>
+    <Type>T</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>153</SNUM>
+    <Remarks />
+    <Label>Stamm der Ueberweisungsempf.</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>UMFRAGE</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>140</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>VERMERKE</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>91</SNUM>
+    <Remarks>Tabelle der TVN-internen Codes (z.B. EWA=Einwohnermeldeamt) mit Info, ob diese Code einen Eintrag in der Erinnerungsliste auslöst</Remarks>
+    <Label>Beschreibung der versch. Codes</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>VERSICHERUNGEN</Name>
+    <Type>T</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>186</SNUM>
+    <Remarks />
+    <Label>Versicherungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>VETAEMTER</Name>
+    <Type>T</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>144</SNUM>
+    <Remarks />
+    <Label>Veterinärämter</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>VORNAMEN</Name>
+    <Type>T</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>121</SNUM>
+    <Remarks>Vornamentabelle zur automatischen Erkennung der Anredeform</Remarks>
+    <Label>Vornamenliste</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>VORTRAEGE</Name>
+    <Type>T</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>105</SNUM>
+    <Remarks>Kontoauszugs-Vorträge Vormonate</Remarks>
+    <Label>Kontoauszugvortraege</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_ABSCHLVOR</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>189</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_AERZTE</Name>
+    <Type>V</Type>
+    <Colcount>86</Colcount>
+    <System>N</System>
+    <SNUM>190</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_AKTIONEN</Name>
+    <Type>V</Type>
+    <Colcount>15</Colcount>
+    <System>N</System>
+    <SNUM>191</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_AUFSCHLAG</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>192</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_BANKEINZUG</Name>
+    <Type>V</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>193</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_BANKENSTAMM</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>194</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_BASISZINSEN</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>195</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_BATCHBUCH</Name>
+    <Type>V</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>196</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_BATCHPROT</Name>
+    <Type>V</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>197</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_BENUTZER</Name>
+    <Type>V</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>198</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_BUCHART</Name>
+    <Type>V</Type>
+    <Colcount>17</Colcount>
+    <System>N</System>
+    <SNUM>199</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_DRUKON</Name>
+    <Type>V</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>200</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_DRUTEMP</Name>
+    <Type>V</Type>
+    <Colcount>15</Colcount>
+    <System>N</System>
+    <SNUM>201</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_DUMMY</Name>
+    <Type>V</Type>
+    <Colcount>1</Colcount>
+    <System>N</System>
+    <SNUM>202</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_ETIDRU</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>203</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_EURO</Name>
+    <Type>V</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>204</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_FORDAUFS</Name>
+    <Type>V</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>205</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_GELESEN</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>206</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_GERICHTE</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>207</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_HABU</Name>
+    <Type>V</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>208</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_INVAD</Name>
+    <Type>V</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>209</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_INVKO</Name>
+    <Type>V</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>210</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_INVPO</Name>
+    <Type>V</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>211</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_LAENDERCODES</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>212</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_LEISTUNGEN</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>213</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_LOG</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>214</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_LOGBUG</Name>
+    <Type>V</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>215</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MAHNBESCH</Name>
+    <Type>V</Type>
+    <Colcount>21</Colcount>
+    <System>N</System>
+    <SNUM>216</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MAHNGEB</Name>
+    <Type>V</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>217</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MAHNINT</Name>
+    <Type>V</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>218</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MAHNTEXTE</Name>
+    <Type>V</Type>
+    <Colcount>16</Colcount>
+    <System>N</System>
+    <SNUM>219</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MAHNUNGEN</Name>
+    <Type>V</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>220</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MAHNVOR</Name>
+    <Type>V</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>221</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MBINFOTEMP</Name>
+    <Type>V</Type>
+    <Colcount>14</Colcount>
+    <System>N</System>
+    <SNUM>222</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MBKOSTEN</Name>
+    <Type>V</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>223</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MCGEM</Name>
+    <Type>V</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>224</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MCKREIS</Name>
+    <Type>V</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>225</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MCLAND</Name>
+    <Type>V</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>226</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MCORT</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>227</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MCORTT</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>228</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MCPLZ</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>229</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MCSTR</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>230</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_MD1</Name>
+    <Type>V</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>231</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_OPENITEMS</Name>
+    <Type>V</Type>
+    <Colcount>23</Colcount>
+    <System>N</System>
+    <SNUM>257</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_PERSONEN</Name>
+    <Type>V</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>232</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_PLAN_TABLE</Name>
+    <Type>V</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>233</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_PORTO</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>234</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_PREDA</Name>
+    <Type>V</Type>
+    <Colcount>148</Colcount>
+    <System>N</System>
+    <SNUM>235</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_PROZREG</Name>
+    <Type>V</Type>
+    <Colcount>32</Colcount>
+    <System>N</System>
+    <SNUM>236</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_PROZREGDET</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>237</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_RECHTEXTE</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>238</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_RUECKERST</Name>
+    <Type>V</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>239</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_SPERREN</Name>
+    <Type>V</Type>
+    <Colcount>1</Colcount>
+    <System>N</System>
+    <SNUM>240</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_STAFFELN</Name>
+    <Type>V</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>241</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TELEFON</Name>
+    <Type>V</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>242</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TRABGBEL</Name>
+    <Type>V</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>243</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TRBEHKO</Name>
+    <Type>V</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>244</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TRBEHPO</Name>
+    <Type>V</Type>
+    <Colcount>11</Colcount>
+    <System>N</System>
+    <SNUM>245</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TRIMPFKO</Name>
+    <Type>V</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>246</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TRIMPFPO</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>247</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TRKUNDEN</Name>
+    <Type>V</Type>
+    <Colcount>9</Colcount>
+    <System>N</System>
+    <SNUM>248</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_TSKKOPF</Name>
+    <Type>V</Type>
+    <Colcount>14</Colcount>
+    <System>N</System>
+    <SNUM>249</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_UEBERW</Name>
+    <Type>V</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>250</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_UEBFIBU</Name>
+    <Type>V</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>251</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_UMFRAGE</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>252</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_VERMERKE</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>253</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_VETAEMTER</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>254</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_VORNAMEN</Name>
+    <Type>V</Type>
+    <Colcount>3</Colcount>
+    <System>N</System>
+    <SNUM>255</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>V_VORTRAEGE</Name>
+    <Type>V</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>256</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ZAHLUNGEN</Name>
+    <Type>T</Type>
+    <Colcount>16</Colcount>
+    <System>N</System>
+    <SNUM>73</SNUM>
+    <Remarks>Eingangszahlungen und Stornierungen der Halter</Remarks>
+    <Label>Zahlungen</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ZETTEL</Name>
+    <Type>T</Type>
+    <Colcount>24</Colcount>
+    <System>N</System>
+    <SNUM>165</SNUM>
+    <Remarks>Zettel Hierin werden verschiedene Aktionen protokolliert, die ein Multifeld (32767 Bytes) benötigen: Telefonnotizen Zahlungsmeldungen Halterstammänderungen Rechnungsabteilungsinformationen </Remarks>
+    <Label>Zettel</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ZETTELA</Name>
+    <Type>T</Type>
+    <Colcount>21</Colcount>
+    <System>N</System>
+    <SNUM>166</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSADM</Creator>
+    <Name>ZUSTAENDIGKEITEN</Name>
+    <Type>T</Type>
+    <Colcount>2</Colcount>
+    <System>N</System>
+    <SNUM>182</SNUM>
+    <Remarks />
+    <Label>Mahnabt.-Zustaendigkeiten</Label>
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSCOLAUTH</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>51</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSCOLUMNS</Name>
+    <Type>V</Type>
+    <Colcount>13</Colcount>
+    <System>N</System>
+    <SNUM>46</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSCOMMANDS</Name>
+    <Type>V</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>53</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSDEPENDENCIES</Name>
+    <Type>V</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>60</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSEVENTS</Name>
+    <Type>V</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>55</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSEXECUTEAUTH</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>54</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSEXTFUN</Name>
+    <Type>V</Type>
+    <Colcount>12</Colcount>
+    <System>N</System>
+    <SNUM>58</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSEXTPARAM</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>59</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSINDEXES</Name>
+    <Type>V</Type>
+    <Colcount>21</Colcount>
+    <System>N</System>
+    <SNUM>47</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSKEYS</Name>
+    <Type>V</Type>
+    <Colcount>8</Colcount>
+    <System>N</System>
+    <SNUM>48</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSOBJAUTH</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>62</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSOBJSYN</Name>
+    <Type>V</Type>
+    <Colcount>5</Colcount>
+    <System>N</System>
+    <SNUM>61</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSPARTTRANS</Name>
+    <Type>V</Type>
+    <Colcount>7</Colcount>
+    <System>N</System>
+    <SNUM>52</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSSYNONYMS</Name>
+    <Type>V</Type>
+    <Colcount>4</Colcount>
+    <System>N</System>
+    <SNUM>49</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSTABAUTH</Name>
+    <Type>V</Type>
+    <Colcount>10</Colcount>
+    <System>N</System>
+    <SNUM>50</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSTABLES</Name>
+    <Type>V</Type>
+    <Colcount>20</Colcount>
+    <System>N</System>
+    <SNUM>45</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSTRGCOLS</Name>
+    <Type>V</Type>
+    <Colcount>6</Colcount>
+    <System>N</System>
+    <SNUM>57</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+  <Systables>
+    <Creator>SYSSQL</Creator>
+    <Name>SYSTRIGGERS</Name>
+    <Type>V</Type>
+    <Colcount>15</Colcount>
+    <System>N</System>
+    <SNUM>56</SNUM>
+    <Remarks />
+    <Label />
+  </Systables>
+</ArrayOfSystables>

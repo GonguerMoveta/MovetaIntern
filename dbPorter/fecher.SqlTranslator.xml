@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>fecher.SqlTranslator</name>
+    </assembly>
+    <members>
+        <member name="T:fecher.SqlTranslator.LexicalAnalyzerSqlBase">
+            <summary>
+            This class is used to delimitate the tokens in the string representing the SQL statement.
+            It is used by the SyntacticalAnalyzer class.
+            </summary>
+        </member>
+        <member name="M:fecher.SqlTranslator.LexicalAnalyzerSqlBase.IsTokenKeywordAllowedAfterSELECT(System.Int32)">
+            <summary>
+            keywords allowed right after SELECT token: ALL|DINSTINCT|TOP
+            </summary>
+            <param name="keywordIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:fecher.SqlTranslator.LexicalAnalyzerSqlBase.IsKeywordBreakingSELECT(System.String)">
+            <summary>
+            Return true if the keyword is an end to a SELECT clause. Keywords are: FROM, INTO
+            </summary>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:fecher.SqlTranslator.LexicalAnalyzerSqlBase.GetToken">
+            <summary>
+            Returns the next token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:fecher.SqlTranslator.SqlTranslator">
+            <summary>
+            Class that contains the TranslateSql function, which groups all the other functions and does the actual translation
+            </summary>
+        </member>
+        <member name="M:fecher.SqlTranslator.SqlTranslator.TranslateSql(System.String)">
+            <summary>
+            Translates a SQL statement from SqlBase to SqlServer
+            </summary>
+            <param name="sourceSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:fecher.SqlTranslator.SqlTranslator.TranslateSql(fecher.Common.DatabaseBrand,System.String)">
+            <summary>
+            Translates a SQL statement from SqlBase to targetDB
+            </summary>
+            <param name="targetDB"></param>
+            <param name="sourceSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:fecher.SqlTranslator.SqlTranslator.TranslateSql(fecher.Common.DatabaseBrand,System.String,fecher.Common.DatabaseSettings)">
+            <summary>
+            Translates a SQL statement from SqlBase to targetDB using the specified database settings
+            </summary>
+            <param name="targetDB"></param>
+            <param name="sourceSql"></param>
+            <param name="settings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:fecher.SqlTranslator.SqlTranslator.TranslateSql(fecher.Common.DatabaseBrand,fecher.Common.DatabaseBrand,System.String,fecher.Common.DatabaseSettings)">
+            <summary>
+            Translates a SQL statement from sourceDB to targetDB using the specified database settings
+            </summary>
+            <param name="sourceDB"></param>
+            <param name="targetDB"></param>
+            <param name="sourceSql"></param>
+            <param name="settings"></param>
+            <returns></returns>
+        </member>
+        <member name="T:fecher.SqlTranslator.SyntacticAnalyzerSqlBase">
+            <summary>
+            Class for constructing the syntax tree
+            </summary>
+        </member>
+    </members>
+</doc>

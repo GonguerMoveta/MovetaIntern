@@ -1,0 +1,4001 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PPJ.Runtime.XSal.49</name>
+    </assembly>
+    <members>
+        <member name="T:PPJ.Runtime.XSal.XSal">
+            <summary>
+            XSal functions.
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_HotSpotClick">
+            <summary>
+            The form, dialog or MDI receive this message when the user clicks
+            the left mouse button on the hot spot.
+            
+            	wParam =	HotSpot ID
+            	lParam =	Mouse position
+            	
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_HotSpotMouseMove">
+            <summary>
+            The form, dialog or MDI receive this message when the user moves the mouse on the hot spot.
+            
+            	wParam =	HotSpot ID if the mouse is entering the hot spot or NULL if the mouse is leaving the hot spot.
+            	lParam =	Mouse position
+            	
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.BackgroundImageFlags">
+            <summary>
+            Background image flags
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundImageFlags.Normal">
+            <summary>
+            normal
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundImageFlags.FillAll">
+            <summary>
+            fill all
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundImageFlags.Tiled">
+            <summary>
+            tiled
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundImageFlags.Center">
+            <summary>
+            centered
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundImageFlags.Transparent">
+            <summary>
+            transparent
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.BackgroundColorStyles">
+            <summary>
+            background color styles
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundColorStyles.Solid">
+            <summary>
+            solid
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundColorStyles.FadeTop">
+            <summary>
+            fade top
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundColorStyles.FadeBottom">
+            <summary>
+            fade bottom
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundColorStyles.FadeLeft">
+            <summary>
+            fade left
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.BackgroundColorStyles.FadeRight">
+            <summary>
+            fade right
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SetWindowImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.BackgroundImageFlags)">
+            <summary>
+            Sets the image to show as the background of the specified window.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="hImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GetWindowImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the image handle associated with the window's background. 
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="hImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SetWindowImageFile(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.BackgroundImageFlags)">
+            <summary>
+            Sets the image to show as the background of the specified window.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="sFileName"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SetWindowHotSpot(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Creates a new hot spot are on the windows background. If the hot spot dimensions
+            are 0,0,0,0 the specified hot spot ID is removed.
+            </summary>
+            <param name="ctrl">The control to add the hot spot to.</param>
+            <param name="id">A unique id returned in the SAM_HotSpotClick event.</param>
+            <param name="x">The X coordinate of the hot spot in pixels.</param>
+            <param name="y">The X coordinate of the hot spot in pixels.</param>
+            <param name="width">The width of the hot spot in pixels.</param>
+            <param name="height">The height of the hot spot in pixels.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GetWindowHotSpot(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the coordinates for the specified hot spot ID.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="id"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GetClientWindow(System.Windows.Forms.Control)">
+            <summary>
+            Returns the client area of a form with the accessories enabled.
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_DrawCell">
+            <summary>
+            Callback message for cell drawing
+            The table window receives this message each time a custom drawn cell needs to be repainted.
+            
+            	wParam =	cell selected flag (TRUE or FALSE)
+            	lParam =	pointer to a structure with drawing information.
+            				Use it with XSalTblGetCustomInfo().
+            				
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_SwapRows">
+            <summary>
+            Notification message from XSalTblSortRows.
+            The table window receives this message each time the quick-sort routine swaps two rows.
+            
+            	wParam =	first row
+            	lParam =	second row
+            	
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.TableWindowSort">
+            <summary>
+            Controls table sorting
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowSort.Ascending">
+            <summary>
+            ascending
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowSort.Descending">
+            <summary>
+            descending
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowSort.AsDateTime">
+            <summary>
+            sort as datetime
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowSort.AsNumber">
+            <summary>
+            sort as number
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowSort.CaseSensitive">
+            <summary>
+            case sensitive
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags">
+            <summary>
+            Flags for clipboard copying
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags.None">
+            <summary>
+            none
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags.SkipHiddenCols">
+            <summary>
+            skip hidden cols
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags.ColumnTitles">
+            <summary>
+            Also copy column titles
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.TableWindowImageFlags">
+            <summary>
+            image positioning/display flags
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.FillAll">
+            <summary>
+            fill complete cell
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.BottomLeft">
+            <summary>
+            bottom left
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.BottomCenter">
+            <summary>
+            bottom center
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.BottomRight">
+            <summary>
+            bottom right
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.CenterLeft">
+            <summary>
+            center left
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.CenterCenter">
+            <summary>
+            center center
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.CenterRight">
+            <summary>
+            center right
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.TopLeft">
+            <summary>
+            top left
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.TopCenter">
+            <summary>
+            top center
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.TopRight">
+            <summary>
+            top right
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.TableWindowImageFlags.Transparent">
+            <summary>
+            transparent
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color of an individual cell.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetCellBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the background color set for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellFont(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            Sets the font for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the font for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellFontName(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the font for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="fontName"></param>
+            <param name="fontSize"></param>
+            <param name="fontEnh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetCellFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font associated with the specified table cell.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetCellFont(System.Windows.Forms.Control)">
+            <summary>
+            Returns the font associated with the specified table cell.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellImage(System.Windows.Forms.Control,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table cell.
+            </summary>
+            <param name="column"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table cell.
+            </summary>
+            <param name="column"></param>
+            <param name="hImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellImageFile(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table cell.
+            </summary>
+            <param name="column"></param>
+            <param name="file"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellImageString(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table cell.
+            </summary>
+            <param name="column"></param>
+            <param name="sImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellImageResource(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table cell.
+            </summary>
+            <param name="column"></param>
+            <param name="name"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetCellImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@,PPJ.Runtime.XSal.XSal.TableWindowImageFlags@)">
+            <summary>
+            Returns the image and position associated with the specified cell.
+            </summary>
+            <param name="column"></param>
+            <param name="hImage"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetCellImage(System.Windows.Forms.Control,PPJ.Runtime.XSal.XSal.TableWindowImageFlags@)">
+            <summary>
+            Returns the image and position associated with the specified cell.
+            </summary>
+            <param name="column"></param>		
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetCellCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Makes the specified cell custom-drawn and assigns the user value to it.
+            </summary>
+            <param name="column"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetCellCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the user value associated to the custom drawn cell.
+            </summary>
+            <param name="column"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color for a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColumnBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the background color set for a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnFont(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            Sets the font for a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the font for a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnFontName(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the font for the table column. The font is created using the specified arguments.
+            </summary>
+            <param name="column"></param>
+            <param name="fontName"></param>
+            <param name="fontSize"></param>
+            <param name="fontEnh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColumnFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font associated with the specified table column.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColumnFont(System.Windows.Forms.Control)">
+            <summary>
+            Returns the font associated with the specified table column.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnImage(System.Windows.Forms.Control,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to the column.
+            </summary>
+            <param name="column"></param>
+            <param name="hImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnImageFile(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to the column.
+            </summary>
+            <param name="column"></param>
+            <param name="file"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnImageString(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to the column.
+            </summary>
+            <param name="column"></param>
+            <param name="sImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnImageResource(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to the column.
+            </summary>
+            <param name="column"></param>
+            <param name="name"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColumnImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@,PPJ.Runtime.XSal.XSal.TableWindowImageFlags@)">
+            <summary>
+            Returns the image associated to the table column.
+            </summary>
+            <param name="column"></param>
+            <param name="hImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColumnCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Enables custom drawing (SAM_DrawCell) for the specified column.
+            </summary>
+            <param name="column"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColumnCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the value stored with the custom painted column.
+            </summary>
+            <param name="column"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color of a row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowHeaderBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color of the row header.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetRowBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the background color of the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,System.Drawing.Font)">
+            <summary>
+            Sets the font for the entire row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the font for the entire row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowFontName(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the font for the entire row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="fontName"></param>
+            <param name="fontSize"></param>
+            <param name="fontEnh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetRowFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font used for the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetRowFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Returns the font used for the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to all the cells in the specified row,
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to all the cells in the specified row,
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="hImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowImageFile(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to all the cells in the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="imageFile"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowImageString(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to all the cells in the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="imageBlob"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowImageResource(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image from the resource object to all the cells in the table row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="resName"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetRowImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@,PPJ.Runtime.XSal.XSal.TableWindowImageFlags@)">
+            <summary>
+            Returns the image and position associated with the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="hImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetRowCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Defines the specified row as custom drawn and assigns the user value.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetRowCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the user value associated to the custom drawn table row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetCustomInfo(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Extracts the custom draw info from the lParam send with SAM_DrawCell.
+            </summary>
+            <param name="lParam"></param>
+            <param name="HDC"></param>
+            <param name="col"></param>
+            <param name="row"></param>
+            <param name="tag"></param>
+            <param name="left"></param>
+            <param name="top"></param>
+            <param name="right"></param>
+            <param name="bottom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetClipRect(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Changes the clipping rectangle when custom drawing a cell.
+            It must be used when processing SAM_DrawCell to make sure that lParam
+            contains the correct value.
+            </summary>
+            <param name="lParam"></param>
+            <param name="left"></param>
+            <param name="top"></param>
+            <param name="right"></param>
+            <param name="bottom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderFont(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            Assigns the specified font to the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Assigns the specified font to the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderFontName(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Creates the specified font and assigns it to the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="fontName"></param>
+            <param name="fontSize"></param>
+            <param name="fontEnh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColHeaderFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font associated to the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColHeaderFont(System.Windows.Forms.Control)">
+            <summary>
+            Returns the font associated to the column header.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderImage(System.Windows.Forms.Control,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image from the handle to the specified column header.
+            </summary>
+            <param name="column"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image from the handle to the specified column header.
+            </summary>
+            <param name="column"></param>
+            <param name="hImage"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderImageFile(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image file to the specified column header.
+            </summary>
+            <param name="column"></param>
+            <param name="imageFile"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderImageString(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image from the blob string to the specified column header.
+            </summary>
+            <param name="column"></param>
+            <param name="imageBlob"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderImageResource(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image from the specified resource object to the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="resName"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColHeaderImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@,PPJ.Runtime.XSal.XSal.TableWindowImageFlags@)">
+            <summary>
+            Returns the image and position associated with the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="hImage"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetColHeaderCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Defines the column header as custom drawn.
+            </summary>
+            <param name="column"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblGetColHeaderCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the value stored with the custom painted column header.
+            </summary>
+            <param name="column"></param>
+            <param name="userValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSortRows(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowSort)">
+            <summary>
+            Sort the table rows using the values in the specified column.
+            </summary>
+            <param name="table"></param>
+            <param name="colID"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblCopyRows(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags)">
+            <summary>
+            Copies the matching rows to the clipboard.
+            </summary>
+            <param name="table"></param>
+            <param name="flagsOn"></param>
+            <param name="flagsOff"></param>
+            <param name="copyFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblPasteRows(System.Windows.Forms.Control,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags)">
+            <summary>
+            Pastes the CSV text from the clipboard.
+            </summary>
+            <param name="table"></param>
+            <param name="copyFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblCopyRowsToString(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags,PPJ.Runtime.SalString@)">
+            <summary>
+            Copies the rows that match the flags selection to a CSV string.
+            </summary>
+            <param name="table"></param>
+            <param name="flagsOn"></param>
+            <param name="flagsOff"></param>
+            <param name="copyFlags"></param>
+            <param name="csvText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblPasteRowsFromString(System.Windows.Forms.Control,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags,PPJ.Runtime.SalString)">
+            <summary>
+            Pastes the specified CSV string into the table window control.
+            </summary>
+            <param name="table"></param>
+            <param name="flags"></param>
+            <param name="csvText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TblSetDelimiters(PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            Changes the standard column and row delimiters for the copy/paste operations.
+            </summary>
+            <param name="colDelimiter"></param>
+            <param name="rowDelimiter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GetImageFromFile(PPJ.Runtime.SalString)">
+            <summary>
+            Loads the image from a file without locking the file.
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.SplitterStyles">
+            <summary>
+            splitter styles
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SplitterStyles.Horizontal">
+            <summary>
+            horizontal
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SplitterStyles.Vertical">
+            <summary>
+            vertical
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SplitterStyles.Invisible">
+            <summary>
+            invisible
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SplitterStyles.NotResizable">
+            <summary>
+            not resizable
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SplitterStyles.Absolute">
+            <summary>
+            absolute
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitSetFrameChild(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber)">
+            <summary>
+            Associates the child control to the splitter's frames.
+            </summary>
+            <param name="split"></param>
+            <param name="child"></param>
+            <param name="frame"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitGetFrameChild(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber)">
+            <summary>
+            Returns the child control associated to the splitter's frames.
+            </summary>
+            <param name="split"></param>
+            <param name="frame"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitSetBarSize(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the size of the splitter.
+            </summary>
+            <param name="split"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitGetBarPosition(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the position of the splitter.
+            If the splitter is proportional, the position is expressed
+            as a percentage integer: 500 = 50%.
+            </summary>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitSetBarPosition(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the position of the splitter.
+            If the splitter is proportional, the position is expressed
+            as a percentage integer: 500 = 50%.
+            </summary>
+            <param name="split"></param>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitSetStyle(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.XSal.XSal.SplitterStyles,PPJ.Runtime.SalBoolean)">
+            <summary>
+            Sets the style of the splitter.
+            </summary>
+            <param name="split"></param>
+            <param name="style"></param>
+            <param name="on"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitGetStyle(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the styles of the splitter.
+            </summary>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.SplitSetMinMax(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the minimum and maximum positions for the splitter.
+            </summary>
+            <param name="split"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_ToolboxSetPosition">
+            <summary>
+            The toolbox receives this message when it's orientation and position are being changed.
+            This allows the program to change some visual aspect of the toolbox.
+            
+            	wParam = The new orientation flag
+            	lParam = not used
+            	
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_ToolboxUpdateMenu">
+            <summary>
+            Send to the form that owns the tool bars. The app can modify the popup menu
+            before it's displayed by processing this event. The menu object can be accessed
+            using the form's ContextMenu property or VT menu functions using wParam for the menu handle.
+            
+            	wParam = Handle for the menu
+            	lParam = not used.
+            
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.ToolboxPositions">
+            <summary>
+            toolbox positions
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.None">
+            <summary>
+            none
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Floating">
+            <summary>
+            floating
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Left">
+            <summary>
+            left
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Top">
+            <summary>
+            top
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Right">
+            <summary>
+            right
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Bottom">
+            <summary>
+            bottom
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Horizontal">
+            <summary>
+            horizontal
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Vertical">
+            <summary>
+            vertical
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxPositions.Mask">
+            <summary>
+            mask
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.ToolboxFlags">
+            <summary>
+            toolbox flags
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxFlags.None">
+            <summary>
+            none
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxFlags.Visible">
+            <summary>
+            visible
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxFlags.Newline">
+            <summary>
+            newline
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxFlags.FillClient">
+            <summary>
+            fill client
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxFlags.FixedPosition">
+            <summary>
+            fixed position
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolboxFlags.Resizable">
+            <summary>
+            resizable
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.ToolbuttonStyles">
+            <summary>
+            button styles
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbuttonStyles.None">
+            <summary>
+            none
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbuttonStyles.Flat">
+            <summary>
+            flat
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbuttonStyles.ThinBorder">
+            <summary>
+            thin border
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbuttonStyles.LeftImage">
+            <summary>
+            left image
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbuttonStyles.RightImage">
+            <summary>
+            right image
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSal.ToolbarMetrics">
+            <summary>
+            toolbar metrics
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbarMetrics.Height">
+            <summary>
+            height
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbarMetrics.Width">
+            <summary>
+            width
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbarMetrics.LeftOffset">
+            <summary>
+            left offset
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.ToolbarMetrics.TopOffset">
+            <summary>
+            top offset
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxCreate(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.ToolboxPositions,PPJ.Runtime.XSal.XSal.ToolboxFlags)">
+            <summary>
+            Creates the specified toolbox dialog.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="position"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxDestroy(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Closes the specified toolbox.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxShow(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Shows the specified toolbox.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxHide(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Hides the specified toolbox.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxShowAll(System.Windows.Forms.Control)">
+            <summary>
+            Shows all the toolboxes.
+            </summary>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxHideAll(System.Windows.Forms.Control)">
+            <summary>
+            Hides all the toolboxes.
+            </summary>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxIsVisible(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Tests the visibility of the specified toolbox.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxGetPosition(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Returns the position of the specified toolbox.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxSetPosition(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.XSal.XSal.ToolboxPositions)">
+            <summary>
+            Changes the position of the specified toolbox.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxGetFlags(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Returns the style flags for the specified toolbox.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxSetButtonStyle(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.XSal.XSal.ToolbuttonStyles)">
+            <summary>
+            Applies the toolbox button styles to the button control.
+            The button must be derived from XSalFlatButton.
+            </summary>
+            <param name="button"></param>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxSetMetrics(PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.ToolbarMetrics)">
+            <summary>
+            Sets metrics values for the tool bars.
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxGetButtonHandle">
+            <summary>
+            hWndButton = XSalToolboxGetButtonHandle( )
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ToolboxUpdate(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Reloads all the child controls in the toolbox and updated the layout.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapClose(PPJ.Runtime.SalNumber)">
+            <summary>
+            Frees the bitmap handle.
+            </summary>
+            <param name="hBitmap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapFromFile(PPJ.Runtime.SalString)">
+            <summary>
+            Returns the bitmap handle from the image file.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapFromResource(PPJ.Runtime.SalString)">
+            <summary>
+            Returns the bitmap handle from the resource object,
+            </summary>
+            <param name="resName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapFromString(PPJ.Runtime.SalString)">
+            <summary>
+            Returns the bitmap handle from the bytes string.
+            </summary>
+            <param name="bitmapBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapDraw(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Draws the image inside the control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="hImage"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapDraw(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalBoolean)">
+            <summary>
+            Draws the image inside the control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="hImage"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="transparent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapDrawDC(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Draws the image inside the device context.
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <param name="Param3"></param>
+            <param name="Param4"></param>
+            <param name="Param5"></param>
+            <param name="Param6"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapCreateDisabled(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            HBITMAP XSalBitmapCreateDisabled(
+            	HBITMAP p_hBitmap,
+            	COLORREF p_cColor );
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapFromIcon(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            HBITMAP XSalBitmapFromIcon(
+            	HICON p_hIcon,
+            	COLORREF p_cBackColor );
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapToString(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@)">
+            <summary>
+            BOOL XSalBitmapToString(
+            	HBITMAP p_hBitmap,
+            	LPHSTRING p_lphString )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.BitmapFromWindow(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalBoolean)">
+            <summary>
+            HBITMAP XSalBitmapFromWindow(
+            	HWND p_hWnd,
+            	BOOL p_bClientOnly )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvToString(PPJ.Runtime.SalFunctionalClass,PPJ.Runtime.SalString@)">
+            <summary>
+            Serializes the entire object graph into the target string.
+            </summary>
+            <param name="obj"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvFromString(PPJ.Runtime.SalFunctionalClass@,PPJ.Runtime.SalString)">
+            <summary>
+            Deserializes the content of the source string into the object.
+            </summary>
+            <param name="obj"></param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvClone(PPJ.Runtime.SalFunctionalClass,PPJ.Runtime.SalFunctionalClass@)">
+            <summary>
+            Clones the specified object.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvArraySwap(PPJ.Runtime.SalArray,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Swaps two object items in an array.
+            </summary>
+            <param name="array"></param>
+            <param name="index1"></param>
+            <param name="index2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvArrayInsert(PPJ.Runtime.SalArray,PPJ.Runtime.SalNumber)">
+            <summary>
+            Inserts a new element in the array.
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvArrayDelete(PPJ.Runtime.SalArray,PPJ.Runtime.SalNumber)">
+            <summary>
+            Removes an element from the array.
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvArrayMove(PPJ.Runtime.SalArray,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Moves the element to the target index in the array.
+            </summary>
+            <param name="array"></param>
+            <param name="sourceIndex"></param>
+            <param name="targetIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.UdvArraySort(PPJ.Runtime.SalArray,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sorts the objects in the array using the value in the variable specified in sFieldName.
+            </summary>
+            <param name="array"></param>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+            <param name="sortOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_TooltipSetText">
+            <summary>
+            Sent to the control under the mouse to show the tool tip.
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSal.SAM_TooltipClose">
+            <summary>
+            Sent to the control with the tool tip when the tool tip is destroyed.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TooltipShow(System.Windows.Forms.Control,PPJ.Runtime.SalString)">
+            <summary>
+            Shows the tool tip for the specified control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="tooltip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TooltipSetText(PPJ.Runtime.SalString)">
+            <summary>
+            Sets the tool tip text in response to SAM_TooltipSetText.
+            </summary>		
+            <param name="tooltip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TooltipSetDelay(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the two timers delay in milliseconds.
+            The first delay regulates the delay between the first time the mouse
+            enters the window and the showing of the tool tip.
+            The second delay regulates how long the tool tip stays on the screen.
+            </summary>
+            <param name="showDelay"></param>
+            <param name="popDelay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TooltipSetColors(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Changes the tool tip colors.
+            </summary>
+            <param name="textColor"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.TooltipInit">
+            <summary>
+            Initializes the XSalTooltip component.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSal.ToolTip">
+            <summary>
+            Returns the single tool tips instance used by XSalTooltips.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipOpen(PPJ.Runtime.SalNumber@,PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            GZIP file handling
+            BOOL XSalGZipOpen(
+            	gzFile* p_lpFile,
+            	LPSTR p_lpszFileName,
+            	LPSTR p_lpszMode )
+            
+            Opens a XSalGZip (.gz) file for reading or writing. The mode parameter
+            is as in fopen ("rb" or "wb") but can also include a compression level
+            ("wb9") or a strategy: 'f' for filtered data as in "wb6f", 'h' for
+            Huffman only compression as in "wb1h".
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <param name="Param3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipClose(PPJ.Runtime.SalNumber@)">
+            <summary>
+            BOOL XSalGZipClose(
+            	gzFile* p_lpFile )
+            </summary>
+            <param name="Param1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipGetError(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@)">
+            <summary>
+            LPSTR XSalGZipGetError(
+            	gzFile p_File,
+            	LPINT p_lpiError )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipRead(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@,PPJ.Runtime.SalNumber)">
+            <summary>
+            LONG XSalGZipRead(
+            	gzFile p_File,
+            	LPHSTRING p_lphsBufferIn,
+            	LONG p_lSize )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <param name="Param3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipWrite(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            LONG XSalGZipWrite(
+            	gzFile p_File,
+            	LPVOID p_lpBufferOut,
+            	LONG p_lSize )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <param name="Param3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipGetStr(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@,PPJ.Runtime.SalNumber)">
+            <summary>
+            LONG XSalGZipGetStr(
+            	gzFile p_File,
+            	LPHSTRING p_lphsBufferIn,
+            	LONG p_lSize )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <param name="Param3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipPutStr(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString)">
+            <summary>
+            INT XSalGZipPutStr(
+            	gzFile p_File,
+            	LPSTR p_lpBufferOut )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipGetChar(PPJ.Runtime.SalNumber)">
+            <summary>
+            CHAR XSalGZipGetStr( gzFile p_File )
+            </summary>
+            <param name="Param1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipPutChar(PPJ.Runtime.SalFileHandle,PPJ.Runtime.SalNumber)">
+            <summary>
+            BOOL XSalGZipPutChar(
+            	gzFile p_File,
+            	CHAR p_cChar )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipSeek(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            LONG XSalGZipSeek(
+            	gzFile p_File,
+            	LONG p_lOffset,
+            	INT p_iWhence )
+            </summary>
+            <param name="Param1"></param>
+            <param name="Param2"></param>
+            <param name="Param3"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipRewind(PPJ.Runtime.SalNumber)">
+            <summary>
+            BOOL XSalGZipRewind( gzFile p_File )
+            </summary>
+            <param name="Param1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipTell(PPJ.Runtime.SalNumber)">
+            <summary>
+            LONG XSalGZipTell( gzFile p_File )
+            </summary>
+            <param name="Param1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipEof(PPJ.Runtime.SalNumber)">
+            <summary>
+            BOOL XSalGZipEof( gzFile p_File )
+            </summary>
+            <param name="Param1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.GZipFlush(PPJ.Runtime.SalNumber)">
+            <summary>
+            BOOL XSalGZipFlush( gzFile p_File )
+            </summary>
+            <param name="Param1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipOpenArchive(PPJ.Runtime.SalNumber@,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            Opens a Zip archive for reading or for writing.
+            </summary>
+            <param name="zipFile"></param>
+            <param name="fileName"></param>
+            <param name="mode">OF_Read or OF_Write. Cannot use both.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipCloseArchive(PPJ.Runtime.SalNumber@)">
+            <summary>
+            Closes the zip archive.
+            </summary>
+            <param name="zipFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipCreateFile(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.SalDateTime,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            Creates a file in the Zip archive and sets the newly created file as the currently open file. 
+            </summary>
+            <param name="zipFile"></param>
+            <param name="fileName"></param>
+            <param name="date"></param>
+            <param name="comment"></param>
+            <param name="compressionLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipWrite(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            Writes the buffer to the currently open zip entry in the zip file.
+            </summary>
+            <param name="zipFile"></param>
+            <param name="buffer"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipWrite(PPJ.Runtime.SalNumber,System.Byte[],PPJ.Runtime.SalNumber)">
+            <summary>
+            Writes the buffer to the currently open zip entry in the zip file.
+            </summary>
+            <param name="zipFile"></param>
+            <param name="buffer"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipFindFirstFile(PPJ.Runtime.SalNumber)">
+            <summary>
+            Positions the current zip entry to the first file in the archive.
+            </summary>
+            <param name="zipFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipFindNextFile(PPJ.Runtime.SalNumber)">
+            <summary>
+            Positions the current zip entry to the next file in the archive.
+            </summary>
+            <param name="zipFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipFindFile(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString)">
+            <summary>
+            Returns the zip entry that matches the specified name.
+            </summary>
+            <param name="zipFile"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipOpenFile(PPJ.Runtime.SalNumber)">
+            <summary>
+            Opens the current zip entry for reading in the Zip archive.
+            It must be used after XSal.ZipFindFile or XSal.ZipFindFirstFile, or XSal.ZipFindNextFile.
+            </summary>
+            <param name="zipFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipCloseFile(PPJ.Runtime.SalNumber)">
+            <summary>
+            Closes the currently open zip entry. It doesn't close the Zip archive, to close the archive you have to use XSal.ZipCloseArchive. 
+            </summary>
+            <param name="zipFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipRead(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@,PPJ.Runtime.SalNumber)">
+            <summary>
+            Reads the specified number of bytes from the currently open zip entry in the archive.
+            </summary>
+            <param name="zipFile"></param>
+            <param name="buffer"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ZipGetFileInfo(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@,PPJ.Runtime.SalString@,PPJ.Runtime.SalDateTime@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Reads the file information from the current file in the zip archive.
+            </summary>
+            <param name="zipFile"></param>
+            <param name="fileName"></param>
+            <param name="comment"></param>
+            <param name="date"></param>
+            <param name="compressedSize"></param>
+            <param name="uncompressedSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrCompress(PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@)">
+            <summary>
+            Compresses a string using the GZIP algorithm.
+            </summary>
+            <param name="inString"></param>
+            <param name="level"></param>
+            <param name="outString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrUncompress(PPJ.Runtime.SalString,PPJ.Runtime.SalString@)">
+            <summary>
+            Uncompresses a string compressed using XSalStrCompress.
+            </summary>
+            <param name="inString"></param>
+            <param name="outString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrScan(PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            Searches for a substring in the source string starting from the specified index. 
+            </summary>
+            <param name="text"></param>
+            <param name="search"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrScanR(PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            Searches for a substring in the source string starting from the specified index. 
+            </summary>
+            <param name="text"></param>
+            <param name="search"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrCount(PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalBoolean)">
+            <summary>
+            Counts the number of times a substring appears in a string.
+            </summary>
+            <param name="text"></param>
+            <param name="search"></param>
+            <param name="start"></param>
+            <param name="length"></param>
+            <param name="left"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrFit(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            Truncates the string to fit the control's width and adds the ellipses characters at the end of the resulting string.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="text"></param>
+            <param name="append"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrAny(PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            Finds the first character in the string that appears in a given character set. 
+            </summary>
+            <param name="text"></param>
+            <param name="chars"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrNAny(PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            Finds the first character in the string that does not appear in a given character set. 
+            </summary>
+            <param name="text"></param>
+            <param name="chars"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrToHex(PPJ.Runtime.SalString)">
+            <summary>
+            Converts a string to a hexadecimal text.
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrFromHex(PPJ.Runtime.SalString)">
+            <summary>
+            Converts a hexadecimal text into a string.
+            </summary>
+            <param name="hex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrFormat(PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            Formats a string using a string mask. 
+            </summary>
+            <param name="text"></param>
+            <param name="mask"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrCompare(PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalBoolean)">
+            <summary>
+            Compares a substring in a string.
+            </summary>
+            <param name="source"></param>
+            <param name="compare"></param>
+            <param name="start"></param>
+            <param name="size"></param>
+            <param name="caseSensitive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrToNumber(PPJ.Runtime.SalString)">
+            <summary>
+            Converts a string to a number, regardless of the decimal point.
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrFormatDateTime(PPJ.Runtime.SalDateTime,PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            </summary>
+            <param name="date"></param>
+            <param name="format"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrFormatDateTimeX(PPJ.Runtime.SalDateTime,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            </summary>
+            <param name="date"></param>
+            <param name="format"></param>
+            <param name="days"></param>
+            <param name="shortDays"></param>
+            <param name="months"></param>
+            <param name="shortMonths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrMetaphone(PPJ.Runtime.SalString)">
+            <summary>
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrGetFirstToken(PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            </summary>
+            <param name="list"></param>
+            <param name="separators"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrGetNextToken">
+            <summary>
+            Returns the next token string in a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrGetCharAt(PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            Returns the character at the indicated position.
+            </summary>
+            <param name="text"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.StrSetCharAt(PPJ.Runtime.SalString@,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the character at the position and returns the previous char.
+            </summary>
+            <param name="text"></param>
+            <param name="charSet"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptCreate(PPJ.Runtime.SalString)">
+            <summary>
+            Creates and compiles the script.
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptFree(PPJ.Runtime.SalNumber)">
+            <summary>
+            Frees the script.
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptAddLine(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString)">
+            <summary>
+            Adds a line to the script and recompiles.
+            </summary>
+            <param name="handle"></param>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptSetContext(PPJ.Runtime.SalNumber,System.Object)">
+            <summary>
+            Changes the execution context for the script object.
+            </summary>
+            <param name="handle"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptRun(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@)">
+            <summary>
+            Executes the script object hScript and stores the result, if any, in sResult. 
+            </summary>
+            <param name="handle"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptGetErrors(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@)">
+            <summary>
+            Returns the list of the errors detected in the script object. 
+            </summary>
+            <param name="handle"></param>
+            <param name="errorsList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptSetDebugMode(PPJ.Runtime.SalNumber,PPJ.Runtime.SalBoolean)">
+            <summary>
+            Enables/Disables debug mode. When the debug mode is on, the exceptions generated
+            by the interpreter are unhandled.
+            </summary>
+            <param name="handle"></param>
+            <param name="debugOn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptGetLocalName(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString,PPJ.Runtime.SalString@)">
+            <summary>
+            Not supported.
+            </summary>
+            <param name="handle"></param>
+            <param name="localName"></param>
+            <param name="varName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.ScriptSetTimeout(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Not supported.
+            </summary>
+            <param name="handle"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.FromHandle(PPJ.Runtime.SalNumber)">
+            <summary>
+            Returns the zip object that is referenced by the handle.
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.FillReversibleBar(System.Windows.Forms.Control,System.Drawing.Rectangle,System.IntPtr)">
+            <summary>
+            Draws the splitter's resize bar.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.FillReversibleFrame(System.Windows.Forms.Control,System.Drawing.Rectangle,System.IntPtr,System.Int32)">
+            <summary>
+            Draws the toolbox's resizable frame
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSal.CreateHalftoneHBRUSH">
+            <summary>
+            Creates the hatched brush to be used to draw the splitter's drag bar.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalFlatButton">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalFlatButton.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalFlatButton.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalFlatButton.FromHandle(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the control associated with the handle.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalFlatButton.op_Explicit(PPJ.Runtime.SalWindowHandle)~PPJ.Runtime.XSal.XSalFlatButton">
+            <summary>
+            Fully qualified expressions operator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalFlatButton.Style">
+            <summary>
+            Returns/Sets the XSal style for the button control.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalFlatButton.ApplyButtonStyle(System.Windows.Forms.ButtonBase,PPJ.Runtime.XSal.XSal.ToolbuttonStyles)">
+            <summary>
+            Modifies the button's property according to the specified XSal styles.
+            </summary>
+            <param name="btn"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalFlatButton.TestStyle(PPJ.Runtime.XSal.XSal.ToolbuttonStyles,PPJ.Runtime.XSal.XSal.ToolbuttonStyles)">
+            <summary>
+            Tests the specified style values.
+            </summary>
+            <param name="style"></param>
+            <param name="mask"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalHotSpot">
+            <summary>
+            Implementation of the XSalHotSpot functionality.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalHotSpot.MaskColor">
+            <summary>
+            Gets or sets the mask color used to draw the hot spot.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalHotSpot.Cursor">
+            <summary>
+            Gets or sets the cursor to display when the mouse enters an hot spot.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHotSpot.SetWindowHotSpot(System.Windows.Forms.Control,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new clickable hot spot on the specified control.
+            </summary>
+            <param name="control">The control to add the hot spot to.</param>
+            <param name="id">A unique id returned in the SAM_HotSpotClick event.</param>
+            <param name="x">The X coordinate of the hot spot in pixels.</param>
+            <param name="y">The X coordinate of the hot spot in pixels.</param>
+            <param name="width">The width of the hot spot in pixels. 0 removes the hot spot.</param>
+            <param name="height">The height of the hot spot in pixels. 0 removes the hot spot.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHotSpot.SetWindowHotSpot(System.Windows.Forms.Control,System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            Creates a new clickable hot spot on the specified control.
+            </summary>
+            <param name="control">The control to add the hot spot to.</param>
+            <param name="id">A unique id returned in the SAM_HotSpotClick event.</param>
+            <param name="bounds">The Rectangle of the hot spot. An height or width set to 0 remove the hot spot.</param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalHotSpot.HotSpot">
+            <summary>
+            Contains the data that defines an hot spot.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalHSplitter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitter.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitter.FromHandle(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the control associated with the handle.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitter.op_Explicit(PPJ.Runtime.SalWindowHandle)~PPJ.Runtime.XSal.XSalHSplitter">
+            <summary>
+            Fully qualified expressions operator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalHSplitter.TopControl">
+            <summary>
+            Returns/Sets the control bound to the top split panel.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalHSplitter.BottomControl">
+            <summary>
+            Returns/Sets the control bound to the bottom split panel.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitter.SetTopFrame(System.Windows.Forms.Control)">
+            <summary>
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitter.SetBottomFrame(System.Windows.Forms.Control)">
+            <summary>
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitter.GetTopFrame">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitter.GetBottomFrame">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalHSplitterInvisible">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalHSplitterInvisible.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalScript">
+            <summary>
+            Implementation of XSalScript
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.#ctor">
+            <summary>
+            Constructs a new empty XSalScript object.
+            </summary>		
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.#ctor(System.String)">
+            <summary>
+            Constructs a new XSalScript object and compiles the specified source code.
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.Interpreter">
+            <summary>
+            Returns the instance of the interpreter used by XSalScript.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.Source">
+            <summary>
+            Returns/Sets the script source code.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.HasErrors">
+            <summary>
+            Returns true if the script object contains a list of errors.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.LastError">
+            <summary>
+            Returns the last error message.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.CSharpSyntax">
+            <summary>
+            Returns/Sets the C# flag to turn on the preprocessor.
+            When this property is false, the preprocessor tries to adapt
+            old XSalScript syntax to C# syntax.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.Context">
+            <summary>
+            Returns/Sets the context for the execution of the script.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.DebugMode">
+            <summary>
+            Returns/Sets the debug mode. When on the script
+            will pop up the error message box.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.Compile">
+            <summary>
+            Compiles the script and saves the resulting AST node.
+            </summary>		
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.Run">
+            <summary>
+            Executes the compiled script and returns the return value.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.AddLine(System.String)">
+            <summary>
+            Adds a line to the script.
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.PreProcessScript(System.String)">
+            <summary>
+            Parses and fixed the script to adapt it from XSal syntax to C#.
+            </summary>
+            <param name="script"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.PreProcessLine(System.String)">
+            <summary>
+            Parses and fixes the single script line to adapt it from XSal syntax to C#.
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.FindFirst(System.String,System.String)">
+            <summary>
+            Finds the position of the specified string after any number of contiguous whitespaces.
+            The search is case insensitive.
+            </summary>
+            <param name="text"></param>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.ExtractFirstKeyWord(System.String,System.Int32@)">
+            <summary>
+            Returns the first keyword.
+            </summary>
+            <param name="line"></param>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalScript.Handle">
+            <summary>
+            Handle
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.FromHandle(System.IntPtr)">
+            <summary>
+            create from Handle
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalScript.Dispose">
+            <summary>
+            Dispose XSalScript
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalSeparator">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalSeparator.SeparatorStyle">
+            <summary>
+            separator styles
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalSeparator.SeparatorStyle.Invisible">
+            <summary>
+            invisible
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalSeparator.SeparatorStyle.Single">
+            <summary>
+            single
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalSeparator.SeparatorStyle.Double">
+            <summary>
+            double
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalSeparator.SeparatorStyle.Etched">
+            <summary>
+            etched
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalSeparator.SeparatorStyle.Dotted">
+            <summary>
+            dotted
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparator.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparator.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparator.FromHandle(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the control associated with the handle.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparator.op_Explicit(PPJ.Runtime.SalWindowHandle)~PPJ.Runtime.XSal.XSalSeparator">
+            <summary>
+            Fully qualified expressions operator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSeparator.Horizontal">
+            <summary>
+            Returns/Sets the orientation of the separator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSeparator.Vertical">
+            <summary>
+            Returns/Sets the orientation of the separator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSeparator.Style">
+            <summary>
+            Returns/Sets the style of the separator.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparator.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paints the separator.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalSeparatorDoubleRaised">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorDoubleRaised.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorDoubleRaised.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalSeparatorEtched">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorEtched.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorEtched.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalSeparatorInvisible">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorInvisible.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorInvisible.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalSeparatorSingleRaised">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorSingleRaised.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSeparatorSingleRaised.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalSplitter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.FromHandle(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the control associated with the handle.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.op_Explicit(PPJ.Runtime.SalWindowHandle)~PPJ.Runtime.XSal.XSalSplitter">
+            <summary>
+            Fully qualified expressions operator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.FirstControl">
+            <summary>
+            Returns/Sets the control bound to the first split panel.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.SecondControl">
+            <summary>
+            Returns/Sets the control bound to the first split panel.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.Proportional">
+            <summary>
+            Returns/Sets the proportional flag. When true, the splitter
+            is automatically moved to keep the same proportions.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.Position">
+            <summary>
+            Returns/Sets the position of the splitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.BarSize">
+            <summary>
+            Returns/Sets the size of the splitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.InvertDocking">
+            <summary>
+            Inverts the docking of the panels for when the splitter is
+            not proportional. By default the top/left panel is the fixed
+            size panel. When InvertedDocking is true, the bottom/right panel
+            become fixed.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.Text">
+            <summary>
+            Sets or returns the Text of the splitter control.
+            The text string contains two labels separated by ";", one
+            for each split panel.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.MinSize">
+            <summary>
+            Sets or returns the minimum size of the first split panel.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.MinExtra">
+            <summary>
+            Sets or returns the minimum size of the second panel.
+            That is the extra space at the right/bottom of the splitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.BorderStyle">
+            <summary>
+            Gets or sets the border style for the control.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.WindowsClassName">
+            <summary>
+            Hidden property. Doesn't apply to XSalSplitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.WindowsDLLName">
+            <summary>
+            Hidden property. Doesn't apply to XSalSplitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.WindowsStyle">
+            <summary>
+            Hidden property. Doesn't apply to XSalSplitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.WindowsExStyle">
+            <summary>
+            Hidden property. Doesn't apply to XSalSplitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.HScroll">
+            <summary>
+            Hidden property. Doesn't apply to XSalSplitter.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalSplitter.VScroll">
+            <summary>
+            Hidden property. Doesn't apply to XSalSplitter.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.SetBarSize(PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the size of the splitter.
+            </summary>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.SetBarPosition(PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the position of the splitter.
+            </summary>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.GetBarPosition">
+            <summary>
+            Returns the position of the splitter.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.SetMinMaxPosition(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the minimum and maximum positions for the splitter.
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.SetStyle(PPJ.Runtime.XSal.XSal.SplitterStyles,PPJ.Runtime.SalBoolean)">
+            <summary>
+            Sets the style of the splitter.
+            </summary>
+            <param name="style"></param>
+            <param name="on"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.GetStyle">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.FixZOrder">
+            <summary>
+            Changes the z-order of the splitter to show it under the  bound controls.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.GetBorderSize(System.Boolean)">
+            <summary>
+            Returns the size of the border for the specified panel.
+            </summary>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.DoLayout">
+            <summary>
+            Arranges the bound controls.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.SubtractLabel(System.Drawing.Rectangle,System.Windows.Forms.Label)">
+            <summary>
+            Subtract the label rectangle.
+            </summary>
+            <param name="rect"></param>
+            <param name="label"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.SetProportionalPosition(System.Int32)">
+            <summary>
+            Positions the splitter using the proportional method.
+            </summary>
+            <param name="ratio"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.SetRealPosition(System.Int32)">
+            <summary>
+            Positions the splitter.
+            </summary>
+            <param name="pos"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.GetProportionalPosition">
+            <summary>
+            Returns the proportional position of the splitter.
+            </summary>		
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.IsVertical">
+            <summary>
+            Tests is the splitter is vertical.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.IsResizable">
+            <summary>
+            Tests if the splitter is resizable.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.IsInvisible">
+            <summary>
+            Tests if the splitter is invisible.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.IsAbsolute">
+            <summary>
+            Tests if the splitter is absolute positioned.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.RemoveBorder(System.Windows.Forms.Control)">
+            <summary>
+            Removes the border from the control using WinSDK.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handler for MouseDown event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handler for MouseMove event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Handler for MouseLeave event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handler for MouseUp event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.DrawDragBar(System.Drawing.Rectangle)">
+            <summary>
+            Draws the splitter's resize bar.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.CalcSplitPosition(System.Int32)">
+            <summary>
+            Calculates the inverted split position.
+            </summary>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.CalcDragBarBounds(System.Int32)">
+            <summary>
+            Returns the splitter's rectangle.
+            </summary>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Handler for HandleCreated event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handler for Paint event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handler for PaintBackground event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnFontChanged(System.EventArgs)">
+            <summary>
+            Handler for FontChanged event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnTextChanged(System.EventArgs)">
+            <summary>
+            Handler for TextChanged event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnResize(System.EventArgs)">
+            <summary>
+            Handler for Resize event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalSplitter.OnMove(System.EventArgs)">
+            <summary>
+            Handler for Move event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalTableWindow">
+            <summary>
+            XSalTableWindow implementation.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetRowBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color of a row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the background color of the table row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetRowHeaderBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color of the row header.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetCellBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color of an individual cell.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetColumnBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sets the background color for a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the background color set for a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellBackColor(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the background color set for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="backColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetColumnFont(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            Sets the font for a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetRowFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,System.Drawing.Font)">
+            <summary>
+            Sets the font for the entire row.
+            </summary>
+            <param name="table"></param>
+            <param name="nRow"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetCellFont(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            Sets the font for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetColHeaderFont(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            Assigns the font to the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font set for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellFont(System.Windows.Forms.Control)">
+            <summary>
+            Returns the font set for a single cell.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font set for the specified column.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnFont(System.Windows.Forms.Control)">
+            <summary>
+            Returns the font set for the specified column.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColHeaderFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font set for the specified column header.
+            </summary>
+            <param name="column"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColHeaderFont(System.Windows.Forms.Control)">
+            <summary>
+            Returns the font set for the specified column header.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the font set for the specified column.
+            </summary>
+            <param name="table"></param>
+            <param name="nRow"></param>
+            <param name="hFont"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowFont(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Returns the font set for the specified column.
+            </summary>
+            <param name="table"></param>
+            <param name="nRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetCellImage(System.Windows.Forms.Control,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table cell.
+            </summary>
+            <param name="column"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetColumnImage(System.Windows.Forms.Control,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns an image to a table column.
+            </summary>
+            <param name="column"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetRowImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image to the row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetColHeaderImage(System.Windows.Forms.Control,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns the image to the column header.
+            </summary>
+            <param name="column"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.ToAlignEnum(PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Converts the image flags to a flexgrid enumeration.
+            </summary>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.FromAlignEnum(C1.Win.C1FlexGrid.ImageAlignEnum)">
+            <summary>
+            Converts the ImageAlignEnum to image flags.
+            </summary>
+            <param name="align"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.AssignImage(C1.Win.C1FlexGrid.CellStyle,System.Drawing.Image,PPJ.Runtime.XSal.XSal.TableWindowImageFlags)">
+            <summary>
+            Assigns our special SingleImageMap to the style.
+            </summary>
+            <param name="style"></param>
+            <param name="image"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellImage(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@,PPJ.Runtime.XSal.XSal.TableWindowImageFlags@)">
+            <summary>
+            Returns the image set for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="hImage"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellImage(System.Windows.Forms.Control,PPJ.Runtime.XSal.XSal.TableWindowImageFlags@)">
+            <summary>
+            Returns the image set for a single cell.
+            </summary>
+            <param name="column"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetColumnCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Enables custom drawing (SAM_DrawCell) for the specified column.
+            </summary>
+            <param name="column"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the value stored with the custom painted column.
+            </summary>
+            <param name="column"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetCellCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Enables custom drawing for the specified cell.
+            </summary>
+            <param name="column"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the user value stored with the custom drawn cell.
+            </summary>
+            <param name="column"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetColHeaderCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber)">
+            <summary>
+            Enables custom drawing for the specified column header.
+            </summary>
+            <param name="column"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColHeaderCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the user value stored with the custom drawn column header.
+            </summary>
+            <param name="column"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SetRowCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Enables custom drawing for the specified table row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowCustom(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Returns the user value stored with the custom drawn row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCustomInfo(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Extracts the custom draw info from the lParam send with SAM_DrawCell.
+            </summary>
+            <param name="lParam"></param>
+            <param name="HDC"></param>
+            <param name="col"></param>
+            <param name="row"></param>
+            <param name="tag"></param>
+            <param name="left"></param>
+            <param name="top"></param>
+            <param name="right"></param>
+            <param name="bottom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.TranslateRowIndex(PPJ.Runtime.Windows.SalTableWindow,C1.Win.C1FlexGrid.C1FlexGrid,System.Int32)">
+            <summary>
+            Transforms the row index to a context row.
+            </summary>
+            <param name="tbw"></param>
+            <param name="grid"></param>
+            <param name="rowIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalTableWindow.USERVALUE">
+            <summary>
+            User defined value stored with custom-drawn cells, cols or rows.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalTableWindow.CUSTOMINFO">
+            <summary>
+            The drawing info send with SAM_DrawCell.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalTableWindow.CSVRowDelimiter">
+            <summary>
+            Returns/Sets the delimiter string used to concatenate rows in a CSV string.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalTableWindow.CSVColumnDelimiter">
+            <summary>
+            Returns/Sets the delimiter string used to concatenate column values in a CSV string.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.CopyRows(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags)">
+            <summary>
+            Copies the selected rows to the clipboard.
+            </summary>
+            <param name="table"></param>
+            <param name="flagsOn"></param>
+            <param name="flagsOff"></param>
+            <param name="copyFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.PasteRows(System.Windows.Forms.Control,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags)">
+            <summary>
+            Pastes rows from the clipboard to the table window.
+            </summary>
+            <param name="table"></param>
+            <param name="copyFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.CopyRowsToString(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags,PPJ.Runtime.SalString@)">
+            <summary>
+            Copies the rows to a string.
+            </summary>
+            <param name="table"></param>
+            <param name="flagsOn"></param>
+            <param name="flagsOff"></param>
+            <param name="copyFlags"></param>
+            <param name="csvText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.PasteRowsFromString(System.Windows.Forms.Control,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags,PPJ.Runtime.SalString)">
+            <summary>
+            Pastes rows from the string.
+            </summary>
+            <param name="table"></param>
+            <param name="copyFlags"></param>
+            <param name="csvText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.CopyRowsInternal(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags,PPJ.Runtime.SalString@)">
+            <summary>
+            Copies the selected rows to the clipboard.
+            </summary>
+            <param name="table"></param>
+            <param name="flagsOn"></param>
+            <param name="flagsOff"></param>
+            <param name="copyFlags"></param>
+            <param name="clipText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.PasteRowsInternal(System.Windows.Forms.Control,PPJ.Runtime.XSal.XSal.TableWindowClipboardFlags,PPJ.Runtime.SalString)">
+            <summary>
+            Pastes rows from the clipboard to the table window.
+            </summary>
+            <param name="table"></param>
+            <param name="copyFlags"></param>
+            <param name="clipText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.SortRows(System.Windows.Forms.Control,PPJ.Runtime.SalNumber,PPJ.Runtime.XSal.XSal.TableWindowSort)">
+            <summary>
+            Sort the table rows using the values in the specified column.
+            </summary>
+            <param name="table"></param>
+            <param name="colID"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalTableWindow.SortRowsComparer">
+            <summary>
+            Comparer class used for sorting rows.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.Invalidate(PPJ.Runtime.Windows.SalTableWindow)">
+            <summary>
+            Invalidates the table.
+            </summary>
+            <param name="table"></param>		
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellStyle(PPJ.Runtime.Windows.SalTableColumn)">
+            <summary>
+            Returns the CellStyle object for the current cell in the specified column.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetCellStyleNew(PPJ.Runtime.Windows.SalTableColumn)">
+            <summary>
+            Returns or creates the CellStyle object for the current cell in the specified column.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowStyle(PPJ.Runtime.Windows.SalTableWindow,System.Int32)">
+            <summary>
+            Returns the CellStyle object for the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowStyleNew(PPJ.Runtime.Windows.SalTableWindow,System.Int32)">
+            <summary>
+            Returns or creates the CellStyle object for the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowHeaderStyle(PPJ.Runtime.Windows.SalTableWindow,System.Int32)">
+            <summary>
+            Returns the CellStyle object for the specified row header.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRowHeaderStyleNew(PPJ.Runtime.Windows.SalTableWindow,System.Int32)">
+            <summary>
+            Returns or creates the CellStyle object for the specified row header.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnStyle(PPJ.Runtime.Windows.SalTableColumn)">
+            <summary>
+            Returns the CellStyle object for the specified column in both the main and the split grids.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnStyleNew(PPJ.Runtime.Windows.SalTableColumn)">
+            <summary>
+            Returns or creates the CellStyle object for the specified column in both the main and the split grids.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnHeaderStyle(PPJ.Runtime.Windows.SalTableColumn)">
+            <summary>
+            Returns the CellStyle object for the specified column's header.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetColumnHeaderStyleNew(PPJ.Runtime.Windows.SalTableColumn)">
+            <summary>
+            Returns or creates the CellStyle object for the specified column's header.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTableWindow.GetRow(PPJ.Runtime.Windows.SalTableWindow,System.Int32)">
+            <summary>
+            Returns the instance of SalTableRow for the specified row.
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalTableWindow.SingleImageMap">
+            <summary>
+            Special ImageMap that holds only one image and returns it in all cases.
+            The FlexGrid can assign ImageMaps to cells, rows, columns and ranges but the images
+            are shown when the value matches the key in the map. With this map, the single image
+            is shown regardless of the value.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalToolbar">
+            <summary>
+            XSal Toolbar panel. One instance of this class is created for
+            each of the four dockable sides of the form: top, left, right, bottom.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalToolbar.Side">
+            <summary>
+            Side of the toolbar.
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalToolbar.Side.Top">
+            <summary>
+            top
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalToolbar.Side.Left">
+            <summary>
+            left
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalToolbar.Side.Right">
+            <summary>
+            right
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalToolbar.Side.Bottom">
+            <summary>
+            bottom
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.#ctor(System.String,PPJ.Runtime.XSal.XSalToolbar.Side)">
+            <summary>
+            Creates a new toolbar panel.
+            </summary>
+            <param name="name"></param>
+            <param name="side"></param>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalToolbar.ToolbarSide">
+            <summary>
+            Returns the side of this toolbar.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalToolbar.UseVisualStyleBackColor">
+            <summary>
+            Returns/Sets the flag that determines if the background of the toolbar is drawn
+            using visual styles, if supported.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalToolbar.Appearance">
+            <summary>
+            Returns/Sets a value that determines the appearance of the toolbar.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.GetToolbars(System.Windows.Forms.Form)">
+            <summary>
+            Returns the 4 toolbars (top, left, right, bottom) created for the specified form.
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.GetToolboxes(System.Windows.Forms.Form)">
+            <summary>
+            Returns all the toolboxes for the specified form.
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.InitializeForm(System.Windows.Forms.Form)">
+            <summary>
+            Prepares the form by creating four XSalToolbar panels.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.LayoutToolboxes">
+            <summary>
+            Arranges the child toolboxes.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.CalcToolbarSize">
+            <summary>
+            Returns the size of the toolbar calculated to fit all the child toolboxes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.IsVisible(PPJ.Runtime.XSal.XSalToolbox)">
+            <summary>
+            Returns true if the toolbox is visible.
+            </summary>
+            <param name="tbox"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.ShowContextMenu(System.Drawing.Point)">
+            <summary>
+            Shows a context menu when the user right-clicks on the empty are of the toolbar.
+            </summary>
+            <param name="pos"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.CreateContextMenu(System.Windows.Forms.Form)">
+            <summary>
+            Creates the context menu for this toolbar. The context menu
+            contains all the toolboxes and it's customizable by the user code
+            by processing SAM_ToolboxUpdateMenu.
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalToolbar.ToolBoxMenuItem">
+            <summary>
+            Specialized menu item for hiding/showing XSalToobox objects
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paints the background color of the toolbar using visual styles.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>
+            Handler for Layout event
+            </summary>
+            <param name="levent"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbar.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Shows the context menu when the right button is clicked outside of a 
+            toolbox but in the toolbar area.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalToolbox">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.XSal.XSalToolbox.ccToolboxHandle">
+            <summary>
+            default handle control
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.FromHandle(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the control associated with the handle.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.op_Explicit(PPJ.Runtime.SalWindowHandle)~PPJ.Runtime.XSal.XSalToolbox">
+            <summary>
+            Fully qualified expressions operator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalToolbox.Flags">
+            <summary>
+            Returns/Sets the XSalToolbox flags.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalToolbox.Position">
+            <summary>
+            Returns/Sets the XSalToolbox position.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalToolbox.Toolbars">
+            <summary>
+            Returns/Sets the four toolbar that can host this toolbox when docked.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalToolbox.Owner">
+            <summary>
+            Returns the forms that owns this toolbox.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.Create(System.String,System.Windows.Forms.Form,PPJ.Runtime.XSal.XSal.ToolboxPositions,PPJ.Runtime.XSal.XSal.ToolboxFlags)">
+            <summary>
+            Creates the specified toolbox.
+            </summary>
+            <param name="name"></param>
+            <param name="form"></param>
+            <param name="position"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.FromName(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Finds the toolbox control in the parent.
+            </summary>
+            <param name="form"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.SetMetrics(System.Int32,PPJ.Runtime.XSal.XSal.ToolbarMetrics)">
+            <summary>
+            Saves metrics values for the XSalToolbar class.
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.UpdateLayout">
+            <summary>
+            Updates the layout of the child controls of the toolbox and of
+            the parent toolbar.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.CanDock(PPJ.Runtime.XSal.XSalToolbar.Side)">
+            <summary>
+            Returns true if the toolbox can dock to the specified side.
+            </summary>
+            <param name="side"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.CanFloat">
+            <summary>
+            Returns true if the toolbox can float.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.ValidatePosition(PPJ.Runtime.XSal.XSal.ToolboxPositions)">
+            <summary>
+            Validates the requested position with the virtual methods: CanDock() and CanFloat().
+            </summary>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.SetFlags(PPJ.Runtime.XSal.XSal.ToolboxFlags)">
+            <summary>
+            Applies the XSalToolboxFlags.
+            </summary>
+            <param name="newFlags"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.GetNextDockedToolbox">
+            <summary>
+            Returns the next toolbox in the toolbar.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.DockTo(PPJ.Runtime.XSal.XSalToolbar)">
+            <summary>
+            Docks the toolbox to the specified toolbar.
+            </summary>
+            <param name="toolbar"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.Float">
+            <summary>
+            Floats the toolbox.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.DropTo(System.Drawing.Point)">
+            <summary>
+            Drops the toolbox to the specified location.
+            It will either dock or float depending on the location.
+            </summary>
+            <param name="pos"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.SuspendToolbarsLayout">
+            <summary>
+            Suspends layout operations an all the toolbars.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.ResumeToolbarsLayout">
+            <summary>
+            Resumes layout operations on all toolbars.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.SetChildIndexAndLocation(PPJ.Runtime.XSal.XSal.ToolboxPositions,System.Drawing.Point)">
+            <summary>
+            Returns the child index from the drop location.
+            </summary>
+            <param name="toolboxPosition"></param>
+            <param name="dropPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.GetPositionFromLocation(System.Drawing.Point)">
+            <summary>
+            Returns the position corresponding to the location.
+            </summary>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.GetToolbarRect(PPJ.Runtime.XSal.XSalToolbar.Side)">
+            <summary>
+            Returns the screen rect for the specified toolbar. If the toolbar is not visible
+            the rectangle is collapsed to either width  0 or height = 0.
+            </summary>
+            <param name="side"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.LoadBounds">
+            <summary>
+            Saves the original bounds of all child controls.
+            The original bounds are restored when the toolbox is not docked.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.LayoutChildren">
+            <summary>
+            Arranges the child controls in the toolbox.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.DrawBorder(System.Drawing.Graphics)">
+            <summary>
+            Draws the 3D border when the toolbox is docked.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.MouseIsOverResizableBar(System.Drawing.Point)">
+            <summary>
+            Returns true if the mouse is over the sizeable var area for fillclient toolboxes.
+            </summary>
+            <param name="loc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.PaintToolboxBackground(System.Drawing.Graphics,System.Boolean)">
+            <summary>
+            Draws the background of the toolbar control.
+            Replicates the background of the ToolStrip control.
+            </summary>		
+            <param name="g"></param>
+            <param name="vertical">If the form units are on the X axis, set this parameter to FALSE. If the form units are on the Y axis, set this parameter to TRUE.</param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handler for PaintBackground event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handler for Paint event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Handler for Closing event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.SetVisibleCore(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handler for MouseDown event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handler for MouseMove event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Handler for MouseLeave event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handler for MouseUp event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnResize(System.EventArgs)">
+            <summary>
+            Handler for Resize event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Handler for HandleCreated event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalToolbox.OnInitializeFlatStyle">
+            <summary>
+            Handler for InitializeFlatStyle event
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalTooltips">
+            <summary>
+            XSalTooltips implementation class.
+            Installs a message filter to detect WM_MOUSEMOVE messages.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.#ctor">
+            <summary>
+            Only one instance of this class exists in XSalTooltips.Instance.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.Init">
+            <summary>
+            Initializes the tool tip control with default values.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.Show(System.String)">
+            <summary>
+            Shows the tool tip for the current control.
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.Show(System.Windows.Forms.Control,System.String)">
+            <summary>
+            Shows the tool tip for the specified control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="text"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.Show(System.Windows.Forms.Control)">
+            <summary>
+            Starts the popup timer for the specified control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.Pop">
+            <summary>
+            Hides the current tool tip.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalTooltips.InitialDelay">
+            <summary>
+            Returns/Sets the initial delay timer
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalTooltips.AutoPopDelay">
+            <summary>
+            Returns/Sets the automatic pop delay timer.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalTooltips.ReshowDelay">
+            <summary>
+            Returns/Sets the reshow delay timer.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalTooltips.ToolTip">
+            <summary>
+            Returns the single common control's tool tips instance.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.OnPop(PPJ.Runtime.Windows.ToolTips.ToolTipEventArgs)">
+            <summary>
+            Send SAM_TooltipClose when the tool tip is closed.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.OnAutoPop(System.Object,System.EventArgs)">
+            <summary>
+            Automatically pop the tool tip after the specified timeout.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.OnReshow(System.Object,System.EventArgs)">
+            <summary>
+            Resets the reshow flag. When this times elapses, the next tool tip will wait for the show timer.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.OnShowTip(System.Object,System.EventArgs)">
+            <summary>
+            Sends SAM_TooltipSetText to show the tool tip after the initial delay.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.OnMouseEnter(System.Windows.Forms.Message@)">
+            <summary>
+            The mouse has entered a control.
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.OnMouseLeave(System.Windows.Forms.Message@)">
+            <summary>
+            The mouse has left a control.
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTooltips.OnMouseMove(System.Windows.Forms.Message@)">
+            <summary>
+            Process WM_MOUSEMOVE messages to any control to detect
+            when the mouse enters or leaves a control.
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalTransparentText">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTransparentText.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalTransparentText.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalVSplitter">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.FromHandle(PPJ.Runtime.SalWindowHandle)">
+            <summary>
+            Returns the control associated with the handle.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.op_Explicit(PPJ.Runtime.SalWindowHandle)~PPJ.Runtime.XSal.XSalVSplitter">
+            <summary>
+            Fully qualified expressions operator.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalVSplitter.LeftControl">
+            <summary>
+            Returns/Sets the control bound to the left split panel.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.XSal.XSalVSplitter.RightControl">
+            <summary>
+            Returns/Sets the control bound to the right split panel.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.SetLeftFrame(System.Windows.Forms.Control)">
+            <summary>
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.SetRightFrame(System.Windows.Forms.Control)">
+            <summary>
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.GetLeftFrame">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitter.GetRightFrame">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalVSplitterInvisible">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitterInvisible.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalVSplitterInvisible.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalZip">
+            <summary>
+            Implementation class for XSalZip functionality.
+            Uses the SharpZipLib library dynamically linked using late bind calls.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.OpenArchive(System.String)">
+            <summary>
+            Opens a zip archive for reading and returns an instance of ZipInputStream.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.CreateArchive(System.String)">
+            <summary>
+            Creates a new zip archive for writing.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.FindFirstEntry(System.Object)">
+            <summary>
+            Returns the first ZipEntry in the archive and resets the internal index to 0.
+            </summary>
+            <param name="zipArchive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.FindNextEntry(System.Object)">
+            <summary>
+            Returns the next ZipEntry in the archive and increases the internal index.
+            </summary>
+            <param name="zipArchive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.FindEntry(System.Object,System.String)">
+            <summary>
+            Returns the requested ZipEntry in the archive.
+            </summary>
+            <param name="zipArchive"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetCurrentEntry(System.Object)">
+            <summary>
+            Returns the current ZipEntry in the archive.
+            </summary>
+            <param name="zipArchive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetZipEntryName(System.Object)">
+            <summary>
+            Returns the file name of the zip entry.
+            </summary>
+            <param name="zipEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetZipEntryComment(System.Object)">
+            <summary>
+            Returns the comment of the zip entry.
+            </summary>
+            <param name="zipEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetZipEntryDateTime(System.Object)">
+            <summary>
+            Returns the date/time of the zip entry.
+            </summary>
+            <param name="zipEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetZipEntryCompressedSize(System.Object)">
+            <summary>
+            Returns the compressed size of the zip entry.
+            </summary>
+            <param name="zipEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetZipEntryUncompressedSize(System.Object)">
+            <summary>
+            Returns the uncompressed size of the zip entry.
+            </summary>
+            <param name="zipEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetZipEntryFileIndex(System.Object)">
+            <summary>
+            Returns the file index.
+            </summary>
+            <param name="zipEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.CreateZipEntry(System.Object,System.String,System.DateTime,System.String,System.Int32)">
+            <summary>
+            Creates a new zip entry in the zip archive.
+            </summary>
+            <param name="zipOutput"></param>
+            <param name="name"></param>
+            <param name="date"></param>
+            <param name="comment"></param>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.WriteZipEntry(System.Object,System.Byte[],System.Int32)">
+            <summary>
+            Writes the specified number of bytes to the currently open zip entry in the zip archive.
+            </summary>
+            <param name="zipOutput"></param>
+            <param name="buffer"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.ReadZipEntry(System.Object,System.Byte[],System.Int32)">
+            <summary>
+            Reads the specified number of bytes from the currently open zip entry.
+            </summary>
+            <param name="zipArchive"></param>
+            <param name="buffer"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.OpenCurrentZipEntry(System.Object)">
+            <summary>
+            Opens the current zip entry for reading.
+            </summary>
+            <param name="zipArchive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.CloseCurrentZipEntry(System.Object)">
+            <summary>
+            Closes the current zip entry.
+            </summary>
+            <param name="zipObject"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.CloseArchive(System.Object)">
+            <summary>
+            Closes the current zip archive.
+            </summary>
+            <param name="zipObject"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.Close(System.Object,System.Boolean)">
+            <summary>
+            Closes any zip object.
+            </summary>
+            <param name="zipObject"></param>
+            <param name="archive"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.Compress(System.Byte[],System.Int32,System.Int32,System.IO.Stream,System.Int32)">
+            <summary>
+            Compresses the buffer into the output string.
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+            <param name="output"></param>
+            <param name="level"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.Uncompress(System.Byte[],System.Int32,System.Int32,System.IO.Stream)">
+            <summary>
+            Uncompresses the buffer to the output stream.
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+            <param name="output"></param>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetInflaterStream(System.IO.Stream)">
+            <summary>
+            Returns an InflaterInputStream.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetDeflaterStream(System.IO.Stream,System.Int32)">
+            <summary>
+            Returns an DelfaterInputStream.
+            </summary>
+            <param name="output"></param>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.XSal.XSalZip.GetZipType(System.String)">
+            <summary>
+            Returns the requested type from the ZipLib library.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.XSal.XSalZip.ZipArchive">
+            <summary>
+            Contains an instance of a ZipFile and the current index to a ZipEntry in the archive.
+            </summary>
+        </member>
+    </members>
+</doc>

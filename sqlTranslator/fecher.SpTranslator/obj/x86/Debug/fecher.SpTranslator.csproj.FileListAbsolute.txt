@@ -1,0 +1,7 @@
+D:\Projekte\Test\sqlTranslator\bin\Debug\fecher.SpTranslator.dll
+D:\Projekte\Test\sqlTranslator\bin\Debug\fecher.SpTranslator.pdb
+D:\Projekte\Test\sqlTranslator\fecher.SpTranslator\obj\x86\Debug\fecher.SpTranslator.csproj.AssemblyReference.cache
+D:\Projekte\Test\sqlTranslator\fecher.SpTranslator\obj\x86\Debug\fecher.SpTranslator.csproj.CoreCompileInputs.cache
+D:\Projekte\Test\sqlTranslator\fecher.SpTranslator\obj\x86\Debug\fecher.S.A18DA9C2.Up2Date
+D:\Projekte\Test\sqlTranslator\fecher.SpTranslator\obj\x86\Debug\fecher.SpTranslator.dll
+D:\Projekte\Test\sqlTranslator\fecher.SpTranslator\obj\x86\Debug\fecher.SpTranslator.pdb

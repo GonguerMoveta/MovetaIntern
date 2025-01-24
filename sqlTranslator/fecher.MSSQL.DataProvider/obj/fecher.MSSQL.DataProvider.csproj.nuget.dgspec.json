@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\fecher.MSSQL.DataProvider.csproj": {}
+  },
+  "projects": {
+    "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj",
+        "projectName": "fecher.Common",
+        "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj",
+        "packagesPath": "C:\\Users\\rhenneboehle\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rhenneboehle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\PPJ-Framework.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\IceTeaGroup\\PPJ\\Framework\\2023\\nuget\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\fecher.MSSQL.DataProvider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\fecher.MSSQL.DataProvider.csproj",
+        "projectName": "fecher.MSSQL.DataProvider",
+        "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\fecher.MSSQL.DataProvider.csproj",
+        "packagesPath": "C:\\Users\\rhenneboehle\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rhenneboehle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\PPJ-Framework.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\IceTeaGroup\\PPJ\\Framework\\2023\\nuget\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj": {
+                "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj"
+              },
+              "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\fecher.SqlTranslator.csproj": {
+                "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\fecher.SqlTranslator.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\fecher.SqlTranslator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\fecher.SqlTranslator.csproj",
+        "projectName": "fecher.SqlTranslator",
+        "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\fecher.SqlTranslator.csproj",
+        "packagesPath": "C:\\Users\\rhenneboehle\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rhenneboehle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\PPJ-Framework.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\IceTeaGroup\\PPJ\\Framework\\2023\\nuget\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj": {
+                "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4559 @@
+SELECT StNr
+				FROM Standort
+				WHERE KZEigeneFiliale = 'J'
+;				
+
+						
+SELECT Wert, Text 
+							FROM System 
+							WHERE (Para LIKE 'ST_%')																		
+;							
+				
+Select Posnr, VkPreis, Gesamtpreis, Menge, KZUmsStornoRueck, QAufNr, QKundNr, KZBestErfRabatt, Datum, Uhrzeit, RabattBetrag 
+			FROM RDXPosition 
+;
+				
+						
+SELECT BETRAG 
+						FROM ZAHLUNG
+
+;
+
+SELECT KAS_KASSENNR, 1 
+					FROM SYSADM.KASSEN  
+					WHERE ((KAS_KZ_ANGMELDET = 'J') OR (KAS_KZ_ANGMELDET = 'Z'))
+;
+
+
+SELECT Bonkopfzeile1, Bonkopfzeile2, Bonkopfzeile3, Bonkopfzeile4 
+					FROM Standort 
+					WHERE KZEigeneFiliale = 'J'
+;					
+						
+SELECT TextNr, ZeilenNr, Text1, Text2 
+					FROM LiefZahlungsbed 
+					ORDER BY 1, 2 
+;	
+
+SELECT absatzweg,  stnr,  unternehmen,  markt,  bez,  strasse,  plz,  ort,  telnr,  kurzwahl,  fibukassenkonto,  kostenstelle,  anzverkaufskassen,  bonkopfzeile1,  bonkopfzeile2,  bonkopfzeile3,  kzeigenefiliale,  bonkopfzeile4,  sapkassennr,  sapbuchungkreisnr,  sapbelegart,  sapwaehrungschl,  sapkostensteing,  sapbuchschleing,  sapbuchschlausg,  qkdnr,  poolnr_f_spesen_be,land,faxnr 
+					FROM Standort 
+					WHERE kzeigenefiliale = 'J'
+;	
+SELECT text1, text2  
+					                FROM liefzahlungsbed 
+					                WHERE textnr = 190
+;					
+					
+SELECT text1,  text2  
+					FROM liefzahlungsbed 
+					WHERE textnr = 191
+;						
+				
+Select Posnr, VkPreis, Gesamtpreis, Menge, KZUmsStornoRueck, QAufNr, QKundNr, KZBestErfRabatt, Datum, Uhrzeit, RabattBetrag 
+			FROM RDXPosition 
+;
+					
+SELECT Bonkopfzeile1, Bonkopfzeile2, Bonkopfzeile3, Bonkopfzeile4 
+					FROM Standort 
+					WHERE KZEigeneFiliale = 'J'
+;									
+						
+SELECT TextNr, ZeilenNr, Text1, Text2 
+					FROM LiefZahlungsbed 
+					ORDER BY 1, 2 
+;	
+SELECT ZAHLUNGSMITTELNR 
+						FROM SYSADM.Zahlungsmittel 
+						WHERE Zahlungsmittelart='B'
+;						
+
+SELECT BUG_TERMINALNR,BUG_TERMINALNR_EXT 
+					FROM SYSADM.BUCHGELDTERMINAL  
+					WHERE (BUG_STATUS != 'G') OR (BUG_STATUS IS NULL) 
+;
+							
+SELECT KAS_KASSENNR,KAS_UMSATZ_RDX_DLZ 
+					FROM SYSADM.KASSEN  
+					WHERE ((KAS_STATUS != 'G') OR (KAS_STATUS IS NULL)) AND (KAS_KASSENNR > 0) AND (KAS_KASSENNR < 99) 
+					ORDER BY KAS_KASSENNR 
+;
+
+SELECT F10_TASTE 
+					FROM SYSADM.SYSTEMEINSTELLUNG
+;
+
+SELECT userid 
+				FROM benutzer 
+				WHERE login='AGENTUR'
+;			
+				
+
+SELECT StNr 
+			FROM Standort
+			WHERE KZEigeneFiliale = 'J'
+;
+
+SELECT RABATTNR, RABATTBEZ,KASSENTEXT,PROZSATZGANZZAHLIG, GUELTIGAB,GUELTIGBIS 
+					FROM SYSADM.RABATT 
+					WHERE (KZBEARBEITUNG = 'S')  
+					ORDER BY ANZEIGEREIHENFOLGE
+;
+
+SELECT stnr, markt, unternehmen, absatzweg 
+			FROM standort 
+			WHERE kzeigenefiliale='J' 
+;
+
+Select ZAHLUNGSMITTELNR, ZAHLUNGSMITTELART 
+						from SYSADM.ZAHLUNGSMITTEL 
+						where ZAHLUNGSMITTELART = 'B' or ZAHLUNGSMITTELART = 'R' or ZAHLUNGSMITTELART = 'X' 
+						order by ZAHLUNGSMITTELART
+;
+
+Select VKIMBUJOURN  
+						from SYSADM.SYSTEMEINSTELLUNG 
+						where KASSENNR = 0
+;
+
+
+SELECT BETRAG,@DECODE(KASSENTAG,NULL,1-1-01,KASSENTAG) 
+						FROM ZMITTELBESTAND
+;
+
+SELECT SYSDATE
+						FROM MWST
+;
+
+SELECT VOP_POSNR,VOP_VORGANGSNR,VOP_KASSENTAG,VOP_KASSENNR,VOP_VK_PREIS 
+						FROM VORGANGSPOSITION 
+						WHERE   VOP_KZ_AUSWEICHNR='J' AND ((VOP_POSNR_ORIG=0) OR (VOP_POSNR_ORIG IS NULL)) 
+						ORDER BY VOP_KASSENTAG, VOP_KASSENNR, VOP_VORGANGSNR
+;
+SELECT text1, text2 
+						FROM LIEFZAHLUNGSBED 
+						WHERE TEXTNR = 192
+;
+
+SELECT KAS_KASSENNR
+						FROM KASSEN 
+					  WHERE (KAS_STATUS<>'G' OR KAS_STATUS IS NULL) AND (KAS_KASSENNR NOT IN (0,99))
+;
+
+SELECT ERLOESABFUHRDETAIL 
+						FROM SYSTEMEINSTELLUNG
+;						
+
+SELECT BETRAG,BETRAG_FW,@DECODE(KASSENTAG,NULL,1-1-01,KASSENTAG) 
+						FROM ZMITTELBESTAND
+;
+
+SELECT BETRAG,BETRAG_FW 
+						FROM ZAHLUNG
+;
+
+SELECT BEZKURZ 
+						FROM SYSADM.ZAHLUNGSMITTEL 
+						WHERE ZAHLUNGSMITTELART = 'B'																																	
+;
+
+
+SELECT VOP_POSNR, VOP_ARTIKELBEZ, VOP_KASSENNR,  VOP_KASSENTAG, VOP_VORGANGSNR, VOP_VK_PREIS,VOP_VORGANGSZNR, VOP_KZ_POSITIONART,VOP_MENGE,VOP_VK_PREIS,VOP_VK_POSITION,VOP_NACHLASSBETRAG,VOP_MWSTPROZENT,VOP_NACHLASSPROZ,VOP_RABATTNR1,VOP_RABATTBETRAG1,VOP_RABATTPOSBON1,VOP_RABATTNR2,VOP_RABATTBETRAG2,VOP_RABATTPOSBON2,VOP_ARTIKELBEZ,VOP_WG,VOP_WUG,VOP_EST_POSITION,VOP_MSP, VOP_KZ_MSP,VOP_KZ_MW,VOP_KZ_AUSWEICHNR,VOP_SOFORTID,VOP_KZ_PROVISION,VOP_KZ_VERGUETFAEH,VOP_KZ_EARTVKPREIS,VOP_KZ_EARTPOSNR, VOP_KZ_RABAUSWERT1,VOP_KZ_RABAUSWERT2,VOP_KZ_UEBERNAUS,VOP_ZUSATZBEZ 
+						FROM VORGANGSPOSITION 
+						WHERE (VOP_KZ_AUSWEICHNR='J') AND (VOP_POSNR_ORIG IS NULL)
+;
+
+SELECT SUM ( @decode ( buchungsart , '59/0' ,wert , 0 ) ) - SUM ( @decode ( buchungsart , '95/1' ,wert , 0 ) ) 
+					FROM BUJOURNAL 
+					WHERE @datetochar(datum, 'yyyy-MM-dd') = @datetochar(datum, '1999-12-12');
+
+SELECT sum( @NULLVALUE(ubarvk,0) ), sum( @NULLVALUE(ukreditvk,0) ) 
+					FROM dvaguwgt 
+					WHERE @datetochar( datum, 'yyyy-MM-dd' ) = @datetochar( datum, '1999-12-12' )
+;
+
+SELECT uprov, unprov, urat, uanz 
+					FROM dvaguprovt 
+					WHERE @datetochar( datum, 'yyyy-MM-dd' ) = @datetochar( datum, '1999-12-12' )
+;
+
+SELECT sum( @NULLVALUE(kreditsaldo,0) ) 
+					FROM Kreditkopf
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE (VorgangsArt = '  1  ')
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE (VorgangsArt = '  1 ')
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE (VorgangsArt = '  1  ') OR (VorgangsArt = '  1  ')
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE VorgangsArt = '  1  '
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE VorgangsArt = '  1  '
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE VorgangsArt = '  1  '
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE VorgangsArt = '  1  '
+;
+
+SELECT SUM( @NULLVALUE( Gutschrift, 0) - @NULLVALUE( Belastung, 0)) 
+					FROM KreditKtnbewegung 
+					WHERE VorgangsArt = '  1  '
+;
+
+SELECT SUM( @NULLVALUE( Anzahlungssaldo, 0)) 
+					FROM Kreditkopf
+;
+
+
+SELECT  wg, SUM( @NULLVALUE(vkag,0) ), SUM( @NULLVALUE(estag,0) ) 
+					FROM dvblwgut 
+					WHERE   @datetochar(datum,'yyyy-MM') =@datetochar( datum,'2000 - 11') AND warenart=0 
+					GROUP BY wg
+;
+
+SELECT  wg, SUM( @NULLVALUE(vkag,0) ), SUM( @NULLVALUE(estag,0) ) 
+					FROM dvblwgut 
+					WHERE @datetochar( datum, 'yyyy-MM-dd') <= @datetochar( datum,'2000 - 11 - 11') AND @datetochar( datum, 'yyyy-MM-dd') >= @datetochar( datum,'2000 - 11 - 11' ) AND warenart=1 
+					GROUP BY wg
+;
+
+SELECT  wg, SUM( @NULLVALUE(vkag,0) ), SUM( @NULLVALUE(estag,0) ) 
+					FROM dvblwgut 
+					WHERE @datetochar(datum,'yyyy-MM') =@datetochar(datum,'2000 - 11') AND warenart=1 
+					GROUP BY wg
+;
+
+SELECT  wg, SUM( @NULLVALUE(vkag,0) ), SUM( @NULLVALUE(estag,0) ) 
+					FROM dvblwgut 
+					WHERE   @datetochar(datum,'yyyy-MM-dd') <= @datetochar( datum, '2000 - 11 - 11') AND @datetochar(datum,'yyyy-MM-dd') >= @datetochar( datum, '2000 - 11 - 11') AND warenart=0 
+					GROUP BY wg
+;
+SELECT wg, SUM ( @NULLVALUE(menge,0) * @NULLVALUE(vkpreis,0) ) 
+					FROM bujournal 
+					WHERE buchungsart ='50/1' AND @datetochar( datum,'yyyy-MM') = @datetochar(datum,'2000 - 11') 
+					GROUP BY wg
+;
+SELECT wg, SUM ( @NULLVALUE(menge,0) * @NULLVALUE(vkpreis,0) ) 
+					FROM bujournal 
+					WHERE buchungsart = '05/1' AND @datetochar( datum,'yyyy-MM') = @datetochar(datum,'2000 - 11') 
+					GROUP BY wg
+;
+SELECT wg, SUM ( @NULLVALUE(ubarvk,0) ), SUM ( @NULLVALUE(ubarest,0) ), SUM ( @NULLVALUE(ukreditvk,0) ), SUM ( @NULLVALUE(ukreditest,0) ) 
+					FROM dvaguwgt 
+					WHERE @datetochar( datum,'yyyy-MM') = @datetochar(datum,'2000 - 11') 
+					GROUP BY wg
+;
+
+SELECT wg, SUM ( @NULLVALUE(ubarvk,0) ), SUM ( @NULLVALUE(ubarest,0) ), SUM ( @NULLVALUE(ukreditvk,0) ), SUM ( @NULLVALUE(ukreditest,0) ) 
+					FROM dvaguwgt 
+					WHERE @datetochar( datum,'yyyy-MM-dd') <= @datetochar(datum, '2000 - 11 - 11') AND @datetochar( datum,'yyyy-MM-dd')  >= @datetochar(datum, '2000 - 11 - 11') 
+					GROUP BY wg
+;
+
+SELECT SUM ( @decode ( buchungsart , '59/0' ,wert , 0 ) ) - SUM ( @decode ( buchungsart , '95/1' ,wert , 0 ) ) 
+					FROM BUJOURNAL 
+					WHERE @datetochar(datum, 'yyyy-MM-dd') = @datetochar(datum, '2000 - 11 - 11')
+;
+SELECT SUM ( anzbon ) 
+					FROM dvtfgubon 
+					WHERE  @datetochar(datum, 'yyyy-MM-dd') = @datetochar(datum, '2000-11-11')
+;
+
+SELECT  sum( abschriften ), wg 
+					FROM dvabtkzvwg 
+					WHERE   kzverursacher LIKE 'A' AND @datetochar( datum, 'yyyy-MM') = @datetochar( datum, '2000-11' ) 
+					GROUP by wg
+;
+
+SELECT  sum( abschriften ), wg 
+					FROM dvabtkzvwg 
+					WHERE   kzverursacher LIKE 'Z' AND @datetochar( datum, 'yyyy-MM') = @datetochar(datum, '2000-11') 
+					GROUP by wg
+;
+SELECT  sum( abschriften ), wg 
+					FROM dvabtkzvwg 
+					WHERE   kzverursacher LIKE 'A' AND @datetochar( datum, 'yyyy-MM-dd') <= @datetochar( datum, '2000-11-11') AND @datetochar( datum, 'yyyy-MM-dd') >= @datetochar( datum, '2000-11-11' ) 
+					GROUP by wg
+;
+
+SELECT  sum ( abschriften ), wg 
+					FROM dvabtkzvwg 
+					WHERE kzverursacher LIKE 'Z' AND @datetochar( datum, 'yyyy-MM-dd') <= @datetochar( datum, '2000-11-11' ) AND @datetochar( datum, 'yyyy-MM-dd') >= @datetochar( datum, '2000-11-11' ) 
+					GROUP by wg
+;
+SELECT  wg, SUM ( @decode ( buchungsart , '65/3' , @NULLVALUE(menge,0) * @NULLVALUE(vkpreis,0) ,  0 ) ), SUM ( @decode ( buchungsart , '56/3' , @NULLVALUE(menge,0) * @NULLVALUE(vkpreis,0) ,  0 ) ) 
+					FROM bujournal 
+					WHERE @datetochar( datum, 'yyyy-MM-dd') >= ( '2000-11-11') AND buchungsart IN ( '65/3', '56/3' ) 
+					GROUP BY 1 
+					ORDER BY 1
+;
+
+SELECT @NULLVALUE(KORREKTUREN_GJ,0) 
+					FROM DVBKORRWGJ 
+					WHERE JAHR = 1999 AND WG= 11
+;
+
+SELECT wg, bezugsnr, SUM ( @decode ( buchungsart , '95/0' , wert , '05/2' ,wert,'05/1',wert, '95/8',wert,  '95/7',wert,'05/0',wert, 0 ) ) , SUM ( @decode ( buchungsart , '95/0' , menge*est , '05/2' ,menge*est,'05/1',menge*est, '95/8',menge*est, '95/7',menge*est, '05/0',menge*est, 0 ) ), SUM ( @decode ( buchungsart , '50/2' , wert , '50/1' ,wert,'50/0',wert,'59/1', wert, '59/8',wert,'59/7',wert, 0 ) ) , SUM ( @decode ( buchungsart , '50/2' , menge*est , '50/1' ,menge*est,'50/0',menge*est,'59/1', menge*est, '59/8',menge*est,  '59/7',menge*est, 0 ) ) , SUM ( @decode ( buchungsart , '95/0' , menge*est , '25/0' ,menge*est,'05/2',menge*est, '05/1',menge*est, '95/8',menge*est, '95/7',menge*est,'05/0',menge*est, '95/1',menge*est, '25/1',menge*est, 0 ) ), SUM ( @decode ( buchungsart , '95/0' , wert , '25/0' ,wert,'05/2',wert, '05/1',wert,  '95/8',wert,'95/7',wert,'05/0',wert, '95/1',wert, '25/1',wert, 0 ) ), SUM ( @decode ( buchungsart , '50/2' , wert , '50/1' ,wert,'59/0',wert, '52/0',wert , '50/0',wert , '59/1',wert , '52/1',wert ,'59/8',wert , '59/7',wert , 0) ), SUM ( @decode ( buchungsart , '50/2' , menge*est , '50/1' ,menge*est,'59/0',menge*est, '52/0',menge*est , '50/0',menge*est , '59/1',menge*est , '52/1',menge*est ,'59/8',menge*est , '59/7',menge*est , 0) ) 
+					FROM bujournal 
+					WHERE @datetochar( datum, 'yyyy-MM-dd') = @datetochar(datum, '2000-11-11') AND buchungsart IN ( '50/2', '50/1', '50/0', '05/2', '05/1', '05/0', '59/1', '59/8', '59/7', '95/0', '95/8', '95/7', '95/1', '59/0', '25/0', '25/1', '52/1', '52/0' ) 
+					GROUP BY wg,bezugsnr
+;
+SELECT DISTINCT mwst, wg, rabattnr1 
+					FROM statjournal 
+					WHERE  @DATETOCHAR( zeit, 'yyyy-MM-dd' ) =  @DATETOCHAR( datum, '2000-11-11' ) AND @UPPER(vorgangstyp) NOT LIKE 'EZ' AND @UPPER(vorgangsart)  IN ( 'V', 'R', 'S' ) AND rabattnr1 IS NOT NULL AND wg IS NOT NULL AND mwst IS NOT NULL 
+					ORDER BY wg, mwst, rabattnr1 
+;
+
+SELECT rabatt 
+					FROM dvlturwt 
+					WHERE monatskenner = 11 AND mwst = 11 AND wg = 11 AND rabattnr = 11
+;
+
+SELECT DISTINCT mwst, wg, rabattnr2 
+					FROM statjournal 
+					WHERE  @DATETOCHAR(zeit, 'yyyy.mm.dd' ) =  @DATETOCHAR( zeit, '2000.11.11' ) AND @UPPER(vorgangstyp) NOT LIKE  'EZ' AND @UPPER(vorgangsart)  IN ( 'V', 'R', 'S' ) AND rabattnr2 IS NOT NULL AND wg IS NOT NULL AND mwst IS NOT NULL 
+					ORDER BY wg, mwst, rabattnr2
+;
+SELECT rabatt 
+					FROM dvlturwt 
+					WHERE monatskenner = 11 AND mwst = 11 AND wg = 11 AND rabattnr = 11
+;
+					
+SELECT monatskenner 
+					FROM dvlturwt 
+					WHERE monatskenner = 11 AND mwst = 11  AND wg = 11 AND rabattnr = 11
+;
+SELECT wg, SUM ( @decode ( buchungsart , '59/0' , @NULLVALUE(menge,0) * @NULLVALUE(est,0), 0 ) ) , SUM ( @decode ( buchungsart , '59/0' ,wert , 0 ) ), SUM ( @decode ( buchungsart , '95/1' , @NULLVALUE(menge,0) * @NULLVALUE(est,0), 0 ) ) , SUM ( @decode ( buchungsart , '95/1' ,wert , 0 ) ) 
+					FROM BUJOURNAL 
+					WHERE @datetochar(datum, 'yyyy-MM') = @datetochar(datum, '2000-11') AND kzverursacher = 'A' AND buchungsart IN (  '59/0', '95/1' ) 
+					GROUP BY WG 
+					ORDER BY WG
+;
+
+SELECT wg, SUM ( @decode ( buchungsart , '59/0' , @NULLVALUE(menge,0) * @NULLVALUE(est,0) , 0 ) ) , SUM ( @decode ( buchungsart , '59/0' , wert , 0 ) ), SUM ( @decode ( buchungsart , '95/1' , @NULLVALUE(menge,0) * @NULLVALUE(est,0) , 0 ) ) , SUM ( @decode ( buchungsart , '95/1' , wert, 0 ) ) 
+					FROM BUJOURNAL 
+					WHERE @datetochar(datum, 'yyyy-MM') = @datetochar(datum, '2000-11') AND kzverursacher = 'Z' AND buchungsart IN (  '59/0', '95/1' ) 
+					GROUP BY WG 
+					ORDER BY WG
+;
+
+
+SELECT *  
+					FROM dvaguprovt  
+					WHERE @datetochar( datum, 'yyyy-MM-dd' ) = @datetochar( datum, '2000-11-11' )
+;
+
+SELECT  sta.ort, sta.bez, sta.stnr, sta.plz, sys.text 
+					FROM  standort sta, system sys 
+					WHERE sta.kzeigenefiliale ='J' AND sys.wert=@STRING(sta.absatzweg,0)
+;
+SELECT pdnr,kzentstehung,buchungsdatum,wg,posnr,wog,bezeichnung,vkalt,vkneu,menge,differenz,abschrift,kzverursacher, bemerkung 
+					FROM preisdiffjournal  
+					WHERE buchungsdatum=  '11/11/2000'
+;
+
+SELECT posnr 
+					FROM inventurvorgang 
+					WHERE @DATETOCHAR( inventurvorgang.datum, 'yyyy.mm.dd' ) = @DATETOCHAR(  inventurvorgang.datum, '2000.11.11' ) AND fachnummer IS NOT NULL AND vgnummer IS NOT NULL AND( kennung_korrektur = 'M' OR kennung_korrektur = 'P' OR kennung_nacherf ='J')
+;
+
+SELECT Wert
+					FROM SYSTEM
+;
+
+select wert 
+					from sysadm.system
+					where para = 'BBACKUP'
+;
+
+SELECT SchnstNr,Prioritaet,Inhalt 
+					FROM SchnstVerarb 
+					WHERE KZAktion ='  100  ' 
+					ORDER BY SchnstNr
+;
+
+SELECT SchnstNr,Prioritaet,Inhalt 
+					FROM SchnstVerarb 
+					WHERE Hierarchie <> 'LOKAL' AND SchnstNr = 10
+;
+
+SELECT wg, sum ( abschrift ) 
+					FROM preisdiffjournal 
+					WHERE  @datetochar(buchungsdatum, 'yyyy-MM-dd') =@datetochar( buchungsdatum, '2000-11-11' ) 
+					GROUP BY wg 
+					ORDER BY wg
+;
+
+SELECT SUM(@NULLVALUE(UGELISTET_GJ,0)) 
+					FROM SYSADM.DVLTUWGM 
+					WHERE WG = 1 AND MONATSKENNER= 1
+;
+
+SELECT SUM(@NULLVALUE(UPOOL_GJ,0)) 
+					FROM SYSADM.DVLTUWGM 
+					WHERE WG = 1 AND MONATSKENNER= 1
+;
+SELECT i.aktionsnr, i.aktionsbez, i.gueltigvon, i.gueltigbis,@LEFT(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),2) || '.' ||@MID(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),2,3) ||'.' ||@MID(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),5,3) ||' ' ||@RIGHT(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),1), i.posbez, i.menge, i.vkalt, i.vkneu,@REPEAT('0',4-@LENGTH(@STRING(i.seitennr,0))) || @STRING(i.seitennr,0) || ' / ' ||@REPEAT('0',2-@LENGTH(@STRING(i.bildnr,0))) || @STRING(i.bildnr,0) 
+					FROM preisaenderinfo i, position p, warengruppe w 
+					WHERE (i.posnr = p.posnr) and (p.warennr = w.warennr) 
+					ORDER BY i.aktionsnr asc, w.wog, p.warennr, i.posnr asc
+;
+
+SELECT Absatzweg, Markt, Unternehmen, StNr 
+					FROM Standort 
+					WHERE KZEigeneFiliale = 'J'
+;
+
+SELECT  max(kassentag)  
+					FROM zmittelbestand
+;
+SELECT  max(kassentag)  
+					FROM  zmittelbestand
+					WHERE kassennr = 99
+;
+
+SELECT Min( BEL_KASSENTAG ) 
+					FROM Belege 
+					WHERE BEL_DRUCKERTYP < 110
+;
+
+SELECT BEL_VORGANGSNR,  BEL_KASSENTAG,  BEL_KASSENNR,  BEL_BELEGNR,  BEL_BELEGTEXT 
+					FROM BELEGE 
+					WHERE BEL_DRUCKERTYP < 110 AND BEL_KASSENTAG = '11/11/2000' 
+					ORDER BY BEL_KASSENTAG, BEL_KASSENNR, BEL_BELEGNR, BEL_VORGANGSNR 
+;
+
+SELECT QAufNr, LieferantenNr, Status 
+					FROM AvisoKopf 
+					WHERE (KZAenderung = 'A')
+;
+
+SELECT Sortierfeld, Text1, Text2 
+					FROM infoliste  
+					ORDER BY Sortierfeld
+;
+
+SELECT *  
+					FROM preisaenderinfo
+;
+
+SELECT *  
+					FROM aenderprotokoll  
+					WHERE @UPPER(kzprotokoll) = 'B'
+;
+SELECT i.aktionsnr, i.aktionsbez, i.gueltigvon, i.gueltigbis,@LEFT(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),2) || '.' ||@MID(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),2,3) ||'.' ||@MID(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),5,3) ||' ' ||@RIGHT(@REPEAT('0',9-@LENGTH(@STRING(i.posnr,0))) || @STRING(i.posnr,0),1), i.posbez, i.menge, i.vkalt, i.vkneu,@REPEAT('0',4-@LENGTH(@STRING(i.seitennr,0))) || @STRING(i.seitennr,0) || ' / ' ||@REPEAT('0',2-@LENGTH(@STRING(i.bildnr,0))) || @STRING(i.bildnr,0) 
+					FROM preisaenderinfo i, position p, warengruppe w 
+					WHERE (i.posnr = p.posnr) and (p.warennr = w.warennr) 
+					ORDER BY i.aktionsnr asc, w.wog, p.warennr, i.posnr asc
+;
+
+SELECT Absatzweg, Markt, Unternehmen, StNr 
+					FROM Standort 
+					WHERE KZEigeneFiliale = 'J'
+;
+
+SELECT  max(kassentag)  
+					FROM zmittelbestand
+;
+SELECT  max(kassentag)  
+					FROM  zmittelbestand
+					WHERE kassennr = 99
+;
+
+SELECT Min( BEL_KASSENTAG ) 
+					FROM Belege 
+					WHERE BEL_DRUCKERTYP < 110
+;
+
+SELECT BEL_VORGANGSNR,  BEL_KASSENTAG,  BEL_KASSENNR,  BEL_BELEGNR,  BEL_BELEGTEXT 
+					FROM BELEGE 
+					WHERE BEL_DRUCKERTYP < 110 AND BEL_KASSENTAG = '11/11/2001'
+					ORDER BY BEL_KASSENTAG, BEL_KASSENNR, BEL_BELEGNR, BEL_VORGANGSNR 
+;
+SELECT QAufNr, LieferantenNr, Status 
+					FROM AvisoKopf 
+					WHERE (KZAenderung = 'a')
+;
+
+SELECT Sortierfeld, Text1, Text2 
+					FROM infoliste  
+					ORDER BY Sortierfeld
+;
+
+SELECT *  
+					FROM preisaenderinfo
+;
+
+SELECT *  
+					FROM aenderprotokoll  
+					WHERE @UPPER(kzprotokoll) = 'A' 
+;
+
+SELECT datum  
+					FROM dvagltft 
+					WHERE Datum = '11/11/2001'
+;
+SELECT  
+			persnalnr,kzentstehung,buchungsdatum,wg,posnr,wog,bezeichnung,vkalt,vkneu,menge,differenz,abschrift,kzverursacher,bemerkung, vorgangnr, kassanr 
+					FROM preisdiffjournal 
+					WHERE buchungsdatum=  '11/11/2001'   
+					ORDER BY 6,4,2,5
+;
+
+SELECT  sta.ort, sta.bez, sta.stnr, sta.plz, sys.text 
+					FROM  standort sta, system sys 
+					WHERE sta.kzeigenefiliale ='J' AND sys.wert=@STRING(sta.absatzweg,0)
+;
+SELECT pdnr,kzentstehung,buchungsdatum,wg,posnr,wog,bezeichnung,vkalt,vkneu,menge,differenz,abschrift,kzverursacher, bemerkung 
+					FROM preisdiffjournal  
+					WHERE buchungsdatum=  '11/11/2001'
+;
+
+SELECT Wert
+					FROM SYSTEM
+;
+
+select wert 
+					from sysadm.system
+					where para = 'BBACKUP'
+;
+
+SELECT SchnstNr,Prioritaet,Inhalt 
+					FROM SchnstVerarb 
+					WHERE KZAktion =' TAB  ' 
+					ORDER BY SchnstNr
+;
+
+SELECT SchnstNr,Prioritaet,Inhalt 
+					FROM SchnstVerarb 
+					WHERE Hierarchie <> 'LOKAL' AND SchnstNr = 1
+;
+
+SELECT wg, sum ( abschrift ) 
+					FROM preisdiffjournal 
+					WHERE  @datetochar(buchungsdatum, 'yyyy-MM-dd') =@datetochar(buchungsdatum, '2000-11-11') 
+					GROUP BY wg 
+					ORDER BY wg
+;
+
+SELECT SUM(@NULLVALUE(UGELISTET_GJ,0)) 
+					FROM SYSADM.DVLTUWGM 
+					WHERE WG = 1 AND MONATSKENNER= 1
+;
+
+SELECT SUM(@NULLVALUE(UPOOL_GJ,0)) 
+					FROM SYSADM.DVLTUWGM 
+					WHERE WG = 1 AND MONATSKENNER= 1
+;
+SELECT * 
+					FROM Avisokopf K, Avisopositionen S 
+					WHERE((S.KZAenderung = '  1  ') OR  (K.KZAenderung = ' 1 ')) AND (K.QAufNr = S.QAufNr(+))
+;
+
+SELECT * 
+					FROM Avisokopf K, Avisopositionen S 
+					WHERE ((S.KZAenderung = ' 1  ') OR (K.KZAenderung = '  1 ')) AND (K.QAufNr = S.QAufNr(+))
+;
+
+SELECT * 
+					FROM Avisokopf  
+					WHERE (KZAenderung = '  DEL  ')
+;
+
+SELECT QAufNr 
+					FROM Avisokopf 
+					WHERE KZAenderung = '  DEL  '
+;
+
+SELECT * 
+					FROM Avisopositionen  
+					WHERE (KZAenderung = '  DEL  ')
+;
+
+SELECT QAufNr
+					FROM AvisoKopf 
+;
+
+SELECT * 
+					FROM InfoListe
+;
+
+SELECT StNr, Markt
+					FROM Standort
+					WHERE KZEigeneFiliale = 'J'
+;
+SELECT Bu_Art, FortPool, FortGel 
+					FROM InvFortSchr WHERE AG = 'J' OR SOVT = 'J'
+;
+
+SELECT @DECODE( vorgangsart, 'V', '53/0', '', '53/0', 'S', '35/1', 'R', '35/0', 'XX/X'), @VALUE( @REPEAT( '0', 2-@LENGTH( @STRING( kassennr, 0))) || @STRING( kassennr, 0) || @REPEAT( '0', 4-@LENGTH( @STRING( kassenvorgangsnr, 0))) || @STRING( kassenvorgangsnr, 0)), QKundNr, S.PosNr, P.Text1, VerkaeuferNr, VKKassaFEinzel, Datum, EST, WG, menge, kzmsp 
+					FROM statjournal s, position p 
+					WHERE s.posnr = p.posnr AND vorgangstyp not like 'EZ' AND zeit BETWEEN '10/10/2000' AND '11/11/2001'
+;
+
+
+SELECT  standort.bez, stnr, plz, ort, system.text 
+					FROM standort, system 
+				  WHERE  @UPPER (kzeigenefiliale )  LIKE 'J' AND system.wert = @STRING(standort.absatzweg, 0)
+;
+SELECT Menge 
+					FROM InventurVorgang  
+					WHERE (VgNummer = 1) AND (Zeit < '11/11/2001') 
+					ORDER BY Zeit DESC
+;
+SELECT * 
+					FROM Position
+					WHERE @YEARNO( SaisonZuordJahr) = 2000
+;
+
+SELECT KreditNr, BezugsNr, KreditSaldo, Ratenhoehe 
+					FROM KreditKopf 
+					WHERE (KreditKopf.KreditStatus = 1) AND (Zahlungsart = 1) AND (Abschlussdatum <= '11/11/2001')
+;
+
+SELECT SUM( Gutschrift)  
+					FROM KreditKtnBewegung 
+					WHERE (KreditNr = '100') AND (BezugsNr = '100') AND (@DATETOCHAR( Datum, 'YYYYMM') = @DATETOCHAR( Datum, '200011')) AND (VorgangsArt = '  a  ')
+;
+
+SELECT SchnStNr, Trennzeichen 
+					FROM SchnStKopf 
+					WHERE SchnStBez = 'Headersatz'
+;
+SELECT MsgID  
+					FROM GeleseneMail
+;
+
+Select AktionNr 
+					FROM AktionKopf 
+					WHERE (GueltigBis <='11/11/2001')
+;
+
+SELECT @NULLVALUE(StNr,0)
+					FROM Standort
+					WHERE KZEigeneFiliale = 'J'
+;
+SELECT LetzteUebertragWo  
+					FROM SchnStKopf
+					WHERE (SchnStNr = 'R09')
+;
+			
+SELECT posnr
+					FROM Aktionstamm
+;
+SELECT avisowe.qaufnr, avisowe.posnr,avisowe.seitenzeilennr, max(avisowe.wedatum) 
+					FROM avisowe, avisopositionen 
+					WHERE avisopositionen.qaufnr = avisowe.qaufnr AND avisopositionen.posnr = avisowe.posnr  AND avisopositionen.seitenzeilennr =  avisowe.seitenzeilennr AND (avisopositionen.bverbmenge >= avisopositionen.menge OR avisopositionen.kzspitzenausgl = 'J') 
+					GROUP BY avisowe.qaufnr, avisowe.posnr, avisowe.seitenzeilennr 
+					HAVING max(avisowe.wedatum) < 11/11/2001
+					ORDER BY avisowe.qaufnr
+;
+
+SELECT K.AktionNr, K.GueltigVon, K.GueltigBis, K.Bez, S.VKPreis, S.BildNr, S.SeitenNr 
+					FROM AktionStamm S, AktionKopf K 
+					WHERE (S.AktionNr = K.AktionNr) AND (S.PosNr = 11) 
+					ORDER BY K.GueltigVon ASC, S.VKPreis ASC
+;
+
+SELECT WOG
+					FROM Warengruppe 
+					WHERE WarenNr = 11
+;
+
+SELECT WOG, WarenNr  
+					FROM Warengruppe  
+					ORDER BY WarenNr
+;
+
+SELECT AktNr 
+					FROM Nummernkreise  
+					WHERE NrKreis = 'PD'
+
+;
+
+SELECT AktNr
+					FROM Nummernkreise  
+					WHERE NrKreis = 'BJ'
+;
+SELECT PosNr, Text1, PAeBuchMenge, VKPreis, WarenNr, ESTPreis, MSP 
+					FROM Position 
+					WHERE PAeBuchDatum BETWEEN 10/10/2000 AND 11/11/2001
+;
+SELECT userid 
+					FROM benutzer 
+					WHERE login='  Int.GetSelItem(SERVICE)  '
+;
+
+SELECT modulid 
+					FROM rechte 
+					WHERE userid=  2 AND modulid=   2
+;
+
+SELECT MAX(rechtpos) 
+					FROM aktion 
+					WHERE modulid=1
+;
+
+SELECT MAX(rechtpos)
+					FROM menue 
+					WHERE modulid=1
+;
+SELECT MAX(rechtpos)
+					FROM objekt 
+					WHERE modulid=1
+;
+SELECT userid 
+					FROM benutzer 
+					WHERE login='  Int.GetSelItem(SERVICE)  '
+;
+
+SELECT modulid 
+					FROM module 
+					WHERE modulbez='  ARTIKEL  '
+;
+
+SELECT MAX(rechtpos)
+					FROM aktion 
+					WHERE modulid=2
+;
+SELECT MAX(rechtpos)
+					FROM menue 
+					WHERE modulid=2
+;
+
+SELECT MAX(rechtpos)
+					FROM objekt 
+					WHERE modulid=2
+;
+SELECT login 
+					FROM benutzer 
+					WHERE login= 'SERVICE'  AND userid <> 2
+;
+
+SELECT persnr 
+					FROM benutzer 
+					WHERE persnr=780911 AND userid <> 2
+;
+SELECT gruppenr 
+					FROM benutzer 
+					WHERE login= 'SERVICE'
+;
+SELECT passwort 
+					FROM benutzer 
+					WHERE login='SERVICE' AND passwort='123'
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE kzgruppe='J' AND (kzsuperbenutzer <> 'J' OR kzsuperbenutzer IS NULL) AND login <> 'TFG' AND login <> 'LECLOU' AND login <> 'SOVT'
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE kzgruppe='J' AND (kzsuperbenutzer <> 'J' OR kzsuperbenutzer IS NULL) AND login <> '  locals.sNotValue1  ' AND login <> '  locals.sNotValue2  '
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE kzgruppe='J' AND login <> '  locals.sNotValue1  ' AND login <> '  locals.sNotValue2  '
+;
+
+SELECT persnr 
+					FROM benutzer 
+					WHERE gruppenr IS NULL AND (kzsuperbenutzer <> 'J' OR kzsuperbenutzer IS NULL) AND persnr IS NOT NULL AND kzgruppe='N'
+;
+
+SELECT persnr 
+					FROM benutzer 
+					WHERE gruppenr IS NULL AND persnr IS NOT NULL AND kzgruppe='N'
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE gruppenr IS NULL AND (kzsuperbenutzer <> 'J' OR kzsuperbenutzer IS NULL) AND login IS NOT NULL AND kzgruppe='N'
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE gruppenr IS NULL AND login IS NOT NULL AND kzgruppe='N'
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='  Int.GetSelItem(lbGruppen)  '
+;
+
+SELECT modulid 
+					FROM module
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='  Int.GetSelItem(lbGruppen)  '
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='  Int.GetSelItem(hWndTmp)  '
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE persnr= 123
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='SERVICE'
+;
+
+SELECT persnr 
+					FROM benutzer 
+					WHERE persnr IS NOT NULL AND gruppenr =(SELECT userid 
+										FROM benutzer 
+										WHERE login='  Int.GetSelItem(1)  ')
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE login IS NOT NULL AND gruppenr =(SELECT userid 
+										FROM benutzer 
+										WHERE login='  Int.GetSelItem(1)  ')
+;
+
+SELECT kzsuperbenutzer 
+					FROM benutzer 
+					WHERE login='  Int.GetSelItem(1)  '
+;
+
+SELECT modulbez 
+					FROM module 
+					WHERE modulid  IN(SELECT rechte.modulid 
+										FROM rechte, benutzer  
+										WHERE rechte.userid=benutzer.userid AND benutzer.login='  Int.GetSelItem(1)  ')
+;
+
+SELECT modulbez 
+					FROM module 
+					WHERE modulid NOT IN(SELECT rechte.modulid 
+										FROM rechte, benutzer  
+										WHERE rechte.userid=benutzer.userid AND benutzer.login='  Int.GetSelItem(1)  ')
+;
+
+SELECT persnr,login,kzsuperbenutzer,gruppenr,vorname,nachname 
+					FROM benutzer 
+					WHERE benutzer.login='  Int.GetSelItem(1)  '
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE userid=  1
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='  Int.GetSelItem(1)  '
+;
+
+SELECT benutzer.persnr, benutzer.login, benutzer.kzsuperbenutzer, '', benutzer.vorname, benutzer.nachname 
+					FROM benutzer 
+					WHERE benutzer.login='  Int.GetSelItem(1)  '
+;
+SELECT WOG, WarenNr  
+					FROM Warengruppe  
+					ORDER BY WarenNr;
+
+
+SELECT @NULLVALUE(StNr,0)
+					FROM Standort
+					WHERE KZEigeneFiliale = 'J'
+;
+
+SELECT SUM( @NULLVALUE( T.Gutschrift, 0) - @NULLVALUE( T.Belastung, 0)), Vorgangsart 
+					FROM KreditKtnBewegung T, KreditKopf K 
+					WHERE T.KreditNr = K.KreditNr AND T.BezugsNr = K.BezugsNr AND (( K.KreditStatus =   1  ) OR ( K.KreditStatus =   1  ) OR ( K.KreditStatus =   1 )) AND K.Auslagerungsdatum < 10/10/2000
+					GROUP BY Vorgangsart
+;
+
+SELECT LetzteUebertragWo  
+					FROM SchnStKopf
+					WHERE (SchnStNr = 'R09')
+;
+			
+SELECT retoure.LSkennung ||'@'|| retoure.Retourennr  
+					FROM retoure
+;
+
+SELECT avisowe.qaufnr, avisowe.posnr,avisowe.seitenzeilennr, max(avisowe.wedatum) 
+					FROM avisowe, avisopositionen 
+					WHERE avisopositionen.qaufnr = avisowe.qaufnr AND avisopositionen.posnr = avisowe.posnr  AND avisopositionen.seitenzeilennr =  avisowe.seitenzeilennr AND (avisopositionen.bverbmenge >= avisopositionen.menge OR avisopositionen.kzspitzenausgl = 'J') 
+					GROUP BY avisowe.qaufnr, avisowe.posnr, avisowe.seitenzeilennr 
+					HAVING max(avisowe.wedatum) < 10/10/2000 
+					ORDER BY avisowe.qaufnr
+;
+
+SELECT K.AktionNr, K.GueltigVon, K.GueltigBis, K.Bez, S.VKPreis, S.BildNr, S.SeitenNr 
+					FROM AktionStamm S, AktionKopf K 
+					WHERE (S.AktionNr = K.AktionNr) AND (S.PosNr = 1) 
+					ORDER BY K.GueltigVon ASC, S.VKPreis ASC
+;
+
+SELECT WOG
+					FROM Warengruppe 
+					WHERE WarenNr = 1
+;
+
+SELECT WOG, WarenNr  
+					FROM Warengruppe  
+					ORDER BY WarenNr
+;
+SELECT kzsuperbenutzer, userid 
+					FROM benutzer 
+					WHERE login='S'
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE login='  SERVICE  '
+;
+
+SELECT MAX(userid)
+					FROM benutzer
+;
+
+SELECT kzsuperbenutzer 
+					FROM benutzer 
+					WHERE login='  SERVICE  '
+;
+
+SELECT modulid 
+					FROM module
+;
+
+SELECT aktionrechte, objektrechte, menuerechte 
+					FROM benutzer, rechte 
+					WHERE login='  SERVICE  ' AND benutzer.userid=rechte.userid AND kzgruppe='J' AND modulid=  1
+;
+
+SELECT login 
+					FROM benutzer 
+					WHERE login='SERVICE'
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.persnr=  111122
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.login='  TFG  '
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.kzgruppe='J' AND benutzer.login=' tfg '
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE persnr=111122
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='TFG'
+;
+
+SELECT rechte.Menuerechte 
+					FROM rechte 
+					WHERE modulid=1 AND userid=1
+;
+
+SELECT rechtpos 
+					FROM Menue 
+					WHERE Menuebez='Verkaufskassa_Menu_Funktionen_Aconto' AND modulid=1
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.persnr=  111122
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.login='  TFG  '
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.kzgruppe='J' AND benutzer.login='  TFG)  '
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE persnr=111122
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='TFG'
+;
+
+SELECT userid 
+				FROM benutzer 
+				WHERE login='  TFG  '
+;
+
+SELECT rechte.Objektrechte 
+					FROM rechte 
+					WHERE modulid=1 AND userid=1
+;
+
+SELECT rechtpos 
+					FROM Objekt 
+					WHERE Objektbez='Positionserfassung_Schaltfläche_Nachlaß' AND modulid=4
+;
+
+SELECT passwort 
+					FROM benutzer 
+					WHERE login='TFG' AND passwort IS NULL
+;
+
+SELECT passwort 
+					FROM benutzer 
+					WHERE login='TFG' AND passwort='HBJOFP'
+;
+
+
+SELECT COUNT(BezugsNr) 
+					FROM Kunde 
+					WHERE BezugsNr = 0
+;
+
+SELECT Vorname1, Nachname, GebDat1, Plz 
+					FROM Kunde 
+					WHERE Vorname1 = 'agentur' AND Nachname = 'Agentur' AND GebDat1 = '10/10/2000' AND Plz = 1
+;
+
+SELECT Wert, Text 
+					FROM System 
+					WHERE(Para LIKE 'ST_%')
+;
+
+SELECT Absatzweg 
+					FROM Standort 
+					WHERE KZEigeneFiliale = '  j  '
+;
+
+SELECT Wert 
+					FROM System 
+					WHERE Para = '  batch  '
+;
+
+SELECT offenerRahmen, Kreditsaldo, Kreditstatus, Ablaufdatum 
+					FROM KreditKopf 
+					WHERE KreditNr = 1 AND BezugsNr = 1
+;
+
+SELECT Faelligkeitsdatum 
+					FROM KreditFaelligkeit 
+					WHERE KreditNr = 1 AND BezugsNr = 1 AND Betrag - Bezahlt > 0 
+					ORDER BY Faelligkeitsdatum
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.persnr=  111122
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.login='  TFG  '
+;
+
+SELECT module.modulbez 
+					FROM module, rechte, benutzer 
+					WHERE module.modulid=rechte.modulid AND rechte.userid=benutzer.userid AND benutzer.kzgruppe='J' AND benutzer.login='  TFG  '
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE persnr= 111122
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login= 'TFG'
+;
+
+SELECT rechte.aktionrechte 
+					FROM rechte 
+					WHERE modulid=1
+;
+
+SELECT kzsuperbenutzer 
+					FROM benutzer 
+					WHERE login='  TFG  ' AND kzgruppe='J'
+;
+
+SELECT persnr 
+					FROM benutzer 
+					WHERE persnr=  111122
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='  TFG  ' AND kzgruppe='J'
+;
+
+SELECT kzsuperbenutzer 
+					FROM benutzer 
+					WHERE login='  TFG  '
+;
+
+SELECT modulid 
+					FROM module
+;
+
+SELECT aktionrechte, objektrechte, menuerechte 
+					FROM benutzer, rechte 
+					WHERE login='  TFG  ' AND benutzer.userid=rechte.userid AND kzgruppe='J' AND modulid=  1
+;
+SELECT SUM( Belastung ) 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = 1
+;
+
+SELECT SUM( Gutschrift ) 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = 1
+;
+
+SELECT kreditnr 
+					FROM kreditkopf 
+					WHERE bezugsnr=1 AND kreditnr=  1
+;
+
+SELECT KreditNr, qkundnr, Zahlungsart, offenerrahmen, Ratenhoehe, @CHOOSE(@INT(kreditsaldo*10), @IF(kreditsaldo, NULL, kreditsaldo), kreditsaldo), @CHOOSE(@INT(kreditsaldo*10), @IF(kreditsaldo, @ABS(kreditsaldo), NULL), NULL), @CHOOSE(Kreditstatus,NULL,'abgelaufen', 'erledigt', 'storniert/ausgeglichen', 'abgetreten', 'offen'), kreditsaldo, Ablaufdatum 
+					FROM Kreditkopf, kunde 
+					WHERE KreditNr = 1 AND kreditkopf.BezugsNr = 1 AND kreditkopf.bezugsnr=1 
+					ORDER BY KreditNr ASC
+;
+
+SELECT KreditNr, qkundnr, Zahlungsart, offenerrahmen, Ratenhoehe, @CHOOSE(@INT(kreditsaldo*10), @IF(kreditsaldo, NULL, kreditsaldo), kreditsaldo), @CHOOSE(@INT(kreditsaldo*10), @IF(kreditsaldo, @ABS(kreditsaldo), NULL), NULL), @CHOOSE(Kreditstatus,NULL,'abgelaufen', 'erledigt', 'storniert/ausgeglichen', 'abgetreten', 'offen'), kreditsaldo, ablaufdatum 
+					FROM Kreditkopf, kunde 
+					WHERE kreditkopf.BezugsNr = 1 AND (Kreditstatus =   1 OR ((kreditstatus = 2 OR kreditstatus = 3 ) AND(offenerrahmen > 0 OR kreditsaldo <> 0))) AND   kreditkopf.bezugsnr=kunde.bezugsnr 
+					ORDER BY KreditNr ASC
+;
+
+SELECT KreditNr, qkundnr, Zahlungsart, offenerrahmen, Ratenhoehe, @CHOOSE(@INT(kreditsaldo*10), @IF(kreditsaldo, NULL, kreditsaldo), kreditsaldo), @CHOOSE(@INT(kreditsaldo*10), @IF(kreditsaldo, @ABS(kreditsaldo), NULL), NULL), @CHOOSE(Kreditstatus,NULL,'abgelaufen', 'erledigt', 'storniert/ausgeglichen', 'abgetreten', 'offen'), kreditsaldo, Ablaufdatum 
+					FROM Kreditkopf, kunde 
+					WHERE kreditkopf.BezugsNr = 1 AND kunde.bezugsnr=kreditkopf.bezugsnr 
+					ORDER BY KreditNr ASC
+;
+
+SELECT faelligkeitsdatum, (betrag - bezahlt) 
+					FROM kreditfaelligkeit, kreditkopf 
+					WHERE kreditkopf.kreditnr=  1 AND kreditkopf.bezugsnr=kreditfaelligkeit.bezugsnr AND kreditkopf.kreditnr=kreditfaelligkeit.kreditnr AND faelligkeitsdatum <= 10/10/2000 AND (Betrag - Bezahlt) > 0 
+					ORDER BY faelligkeitsdatum ASC
+;
+
+SELECT faelligkeitsdatum, ( betrag - bezahlt ) 
+					FROM kreditfaelligkeit, kreditkopf 
+					WHERE kreditkopf.kreditnr=  1 AND kreditkopf.bezugsnr=kreditfaelligkeit.bezugsnr AND kreditkopf.kreditnr=kreditfaelligkeit.kreditnr AND faelligkeitsdatum > 10/10/1990 AND (Betrag - Bezahlt ) > 0
+;
+
+
+SELECT UmsatzAktjahr  
+					FROM Kunde  
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT UmsatzVorjahr  
+					FROM Kunde
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT UmsatzVorvorjahr  
+					FROM Kunde
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT RueckAktjahr  
+					FROM Kunde  
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT RueckVorjahr  
+					FROM Kunde  
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT RueckVorvorjahr  
+					FROM Kunde  
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT VVW_MODUL, VVW_VERSIONSNR, VVW_VERSION_APL, VVW_ICON, VVW_EXE_NAME, VVW_BESCHREIBUNG 
+					FROM SYSADM.VERSVERW 
+					WHERE VVW_MODUL= 'ACONTO'
+;
+
+SELECT VVD_VERSIONSNR, VVD_AEND_GRUND, VVD_NAME_PROGRAM 
+					FROM SYSADM.VERSVERWDET 
+					WHERE VVD_MODUL = 'ACONTO'
+					ORDER BY VVD_VERSIONSNR
+;
+
+SELECT COUNT(BezugsNr) 
+					FROM Kunde 
+					WHERE BezugsNr = 1
+;
+
+SELECT * 
+					FROM Kundenart 
+					WHERE KurzBez= 'EB'
+;
+
+SELECT GruppeId
+					FROM  Kundenart 
+					WHERE KurzBez= 'EB'
+;
+
+SELECT * 
+					FROM Kundenart  
+					WHERE KurzBez='EB'
+;
+
+SELECT * 
+					FROM anrede 
+					WHERE Anrede='FRAU'
+;
+
+SELECT AnredeId
+					FROM Anrede 
+					WHERE Anrede='FRAU'
+;
+
+SELECT COUNT(BezugsNr) 
+					FROM Kunde 
+					WHERE BezugsNr = 1
+;
+
+SELECT Count(*) 
+					FROM Kunde 
+					WHERE BezugsNr = 1
+;
+
+SELECT AufPos.BezugsNr 
+					FROM AufPos, Kunde 
+					WHERE AufPos.BezugsNr = Kunde.BezugsNr AND Kunde.BezugsNr = 1
+;
+
+
+SELECT Abtretungsfrist 
+					FROM Ratenkaufkondit 
+					WHERE Gueltigab <= 10/10/2000
+					ORDER BY Gueltigab DESC
+;
+
+select report, lfdrepnr
+					from repreports 
+					where bezeichnung = 'Kundenübersichtsblatt'
+;
+
+select lfdnr, bezeichnung
+					from repyourself 
+					where report = 'klmueber'
+;
+
+select report, bezeichnung
+					from repreports 
+					where lfdrepnr = 413
+;
+
+select typ, inputitem
+					from repinput 
+					where lfdrepnr = 413 order by lfdnr
+;
+SELECT AufPos.AufPosID, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ), AufPos.Zusatz, Position.Text1, AufPos.VKPreis, AufPos.Menge, AufPos.Fehlmenge, AufPos.Status, @IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum, AufPos.LSNr, @DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun, AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = 1
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT buchungsart 
+					FROM bujournal 
+					WHERE @UPPER(buchungsart) = '51/1'
+;
+
+SELECT kundennr 
+					FROM bujournal 
+					WHERE kundennr = 92624295
+;
+
+SELECT posnr 
+					FROM bujournal 
+					WHERE posnr = 3325081
+;
+
+SELECT auftrbeleglsbonnr 
+					FROM bujournal 
+					WHERE auftrbeleglsbonnr = 11722048
+;
+
+
+
+SELECT Kundenart.GruppeId 
+					FROM Kundenart 
+					WHERE Kundenart.KurzBez LIKE( 'SO')
+;
+
+SELECT Ratenhoehe, Ratenanzahl, Kreditrahmen, offenerRahmen 
+					FROM Kreditkopf 
+					WHERE BezugsNr = 1 AND KreditNr = 1
+;
+
+SELECT @DECODE(vorgangsart,'VK', 'Verkauf','VKS', 'Verkaufsstorno','Z', 'Zinsen','ZGS', 'Zinsgutschrift','RN', 'Rücknahme','ANZ', 'Anzahlung','EIN', 'Krediteinzahlung','AUS', 'Auszahlung'), Datum, Belastung, Gutschrift 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = 1 AND Kreditkopf.KreditNr = KreditKtnbewegung.KreditNr 
+					ORDER BY Datum ASC
+;
+
+SELECT SUM( Belastung ) 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = 1 AND Kreditkopf.KreditNr = KreditKtnbewegung.KreditNr
+;
+
+SELECT SUM( gutschrift ) 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = 1 AND Kreditkopf.KreditNr = KreditKtnbewegung.KreditNr
+;
+
+SELECT @DECODE(vorgangsart,'VK', 'Verkauf','VKS', 'Verkaufsstorno','Z', 'Zinsen','ZGS', 'Zinsgutschrift','RN', 'Rücknahme','ANZ', 'Anzahlung','EIN', 'Krediteinzahlung','AUS', 'Auszahlung'), Datum, Belastung, Gutschrift 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = KreditKtnbewegung.KreditNr AND Kreditsaldo > 0 
+					ORDER BY Datum ASC
+;
+
+SELECT SUM( Belastung ) 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = KreditKtnbewegung.KreditNr AND Kreditsaldo > 0
+;
+
+SELECT SUM( Gutschrift ) 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = KreditKtnbewegung.KreditNr AND Kreditsaldo > 0
+;
+
+SELECT @DECODE(vorgangsart, 'VK', 'Verkauf', 'VKS', 'Verkaufsstorno', 'Z', 'Zinsen', 'ZGS', 'Zinsgutschrift', 'RN', 'Rücknahme', 'ANZ', 'Anzahlung', 'EIN', 'Krediteinzahlung', 'AUS', 'Auszahlung'), Datum, Belastung,Gutschrift 
+					FROM Kreditkopf, KreditKtnbewegung 
+					WHERE Kreditkopf.BezugsNr = 1 AND Kreditkopf.KreditNr = KreditKtnbewegung.KreditNr 
+					ORDER BY Datum ASC
+;
+
+SELECT Kunde.rowid, Kunde.BezugsNr, Kunde.QKundNr, Kunde.Nachname, Kunde.Vorname1, Kunde.Benachrichtigung, Kunde.Telephon, Kunde.Telefax 
+					FROM Kunde 
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT @DECODE(Aufpos.Status, '','3','A','7','E','9','G','1','L','6','N','4','S','5','U','2','V','8',Aufpos.Status), AufPos.AufPosID, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ),  AufPos.Zusatz,Position.Text1, AufPos.VKPreis,AufPos.Menge, AufPos.Fehlmenge,AufPos.Status,@IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum, AufPos.LSNr, @DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun, AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr AND AufPos.Annahmeverweigerun NOT LIKE( 'W') AND AufPos.Mitteilung NOT LIKE( 'J') AND AufPos.Status NOT LIKE( 'E') 
+					ORDER BY 1 ASC, AufPos.EingangsDatum DESC
+;
+
+SELECT Position.PosNr,Text1,Vkpreis,BestV,BestRes,BestU,BestNV 
+					FROM Position 
+					WHERE Position.PosNr = 5918
+;
+
+SELECT AufPos.AufPosID,AufPos.BezugsNr,Kunde.QKundNr,Kunde.Nachname,AufPos.VKPreis,AufPos.Menge,AufPos.Fehlmenge,AufPos.Status,@IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')),AufPos.EingangsDatum,@IF(@ISNA(AufPos.Liefernachname),' ','J'),AufPos.LSNr, AufPos.Bemerkung,@DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr),AufPos.Annahmeverweigerun, AufPos.EingangsNr,Position.PosNr 
+					FROM AufPos, Position, Kunde 
+					WHERE AufPos.PosNr = 1 AND Kunde.BezugsNr = AufPos.BezugsNr AND AufPos.PosNr = Position.PosNr AND (AufPos.Status LIKE('') OR AufPos.Status LIKE('N') OR AufPos.Status LIKE('L') OR AufPos.Status LIKE('U') OR AufPos.Status LIKE('G')) 
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT Kunde.rowid, Kunde.BezugsNr, Kunde.QKundNr, Kunde.Nachname,Kunde.Vorname1, Kunde.Benachrichtigung,Kunde.Telephon,Kunde.Telefax 
+					FROM Kunde 
+					WHERE Kunde.BezugsNr = 1
+;
+
+SELECT @DECODE(Aufpos.Status, '','3','A','7','E','9','G','1','L','6','N','4','S','5','U','2','V','8',Aufpos.Status), AufPos.AufPosID, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ), AufPos.Zusatz, Position.Text1, AufPos.VKPreis, AufPos.Menge, AufPos.Fehlmenge, AufPos.Status, @IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum, AufPos.LSNr, @DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun, AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr AND AufPos.Annahmeverweigerun NOT LIKE( 'W') AND AufPos.Mitteilung NOT LIKE( 'J') AND AufPos.Status NOT LIKE( 'E') 
+					ORDER BY  1 ASC, AufPos.EingangsDatum DESC
+;
+
+SELECT AufPos.AufPosID,AufPos.BezugsNr,Kunde.QKundNr,Kunde.Nachname,AufPos.VKPreis,AufPos.Menge,AufPos.Fehlmenge,AufPos.Status,@IF(@ISNA(AufPos.Liefertermin),AufPos.Lieferdatum,@DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')),AufPos.EingangsDatum,@IF(@ISNA(AufPos.Liefernachname),' ','J'),AufPos.LSNr,AufPos.Bemerkung,@DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr),AufPos.Annahmeverweigerun,AufPos.EingangsNr,Position.PosNr 
+					FROM AufPos, Position, Kunde 
+					WHERE AufPos.PosNr = 1 AND Kunde.BezugsNr = AufPos.BezugsNr AND AufPos.PosNr = Position.PosNr AND (AufPos.Status LIKE('') OR  AufPos.Status LIKE('N') OR  AufPos.Status LIKE('L') OR  AufPos.Status LIKE('U') OR AufPos.Status LIKE('G')) 
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT @DECODE(Aufpos.Status, '','3','A','7','E','9','G','1','L','6','N','4','S','5','U','2','V','8',Aufpos.Status), AufPos.AufPosID, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ), AufPos.Zusatz, Position.Text1, AufPos.VKPreis, AufPos.Menge, AufPos.Fehlmenge, AufPos.Status, @IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum, AufPos.LSNr, @DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun, AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr AND AufPos.Annahmeverweigerun NOT LIKE( 'W') AND AufPos.Mitteilung NOT LIKE( 'J') AND AufPos.Status NOT LIKE( 'E') 
+					ORDER BY  1 ASC, AufPos.EingangsDatum DESC
+;
+
+SELECT @DECODE(Aufpos.Status, '','3','A','7','E','9','G','1','L','6','N','4','S','5','U','2','V','8',Aufpos.Status), AufPos.AufPosID, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ), AufPos.Zusatz, Position.Text1, AufPos.VKPreis, AufPos.Menge, AufPos.Fehlmenge, AufPos.Status, @IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum, AufPos.LSNr, @DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun, AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr AND AufPos.Annahmeverweigerun NOT LIKE( 'W') AND AufPos.Mitteilung NOT LIKE( 'J') AND AufPos.Status NOT LIKE( 'E') 
+					ORDER BY  1 ASC, AufPos.EingangsDatum DESC
+;
+
+SELECT KZDirektzusteller  
+					FROM Position  
+					WHERE Position.PosNr = 5918
+;
+
+SELECT KZWarenart  
+					FROM Position  
+					WHERE Position.PosNr = 6918
+;
+
+SELECT BestRES  
+					FROM Position  
+					WHERE Position.PosNr = 5918
+;
+
+SELECT KZWarenart  
+					FROM Position, AufPos  
+					WHERE Position.PosNr = 5918 AND Position.PosNr = AufPos.PosNr AND AufPos.BezugsNr = 1 AND AufPos.AufPosID = 1 AND AufPos.EingangsDatum = 1 AND AufPos.EingangsNr = 1
+;
+
+SELECT Liefernachname  
+					FROM AufPos  
+					WHERE AufPos.AufPosID = 1 AND AufPos.BezugsNr = 1 AND AufPos.EingangsDatum = 1 AND AufPos.EingangsNr = 1 AND AufPos.PosNr = 1
+;
+
+SELECT BestRES  
+					FROM Position  
+					WHERE Position.PosNr = 5918
+;
+
+SELECT COUNT(*) 
+					FROM  AufPos
+				  WHERE AufPos.BezugsNr = 1  AND(AufPos.Status = 'V' OR AufPos.Status = 'S' OR AufPos.Status = 'W' OR AufPos.Status = 'A')  AND NOT @NULLVALUE(ANNAHMEVERWEIGERUN,' ' ) = 'W' AND NOT @NULLVALUE(MITTEILUNG,' ' ) = 'J'   
+;
+
+SELECT LIEFERTERMIN, ANNAHMEVERWEIGERUN 
+					FROM AUFPOS 
+					WHERE POSNR = 1 AND EINGANGSDATUM = 10/10/2000 AND EINGANGSNR = 1 AND AUFPOSID = 1 AND BEZUGSNR = 1
+;
+
+SELECT COUNT(*) 
+					FROM Kunde, Kundenart, Anrede 
+					WHERE Kunde.GruppeId = Kundenart.GruppeId AND Kunde.AnredeId = Anrede.AnredeId AND Kunde.BezugsNr = 0
+;
+
+SELECT Position.PosNr,Text1,Vkpreis,BestV,BestRes,BestU,BestNV 
+					FROM Position 
+					WHERE Position.PosNr = 5918
+;
+
+SELECT AufPos.AufPosID,AufPos.BezugsNr,Kunde.QKundNr,Kunde.Nachname,AufPos.VKPreis,AufPos.Menge,AufPos.Fehlmenge,AufPos.Status,@IF(@ISNA(AufPos.Liefertermin),AufPos.Lieferdatum,@DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')),AufPos.EingangsDatum,@IF(@ISNA(AufPos.Liefernachname),' ','J'), AufPos.LSNr,AufPos.Bemerkung,@DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr),AufPos.Annahmeverweigerun,AufPos.EingangsNr,Position.PosNr 
+					FROM AufPos, Position, Kunde 
+					WHERE AufPos.PosNr = 1 AND Kunde.BezugsNr = 0 AND AufPos.PosNr = 1 AND (AufPos.Status LIKE('') OR AufPos.Status LIKE('N') OR AufPos.Status LIKE('L') OR AufPos.Status LIKE('U') OR AufPos.Status LIKE('G')) 
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT AufPos.AufPosID, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ), AufPos.Zusatz,Position.Text1,AufPos.VKPreis,AufPos.Menge, AufPos.Fehlmenge,AufPos.Status,@IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum,AufPos.LSNr,@DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun,AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr 
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT @DECODE(Aufpos.Status, '','3','A','7','E','9','G','1','L','6','N','4','S','5','U','2','V','8',Aufpos.Status), AufPos.AufPosID,@IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ),AufPos.Zusatz,Position.Text1,AufPos.VKPreis,AufPos.Menge, AufPos.Fehlmenge,AufPos.Status,@IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')),AufPos.EingangsDatum,AufPos.LSNr,@DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun,AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr AND AufPos.Annahmeverweigerun NOT LIKE( 'W') AND AufPos.Mitteilung NOT LIKE( 'J') AND AufPos.Status NOT LIKE( 'E') 
+					ORDER BY  1 ASC, AufPos.Eingangsdatum DESC
+;
+
+SELECT AufPos.AufPosID,@IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ),AufPos.Zusatz,Position.Text1,AufPos.VKPreis,AufPos.Menge,AufPos.Fehlmenge,AufPos.Status,@IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')),AufPos.EingangsDatum,AufPos.LSNr,@DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr),AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun, AufPos.EingangsNr,Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr 
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT AufPos.AufPosID, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000', 7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0), AufPos.Aktionsbuchstabe || @LEFT('000000', 5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR, 0) ), AufPos.Zusatz, Position.Text1, AufPos.VKPreis, AufPos.Menge, AufPos.Fehlmenge,  AufPos.Status, @IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum, AufPos.LSNr, @DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Bemerkung, @IF(@ISNA(AufPos.Liefernachname),'','J'), AufPos.Annahmeverweigerun, AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position 
+					WHERE AufPos.Bezugsnr = 1 AND AufPos.PosNr = Position.PosNr AND AufPos.Annahmeverweigerun NOT LIKE('W') AND AufPos.Mitteilung NOT LIKE( 'J') AND AufPos.Status NOT LIKE( 'E')  
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT    DISTINCT   Position.PosNr, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000',7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR,0), AufPos.Aktionsbuchstabe || @LEFT('000000',5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(AufPos.BNR,0)), Position.Groessenzusatz, Position.Text1 
+					FROM Position, AufPos  
+					WHERE Position.PosNr = AufPos.PosNr  
+;
+
+SELECT    DISTINCT    Position.PosNr, 
+								                                                      AufPos.Aktionsbuchstabe, 
+								                                                      @IF(@ISNA(AufPos.Aktionsbuchstabe), 
+								                                                             @LEFT('000000',7-@LENGTH(@STRING(AufPos.BNR,0))) 
+								                                                                          || @STRING(BNR,0), 
+								                                                             @LEFT('000000',5-@LENGTH(@STRING(AufPos.BNR,0))) 
+								                                                                          || @STRING(BNR,0)), 
+								                                                     Position.Groessenzusatz,  
+								                                                     Position.Text1 
+					FROM Position, AufPos     
+					Where Position.PosNr = AufPos.PosNr   
+
+;
+
+SELECT DISTINCT Position.PosNr, AufPos.Aktionsbuchstabe, @IF(@ISNA(AufPos.Aktionsbuchstabe), @LEFT('000000',7-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(BNR,0), @LEFT('000000',5-@LENGTH(@STRING(AufPos.BNR,0))) || @STRING(BNR,0)), Position.Groessenzusatz, Position.Text1 
+					FROM Position, AufPos  
+					WHERE Position.PosNr = AufPos.PosNr  
+;
+
+SELECT AufPos.AufPosID, AufPos.BezugsNr, Kunde.QKundNr, Kunde.Nachname, AufPos.VKPreis, AufPos.Menge, AufPos.Fehlmenge, AufPos.Status, @IF(@ISNA(AufPos.Liefertermin), AufPos.Lieferdatum, @DATETOCHAR(AufPos.Liefertermin,'dd.mm.yyyy')), AufPos.EingangsDatum, @IF(@ISNA(AufPos.Liefernachname),' ','J'), AufPos.LSNr, AufPos.Bemerkung, @DECODE(AufPos.KreditNr,0,NULL,AufPos.KreditNr), AufPos.Annahmeverweigerun, AufPos.EingangsNr, Position.PosNr 
+					FROM AufPos, Position, Kunde 
+					WHERE AufPos.PosNr = 1 AND Kunde.BezugsNr = AufPos.BezugsNr AND AufPos.PosNr = Position.PosNr AND (AufPos.Status LIKE('') OR AufPos.Status LIKE('N') OR AufPos.Status LIKE('L') OR AufPos.Status LIKE('U') OR AufPos.Status LIKE('G'))
+					ORDER BY AufPos.EingangsDatum DESC
+;
+
+SELECT posnr 
+				   FROM aktionstamm 
+				   WHERE bestellnr=4053505 AND aktionsbuchstabe='' 
+;
+
+SELECT position.posnr 
+				   FROM position, aktionstamm 
+				   WHERE aktionstamm.bestellnr=4053505   AND aktionstamm.posnr=position.posnr AND(bestellgroesse= 0 OR groesse1=  0040 OR groesse2=  0040  ) 
+;
+
+SELECT position.posnr 
+				   FROM position, aktionstamm 
+				   WHERE aktionstamm.bestellnr=  4053505 AND position.posnr=aktionstamm.posnr 
+;
+
+SELECT aktionstamm.bestellnr, aktionstamm.bestellgroesse, @REPEAT('0',7-@LENGTH(@STRING(position.posnr,0)))||@STRING(position.posnr,0), position.text1, @REPEAT('0',3-@LENGTH(@STRING(position.warennr,0)))||@STRING(position.warennr,0), @TRIM(position.groessenzusatz), position.VKPreis 
+				   FROM position, aktionstamm 
+				   WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr= 4053505
+;
+
+SELECT posnr 
+				   FROM position 
+				   WHERE posnr=  5918   
+;
+
+SELECT position.posnr 
+				   FROM position,ean 
+				   WHERE ean.posnr=position.posnr AND ean.eannr=  50936816    
+;
+
+SELECT position.posnr 
+				   FROM position, aktionstamm 
+				   WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr=  4053505  
+;
+
+SELECT aktionstamm.bestellnr, aktionstamm.bestellgroesse, @REPEAT('0',7-@LENGTH(@STRING(position.posnr,0)))||@STRING(position.posnr,0), position.text1, @REPEAT('0',3-@LENGTH(@STRING(position.warennr,0)))||@STRING(position.warennr,0), @TRIM(position.groessenzusatz), position.VKPreis 
+				   FROM position, aktionstamm 
+				   WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr=  4053505
+;
+
+SELECT  KZPositionsart, EstPreis 
+				   FROM position 
+				   WHERE posnr= 5918 
+;
+SELECT verkaeufernr, persnr 
+				   FROM dvmvnrpr, benutzer 
+				   WHERE @STRING(monatskenner,0) LIKE @DATETOCHAR(monatskenner,'200710') AND verkaeufernr IS NOT NULL AND verkaeufernr = persnr 
+				   
+;
+SELECT  wg, bstp, bstg, bstv, bstvv, bstaelt 
+				   FROM dvbstwgm 
+				   WHERE monatskenner= '200710'
+				   ORDER BY wg
+;
+
+SELECT  SUM( bstp ), SUM( bstg ), wg 
+				   FROM dvbstwgm 
+				   WHERE monatskenner  BETWEEN '200710' AND '200712'
+				   GROUP BY wg 
+				   ORDER BY wg
+;
+
+SELECT  SUM( bstg ) 
+				   FROM dvbstwgm 
+				   WHERE monatskenner>=200711 AND wg=99
+;
+
+SELECT  SUM (upool), SUM (ugelistet) 
+				   FROM dvltuwgm 
+				   WHERE monatskenner  BETWEEN '200710' AND '200712' 
+;
+
+SELECT  wg, SUM (upool), SUM (ugelistet) 
+				   FROM dvltuwgm 
+				   WHERE monatskenner BETWEEN '200710' AND '200712'
+				   GROUP BY wg
+;
+
+SELECT  akts.aktionnr, gueltigvon, gueltigbis, bildnr, seitennr 
+				   FROM aktionkopf aktk, aktionstamm akts 
+				   WHERE posnr= 1320407 AND aktk.aktionnr=akts.aktionnr 
+				   ORDER BY gueltigvon desc
+;
+
+SELECT  sta.ort, sta.bez, sta.stnr, sta.plz, sys.text 
+				   FROM standort sta, system sys 
+				   WHERE sta.kzeigenefiliale ='J' AND sys.wert= '2008-05-05'
+;
+
+SELECT wg,bstp,bstg,bstv,bstvv,bstaelt 
+				   FROM dvbstwgm 
+				   WHERE monatskenner='200710' 
+				   ORDER BY wg
+;
+
+SELECT SUM (upool), SUM (ugelistet), wg 
+				   FROM dvltuwgm 
+				   WHERE monatskenner = '200710'
+				   GROUP BY wg 
+				   ORDER BY wg
+;
+SELECT  wg 
+				   FROM dvagretwgt 
+				   WHERE monatskenner BETWEEN @VALUE(@DATETOCHAR(monatskenner,'200710')) AND @VALUE(@DATETOCHAR(monatskenner,'200712')) 
+;
+
+SELECT Trennzeichen, Aktionskenner, KZStdVerarb, SchnStBez 
+				   FROM SchnStKopf 
+				   WHERE SchnstNr = 'A01'
+;
+
+SELECT SchnStFelder.Tabelle, SchnStFelder.Feld, SchnStFelder.FeldBez,SchnStFelder.Typ, SchnStFelder.KZPK, SchnStFelder.FormatString 
+				   FROM SchnStFelder 
+				   WHERE SchnStFelder.SchnStNr = 'A01'
+				   ORDER BY SchnStFelder.FeldNr
+;
+
+SELECT  dvaguwgt.wg, dvaguprovt.datum 
+				   FROM dvaguwgt, dvaguprovt, warengruppe 
+				   WHERE dvaguwgt.wg = warengruppe.warennr AND dvaguwgt.datum  BETWEEN '10/10/2007'  AND '10/10/2007' AND dvaguprovt.datum  BETWEEN 10/10/2007 AND 10/10/2007
+;
+
+SELECT kzsuperbenutzer 
+				   FROM benutzer 
+				   WHERE userid= 1 
+;
+
+SELECT Dateiname   
+				   FROM VersendeMail  
+				   WHERE @Upper( Dateiname) >  '10/10/2000' 
+				   ORDER BY Dateiname
+;
+
+SELECT Text 
+				   FROM System 
+				   WHERE (Para LIKE 'ST_%') AND (Wert = '  0  ')
+;
+
+SELECT Absatzweg 
+				   FROM Standort 
+				   WHERE KZEigeneFiliale = '  j  '
+;
+
+SELECT Wert 
+				   FROM System 
+				   WHERE Para = ' batch  '
+;
+
+
+SELECT StNr  
+				   FROM Standort WHERE Absatzweg = 2
+;
+SELECT  SUM(uprov), SUM(unprov), SUM(uprov), SUM(unprov) 
+						FROM dvaguprovt 
+						WHERE datum  BETWEEN '10/10/2000' AND '10/10/2001'
+;
+
+SELECT R.PosNr, P.Text1, P.VKPreis, (R.Menge-@if(R.Quittiermenge,R.Quittiermenge,0)), G.Bezeichnung, G.RetourengrundNr, R.Bemerkung, P.Lagerortzentrale, R.Erfassdatum 
+						FROM retoure R, position P, retourengrund G, retourekopf K 
+						WHERE P.PosNr = 5918 AND R.KZStorno LIKE 'S' AND R.Retourengrund = G.RetourengrundNr (+) AND P.KZWarenart = G.KZWarenart (+) AND R.LSKennung LIKE 'W' AND K.LSKennung LIKE 'w' AND R.RetourenNr = 20063213 AND K.RetourenNr = 20063347
+;
+
+SELECT R.PosNr, R.Bezeichnung, R.VKPreis, R.Menge, K.Bemerkung, K.Lieferantennr, R.Bemerkung, P.Lagerortzentrale, R.Erfassdatum 
+						FROM retoure R, position P, retourekopf K 
+						WHERE P.PosNr = R.PosNr AND R.LSKennung LIKE 'w' AND K.LSKennung LIKE 'w' AND R.RetourenNr = 20063213 AND K.RetourenNr = 20063347
+						ORDER BY R.Zeilennr
+;		
+				
+SELECT Text1, Text2 
+						FROM Liefzahlungsbed 
+						WHERE TextNr = 30  
+						ORDER BY ZeilenNr
+;
+
+SELECT R.PosNr, R.Bezeichnung, R.EKPreis, R.Menge, K.Bemerkung, K.LieferantenNr, R.Erfassdatum, K.Lieferantenbez, K.StrassehausNr, K.PLZORT 
+						FROM retoure R, position P, retourekopf K 
+						WHERE P.PosNr = R.PosNr AND R.LSKennung LIKE 'w' AND K.LSKennung LIKE 'w' AND R.RetourenNr = 20063213 AND K.RetourenNr = 20063347
+						ORDER BY R.Zeilennr
+;
+
+SELECT PosNr, ARTIKELBez, VKPreis, Menge, AbsatzwegEmpfang, StandortEmpfang, DatumUmlagerung 
+						FROM Umlagerung 
+						WHERE BelegNr =  20102413
+						ORDER BY ZeilenNrUmlagerung
+;
+
+SELECT S.ort, S.bez, S.plz  
+						FROM standort S 
+						WHERE S.Absatzweg = 2 AND S.StNr = 2
+;
+
+SELECT DISTINCT @REPEAT('0',9-@LENGTH(@STRING(Position.PosNr,0))) || @STRING(Position.PosNr,0), Position.Text1, Retoure.Menge, Position.VkPreis, Retoure.Retourengrund, Retourengrund.Bezeichnung, Retoure.Bemerkung, Retoure.LSKennung, Retoure.ZeilenNr, Retoure.RetourenNr, Position.KZPositionsart, Position.EstPreis, Position.WarenNr, Retoure.Quittiermenge, Retoure.RowID 
+						FROM Position, Retoure, Retourengrund 
+						WHERE Position.PosNr = Retoure.PosNr AND Position.KZWarenart = Retourengrund.KZWarenart  AND Retourengrund.RetourengrundNr  = Retoure.Retourengrund AND Retoure.RetourenNr = 20063213 AND Retoure.LSKennung LIKE('R') AND Retoure.KZStorno NOT LIKE('S') 
+						ORDER BY zeilennr
+;
+
+SELECT DISTINCT @REPEAT('0',9-@LENGTH(@STRING(Position.PosNr,0))) || @STRING(Position.PosNr,0), @CHOOSE(Position.KZPositionsart,Position.Text1,Position.Text1,Retoure.Bezeichnung), Retoure.Menge, Retoure.EkPreis, @CHOOSE(Position.KZPositionsart,Position.VkPreis,Position.VKPreis,Retoure.VKPreis), Retoure.Bemerkung, Retoure.LSKennung, Retoure.ZeilenNr, Retoure.RetourenNr, Position.KZPositionsart, Position.WarenNr, Position.EstPreis, Retoure.rowid 
+						FROM Position, Retoure 
+						WHERE Position.PosNr = Retoure.PosNr AND Retoure.RetourenNr = 20063213 AND Retoure.LSKennung LIKE(' ') AND Retoure.KZStorno NOT LIKE('S') 
+						ORDER BY zeilennr
+;
+
+SELECT DISTINCT @REPEAT('0',9-@LENGTH(@STRING(Position.PosNr,0))) || @STRING(Position.PosNr,0), @CHOOSE(Position.KZPositionsart,Position.Text1,Position.Text1,Retoure.Bezeichnung), Retoure.Menge, Retoure.EkPreis, @CHOOSE(Position.KZPositionsart,Position.VkPreis,Position.VKPreis,Retoure.VKPreis), Retoure.Bemerkung, Retoure.LSKennung, Retoure.ZeilenNr, Retoure.RetourenNr, Position.KZPositionsart, Position.EstPreis, Position.WarenNr, Retoure.rowid 
+						FROM Position, Retoure 
+						WHERE Position.PosNr = Retoure.PosNr AND Retoure.RetourenNr = 20063213 AND Retoure.LSKennung LIKE('W') AND Retoure.KZStorno NOT LIKE('S') 
+						ORDER BY zeilennr
+;
+
+SELECT aktionstamm.posnr, position.vkpreis 
+						FROM aktionstamm, position 
+						WHERE bestellnr = 1085153 AND aktionsbuchstabe='  ' 
+;
+
+SELECT position.posnr, position.vkpreis 
+						FROM position, aktionstamm 
+						WHERE aktionstamm.bestellnr= 1085153 AND aktionstamm.posnr=position.posnr AND(bestellgroesse=  0 OR groesse1= 0040 OR groesse2= 0040  ) 
+;
+
+SELECT position.posnr 
+						FROM position, aktionstamm 
+						WHERE aktionstamm.bestellnr= 1085153 AND position.posnr=aktionstamm.posnr 
+;
+
+SELECT @REPEAT('0',9-@LENGTH(@STRING(position.posnr,0)))||@STRING(position.posnr,0), position.text1, @REPEAT('0',3-@LENGTH(@STRING(position.warennr,0)))||@STRING(position.warennr,0), @TRIM(position.groessenzusatz), position.VKPreis 
+						FROM position, aktionstamm 
+						WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr=  1085153   
+;
+																								    				
+SELECT posnr, vkpreis 
+						FROM position 
+						WHERE posnr=  5918  
+;
+
+SELECT position.posnr, ean.vkpreis 
+						FROM position,ean 
+						WHERE ean.posnr=position.posnr AND ean.eannr=  4008496103942   
+;
+
+SELECT position.posnr, position.vkpreis 
+						FROM position, aktionstamm 
+						WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr =  1085153   
+;
+
+SELECT @REPEAT('0',9-@LENGTH(@STRING(position.posnr,0)))||@STRING(position.posnr,0), position.text1, @REPEAT('0',3-@LENGTH(@STRING(position.warennr,0)))||@STRING(position.warennr,0), @TRIM(position.groessenzusatz), position.VKPreis 
+						FROM position, aktionstamm 
+						WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr= 1085153   
+;
+
+SELECT vkpreis 
+						FROM position 
+						WHERE posnr=  5918 
+;
+
+SELECT AvisoPositionen.Menge, AvisoPositionen.bverbMenge, AvisoPositionen.KZSpitzenausgl 
+						FROM AvisoPositionen 
+						WHERE AvisoPositionen.QAufNr = 12834966 
+;
+
+SELECT wg 
+						FROM dvlturwgt 
+						WHERE datum  IS NOT NULL  AND datum = 05/05/2008 OR @DATETOCHAR( datum, 'yyyymm' ) BETWEEN @DATETOCHAR( datum, '200004' ) AND @DATETOCHAR( datum, '200005' )
+;
+
+SELECT wg 
+						FROM dvlturwgt 
+					  WHERE datum  IS NOT NULL AND datum = '05/05/2008'
+;
+
+SELECT belegaktionsnr 
+				   FROM dvagltft 
+				   WHERE @UPPER(dvagltft.kzfehlerart) IN ( 'W', 'Z', 'R', 'G' ) AND @DATETOCHAR( dvagltft.datum, 'yyyy.mm.dd' ) =  @DATETOCHAR(dvagltft.datum , '2008.05.05' )  
+;
+
+SELECT posnr 
+				   FROM inventurvorgang 
+				   WHERE @DATETOCHAR( inventurvorgang.datum, 'yyyy.mm.dd' ) =  @DATETOCHAR(  inventurvorgang.datum, '2007.09.11' ) AND fachnummer IS NOT NULL AND vgnummer IS NOT NULL AND( kennung_korrektur = 'M' OR kennung_korrektur = 'P' OR kennung_nacherf ='J')
+;
+
+SELECT text 
+				   FROM timeouthw 
+				   WHERE hinwnr= 1
+;
+SELECT DiffMenge, DiffMengeDFUE  
+						FROM Lieferdifferenz 
+						WHERE Lieferdifferenz.LieferscheinNr = 79407839 AND Lieferdifferenz.KZLieferPapier = 'LS' AND Lieferdifferenz.PosNr = 5393723 AND Lieferdifferenz.ZeilenNr = 1 AND Lieferdifferenz.KZHerkunft = 'F' AND Lieferdifferenz.KZUebertragen = 'S'
+;
+
+SELECT text1,vkpreis,0,kzpositionsart,estpreis,warennr,kzwarenart,kzfixesset,kzmeterkiloware,kzdirektzusteller,kzausweichnr 
+						FROM position 
+						WHERE posnr=  195875
+;
+
+SELECT ELS.Freigabedatum 
+						FROM ELS 
+						WHERE ELS.KZLieferPapier = 'LS' AND ELS.LieferscheinNr = 80488505 AND ELS.Status LIKE '  Erl   '
+;
+
+SELECT * 
+						FROM AufPos 
+						WHERE AufPos.AufPosID = 1 AND AufPos.BezugsNr = 1 AND AufPos.EingangsNr = 1 AND AufPos.EingangsDatum = '10/10/2000' AND AufPos.PosNr =   1
+;
+
+SELECT DISTINCT ELS.LSDatum, @REPEAT('0',8 - @LENGTH(@STRING(ELS.LieferscheinNr,0))) || @STRING(ELS.LieferscheinNr,0), ELS.KZLieferpapier, @DATETOCHAR(ELS.WEDatum,'yyyy-mm-dd') 
+						FROM ELS 
+						WHERE ELS.Status = '  Erl  '
+;
+
+SELECT DISTINCT ELS.LSDatum, @REPEAT('0',8 - @LENGTH(@STRING(ELS.LieferscheinNr,0))) || @STRING( ELS.LieferscheinNr, 0 ), ELS.KZLieferpapier  
+						FROM ELS 
+						WHERE ELS.Status NOT LIKE '  Erl  '
+;
+
+SELECT DISTINCT position.text1, position.text2, position.warennr, position.wug, position.vkpreis, position.lieferantennr, @CHOOSE(Position.MSP,NULL,NULL,Position.MSP), @TRIM(position.groessenzusatz), position.kzrabattfaehig, position.kzprovisionsfaehig, position.kzpraemienfaehig, position.kzaktionsrabatt, Position.BestU, Position.BestV, position.BestRES, Position.BestNV, @CHOOSE(Position.KZPositionsart,Position.VkStkMonat, Position.VkStkMonat, Position.VkWertMonat), @CHOOSE(Position.KZPositionsart,Position.VkStkAlt, Position.VkStkAlt, Position.VkWertAlt), @CHOOSE(Position.KZPositionsart,Position.VkStkSaison, Position.VkStkSaison, Position.VkWertSaison), position.KZPositionsart, position.mwstid, position.garantid
+						FROM position  
+						WHERE Position.posnr = 195875
+;
+
+SELECT DISTINCT mwst.mwstprozent 
+						FROM mwst 
+						WHERE mwst.mwstid =   2
+;
+
+SELECT DISTINCT garantie.garantiebdg 
+						FROM garantie 
+						WHERE garantie.garantid = 2
+;
+
+SELECT EAN.EANNr 
+						FROM EAN 
+						WHERE EAN.PosNr =   4008496103942
+;
+
+SELECT AktionStamm.BestellNr 
+						FROM AktionStamm 
+						WHERE AktionStamm.PosNr =   1320407
+;
+
+SELECT Position.KZFixesSet, FSet.PosNr 
+						FROM Position, FSet 
+						WHERE Position.PosNr=FSet.PosNr (+) AND Position.PosNr=  195875
+;
+
+SELECT hpnr 
+						FROM hauspreis 
+						WHERE gueltigab > SYSDATE AND posnr=  6001093
+;
+
+select text1,warennr,estpreis,vkpreis 
+						from position 
+						where posnr = 195875
+;
+
+SELECT Bez || @STRING(PLZ,0) || ' ' || Ort || ' ' || Strasse, StNr  
+						FROM Standort  
+						WHERE KZEigeneFiliale='J'
+;
+
+SELECT  standort.bez, stnr, plz, ort, gueltigvon, gueltigbis, aktionkopf.bez, system.text 
+						FROM standort, aktionkopf, system 
+						WHERE aktionnr =  670 AND system.wert = '0' AND @UPPER (kzeigenefiliale ) LIKE 'J'
+;
+
+SELECT @REPEAT('0',2-@LENGTH(@STRING(wog,0))) || @STRING(wog,0), @REPEAT('0',3-@LENGTH(@STRING(position.warennr,0))) || @STRING(position.warennr,0), position.text1, @LEFT(@REPEAT('0',9-@LENGTH(@STRING(aktionstamm.posnr,0))) || @STRING(aktionstamm.posnr,0),2) || '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(aktionstamm.posnr,0))) || @STRING(aktionstamm.posnr,0),2,3) ||'.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(aktionstamm.posnr,0))) || @STRING(aktionstamm.posnr,0),5,3) ||' ' || @RIGHT(@REPEAT('0',9-@LENGTH(@STRING(aktionstamm.posnr,0))) || @STRING(aktionstamm.posnr,0),1), position.vkpreis, aktionstamm.vkpreis, @REPEAT('0',4-@LENGTH(@STRING(seitennr,0))) || @STRING(seitennr,0) || ' / ' || @REPEAT('0',2-@LENGTH(@STRING(bildnr,0))) || @STRING(bildnr,0) 
+						FROM position, warengruppe, aktionstamm 
+						WHERE aktionnr = 670 AND aktionstamm.posnr = position.posnr AND warengruppe.warennr = position.warennr 
+						ORDER BY 1,2,4
+;						
+
+SELECT  @REPEAT('0',2-@LENGTH(@STRING(mwst,0))) || @STRING(mwst,0),@REPEAT('0',2-@LENGTH(@STRING(rabattnr,0))) || @STRING(rabattnr,0) || '                ',@STRING(sum(rabatt),2),NULL,NULL 
+						FROM dvlturwt 
+						WHERE monatskenner BETWEEN @VALUE(@DATETOCHAR(monatskenner,'200804')) AND @VALUE(@DATETOCHAR(monatskenner,'200806')) 
+						GROUP BY  1,2 
+;
+
+SELECT  @NULLVALUE(sum(umsatz),0) 
+						FROM umsatzsummenblatt, mwst 
+						WHERE @DATETOCHAR(datum,'yyyymm') BETWEEN @DATETOCHAR(datum,'200710') AND @DATETOCHAR(datum,'200712') AND kzmwst = mwstid AND mwstprozent = @VALUE(20.00) 
+;
+
+SELECT @REPEAT('0',8-@LENGTH(@STRING(belegaktionsnr,0))) || @STRING(belegaktionsnr,0), NULL, @LEFT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2) || '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2,3) ||  '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),5,3) ||  ' ' || @RIGHT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),1), bez, menge, vkpreis, bemerkung 
+						FROM   dvagltft  
+						WHERE  @UPPER(kzfehlerart) = 'W' AND @DATETOCHAR( datum, 'yyyy.mm.dd' ) =  @DATETOCHAR( datum, '2008.04.04' )  
+						ORDER BY 1, 3
+;
+
+SELECT @REPEAT('0',8-@LENGTH(@STRING(belegaktionsnr,0))) || @STRING(belegaktionsnr,0), NULL, @LEFT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2) || '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2,3) ||  '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),5,3) ||  ' ' || @RIGHT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),1), bez, menge, vkpreis, bemerkung 
+						FROM dvagltft  
+						WHERE @UPPER(kzfehlerart) = 'Z' AND @DATETOCHAR( datum, 'yyyy.mm.dd' ) =  @DATETOCHAR( datum, '2008.04.04' ) 
+						ORDER BY 1, 3 
+;
+
+SELECT @REPEAT('0',8-@LENGTH(@STRING(belegaktionsnr,0))) || @STRING(belegaktionsnr,0), @STRING(kundennr,0), @LEFT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2) || '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2,3) ||  '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),5,3) ||  ' ' || @RIGHT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),1), bez, menge, vkpreis, bemerkung 
+						FROM   dvagltft  
+						WHERE  @UPPER(kzfehlerart) = 'R' AND @DATETOCHAR( datum, 'yyyy.mm.dd' ) =  @DATETOCHAR(  datum, '2008.04.04' )  
+						ORDER BY 1, 2, 3 
+;
+
+SELECT NULL, NULL, @LEFT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2) || '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),2,3) ||  '.' || @MID(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),5,3) ||  ' ' || @RIGHT(@REPEAT('0',9-@LENGTH(@STRING(posnr,0))) || @STRING(posnr,0),1), bez, menge, vkpreis, NULL 
+						FROM   dvagltft  
+						WHERE  @UPPER(kzfehlerart) = 'G' AND @DATETOCHAR( datum, 'yyyy.mm.dd' ) =  @DATETOCHAR(  datum, '2008.04.04' )  
+						ORDER BY 3
+;
+
+SELECT Menge  
+						FROM InventurVorgang  
+						WHERE (VgNummer = 103107) AND (Zeit < '2007-09-11 19:28:22.190') 
+						ORDER BY Zeit DESC
+;
+
+SELECT @TRIM(kun.titel || ' ' || kun.vorname1|| ' ' || kun.nachname) as name, @TRIM(kun.strasse || ' ' || kun.stiegennr) as strasse, @TRIM(kun.plz || ' ' || kun.ort) as ort, kun.telephon as telefon 
+						FROM kunde kun 
+						WHERE kun.bezugsnr =   0
+;
+
+SELECT verkaeufernr, praemien, nachname || ' ' || vorname 
+						FROM dvmvnrpr, benutzer 
+						WHERE  @STRING(monatskenner,0) LIKE @DATETOCHAR(monatskenner,'200804') AND verkaeufernr IS NOT NULL AND verkaeufernr = persnr   
+						ORDER BY verkaeufernr
+;
+
+SELECT  @REPEAT('0',3-@LENGTH(@STRING(wg,0))) || @STRING(wg,0), warenbez, SUM(retag), SUM(retzentral), SUM(retag),   SUM(retzentral) 
+						FROM dvagretwgt, warengruppe 
+						WHERE warennr = wg AND monatskenner BETWEEN @VALUE(@DATETOCHAR(monatskenner,'200805')) AND @VALUE(@DATETOCHAR(monatskenner,'200805')) 
+						GROUP BY wg, warenbez
+;
+
+SELECT  @NULLVALUE(sum(umsatz),0), @NULLVALUE(sum(abschriften),0) 
+						FROM dvlturwgt 
+						WHERE dvlturwgt.datum  BETWEEN '04/04/2008' AND '05/05/2008' AND dvlturwgt.datum IS NOT NULL AND dvlturwgt.wg = 67 
+;
+
+SELECT  DISTINCT @REPEAT('0',3-@LENGTH(@STRING(warennr,0))) || @STRING( warennr,0), warennr 
+						FROM position 
+						ORDER BY warennr 
+;
+
+SELECT  bez, stnr, plz, ort, system.text 
+						FROM standort, system 
+						WHERE @UPPER (kzeigenefiliale) LIKE 'J' AND system.wert = @STRING(standort.absatzweg, 0)
+;
+
+SELECT  DISTINCT @REPEAT('0',3-@LENGTH(@STRING(warennr,0))) || @STRING( warennr,0), warennr 
+						FROM position 
+						ORDER BY warennr
+;
+
+SELECT  @NULLVALUE(sum(umsatz),0), @NULLVALUE(sum(abschriften),0) 
+						FROM dvlturwgt 
+						WHERE dvlturwgt.datum BETWEEN '04/04/2008' AND '05/05/2008' AND dvlturwgt.datum IS NOT NULL AND dvlturwgt.wg = 67
+;
+SELECT  @REPEAT('0',3-@LENGTH(@STRING(wg,0))) || @STRING(wg,0), warenbez, SUM(ubarvk), SUM(ukreditvk), SUM(ubarvk),  SUM(ukreditvk), SUM(ubarest), SUM(ukreditest) 
+						FROM dvaguwgt, warengruppe 
+						WHERE warennr = wg AND datum  BETWEEN '02/02/2008' AND '03/03/2008'
+						GROUP BY wg,warenbez
+;
+SELECT text1, vkpreis, kzpositionsart,msp,kzmeterkiloware,posnr,kzfixesset,kzausweichnr 
+						FROM position 
+						WHERE posnr=  6646806
+;
+
+SELECT text1,vkpreis,kzpositionsart,msp,kzmeterkiloware,posnr,kzfixesset,kzausweichnr 
+						FROM position 
+						WHERE posnr=  6646806
+
+;
+SELECT position.warennr, estpreis, warengruppe.wog 
+						FROM position, warengruppe 
+						WHERE position.posnr=  6646806   AND position.warennr=warengruppe.warennr
+;
+
+SELECT text1, @CHOOSE(kzpositionsart, vkpreis, vkpreis, bestv), KZPositionsart,posnr,kzfixesset,kzausweichnr,kzmeterkiloware 
+						FROM position 
+						WHERE posnr=  6646806
+;
+
+
+SELECT kzpositionsart 
+						FROM position 
+						WHERE posnr=  6646806
+;
+
+
+SELECT position.warennr, position.estpreis, warengruppe.wog 
+						FROM position, warengruppe 
+						WHERE position.posnr=  6646806 AND position.warennr=warengruppe.warennr
+;
+
+
+SELECT position.posnr,position.text1,bujournal.datum,bujournal.menge, @CHOOSE(kzpositionsart, position.vkpreis, position.vkpreis, bujournal.vkpreis),bujournal.text,position.kzpositionsart, bjnr, bujournal.rowid 
+						FROM position, bujournal 
+						WHERE position.posnr=  6646806 AND bujournal.datum BETWEEN 07/07/2007 AND 11/11/2007 AND position.posnr=bujournal.posnr AND bujournal.buchungsart='51/1' AND bujournal.kzstorniert IS NULL
+
+;
+SELECT MAX(AvisoNrKreis.AktNr)  
+						FROM AvisoNrKreis  
+						WHERE AvisoNrKreis.QAufNr = 12818266
+
+;
+SELECT @REPEAT('0',8-@LENGTH(@STRING(AvisoKopf.QAufNr,0)))||@STRING(AvisoKopf.QAufNr,0), AvisoKopf.Auftragsdatum, @REPEAT('0',6-@LENGTH(@STRING(AvisoKopf.LieferantenNr,0)))||@STRING(AvisoKopf.LieferantenNr,0), AvisoKopf.LieferantenBez, AvisoKopf.Status, @REPEAT('0',6-@LENGTH(@STRING(avisowe.lsnr,0)))||@STRING(avisowe.lsnr,0),  @IF(@ISNA(avisowe.verbdatumzentrale),avisowe.wedatum,avisowe.verbdatumzentrale), avisowe.wedatum, avisowe.verbdatumzentrale 
+						FROM AvisoKopf, avisowe 
+						WHERE AvisoKopf.QAufNr = 12818266 AND avisowe.QAufNr = 12794244 AND avisowe.welfdnr=1 AND avisokopf.qaufnr=avisowe.qaufnr
+
+;
+SELECT @REPEAT('0',8-@LENGTH(@STRING(AvisoKopf.QAufNr,0)))||@STRING(AvisoKopf.QAufNr,0), AvisoKopf.Auftragsdatum, @REPEAT('0',6-@LENGTH(@STRING(AvisoKopf.LieferantenNr,0)))||@STRING(AvisoKopf.LieferantenNr,0), AvisoKopf.LieferantenBez, AvisoKopf.Status 
+						FROM AvisoKopf 
+						WHERE AvisoKopf.QAufNr = 12818266 AND AvisoKopf.Status = '  Erl  '
+
+;
+SELECT @REPEAT('0',8-@LENGTH(@STRING(AvisoKopf.QAufNr,0)))||@STRING(AvisoKopf.QAufNr,0), AvisoKopf.Auftragsdatum, @REPEAT('0',6-@LENGTH(@STRING(AvisoKopf.LieferantenNr,0)))||@STRING(AvisoKopf.LieferantenNr,0), AvisoKopf.LieferantenBez, AvisoKopf.Status 
+						FROM AvisoKopf 
+						WHERE AvisoKopf.QAufNr = 12818266
+
+;
+
+SELECT DISTINCT @REPEAT('0',3-@LENGTH(@STRING(AvisoPositionen.SeitenzeilenNr,0)))||@STRING(AvisoPositionen.SeitenZeilenNr,0), @REPEAT('0', 9-@LENGTH(@STRING(AvisoPositionen.PosNr,0))) || AvisoPositionen.PosNr, Position.Text1, AvisoPositionen.Menge, AvisoPositionen.bverbMenge, AvisoPositionen.EKPreis, @CHOOSE( Position.KZPositionsart,Position.VKPreis, Position.VKPreis, AvisoPositionen.VKPreis ), AvisoPositionen.KZSpitzenAusgl,AvisoPositionen.KZSpitzenAusgl, Position.KZMeterKiloware, Position.KZPositionsart, Position.ESTPreis, Position.WarenNr, AvisoPositionen.SeitenZeilenNr
+						FROM AvisoPositionen, Position 
+						WHERE AvisoPositionen.QAufNr= 12834966 AND Position.PosNr = 6646806
+						ORDER BY AvisoPositionen.SeitenZeilenNr
+;
+
+SELECT kzuebertragen  
+						FROM Avisowe 
+						WHERE qaufnr = 12794244 AND lsnr = 81811169 AND posnr = 1058239 AND seitenzeilennr = 11 AND welfdnr = 1
+;
+
+SELECT *  
+						FROM AvisoPositionen 
+						WHERE AvisoPositionen.QAufNr = 12834966 AND AvisoPositionen.PosNr = 4874368 AND AvisoPositionen.SeitenZeilenNr = 13 AND AvisoPositionen.KZSpitzenausgl = 'J'
+;
+
+SELECT text1, vkpreis, kzpositionsart, lieferantennr, kzmeterkiloware, kzfixesset, kzausweichnr, warennr 
+						FROM position 
+						WHERE posnr= @VALUE(6646806)
+;
+
+SELECT   menge, nara, vkpreis 
+						FROM handauftrag 
+						WHERE auftrnr=@VALUE(90206566) AND seitenzeilennr=11
+;
+
+SELECT   warennr 
+						FROM position  
+						WHERE posnr=@VALUE(6646806)
+;
+
+SELECT *  
+						FROM Handauftrag 
+						WHERE Handauftrag.AuftrNr = 90206566 AND Handauftrag.PosNr = 1983824 AND Handauftrag.SeitenZeilenNr = 11 AND Handauftrag.KZUebertragen = 'J'
+;
+
+SELECT menge,@CHOOSE(kzpositionsart, position.vkpreis, position.vkpreis, iwv.vkpreis),@REPEAT( '0', 9-@LENGTH(@STRING(iwv.posnr, 0))) || @STRING(iwv.posnr, 0),@REPEAT( '0', 8-@LENGTH(@STRING(belegnr, 0))) || @STRING(belegnr, 0),kzuebernahme,ARTIKELbez,kzpositionsart,iwv.estpreis,iwv.rowid,position.warennr 
+						FROM iwv, position 
+						WHERE kzersatzmuster LIKE '  z ' AND belegnr =   20408 AND position.posnr=iwv.posnr 
+						ORDER BY zeilennummer
+;			
+
+SELECT * 
+						FROM IWV 
+						WHERE belegnr = 20408 AND kzersatzmuster = 'z'
+;
+
+SELECT text1,vkpreis,kzpositionsart,posnr,kzfixesset,kzausweichnr,kzmeterkiloware,warennr 
+						FROM position 
+						WHERE posnr= 6646806
+;
+
+SELECT text1, vkpreis  
+						FROM position  
+						WHERE posnr=@VALUE(6646806) AND kzpositionsart<=1
+;
+
+SELECT  belegnr  
+						FROM iwv  
+						WHERE belegnr=@VALUE(20408)
+;
+
+SELECT @REPEAT( '0', 8-@LENGTH(@STRING(belegnr, 0))) || @STRING(belegnr, 0), ausstelldatumzent, kzersatzmuster 
+						FROM iwv 
+						WHERE posnr=@VALUE(2634004)
+;
+
+
+SELECT @REPEAT( '0', 8-@LENGTH(@STRING(belegnr, 0))) || @STRING(belegnr, 0), ausstelldatumzent, kzersatzmuster 
+						FROM iwv 
+						WHERE posnr=@VALUE(2634004) AND kzersatzmuster IN ( 'M','E')
+;
+
+SELECT @REPEAT( '0', 8-@LENGTH(@STRING(belegnr, 0))) || @STRING(belegnr, 0), ausstelldatumzent, kzersatzmuster 
+						FROM iwv 
+						WHERE posnr=@VALUE(2634004) AND kzuebernahme NOT LIKE  'J'
+;
+
+SELECT DISTINCT ELS.LSDatum, @REPEAT('0', 8 - @LENGTH(@STRING(ELS.LieferscheinNr,0))) || @STRING(ELS.LieferscheinNr,0), ELS.KZLieferpapier, ELS.WEDatum 
+						FROM ELS
+						WHERE ELS.Status = '  Erl'
+;
+
+SELECT MAX(ELS.ZeilenNr)  
+						FROM ELS 
+						WHERE ELS.LieferscheinNr = 80488505    AND ELS.KZLieferPapier = '  LZ  '
+;
+
+SELECT ELS.Freigabedatum 
+						FROM ELS 
+						WHERE ELS.KZLieferPapier = 'LZ' AND ELS.LieferscheinNr = 80488505  AND ELS.Status NOT LIKE '  Erl '
+;			
+
+SELECT AufPos.annahmeverweigerun, AufPos.Status, AufPos.Menge 
+						FROM AufPos 
+						WHERE AufPos.AufPosID = 1 AND AufPos.BezugsNr = 1 AND AufPos.EingangsNr = 1 AND AufPos.EingangsDatum = '02/02/2002' AND AufPos.PosNr = 1
+;
+
+SELECT MAX(ELS.ZeilenNr)  
+						FROM ELS 
+						WHERE ELS.LieferscheinNr =   80488505  AND ELS.KZLieferPapier = '  LZ  '
+
+;
+SELECT ELS.Freigabedatum 
+						FROM ELS 
+						WHERE ELS.KZLieferPapier = 'LZ' AND ELS.LieferscheinNr = 80488505 AND ELS.Status NOT LIKE '  Erl  '
+;	
+SELECT B.BUCHUNGSART,B.BUCHUNGSTEXT, 
+					@DECODE(E.KASSENNR,NULL,0,1) 
+					FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG E 
+					WHERE (B.BUCHUNGSART= E.BUCHARTSYMBOL(+)) AND 
+					(E.KASSENNR(+) = 1) AND (B.KZ_EA_MASKE = 'J')
+					ORDER BY ABARBEIT_FOLGE 
+;				
+					
+SELECT E.BUCHARTSYMBOL,B.BUCHUNGSTEXT_VK, B.BUCHUNGSTEXT, E.KASSENNR 
+							FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG E 
+							WHERE (B.BUCHUNGSART= E.BUCHARTSYMBOL(+)) AND (E.KASSENNR(+) = 1)  AND (B.BUCHUNGSTEXT != E.BUCHUNGSTEXT)
+							ORDER BY ANZREIHENFOLGEEA
+;
+SELECT A.QKUNDNR, A.QAUFNR, A.KZUMSSTORNORUECK, A.POSNR, A.MENGE, A.VKPREIS, A.GESAMTPREIS, A.RABATTBETRAG, A.KZBESTERFRABATT, A.DATUM, A.UHRZEIT, A.LFDNR, B.POSNR 
+							FROM SYSADM.RDXPOSITION A, SYSADM.POSITION B 
+							WHERE A.POSNR= B.POSNR(+)AND DATUM= '10/10/2000' AND UHRZEIT= '10/10/2000' AND QKUNDNR= 1 AND QAUFNR= 1 AND KZUMSSTORNORUECK= 'q'  
+							ORDER BY A.LFDNR 	
+;
+
+SELECT BEL_BELEGNR,BEL_KUNDENNR,BEL_BELEGART, VOR_VORGANGSNR,VOR_KASSENNR,VOR_KASSENTAG,VOR_TYP_HPTNR 
+						FROM VORGANG,BELEGE,VORGANGSPOSITION 
+            WHERE VORGANG.VOR_KASSENNR=BELEGE.BEL_KASSENNR AND VORGANG.VOR_KASSENTAG=BELEGE.BEL_KASSENTAG AND VORGANG.VOR_VORGANGSNR=BELEGE.BEL_VORGANGSNR AND VORGANG.VOR_KASSENTAG=VORGANGSPOSITION.VOP_KASSENTAG(+) AND VORGANG.VOR_KASSENNR=VORGANGSPOSITION.VOP_KASSENNR(+) AND VORGANG.VOR_VORGANGSNR=VORGANGSPOSITION.VOP_VORGANGSNR(+)  
+						ORDER BY VOR_KASSENTAG DESC                    
+;
+
+SELECT DISTINCT VOR_VORGANGSNR,BEL_BELEGNR,VOR_KASSENTAG,VOP_POSNR,BEL_BETRAG,VOP_VK_PREIS ,VOR_KASSENNR,VOR_TYP_HPTNR,BEL_BELEGART,BEL_KUNDENNR 
+								 FROM VORGANG VOR, VORGANGSPOSITION VOP, BELEGE BEL 
+								 WHERE VOR.VOR_KASSENNR=VOP.VOP_KASSENNR(+) AND VOR.VOR_KASSENTAG=VOP.VOP_KASSENTAG(+) AND VOR.VOR_VORGANGSNR=VOP.VOP_VORGANGSNR(+) AND VOR.VOR_KASSENNR=BEL.BEL_KASSENNR AND VOR.VOR_KASSENTAG=BEL.BEL_KASSENTAG AND VOR.VOR_VORGANGSNR=BEL.BEL_VORGANGSNR 
+								 ORDER BY VOR.VOR_KASSENTAG DESC								 
+;								 						
+								
+SELECT DISTINCT @REPEAT('0', 3-@LENGTH(@STRING(AvisoPositionen.SeitenzeilenNr,0)))||@STRING(AvisoPositionen.SeitenzeilenNr,0),  
+				@REPEAT('0', 9-@LENGTH(@STRING(AvisoPositionen.PosNr,0))) || AvisoPositionen.PosNr, Position.Text1, AvisoPositionen.Menge, AvisoPositionen.EKPreis, 
+				@CHOOSE( Position.KZPositionsart, Position.VKPreis, Position.VKPreis, AvisoPositionen.VKPreis ), Avisopositionen.KZSpitzenAusgl,Position.KZMeterKiloware, Position.KZPositionsart, Position.ESTPreis, Position.WarenNr, AvisoPositionen.SeitenZeilenNr, avisowe.menge, 
+				@IF(avisowe.vkpreis,avisowe.vkpreis,avisopositionen.vkpreis), avisowe.naturalrabatt, avisowe.menge, avisowe.vkpreis, avisowe.naturalrabatt, avisopositionen.kzspitzenausgl, avisopositionen.rowid 
+				FROM AvisoPositionen, Position, avisowe 
+				WHERE avisowe.QAufNr(+)= 12794244 AND avisowe.lsnr(+)= 81811169 AND avisowe.welfdnr(+)= 1 AND avisopositionen.qaufnr= 12834966 AND avisopositionen.seitenzeilennr=avisowe.seitenzeilennr(+) AND avisopositionen.posnr=avisowe.posnr(+) AND position.posnr=avisopositionen.posnr AND Avisowe.kzStorno NOT LIKE 'S' AND Avisowe.kzuebertragen NOT LIKE 'S' 
+				ORDER BY AvisoPositionen.SeitenZeilenNr			
+;			
+				
+			
+SELECT Position.KZFixesSet, FSet.PosNr
+					FROM Position, FSet
+					WHERE Position.PosNr=FSet.PosNr (+) AND Position.PosNr= 6646806
+;					
+										
+SELECT R.PosNr, P.Text1, P.VKPreis, (R.Menge-@if(R.Quittiermenge,R.Quittiermenge,0)), G.Bezeichnung, G.RetourengrundNr, R.Bemerkung, P.Lagerortzentrale, R.Erfassdatum 
+					FROM retoure R, position P, retourengrund G, retourekopf K 
+					WHERE P.PosNr = R.PosNr AND R.KZStorno LIKE 'S' AND R.Retourengrund = G.RetourengrundNr (+) AND P.KZWarenart = G.KZWarenart (+) AND R.LSKennung LIKE 'a' AND K.LSKennung LIKE 'a' AND R.RetourenNr = 1 AND K.RetourenNr = 1			
+;					
+					
+SELECT R.PosNr, P.Text1, P.VKPreis, R.Menge, G.Bezeichnung, G.RetourengrundNr, R.Bemerkung, P.Lagerortzentrale, R.Erfassdatum 
+					FROM retoure R, position P, retourengrund G, retourekopf K 
+					WHERE P.PosNr = R.PosNr AND R.Retourengrund = G.RetourengrundNr (+) AND P.KZWarenart = G.KZWarenart (+) AND R.LSKennung LIKE 'a' AND K.LSKennung LIKE 'a' AND R.RetourenNr = 1 AND K.RetourenNr = 1 
+					ORDER BY R.Zeilennr
+;		
+
+SELECT COUNT(*) 
+						FROM Position, Retoure, Retourengrund 
+						WHERE Position.PosNr = Retoure.PosNr AND Retoure.Retourengrund = Retourengrund.RetourengrundNr AND Retoure.RetourenNr = 20063213  AND Retourengrund.KZWarenart = Position.KZWarenart AND Retoure.LSKennung LIKE('R') AND Retoure.KZStorno NOT LIKE('S')
+
+;
+SELECT COUNT(*) 
+						FROM Position, Retoure 
+						WHERE Position.PosNr = Retoure.PosNr AND Retoure.RetourenNr = 20063213 AND Retoure.LSKennung LIKE(' ') AND Retoure.KZStorno NOT LIKE 'S'
+;
+
+SELECT COUNT(*) 
+						FROM Position, Retoure 
+						WHERE Position.PosNr = Retoure.PosNr AND Retoure.RetourenNr = 20063213 AND Retoure.LSKennung LIKE('W') AND Retoure.KZStorno NOT LIKE('S')
+;
+
+SELECT COUNT(*) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND LSKennung LIKE('R') AND Retoure.KZStorno NOT LIKE('S')
+;
+
+SELECT COUNT(*) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND LSKennung LIKE(' ') AND Retoure.KZStorno NOT LIKE('S')
+;
+
+SELECT COUNT(*) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND LSKennung LIKE('W') AND Retoure.KZStorno NOT LIKE('S')
+;
+
+SELECT DISTINCT Erfassdatum, @REPEAT('0',8-@LENGTH(@STRING(RetourenNr,0))) || @STRING(RetourenNr,0) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND Retoure.LSKennung LIKE('R') AND Retoure.KZStorno NOT LIKE('S') 
+						ORDER BY  Retoure.Erfassdatum
+
+;
+SELECT COUNT(*) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND Retoure.LSKennung LIKE('R') AND Retoure.KZStorno NOT LIKE('S')
+;
+
+SELECT DISTINCT Erfassdatum, @REPEAT('0',8-@LENGTH(@STRING(RetourenNr,0))) || @STRING(RetourenNr,0) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND Retoure.LSKennung LIKE(' ') AND Retoure.KZStorno NOT LIKE('S') 
+						ORDER BY Retoure.Erfassdatum
+;
+
+SELECT COUNT(*) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND Retoure.LSKennung LIKE(' ') AND Retoure.KZStorno NOT LIKE('S')
+
+;
+SELECT DISTINCT Erfassdatum,@REPEAT('0',8-@LENGTH(@STRING(RetourenNr,0))) || @STRING(RetourenNr,0) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND Retoure.LSKennung LIKE('W') AND Retoure.KZStorno NOT LIKE('S') 
+						ORDER BY Retoure.Erfassdatum
+
+;
+SELECT COUNT(*) 
+						FROM Retoure 
+						WHERE PosNr = 2640001 AND Retoure.LSKennung LIKE('W') AND Retoure.KZStorno NOT LIKE('S')
+
+;
+SELECT RetourenNr, Erfassdatum 
+						FROM RetoureKopf 
+						WHERE RetourenNr = 20063168
+
+;
+SELECT KZUebertragen 
+						FROM Retoure 
+						WHERE LSKennung = 'w'  AND RetourenNr = 20063361 AND ZeilenNr = 1
+
+;
+SELECT COUNT(*) 
+						FROM Retourengrund 
+						WHERE RetourengrundNr = 1
+
+;
+SELECT *  
+						FROM Retourengrund 
+						WHERE RetourengrundNr = 1 AND KZWarenart LIKE 'a'
+
+;
+SELECT Bezeichnung 
+						FROM Retourengrund 
+						WHERE RetourengrundNr = '1' AND KZWarenart LIKE 'a'
+
+;
+SELECT RetourengrundNr, Bezeichnung 
+						FROM Retourengrund 
+						WHERE RetourengrundNr LIKE(1) 
+						ORDER BY RetourengrundNr
+
+;
+SELECT text1, @CHOOSE(kzpositionsart, vkpreis, vkpreis, bestv), KZPositionsart,posnr,kzfixesset,kzausweichnr,kzmeterkiloware 
+						FROM position 
+						WHERE posnr= 6646806
+
+;
+SELECT DISTINCT Position.PosNr, Position.Text1, Position.VKPreis 
+						FROM Position, FSet 
+						WHERE FSet.PosNr =   1   AND Position.PosNr = FSet.SetNr
+
+
+;
+SELECT StNr, Bez 
+						FROM Standort 
+            WHERE @UPPER(KZEigeneFiliale) NOT LIKE 'J' AND Absatzweg= 2 
+            ORDER BY StNr
+
+;
+SELECT DISTINCT @DECODE(KZEigeneFiliale,'J','X'), StNr, Bez || @CHAR(13) || @STRING(PLZ,0) || ' ' || Ort || ' ' || Strasse, Bez || @STRING(PLZ,0) || ' ' || Ort || ' ' || Strasse, 'DBSVT' || @REPEAT('0', 3 - @LENGTH(@STRING( Standort.StNr, 0 ))) || @STRING( Standort.StNr, 0 ) 
+						FROM Standort, System 
+						WHERE System.Wert=@STRING(Standort.Absatzweg,0) AND System.Text LIKE 'SOVT' 
+						ORDER BY StNr
+
+;
+SELECT estpreis, warennr 
+						FROM position  
+						WHERE posnr=@VALUE(6646806)
+;
+SELECT SUM(Menge) 
+						FROM BuJournal 
+						WHERE BuJournal.BuchungsArt='53/0' AND BuJournal.PosNr= 4605192 AND BuJournal.Datum= 08/08/2007
+
+;
+SELECT SUM(Menge) 
+						FROM BuJournal 
+						WHERE BuJournal.BuchungsArt='35/1' AND BuJournal.PosNr= 4605192 AND BuJournal.Datum= 08/08/2007
+
+;
+SELECT SUM(Wert) 
+						FROM BuJournal 
+						WHERE BuJournal.BuchungsArt='53/0' AND BuJournal.PosNr= 4605192 AND BuJournal.Datum= 08/08/2007
+
+;
+SELECT SUM(Wert) 
+						FROM BuJournal 
+						WHERE BuJournal.BuchungsArt='35/1' AND BuJournal.PosNr= 4605192 AND BuJournal.Datum= 08/08/2007
+
+;
+SELECT LagerortZentrale, KZWarenart, KZMeterKiloware,SaisonzuordZeit, @YearNo(SaisonZuordJahr),KZPositionsart, KZDirektzusteller, ESTPreis, Farbe,KZAusweichNr, Groesse1, Groesse2,DatumLetzteDFU, KZVerguetung, DatumletzteBeweg, KZFixesSortiment, UmtauschZusatztext.Text 
+						FROM Position, UmtauschZusatztext 
+						WHERE Position.PosNr =   6646806  AND UmtauschZusatztext.SofortId = Position.SofortId
+
+;
+SELECT @DECODE(KZEigeneFiliale,'J','X'), @STRING(Absatzweg,0) || ' - ' || Text, StNr, Bez || '' || @STRING(PLZ,0) || ' ' || Ort || ', ' || Strasse, TelNr, FaxNr, KurzWahl, FIBUKassenkonto, Kostenstelle, AnzVerkaufskassen, Bonkopfzeile1, Bonkopfzeile2, Bonkopfzeile3, Bonkopfzeile4, SAPKassenNr, SAPBuchungkreisNr, SAPBelegArt, SAPWaehrungSchl, SAPKostenstEing, SAPBuchSchlEing, SAPBuchSchlAusg, QKdNr, PoolNr_f_Spesen_BE 
+						FROM Standort, System 
+            WHERE System.Wert=@STRING(Standort.Absatzweg,0) 
+            ORDER BY Absatzweg, StNr
+
+;
+SELECT DISTINCT Position.PosNr, Position.Text1, FSet.FSetMenge, Position.VkPreis, AktionStamm.SetPreisReduziert 
+						FROM Position, FSet, AktionStamm 
+						WHERE FSet.SetNr =   0   AND Position.PosNr = FSet.PosNr AND AktionStamm.PosNr = Position.PosNr AND AktionStamm.SetPreisReduziert > 0
+
+;
+SELECT aktionstamm.bestellnr,aktionstamm.bestellgroesse,position.posnr,position.text1,position.warennr, @TRIM(position.groessenzusatz), position.vkpreis 
+						FROM position, aktionstamm 
+						WHERE position.posnr = aktionstamm.posnr(+)
+						ORDER BY position.posnr, position.text1 ASC
+;
+SELECT warennr 
+				    FROM warengruppe 
+				    WHERE warennr=  56
+
+;
+SELECT @REPEAT( '0', 9-@LENGTH(@STRING(position.posnr, 0))) || @STRING(position.posnr, 0), position.text1,bujournal.datum,bujournal.menge, @CHOOSE(kzpositionsart, position.vkpreis, position.vkpreis, bujournal.vkpreis),position.kzpositionsart, bujournal.bjnr, bujournal.rowid 
+						FROM position, bujournal 
+						WHERE position.posnr=  6646806  AND bujournal.datum BETWEEN   10/10/2007   AND   11/11/2007   AND position.posnr=bujournal.posnr AND bujournal.buchungsart='56/1' AND bujournal.kzstorniert IS NULL
+
+;
+SELECT DISTINCT Umlagerung.BelegNr,Umlagerung.StandortAbgehend,Standort.Bez,Text,DatumUmlagerung 
+						FROM Umlagerung, Standort, System 
+						WHERE System.Wert = @STRING(Umlagerung.AbsatzwegAbgehend,0) AND Standort.StNr=Umlagerung.StandortAbgehend AND Standort.Absatzweg=Umlagerung.AbsatzwegAbgehend AND Umlagerung.AbsatzwegEmpfang= 2  AND Umlagerung.StandortEmpfang= 6 AND Umlagerung.KZVerbuchung NOT LIKE 'J' AND Umlagerung.KZStorno NOT LIKE 'S'
+
+;
+SELECT DISTINCT Umlagerung.BelegNr, Umlagerung.StandortAbgehend, Standort.Bez, Text, DatumUmlagerung 
+						FROM Umlagerung, Standort, System 
+						WHERE System.Wert = @STRING(Umlagerung.AbsatzwegAbgehend,0) AND Standort.StNr=Umlagerung.StandortAbgehend AND Standort.Absatzweg=Umlagerung.AbsatzwegAbgehend AND Umlagerung.AbsatzwegEmpfang= 2 AND Umlagerung.StandortEmpfang= 6 AND Umlagerung.KZVerbuchung LIKE 'J' AND Umlagerung.KZStorno NOT LIKE 'S'
+
+;
+SELECT KZUebertragen 
+						FROM Retoure 
+						WHERE LSKennung = 'w' AND RetourenNr = 20063361 AND ZeilenNr = 1
+;
+SELECT auftrbeleglsbonnr 
+						FROM bujournal 
+						WHERE auftrbeleglsbonnr= 11722048 AND buchungsart='56/0'
+
+;
+SELECT DISTINCT bujournal.datum,bujournal.auftrbeleglsbonnr,position.posnr 
+						FROM position, bujournal 
+						WHERE position.posnr= 6646806 AND bujournal.datum BETWEEN 10/10/2007 AND 11/11/2007 AND position.posnr=bujournal.posnr AND bujournal.buchungsart='56/0' AND bujournal.kzstorniert IS NULL
+
+;
+SELECT bujournal.auftrbeleglsbonnr,position.posnr,position.text1,bujournal.menge, @CHOOSE(kzpositionsart, position.vkpreis, position.vkpreis, bujournal.vkpreis),bujournal.kundennr,bujournal.text, position.kzpositionsart,bujournal.bjnr,bujournal.rowid 
+						FROM position, bujournal 
+						WHERE bujournal.auftrbeleglsbonnr= 11722048 AND bujournal.datum BETWEEN   10/10/2007   AND   11/11/2008   AND position.posnr=bujournal.posnr AND bujournal.buchungsart='56/0' AND bujournal.kzstorniert IS NULL
+			
+;
+SELECT StNr  
+						FROM Standort  
+						WHERE Absatzweg= 2 AND KZEigeneFiliale='J'
+
+;
+SELECT @REPEAT('0',9-@LENGTH(@STRING(Umlagerung.PosNr,0))) || @STRING(Umlagerung.PosNr,0), Umlagerung.ARTIKELBez, Umlagerung.Menge, Umlagerung.VKPreis, Umlagerung.VKOriginal, Position.KZPositionsArt, Umlagerung.rowid 
+						FROM Umlagerung, Position 
+						WHERE Umlagerung.BelegNr= 20102413 AND Umlagerung.StandortEmpfang= 6 AND Umlagerung.KZVerbuchung NOT LIKE 'J' AND Position.PosNr=Umlagerung.PosNr 
+						ORDER BY Umlagerung.ZeilenNrUmlagerung
+
+;
+SELECT AbsatzwegAbgehend, StandortAbgehend, Standort.Bez, Text, @REPEAT('0', 8 - @LENGTH(@STRING(BelegNr,0))) || @STRING(BelegNr, 0) 
+						FROM Umlagerung, Standort, System 
+						WHERE Umlagerung.BelegNr = 20102413 AND Umlagerung.StandortEmpfang = 6 AND System.Wert=@STRING(Umlagerung.AbsatzwegAbgehend,0) AND Standort.Absatzweg=Umlagerung.AbsatzwegAbgehend AND Standort.StNr=Umlagerung.StandortAbgehend AND Umlagerung.KZVerbuchung NOT LIKE 'J'
+
+;
+SELECT AbsatzwegAbgehend, StandortAbgehend, Standort.Bez, Text,BelegNr 
+						FROM Umlagerung, Standort, System 
+						WHERE Umlagerung.BelegNr = 20102413 AND Umlagerung.StandortEmpfang = 6 AND System.Wert=@STRING(Umlagerung.AbsatzwegAbgehend,0) AND Standort.Absatzweg=Umlagerung.AbsatzwegAbgehend AND Standort.StNr=Umlagerung.StandortAbgehend AND Umlagerung.KZVerbuchung LIKE 'J' 
+
+;
+SELECT @REPEAT('0',9-@LENGTH(@STRING(Umlagerung.PosNr,0))) || @STRING(Umlagerung.PosNr,0), Umlagerung.ARTIKELBez, Umlagerung.Menge, Umlagerung.VKPreis, Umlagerung.VKOriginal, Position.KZPositionsArt, Umlagerung.rowid 
+						FROM Umlagerung, Position 
+						WHERE Umlagerung.BelegNr=20102413 AND Umlagerung.StandortEmpfang= 20102413 AND Umlagerung.KZVerbuchung LIKE 'J' AND Position.PosNr=Umlagerung.PosNr 
+						ORDER BY Umlagerung.ZeilenNrUmlagerung
+
+;
+SELECT Bez 
+						FROM Standort 
+						WHERE @UPPER(KZEigeneFiliale) = 'J' AND StNr= 6 AND Absatzweg= 2
+
+;
+
+SELECT Bez 
+						FROM Standort 
+						WHERE StNr= 6 AND Absatzweg= 2
+
+;
+
+SELECT StNr  
+						FROM Standort  
+						WHERE Absatzweg= 2 AND KZEigeneFiliale='J' 
+
+;
+SELECT text1, @CHOOSE(kzpositionsart, vkpreis, vkpreis, bestv), kzpositionsart,posnr,kzfixesset,kzausweichnr,kzmeterkiloware 
+						FROM position 
+						WHERE posnr=  6646806
+
+;
+
+SELECT text1, @CHOOSE(kzpositionsart, vkpreis, vkpreis, bestv), kzPositionsart,posnr,kzfixesset,kzausweichnr,kzmeterkiloware 
+						FROM position 
+						WHERE posnr=  6646806
+
+;
+
+SELECT hauspreis 
+						FROM hauspreis 
+						WHERE posnr=  6001093 AND gueltigab= 2008-04-04 AND NOT kzuebertragen='J' AND kzherkunft='F'
+
+;
+SELECT hauspreis 
+						FROM hauspreis 
+						WHERE hpnr= 30826
+
+;
+SELECT hauspreis 
+						FROM hauspreis 
+						WHERE posnr=  6001093 AND gueltigab= 2008-04-04 AND NOT kzuebertragen='J' AND kzherkunft='F'
+
+;
+SELECT hauspreis, hpnr 
+						FROM hauspreis 
+						WHERE posnr=  6001093 AND gueltigab= 2008-04-04 AND kzherkunft='F'
+
+;
+SELECT hauspreis 
+						FROM hauspreis 
+						WHERE posnr=  6001093 AND gueltigab= 2008-04-04 AND NOT kzuebertragen='J' AND kzherkunft='F'
+
+;
+SELECT hauspreis,hpnr, RowId 
+						FROM hauspreis 
+						WHERE posnr=  6001093 AND gueltigab= 2008-04-04 AND kzherkunft='F'
+
+;
+
+SELECT StNr 
+						FROM Standort 
+						WHERE Absatzweg= 2 AND KZEigeneFiliale='J'
+;
+
+SELECT estpreis, warennr 
+						FROM position  
+						WHERE posnr=@VALUE(6646806)
+
+;
+SELECT RetourenNr,LieferantenNr,LieferantenBez,StrasseHausNr,PlzOrt,Erfassdatum,Bemerkung 
+						FROM RetoureKopf 
+						WHERE RetourenNr = 20063168
+;
+SELECT KZUebertragen 
+						FROM Retoure 
+						WHERE LSKennung = 'w' AND RetourenNr = 20063361 AND ZeilenNr = 1
+
+;
+SELECT StNr 
+						FROM Standort 
+						WHERE Absatzweg= 2 AND KZEigeneFiliale='J'
+
+;
+SELECT estpreis, warennr 
+						FROM position  
+						WHERE posnr=@VALUE(6646806)
+
+;
+SELECT K.KreditNr, K.BezugsNr 
+					FROM KreditKopf K 
+					WHERE (( K.KreditStatus =   1  ) OR ( K.KreditStatus =   1  ) OR ( K.KreditStatus =   1  ) AND (K.Auslagerungsdatum < 11/11/2001))
+;	
+SELECT K.AktionNr, K.GueltigVon, K.GueltigBis, K.Bez, S.VKPreis, S.BildNr, S.SeitenNr 
+					FROM AktionStamm S, AktionKopf K 
+					WHERE (S.AktionNr = K.AktionNr) AND (S.PosNr = 1) AND (K.GueltigVon <= 11/11/2001) AND (K.GueltigBis >= 11/11/2001) 
+					ORDER By K.GueltigVon, S.VKPreis ASC
+;
+SELECT K.AktionNr, K.GueltigVon, K.GueltigBis, K.Bez, S.VKPreis, S.BildNr, S.SeitenNr 
+					FROM AktionStamm S, AktionKopf K 
+					WHERE (S.AktionNr = K.AktionNr) AND (S.PosNr = 1) AND (K.GueltigVon <= 10/10/2000) AND (K.GueltigBis >= 10/10/2000) 
+					ORDER By K.GueltigVon, S.VKPreis ASC
+;
+SELECT K.AktionNr, K.GueltigVon, K.GueltigBis, K.Bez, S.VKPreis, S.BildNr, S.SeitenNr 
+					FROM AktionStamm S, AktionKopf K 
+					WHERE (S.AktionNr = K.AktionNr) AND (S.PosNr = 1) AND (K.GueltigBis < 10/10/2000) 
+					ORDER BY K.GueltigBis DESC, S.VKPreis ASC
+;
+SELECT  KR.Kreditnr,KR.Bezugsnr,KR.Betrag,KR.Faelligkeitsdatum,KR.Mahndatum,KU.Nachname,KU.Vorname1,KU.Strasse,KU.Stiegennr,KU.PLZ,KU.Ort,KU.Telephon,KK.Kreditsaldo,KK.Zahlungsart
+					FROM KREDITFAELLIGKEIT KR, KUNDE KU, KREDITKOPF KK 
+					WHERE KR.Bezugsnr = KU.Bezugsnr AND KR.Bezugsnr = KK.Bezugsnr AND KR.Kreditnr = KK.Kreditnr AND KR.Betrag - KR.Bezahlt > 0 AND KR.Faelligkeitsdatum <= 10/10/2000 AND ((KR.MahnDatum IS NOT NULL AND KR.Faelligkeitsdatum  <= 10/10/2000) OR (KR.Mahndatum IS NULL) OR (KR.Mahndatum = 10/10/2000)) 
+					ORDER BY 1, 2, 3
+;				
+
+
+SELECT DISTINCT VOR_VORGANGSNR,BEL_BELEGNR,VOR_KASSENTAG,VOP_POSNR,BEL_BETRAG,VOP_VK_PREIS,VOR_KASSENNR,VOR_TYP_HPTNR,BEL_BELEGART,BEL_KUNDENNR 
+								 FROM VORGANG VOR, VORGANGSPOSITION VOP, BELEGE BEL 
+								 WHERE VOR.VOR_KASSENNR=VOP.VOP_KASSENNR(+) AND VOR.VOR_KASSENTAG=VOP.VOP_KASSENTAG(+) AND VOR.VOR_VORGANGSNR=VOP.VOP_VORGANGSNR(+) AND VOR.VOR_KASSENNR=BEL.BEL_KASSENNR AND VOR.VOR_KASSENTAG=BEL.BEL_KASSENTAG AND VOR.VOR_VORGANGSNR=BEL.BEL_VORGANGSNR 
+								 ORDER BY VOR.VOR_KASSENTAG DESC						
+;
+SELECT ELS.BestellNr, ELS.POSNR, Position.Text1,  
+			            @IF(ELS.VKPreis, @CHOOSE(Position.KZPositionsart,Position.VKPreis,Position.VKPreis,ELS.VKPreis), Position.VKPreis),  
+			            @IF(Lieferdifferenz.DiffMenge,ELS.SollMenge+Lieferdifferenz.DiffMenge, ELS.SollMenge), ELS.IstMenge, ELS.ZeilenNr, ELS.BezugsNr, ELS.LfdNrBestellung, ELS.EingangsNr, ELS.EingangsNrDatum, Position.KZPositionsart, Position.WarenNr, Position.EstPreis, ELS.FreigabeDatum, ELS.RowID 
+			               FROM ELS, Position, Lieferdifferenz 
+			               WHERE ELS.KZLieferPapier =  'LZ' AND ELS.LieferscheinNr =  80488505 AND ELS.STATUS LIKE 'Erl ' AND Position.POSNR = ELS.PosNr AND Lieferdifferenz.LieferscheinNr (+) =ELS.LieferscheinNr AND Lieferdifferenz.KZLieferpapier (+) =ELS.KZLieferPapier AND Lieferdifferenz.PosNr (+)=ELS.PosNr AND Lieferdifferenz.KZHerkunft (+)='Z' 
+			               ORDER BY ELS.ZeilenNr
+;
+SELECT  uhrzeit, umsatz, anzbon                                 
+				   FROM dvtfgubon 
+				   WHERE datum= 05/05/2008
+				   ORDER BY 1
+;
+
+SELECT  uhrzeit, umsatz, anzbon
+				   FROM  dvtfgubon 
+				   WHERE @datetochar( datum,'yyyy-MM-dd' ) = @datetochar( datum, '2008-03-31' ) 
+				   ORDER BY 1
+;
+SELECT R.PosNr, P.Text1, P.VKPreis, R.Menge, G.Bezeichnung, G.RetourengrundNr, R.Bemerkung, P.Lagerortzentrale, R.Erfassdatum 
+						FROM retoure R, position P, retourengrund G, retourekopf K 
+						WHERE P.PosNr = R.PosNr AND R.Retourengrund = G.RetourengrundNr (+) AND P.KZWarenart = G.KZWarenart (+) AND R.LSKennung LIKE 'w' AND K.LSKennung LIKE 'w' AND R.RetourenNr = 20063213 AND K.RetourenNr = 20063347
+						ORDER BY R.Zeilennr
+;
+SELECT userid  
+						FROM benutzer 
+						WHERE kzgruppe='N'  AND login= 'SERVICE'
+
+;
+SELECT userid 
+						FROM benutzer 
+						WHERE login= 'SERVICE' AND passwort= ''
+
+;
+SELECT userid  
+						FROM benutzer  
+						WHERE login='SERVICE' AND kzgruppe='N' AND kzsuperbenutzer='J'
+
+;
+SELECT login 
+						FROM benutzer 
+						WHERE login='SERVICE' AND kzgruppe='J'
+
+
+;
+SELECT markt,unternehmen 
+						FROM standort 
+						WHERE(absatzweg= 2) AND (stnr= 6)
+;
+SELECT StNr  
+						FROM Standort  
+						WHERE Absatzweg=2 AND KZEigeneFiliale='J'
+
+;
+SELECT AbsatzwegEmpfang, StandortEmpfang, Standort.Bez, Text 
+					FROM Umlagerung, Standort, System 
+					WHERE Umlagerung.BelegNr = 20102413 AND Umlagerung.StandortAbgehend = 10 AND System.Wert=@STRING(Umlagerung.AbsatzwegEmpfang,0) AND Standort.Absatzweg=Umlagerung.AbsatzwegEmpfang AND Standort.StNr=Umlagerung.StandortEmpfang
+
+;
+SELECT Bez 
+						FROM Standort 
+						WHERE @UPPER(KZEigeneFiliale) = 'J' AND StNr= 6
+
+;
+SELECT Bez 
+						FROM Standort 
+						WHERE StNr= 6 AND Absatzweg= 2
+;
+SELECT KZUebertragen  
+						FROM Umlagerung  
+						WHERE belegnr = 20102413 AND posnr = 9182981 AND zeilennrumlagerung = 1 
+
+;
+
+SELECT buchungsart 
+						FROM bujournal 
+						WHERE @UPPER(buchungsart) = '95/0'
+
+;
+SELECT auftrbeleglsbonnr 
+						FROM bujournal 
+						WHERE auftrbeleglsbonnr = 11722048
+
+;
+
+SELECT DISTINCT Absatzweg, Text 
+						FROM Standort, System 
+						WHERE System.Wert=@STRING(Standort.Absatzweg,0) 
+						ORDER BY Absatzweg
+
+;
+
+
+SELECT EAN.EANNr 
+						FROM EAN 
+						WHERE EAN.EANNr = 4008496103942
+;
+SELECT EAN.EANNr, NULL, RowID 
+						FROM EAN 
+			      WHERE EAN.PosNr =   4008496103942   
+						ORDER BY EAN.EANNr
+
+;
+SELECT DISTINCT text1, @CHOOSE(kzpositionsart, vkpreis, vkpreis, bestv), kzpositionsart, posnr, kzfixesset, kzausweichnr, kzmeterkiloware 
+						FROM position 
+						WHERE posnr= 6646806
+;	
+SELECT AktNr
+						FROM Nummernkreise  
+						WHERE NrKreis = 'KB'
+
+;
+SELECT position.posnr 
+						FROM position,ungnr 
+						WHERE position.warennr=ungnr.ungnr AND ungnr.kenner='W' AND position.posnr= 6646806
+
+;
+SELECT aktionstamm.posnr, position.vkpreis 
+						FROM aktionstamm, position 
+						WHERE aktionstamm.bestellnr=  1085153   AND aktionstamm.aktionsbuchstabe='    ' AND position.posnr=aktionstamm.posnr
+
+;
+SELECT position.posnr, position.vkpreis 
+						FROM position, aktionstamm 
+						WHERE aktionstamm.bestellnr =   1085153   AND aktionstamm.posnr = position.posnr AND(bestellgroesse =  0   OR groesse1 =   4   OR groesse2 =   0040  )
+
+;
+SELECT position.posnr, position.vkpreis 
+						FROM position, aktionstamm 
+						WHERE aktionstamm.bestellnr=  1085153   AND position.posnr=aktionstamm.posnr
+
+;
+SELECT position.text1,position.groessenzusatz,aktionstamm.bestellnr,aktionstamm.bestellgroesse,position.vkpreis,position.posnr,position.warennr 
+						FROM position, aktionstamm 
+						WHERE position.posnr = aktionstamm.posnr AND aktionstamm.bestellnr =   1085153  
+						ORDER BY aktionstamm.bestellnr, aktionstamm.bestellgroesse 
+
+;
+SELECT position.posnr, ean.vkpreis 
+						FROM position,ean 
+						WHERE ean.posnr=position.posnr AND ean.eannr=  4008496103942
+
+;
+SELECT posnr, vkpreis 
+						FROM ean 
+						WHERE ean.eannr=  4008496103942
+
+;
+SELECT position.text1,position.groessenzusatz,aktionstamm.bestellnr,aktionstamm.bestellgroesse,position.vkpreis,position.posnr,position.warennr 
+						FROM position, aktionstamm 
+						WHERE position.posnr = aktionstamm.posnr AND aktionstamm.bestellnr = 1085153  
+						ORDER BY aktionstamm.bestellnr,aktionstamm.bestellgroesse
+
+;
+SELECT zinssatz, gueltigab 
+						FROM ratenkaufkondit 
+						WHERE gueltigab <= 10/10/2008
+						ORDER BY gueltigab DESC
+
+;
+SELECT Gutschrift, Belastung, Faelligkeit, Saldo 
+						FROM KreditKtnBewegung 
+						WHERE KreditNr = 0 AND BezugsNr = 0 AND Faelligkeit < 10/10/2008
+						ORDER BY Faelligkeit DESC, Datum DESC
+
+;
+SELECT zinssatz, gueltigab 
+						FROM ratenkaufkondit 
+						WHERE gueltigab < 10/10/2008 
+						ORDER BY gueltigab DESC
+
+;
+SELECT MsgID
+						FROM GeleseneMail 
+						WHERE (@DATETOCHAR( Datum, 'YYYYMM') <= @DATETOCHAR( datum, '200806')) OR (Datum LIKE NULL)
+
+;
+SELECT '%' || @STRING(rechte.modulid,0) || '%'  
+						FROM module, rechte, benutzer 
+						WHERE rechte.modulid=module.modulid AND benutzer.userid=  10 AND benutzer.userid=rechte.userid AND module.modulbez='  ARTIKEL  '
+;
+SELECT * 
+						FROM Avisokopf K, Avisopositionen S 
+						WHERE((S.KZAenderung = '  ') OR (K.KZAenderung = '  ')) AND (K.QAufNr = S.QAufNr(+))
+;												
+						
+SELECT dvbstwgm.monatskenner, dvbstwgm.wg, bstg, bstv, bstvv, bstaelt, bstp, 
+					@NULLVALUE( upool,0 ), @NULLVALUE( ugelistet+upool ,0) 
+					FROM dvbstwgm, dvltuwgm 
+					WHERE dvbstwgm.monatskenner = '200710' AND dvbstwgm.monatskenner = dvltuwgm.monatskenner(+) AND dvbstwgm.wg = dvltuwgm.wg(+) 
+					ORDER BY 1 ASC, 2 ASC
+;					
+					
+
+SELECT	COUNT(*)
+		FROM	SYSADM.VERSVERW
+		WHERE	VVW_MODUL = 'ACONTO' AND VVW_VERSIONSNR = 1
+;
+		
+SELECT VVW_MODUL, VVW_VERSIONSNR 
+							FROM SYSADM.VERSVERW 
+							WHERE VVW_MODUL = 'ACONTO'
+					
+;				
+SELECT VVW_MODUL, VVW_VERSIONSNR, VVW_VERSION_APL, VVW_ICON, VVW_EXE_NAME, VVW_BESCHREIBUNG 
+				FROM SYSADM.VERSVERW 
+				WHERE VVW_MODUL= 'ACONTO'				
+;				
+				
+SELECT VVD_VERSIONSNR, 
+						VVD_AEND_GRUND, 
+						VVD_NAME_PROGRAM 
+						FROM SYSADM.VERSVERWDET 
+						WHERE VVD_MODUL = 'ACONTO'
+						ORDER BY VVD_VERSIONSNR				
+;																							
+																						
+SELECT Text1, Text2 
+					FROM Liefzahlungsbed 
+					WHERE textnr = 30
+;					
+				
+			
+
+								                                             					
+					
+SELECT * 
+					from ungnr
+					where ungnr= 99
+;
+
+SELECT RabattNr  
+				FROM Rabatt 
+				WHERE RabattNr = 1 AND KZEingabePersNr = 'J'
+;				
+
+SELECT RabattNr , Kassentext 
+					FROM Rabatt 
+					WHERE KZBESTELLERFRAB = 'BPZ'				
+;														
+					
+SELECT DISTINCT kassennr 
+					FROM zmittelbestand 
+					WHERE kassennr <> 6
+;					
+					
+		
+SELECT KASSENNR, BEDIENER, SOLLBEST_ZM, KUNDENDATEN, KUNDENDARST, SCHECKDRUCK, SCHECK_LISTE, KREDITKARTEN_LISTE, ISTGELDZAEHLUNG, ERLOESABFUHRDETAIL, F10_TASTE, KREDITANW, VKIMBUJOURN, ZMMASKE_EZ, ZMMASKE_AZ, VKBELEG_A6, RECHNUNGSSPLITTUNG, BONDRUCKER, BONBELEGDRUCKER, A4DRUCKER, GELDLADE_VK, GELDLADE_HK 
+					FROM SYSADM.SYSTEMEINSTELLUNG 
+					WHERE KASSENNR= 6
+;					
+					
+SELECT WerbeTextZeile1,WerbeTextZeile2,WerbeTextZeile3,WerbeTextZeile4,WerbeTextZeile5,WerbeTextZeile6 
+					FROM WerbeText 
+					WHERE KASSENNR = 0 AND GUELTIGAB = (SELECT MAX(GUELTIGAB) FROM WERBETEXT WHERE KASSENNR = 0 AND  GUELTIGAB <=  '05/05/2008' )   
+					ORDER BY WerbNr 
+;					
+
+SELECT WerbeTextZeile1,WerbeTextZeile2,WerbeTextZeile3,WerbeTextZeile4,WerbeTextZeile5,WerbeTextZeile6 
+						FROM WerbeText 
+						WHERE KASSENNR = 0 AND GUELTIGAB = (SELECT MAX(GUELTIGAB) FROM WERBETEXT WHERE KASSENNR = 0 AND GUELTIGAB <=   '05/05/2008'  )   
+						ORDER BY WerbNr 
+;				
+						
+
+SELECT KREDITNR, 
+				ABSCHLUSSDATUM, 
+				ZAHLUNGSART, 
+				OFFENERRAHMEN, 
+				KZANZAHLUNG 
+				FROM SYSADM.KREDITKOPF 
+				WHERE KREDITSTATUS = 5 
+				AND BEZUGSNR = 1
+				ORDER BY KREDITNR
+;
+
+SELECT KAS_KASSENNR 
+					FROM SYSADM.KASSEN  
+					WHERE (KAS_KASSENNR= 0) AND ((KAS_STATUS != 'G') OR (KAS_STATUS IS NULL))
+;
+
+SELECT B.BUCHUNGSART,B.BUCHUNGSTEXT, @DECODE(E.KASSENNR,NULL,0,1) 
+					FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG E 
+					WHERE (B.BUCHUNGSART= E.BUCHARTSYMBOL(+)) AND (E.KASSENNR(+) = 1)  AND (B.KZ_EA_MASKE = 'J') 
+					ORDER BY ABARBEIT_FOLGE																																			
+;
+
+SELECT E.BUCHARTSYMBOL,B.BUCHUNGSTEXT_VK,B.BUCHUNGSTEXT, E.KASSENNR 
+							FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG E 
+							WHERE (B.BUCHUNGSART= E.BUCHARTSYMBOL(+)) AND (E.KASSENNR(+) = 1) AND (B.BUCHUNGSTEXT != E.BUCHUNGSTEXT) 
+							ORDER BY ANZREIHENFOLGEEA
+;							
+				
+SELECT userid  
+					FROM benutzer 
+					WHERE kzgruppe='N'  
+					AND login= 'SERVICE'																										
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login= 'SERVICE'
+					AND passwort= ''
+;
+SELECT userid  
+					FROM benutzer  
+					WHERE login='SERVICE' AND kzgruppe='N' AND kzsuperbenutzer='J'
+;
+
+SELECT userid 
+					FROM benutzer 
+					WHERE login='SERVICE' AND passwort=''
+;
+
+SELECT login 
+				FROM benutzer 
+				WHERE login= 'SERVICE' AND kzgruppe='J'
+;				
+				
+SELECT userid, gruppenr, persnr 
+				FROM benutzer 
+				WHERE login='  SERVICE  '   
+;				
+				
+SELECT rechte.modulid 
+				FROM module, rechte, benutzer 
+				WHERE rechte.modulid=module.modulid AND benutzer.userid= 11  AND benutzer.userid=rechte.userid AND module.modulbez='  ARTIKEL  ' 
+;				
+
+SELECT markt, unternehmen 
+				FROM standort 
+				WHERE(absatzweg= 2) AND(stnr= 6 ) 
+;
+
+SELECT KAS_KASSENNR 
+							FROM SYSADM.KASSEN  
+							WHERE (KAS_KASSENNR= 0 ) AND ((KAS_STATUS != 'G') OR (KAS_STATUS IS NULL))
+;
+
+SELECT WerbetextZeile1, Werbetextzeile2, Werbetextzeile3, Werbetextzeile4, Werbetextzeile5, Werbetextzeile6 
+							FROM SYSADM.WerbeText 
+							WHERE KASSENNR = 0 
+							ORDER BY WerbNr
+;
+
+SELECT HOECHSTGRENZE, ZAHLUNGSMITTELNR, BEZEICHNUNG 
+							FROM SYSADM.ZAHLUNGSMITTEL 
+							WHERE ZAHLUNGSMITTELART = 'G'
+;
+
+SELECT SCHECKDRUCK 
+												FROM SYSADM.SYSTEMEINSTELLUNG 
+												WHERE KASSENNR IN ( 0, '0') 
+												ORDER BY KASSENNR DESC
+;			
+
+SELECT  VNR_VORGANGSNR 
+					              from SYSADM.VORGANGSNR 
+					              where VNR_KASSENTAG = 05/05/2008 and VNR_KASSENNR = 3
+;
+
+SELECT VOR_VORGANGSNR  
+						FROM VORGANG 
+						WHERE VOR_VORGANGSNR = 31 AND VOR_KASSENTAG = 05/05/2008 AND VOR_KASSENNR = 1
+;						
+
+SELECT MAX(KASSENTAG) 
+						             from SYSADM.ZMITTELBESTAND 
+						             where KASSENNR = 6
+;
+
+SELECT BNR_BELEGNR 
+					            from SYSADM.BELEGNR 
+					            where BNR_KASSENTAG = 05/05/2008
+;					
+
+SELECT @NULLVALUE(VBA_BA_BETRAG, ' '), @NULLVALUE(VBA_BA_TAGESLOS, ' '), @NULLVALUE(VBA_BA_FORDAB, ' ')  
+								        from SYSADM.VORGBUCHUNGSART 
+								        where VBA_TYP_HPTNR = 12 and VBA_TYP_TEILNR = 0
+;
+
+SELECT BA_ERLOESABF 
+						from SYSADM.ZAHLUNGSMITTEL 
+						where ZAHLUNGSMITTELNR = 1
+;
+
+SELECT SUM (BETRAG) 
+						from SYSADM.ZAHLUNG 
+					  where KASSENTAG = 05/05/2008 and KASSENNR = 1 and VORGANGSNR = 33
+;
+
+Select MAX(KASSENTAG) 
+						   from SYSADM.ZMITTELBESTAND 
+						   where KASSENNR = 6
+;
+
+Select ZA.ZAHLUNGSMITTELNR, BETRAG, BETRAG_FW, ZAHLUNGSMITTELART, @DECODE ( ZAHLUNGSMITTELART, 'B', 2, 'R', 3, 1 ) 
+						        from SYSADM.ZAHLUNG ZA, SYSADM.ZAHLUNGSMITTEL ZM 
+						        where KASSENTAG = 05/05/2008 and KASSENNR = 1 and VORGANGSNR  = 33 and ZM.ZAHLUNGSMITTELNR = ZA.ZAHLUNGSMITTELNR and ZM.ZAHLUNGSMITTELART != 'X'  
+						        order by 5
+;
+
+Select count (*) 
+						from SYSADM.ZAHLUNG 
+						where KASSENTAG = 05/05/2008 and KASSENNR = 1 and VORGANGSNR  = 33 and ZAHLUNGSMITTELNR = 2 and @NULLVALUE( STATUS, ' ' )  != ' '
+;									
+
+Select SUM(BETRAG), SUM(BETRAG_FW) 
+						from SYSADM.ZMITTELBESTAND 
+						where ZAHLUNGSMITTELNR = 35 and KASSENTAG = 05/05/2008 and KASSENNR = 3
+;									
+
+Select SUM(BETRAG), SUM(BETRAG_FW) 
+						from SYSADM.ZAHLUNG 
+						where ZAHLUNGSMITTELNR = 35 and KASSENTAG > 04/04/2008 and KASSENNR = 3
+;
+
+Select SUM(BETRAG), SUM(BETRAG_FW) 
+						from SYSADM.ZMITTELBESTAND 
+						where ZAHLUNGSMITTELNR = 35 and KASSENTAG = 04/04/2008 and KASSENNR = 3
+;
+
+Select SUM(BETRAG), SUM(BETRAG_FW) 
+						from SYSADM.ZAHLUNG 
+						where ZAHLUNGSMITTELNR = 2 and KASSENTAG > 04/04/2008 and KASSENNR = 1
+;
+
+
+Select SUM(BETRAG)  
+						from SYSADM.ZAHLUNG 
+						where KASSENTAG =  2 and KASSENNR = 3 and VORGANGSNR  = 33 and ZAHLUNGSMITTELNR != 2
+;
+
+SELECT VBA_BA_BETRAG, VBA_BA_TAGESLOS, VBA_BA_FORDAB 
+						from SYSADM.VORGBUCHUNGSART 
+						where VBA_TYP_HPTNR = 12 and VBA_TYP_TEILNR = 0
+;
+
+Select SUM(BETRAG)  
+						from SYSADM.ZAHLUNG 
+						where KASSENTAG =  05/05/2008 and KASSENNR = 1 and VORGANGSNR  = 33 and ZAHLUNGSMITTELNR = 2
+;
+
+SELECT VBA_BA_BETRAG, VBA_BA_TAGESLOS, VBA_BA_FORDAB 
+						from SYSADM.VORGBUCHUNGSART
+						where VBA_TYP_HPTNR = 12 and VBA_TYP_TEILNR = 0
+;
+
+Select ZA.ZAHLUNGSMITTELNR, VORG_UNTERNR, BETRAG, BETRAG_FW, ZAHLUNGSMITTELART, @DECODE ( ZAHLUNGSMITTELART, 'B', 2, 'R', 3, 1 ) 
+						from SYSADM.ZAHLUNG ZA, SYSADM.ZAHLUNGSMITTEL ZM 
+						where KASSENTAG = 05/05/2008 and KASSENNR = 1 and VORGANGSNR  = 33 and ZM.ZAHLUNGSMITTELNR = ZA.ZAHLUNGSMITTELNR 
+						order by 6
+;
+
+SELECT VBA_BA_BETRAG, VBA_BA_TAGESLOS, VBA_BA_FORDAB 
+						from SYSADM.VORGBUCHUNGSART 
+						where VBA_TYP_HPTNR = 12 and VBA_TYP_TEILNR = 0
+;
+											
+SELECT SUM (BETRAG) 
+						from SYSADM.ZAHLUNG 
+						where KASSENTAG = 05/05/2008 and KASSENNR = 1 and VORGANGSNR = 33											
+;
+
+SELECT VOR_TYP_HPTNR 
+						from SYSADM.VORGANG 
+						where VOR_KASSENTAG = 05/05/2008 and VOR_TYP_HPTNR = 12
+;
+SELECT ELS.BestellNr, @REPEAT('0', 9-@LENGTH(@STRING(ELS.PosNr,0))) || ELS.PosNr, Position.Text1,  
+                        @IF(ELS.VKPreis, @CHOOSE(Position.KZPositionsart,Position.VKPreis,Position.VKPreis,ELS.VKPreis), Position.VKPreis), 
+                        @IF(Lieferdifferenz.DiffMenge,ELS.SollMenge+Lieferdifferenz.DiffMenge, ELS.SollMenge), 
+                        @IF(Lieferdifferenz.DiffMenge,ELS.SollMenge+Lieferdifferenz.DiffMenge, ELS.SollMenge),ELS.ZeilenNr, ELS.BezugsNr, ELS.LfdNrBestellung, ELS.EingangsNr, ELS.EingangsNrDatum, Position.KZPositionsart, Position.KZMeterKiloware, Position.WarenNr, Position.ESTPreis, Position.KZWarenart, 0, ELS.Freigabedatum, ELS.RowID 
+	               FROM ELS, Position, Lieferdifferenz 
+                 WHERE ELS.LieferscheinNr = Lieferdifferenz.LieferscheinNr (+) AND ELS.KZLieferPapier = Lieferdifferenz.KZLieferpapier (+) AND ELS.PosNr = Lieferdifferenz.PosNr (+) AND 'Z' = Lieferdifferenz.KZHerkunft (+) AND ELS.KZLieferPapier =  'LZ' AND ELS.LieferscheinNr = 80488505  AND ELS.Status NOT LIKE 'Erl' AND Position.POSNR = ELS.PosNr 
+			           ORDER BY ELS.ZeilenNr
+;
+	
+SELECT 
+			@IF(@EXACT(FehlbestellNr.AktionsbuchFalsch,' '), 
+			@REPEAT('0', 7-@LENGTH(@STRING(FehlbestellNr.BestellNrFalsch,0)))||@STRING(FehlbestellNr.BestellNrFalsch,0) || @IF(FehlbestellNr.BestellzusatzFalsc,'-'||FehlbestellNr.BestellzusatzFalsc,'') , FehlbestellNr.AktionsbuchFalsch || @REPEAT('0', 5-@LENGTH(@STRING(FehlbestellNr.BestellNrFalsch,0))) || @STRING(FehlbestellNr.BestellNrFalsch ,0)), 
+      @IF(@EXACT(FehlbestellNr.AktionsbuchOK,' '), 
+			@REPEAT('0', 7-@LENGTH(@STRING(FehlbestellNr.BestellOK,0)))||@STRING(FehlbestellNr.BestellOK,0) || @IF(FehlbestellNr.BestellzusatzOK,'-'||FehlbestellNr.BestellzusatzOK,'') , FehlbestellNr.AktionsbuchOK || @REPEAT('0', 5-@LENGTH(@STRING(FehlbestellNr.BestellOK,0))) || @STRING(FehlbestellNr.BestellOK ,0)), Position.Text1, Position.PosNr 
+			FROM Position, FehlbestellNr, Aktionstamm 
+			WHERE FehlBestellNr.BestellNrFalsch = 40400  AND FehlBestellNr.AktionsbuchFalsch = ' b ' AND Aktionstamm.Bestellgroesse = FehlBestellNr.BestellZusatzOK AND Aktionstamm.BestellNr = FehlBestellNr.BestellOK AND Aktionstamm.Aktionsbuchstabe = FehlBestellNr.AktionsbuchOK AND Position.PosNr (+) = Aktionstamm.PosNr						
+;			
+
+
+SELECT ELS.BestellNr, @REPEAT('0', 9-@LENGTH(@STRING(ELS.PosNr,0))) || ELS.PosNr, Position.Text1,  
+			            @IF(ELS.VKPreis, @CHOOSE(Position.KZPositionsart,Position.VKPreis,Position.VKPreis,ELS.VKPreis), Position.VKPreis), 
+			            @IF(Lieferdifferenz.DiffMenge,ELS.SollMenge+Lieferdifferenz.DiffMenge, ELS.SollMenge), ELS.IstMenge, ELS.IstMenge,  
+			   				  @IF(ELS.VKPreis, @CHOOSE(Position.KZPositionsart,Position.VKPreis,Position.VKPreis,ELS.VKPreis), Position.VKPreis), ELS.ZeilenNr, ELS.BezugsNr, ELS.LfdNrBestellung, ELS.EingangsNr, ELS.EingangsNrDatum, Position.KZPositionsart, Position.KZMeterKiloware, Position.WarenNr, Position.ESTPreis, Position.KZWarenart, 0, ELS.Freigabedatum, ELS.RowID 
+			               FROM ELS, Position, Lieferdifferenz 
+			               WHERE ELS.KZLieferPapier =  'LZ' AND ELS.LieferscheinNr = 80488505 AND Position.POSNR = ELS.PosNr AND Lieferdifferenz.LieferscheinNr (+) =ELS.LieferscheinNr AND Lieferdifferenz.KZLieferpapier (+) =ELS.KZLieferPapier AND Lieferdifferenz.PosNr (+)=ELS.PosNr AND Lieferdifferenz.KZHerkunft (+)='Z' 
+			               ORDER BY ELS.ZeilenNr
+;
+
+
+
+			
+	
+SELECT DISTINCT @REPEAT('0',8-@LENGTH(@STRING(Umlagerung.BelegNr,0)))||@STRING(Umlagerung.BelegNr,0),Umlagerung.StandortEmpfang,Standort.Bez,Text,DatumUmlagerung 
+						FROM Umlagerung, Standort, System 
+						WHERE System.Wert = @STRING(Umlagerung.AbsatzwegEmpfang,0) AND Standort.StNr=Umlagerung.StandortEmpfang AND Standort.Absatzweg=Umlagerung.AbsatzwegEmpfang AND Umlagerung.KZStorno NOT LIKE 'S' AND Umlagerung.AbsatzwegAbgehend= 10 AND Umlagerung.StandortAbgehend=2
+						ORDER BY Umlagerung.DatumUmlagerung
+
+;
+SELECT     @IF(@EXACT(@NULLVALUE(AktionStamm.Aktionsbuchstabe, ' '),' '),@REPEAT('0', 7-@LENGTH(@STRING(AktionStamm.BestellNr,0)))||@STRING(AktionStamm.BestellNr,0), AktionStamm.Aktionsbuchstabe || @REPEAT('0', 5-@LENGTH(@STRING(AktionStamm.BestellNr,0)))||@STRING(AktionStamm.BestellNr ,0)), Aktionstamm.Bestellgroesse, AktionStamm.VkPreis, AktionKopf.Bez, @STRING(AktionStamm.SeitenNr,0) ||  '/' || @STRING(AktionStamm.BildNr,0), AktionKopf.GueltigVon, AktionKopf.GueltigBis, @IF(AktionStamm.Verknuepfungskreis, 'J', 'N') 
+						FROM Position, AktionStamm, AktionKopf 
+			      WHERE Position.PosNr = 6646806 AND AktionStamm.PosNr = Position.PosNr AND AktionKopf.AktionNr = AktionStamm.AktionNr
+
+;
+SELECT @REPEAT('0', 9-@LENGTH(@STRING(position.posnr, 0))) || @STRING(position.posnr, 0),position.text1,disposition.menge,position.vkpreis,position.kzdirektzusteller,position.posnr,disposition.disponr,disposition.rowid 
+						FROM disposition, position 
+						WHERE disposition.posnr=position.posnr AND NOT kzuebertragen='J'
+
+;
+SELECT @REPEAT('0',9-@LENGTH(@STRING(Umlagerung.PosNr,0))) || @STRING(Umlagerung.PosNr,0), Umlagerung.ARTIKELBez, Umlagerung.Menge, umlagerung.VKPreis, VKOriginal, position.KZPositionsart, Umlagerung.rowid 
+						FROM Umlagerung, Position 
+						WHERE Umlagerung.BelegNr= 20102413 AND Umlagerung.StandortAbgehend= 10 AND Umlagerung.KZStorno NOT LIKE 'S' AND Position.PosNr = Umlagerung.PosNr 
+						ORDER BY Umlagerung.ZeilenNrUmlagerung
+
+;
+SELECT @IF(@EXACT(FehlbestellNr.AktionsbuchFalsch,' '), @REPEAT('0', 7-@LENGTH(@STRING(FehlbestellNr.BestellNrFalsch,0)))||@STRING(FehlbestellNr.BestellNrFalsch,0) || @IF(FehlbestellNr.BestellzusatzFalsc,'-'||FehlbestellNr.BestellzusatzFalsc,'') , FehlbestellNr.AktionsbuchFalsch || @REPEAT('0', 5-@LENGTH(@STRING(FehlbestellNr.BestellNrFalsch,0))) || @STRING(FehlbestellNr.BestellNrFalsch ,0)),@IF(@EXACT(FehlbestellNr.AktionsbuchOK,' '), @REPEAT('0', 7-@LENGTH(@STRING(FehlbestellNr.BestellOK,0)))||@STRING(FehlbestellNr.BestellOK,0) || @IF(FehlbestellNr.BestellzusatzOK,'-'||FehlbestellNr.BestellzusatzOK,'') , FehlbestellNr.AktionsbuchOK || @REPEAT('0', 5-@LENGTH(@STRING(FehlbestellNr.BestellOK,0))) || @STRING(FehlbestellNr.BestellOK ,0)), Position.Text1, Position.PosNr 
+						FROM Position, FehlbestellNr, Aktionstamm 
+						WHERE FehlBestellNr.BestellNrFalsch = '1'   AND Aktionstamm.Bestellgroesse = FehlBestellNr.BestellZusatzOK AND Aktionstamm.BestellNr = FehlBestellNr.BestellOK AND Aktionstamm.Aktionsbuchstabe = FehlBestellNr.AktionsbuchOK AND Position.PosNr (+) = Aktionstamm.PosNr
+
+;
+SELECT @REPEAT('0',9-@LENGTH(@STRING(position.posnr,0)))||@STRING(position.posnr,0),position.text1, @REPEAT('0',3-@LENGTH(@STRING(position.warennr,0)))||@STRING(position.warennr,0), @TRIM(position.groessenzusatz), position.VKPreis,BESTELLNR,BESTELLGROESSE 
+						FROM position, aktionstamm 
+						WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr=  1
+
+;
+SELECT @REPEAT('0',9-@LENGTH(@STRING(position.posnr,0)))||@STRING(position.posnr,0),position.text1, @REPEAT('0',3-@LENGTH(@STRING(position.warennr,0)))||@STRING(position.warennr,0), @TRIM(position.groessenzusatz), position.VKPreis,BESTELLNR,BESTELLGROESSE
+						FROM position, aktionstamm 
+						WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr=  1
+
+;
+SELECT p.ROWID, p.PosNr, p.BestV, p.BestU, p.BestNV, p.Grundpreis, p.Text1, p.VKPreis, p.WarenNr, p.ESTPreis, p.MSP, h.hauspreis, h.gueltigab, h.kzherkunft, a.vkpreis, h.HPNr 
+							FROM position p, hauspreis h, aktionstamm a 
+							WHERE h.gueltigab <= 04/04/2008 AND h.posnr = a.posnr(+) AND h.posnr = p.posnr 
+							ORDER BY p.posnr ASC, h.gueltigab ASC, h.kzherkunft ASC
+;
+SELECT p.ROWID, p.PosNr, p.BestV, p.BestU, p.BestNV, p.Grundpreis, p.Text1, p.VKPreis, p.WarenNr, p.ESTPreis, p.MSP, h.hauspreis, h.gueltigab, h.kzherkunft, a.vkpreis, h.HPNr 
+					FROM position p, hauspreis h, aktionstamm a 
+					WHERE h.gueltigab <= 11/11/2001 AND h.posnr = a.posnr(+) AND h.posnr = p.posnr 
+					order by p.posnr ASC, h.gueltigab ASC, h.kzherkunft ASC
+;
+Select UMSATZAKTJAHR, RUECKAKTJAHR 
+						from SYSADM.KUNDE 
+						where BEZUGSNR = 0
+
+;
+SELECT BESTV, BESTRES, VKSTKMONAT, VKWERTMONAT, VKSTKSAISON, VKWERTSAISON 
+						from SYSADM.POSITION 
+						where POSNR = 6646806
+
+;
+SELECT * 
+						from SYSADM.UNGNR 
+						where UNGNR = 99
+
+;
+Select VOR_BEDIENERKENN,  VOR_KUNDENNR,  VOR_AUFTRAGSNR, VOR_QAUFNR_UMS, VOR_BEZUGSNR, VOR_KREDITNR 
+						from SYSADM.VORGANG 
+						where VOR_KASSENTAG = 05/05/2008 and VOR_KASSENNR = 1 and VOR_VORGANGSNR = 33 and VOR_TYP_HPTNR = 12
+
+;
+Select VBA_VORGANGSTYP, VBA_BUCHSCHL_WE 
+						from SYSADM.VORGBUCHUNGSART 
+						where VBA_TYP_HPTNR = 12
+
+;
+Select VOR_BEDIENERKENN,  VOR_KUNDENNR,  VOR_AUFTRAGSNR, VOR_QAUFNR_UMS, VOR_BEZUGSNR, VOR_KREDITNR 
+						from SYSADM.VORGANG 
+						where VOR_KASSENTAG = 05/05/2008 and VOR_KASSENNR = 1 and VOR_VORGANGSNR = 33 and VOR_TYP_HPTNR = 12
+
+;
+Select VBA_VORGANGSTYP, VBA_BUCHSCHL_VK 
+						from SYSADM.VORGBUCHUNGSART 
+						where VBA_TYP_HPTNR = 12
+;										
+SELECT wert 
+						FROM logo 
+						WHERE logonr = 2 
+						ORDER BY bytenr
+;
+
+SELECT  @NULLVALUE(TEXTNR_NAME,0),@NULLVALUE(TEXTNR_ADR,0) 
+						FROM BUCHUNGSART 
+						WHERE BUCHUNGSART=' A0 '
+;
+
+SELECT text1 
+						FROM liefzahlungsbed 
+						WHERE textnr =  30
+;
+
+SELECT text1, text2  
+						FROM liefzahlungsbed 
+						WHERE textnr =  30	
+;
+
+SELECT BEL_BELEGTEXT,BEL_DRUCKERTYP,BEL_DRUCKERART,BEL_BELEGART,BEL_KUNDENNR 
+						FROM BELEGE 
+						WHERE BEL_VORGANGSNR = 1 AND BEL_KASSENTAG = @DATE( 2008  ,  05  , 05 ) AND BEL_KASSENNR = 1 AND BEL_BELEGNR = 0 
+;
+
+SELECT bel_betrag,bel_bezugsnr,bel_kundennr, bel_verwendung1,bel_verwendung2,bel_belegart,bel_barcode, bel_name,bel_adresse,bel_kst1,bel_kst2,bel_kst3 
+						FROM belege 
+						WHERE bel_kassentag = @DATE(  2008  ,  05  ,  05  ) and bel_kassennr = 1   and bel_vorgangsnr = 7 and bel_belegnr = 0 
+;
+
+SELECT modulbez 
+						FROM module 
+						WHERE qmodulnr= 9030
+;
+
+SELECT Nachname 
+						FROM Benutzer 
+						WHERE userid= 1
+;					
+
+SELECT aktionstamm.posnr, position.vkpreis 
+						FROM aktionstamm, position 
+						WHERE aktionstamm.bestellnr=  1085153 AND aktionstamm.aktionsbuchstabe= '' AND position.posnr=aktionstamm.posnr 
+;
+
+SELECT position.posnr, position.vkpreis 
+						FROM position, aktionstamm 
+						WHERE aktionstamm.bestellnr =   1085153   AND aktionstamm.posnr = position.posnr AND (bestellgroesse =   2   OR groesse1 =   2   OR groesse2 =   2  )
+;
+
+SELECT position.posnr, position.vkpreis 
+						FROM position, aktionstamm
+						WHERE aktionstamm.bestellnr = 1085153 AND position.posnr=aktionstamm.posnr
+;
+
+SELECT position.text1,  position.groessenzusatz, aktionstamm.bestellnr, aktionstamm.bestellgroesse, position.vkpreis, position.posnr, position.warennr 
+						FROM position, aktionstamm 
+						WHERE position.posnr = aktionstamm.posnr AND aktionstamm.bestellnr =   1085153  
+						ORDER BY aktionstamm.bestellnr, aktionstamm.bestellgroesse
+;
+SELECT posnr 
+						FROM position 
+						WHERE position.posnr >= 4694162  AND position.posnr <=  6646806
+;
+
+SELECT position.posnr, position.vkpreis 
+						FROM position, aktionstamm 
+						WHERE position.posnr=aktionstamm.posnr AND aktionstamm.bestellnr=  1085153
+;
+																																				
+SELECT position.posnr, ean.vkpreis 
+						FROM position,ean
+						WHERE ean.posnr=position.posnr AND ean.eannr= 4008496103942 
+;																																															
+
+SELECT position.text1, position.groessenzusatz, aktionstamm.bestellnr, aktionstamm.bestellgroesse, position.vkpreis, position.posnr, position.warennr 
+						FROM position, aktionstamm 
+						WHERE position.posnr = aktionstamm.posnr AND aktionstamm.bestellnr =   1085153   
+						ORDER BY aktionstamm.bestellnr, aktionstamm.bestellgroesse
+;
+SELECT SUM(BETRAG) 
+						FROM ZMITTELBESTAND ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART NOT IN ('X') AND ZM.ZAHLUNGSMITTELNR = ZMB.ZAHLUNGSMITTELNR AND ZMB.KASSENNR= 6  AND ZMB.KASSENTAG=(SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR= 6)
+;
+
+SELECT SUM(BETRAG) 
+						FROM ZAHLUNG Z, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART NOT IN ('X') AND ZM.ZAHLUNGSMITTELNR = Z.ZAHLUNGSMITTELNR AND Z.KASSENNR= 1 AND Z.KASSENTAG > (SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR= 6)
+;
+
+SELECT SUM(ZMB.BETRAG) 
+						FROM ZMITTELBESTAND ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART IN ('B','R') AND  ZM.ZAHLUNGSMITTELNR = ZMB.ZAHLUNGSMITTELNR AND ZMB.KASSENNR= 6 AND ZMB.KASSENTAG=(SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR= 6 )
+;
+
+SELECT SUM(Z.BETRAG) 
+						FROM ZAHLUNG Z, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART IN ('B','R') AND ZM.ZAHLUNGSMITTELNR = Z.ZAHLUNGSMITTELNR AND Z.KASSENNR= 1 AND Z.KASSENTAG > (SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR=  6)
+;
+
+SELECT SUM(ZMB.BETRAG) 
+						FROM ZMITTELBESTAND ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART IN (  'x'  ) AND  ZM.ZAHLUNGSMITTELNR = ZMB.ZAHLUNGSMITTELNR AND ZMB.KASSENNR=  6   AND  ZMB.KASSENTAG=(SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR=  6)						
+;
+
+SELECT BNR_BELEGNR,BNR_BELEGNR_SPEZ
+						FROM SYSADM.BELEGNR 
+						WHERE BNR_KASSENTAG= 04/04/2008
+;
+
+SELECT BNR_BELEGNR 
+					 FROM SYSADM.BELEGNR 
+					 WHERE BNR_KASSENTAG = 04/04/2008
+;
+
+select max(kassentag) 
+						from zmittelbestand 
+						where kassennr = 3
+;
+
+SELECT ZM.ZAHLUNGSMITTELNR, ZM.BEZEICHNUNG, ZM.KURS, ZM.UMRECHNUNG, ZM.ZAHLUNGSMITTELART, ZM.ANZEIGEREIHENFOLGE 
+						FROM ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART not in ('X') and  ZM.ZAHLUNGSMITTELART != 'G' and  ZM.GUELTIGVON <= 06/06/2008 AND ZM.GUELTIGBIS >=  02/02/2002 
+						ORDER BY 6
+;
+
+SELECT SUM (ZMB.BETRAG), SUM (ZMB.BETRAG_FW) 
+						FROM ZMITTELBESTAND ZMB 
+						WHERE ZMB.ZAHLUNGSMITTELNR = 3 and ZMB.KASSENNR = 6 AND ZMB.KASSENTAG = '05/05/2008'
+;
+
+SELECT sum(ZMB.BETRAG), sum(ZMB.BETRAG_FW) 
+						FROM ZAHLUNG ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZMB.ZAHLUNGSMITTELNR = 6 and zm.zahlungsmittelnr = 3 and ZM.ZAHLUNGSMITTELART <> 'X' AND ZMB.KASSENNR = 6 AND ZMB.KASSENTAG > 04/04/2007
+;
+
+SELECT ZM.ZAHLUNGSMITTELART 
+						FROM ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELNR = 1 
+						ORDER BY ZM.ANZEIGEREIHENFOLGE
+;
+
+SELECT ZM.BEZEICHNUNG,ZM.KURS,ZM.UMRECHNUNG,ZM.ZAHLUNGSMITTELART,ZM.BEZKURZ, Z.BETRAG,Z.BETRAG_FW 
+						FROM ZAHLUNGSMITTEL ZM, ZAHLUNG Z 
+						WHERE Z.VORGANGSNR = 33 AND Z.KASSENTAG = 05/052008 And Z.KASSENNR= 3 And Z.ZAHLUNGSMITTELNR = ZM.ZAHLUNGSMITTELNR 
+;
+
+SELECT  COUNT(*) 
+						FROM VORGANG 
+						WHERE VOR_KASSENTAG = 05/05/2008 AND VOR_KASSENNR BETWEEN 1 AND 98 AND VOR_TYP_HPTNR = 810 AND @NULLVALUE(VOR_BETRAG,0) != 0
+;
+
+SELECT  VOR_KASSENNR,VOR_BETRAG
+						FROM SYSADM.VORGANG 
+						WHERE   VOR_KASSENTAG = 05/05/2008 AND VOR_KASSENNR BETWEEN 1 AND 98 AND VOR_TYP_HPTNR = 810 AND (VOR_BETRAG <> 0 AND VOR_BETRAG IS NOT NULL) 
+						ORDER BY VOR_KASSENNR
+;
+
+SELECT DRU_KASSENNR,DRU_ZM_NR,DRU_ZM_ART,BEZKURZ,DRU_ART,DRU_ANZAHL,SUM(DRU_WERT_FW),SUM(DRU_WERT) 
+						FROM DRUCKDATENTAB,ZAHLUNGSMITTEL 
+						WHERE  DRU_KASSENTAG = 05/05/2008 AND DRU_KASSENNR=3 AND DRU_TYP = 'G' AND ZAHLUNGSMITTELNR=DRU_ZM_NR 
+					  GROUP BY DRU_KASSENNR,DRU_ZM_NR,DRU_ZM_ART,BEZKURZ,DRU_ART,DRU_ANZAHL 
+					  ORDER BY DRU_KASSENNR
+;
+
+SELECT DISTINCT STATUS_TAB 
+						FROM ZMITTELBESTAND 
+						WHERE STATUS_TAB IS NOT NULL AND KASSENTAG = 05/05/2008 AND KASSENNR = 3
+;
+
+SELECT MAX(KASSENTAG) 
+						FROM ZMITTELBESTAND 
+					  WHERE STATUS_TAB IS NOT NULL AND KASSENTAG <= 05/05/2008 AND KASSENNR = 1
+;
+
+SELECT VOR_ANZAHLUNG, VOR_OFFENERBETRAG, VOR_KASSENTAG 
+ 						FROM VORGANG 
+						WHERE VOR_KASSENTAG <= 05/05/2008 AND VOR_KASSENNR = 1 AND VOR_TYP_HPTNR IN (810,811) 
+						ORDER BY VOR_KASSENTAG DESC
+;
+SELECT SUM(BETRAG) 
+						FROM ZMITTELBESTAND ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART NOT IN ('X') AND ZM.ZAHLUNGSMITTELNR = ZMB.ZAHLUNGSMITTELNR AND ZMB.KASSENNR= 6 AND ZMB.KASSENTAG=(SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR= 6)
+;
+
+SELECT SUM(BETRAG) 
+						FROM ZAHLUNG Z, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART NOT IN ('X') AND ZM.ZAHLUNGSMITTELNR = Z.ZAHLUNGSMITTELNR AND Z.KASSENNR= 1 AND Z.KASSENTAG > (SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR= 6)
+;
+
+SELECT SUM(ZMB.BETRAG) 
+						FROM ZMITTELBESTAND ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART IN ('B','R') AND  ZM.ZAHLUNGSMITTELNR = ZMB.ZAHLUNGSMITTELNR AND ZMB.KASSENNR= 6 AND ZMB.KASSENTAG=(SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR= 6)
+;
+
+SELECT SUM(Z.BETRAG) 
+						FROM ZAHLUNG Z, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART IN ('B','R') AND ZM.ZAHLUNGSMITTELNR = Z.ZAHLUNGSMITTELNR AND Z.KASSENNR= 1 AND Z.KASSENTAG > (SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR=  6)
+;
+
+SELECT SUM(ZMB.BETRAG) 
+						FROM ZMITTELBESTAND ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART IN (  'B'  ) AND  ZM.ZAHLUNGSMITTELNR = ZMB.ZAHLUNGSMITTELNR AND ZMB.KASSENNR=  1   AND  ZMB.KASSENTAG=(SELECT MAX(KASSENTAG) FROM ZMITTELBESTAND WHERE KASSENNR=  6)						
+;
+
+SELECT SUM(Z.BETRAG) 
+						FROM ZAHLUNG Z, ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART IN ('R') AND ZM.ZAHLUNGSMITTELNR=Z.ZAHLUNGSMITTELNR AND Z.KASSENNR= 1   AND  Z.KASSENTAG >=   10/10/2000
+;
+
+SELECT BNR_BELEGNR,BNR_BELEGNR_SPEZ
+						FROM SYSADM.BELEGNR 
+						WHERE BNR_KASSENTAG= 04/04/2008
+;
+
+SELECT BNR_BELEGNR 
+					 FROM SYSADM.BELEGNR 
+					 WHERE BNR_KASSENTAG = 04/04/2008
+;
+
+select max(kassentag) 
+						from zmittelbestand 
+						where kassennr = 6
+;
+
+SELECT ZM.ZAHLUNGSMITTELNR, ZM.BEZEICHNUNG, ZM.KURS, ZM.UMRECHNUNG, ZM.ZAHLUNGSMITTELART, ZM.ANZEIGEREIHENFOLGE 
+						FROM ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART not in ('X') and  ZM.ZAHLUNGSMITTELART != 'G' and  ZM.GUELTIGVON <= 12/12/2008 AND ZM.GUELTIGBIS >=  10/10/2000 
+						ORDER BY 6
+;
+
+SELECT SUM (ZMB.BETRAG), SUM (ZMB.BETRAG_FW) 
+						FROM ZMITTELBESTAND ZMB 
+						WHERE ZMB.ZAHLUNGSMITTELNR = 41 and ZMB.KASSENNR = 3 AND ZMB.KASSENTAG = 04/04/2008
+;
+
+SELECT sum(ZMB.BETRAG), sum(ZMB.BETRAG_FW) 
+						FROM ZAHLUNG ZMB, ZAHLUNGSMITTEL ZM 
+						WHERE ZMB.ZAHLUNGSMITTELNR = 30 and zm.zahlungsmittelnr = 1 and ZM.ZAHLUNGSMITTELART <> 'X' AND ZMB.KASSENNR = 1 AND ZMB.KASSENTAG > '04/04/2005'
+;
+
+SELECT ZM.ZAHLUNGSMITTELART 
+						FROM ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELNR = 1
+						ORDER BY ZM.ANZEIGEREIHENFOLGE
+;
+
+SELECT ZM.BEZEICHNUNG,ZM.KURS,ZM.UMRECHNUNG,ZM.ZAHLUNGSMITTELART,ZM.BEZKURZ, Z.BETRAG,Z.BETRAG_FW 
+						FROM ZAHLUNGSMITTEL ZM, ZAHLUNG Z 
+						WHERE Z.VORGANGSNR = 2 AND Z.KASSENTAG = '04/04/2008' And Z.KASSENNR= 2 And Z.ZAHLUNGSMITTELNR = ZM.ZAHLUNGSMITTELNR 
+;
+
+SELECT  COUNT(*) 
+						FROM VORGANG 
+						WHERE VOR_KASSENTAG = '04/04/2008' AND VOR_KASSENNR BETWEEN 1 AND 98 AND VOR_TYP_HPTNR = 810 AND @NULLVALUE(VOR_BETRAG,0) != 0
+;
+
+SELECT  VOR_KASSENNR,VOR_BETRAG
+						FROM SYSADM.VORGANG 
+						WHERE   VOR_KASSENTAG = '04/04/2008' AND VOR_KASSENNR BETWEEN 1 AND 98 AND VOR_TYP_HPTNR = 810 AND (VOR_BETRAG <> 0 AND VOR_BETRAG IS NOT NULL) 
+						ORDER BY VOR_KASSENNR
+;
+
+SELECT DRU_KASSENNR,DRU_ZM_NR,DRU_ZM_ART,BEZKURZ,DRU_ART,DRU_ANZAHL,SUM(DRU_WERT_FW),SUM(DRU_WERT) 
+						FROM DRUCKDATENTAB,ZAHLUNGSMITTEL 
+						WHERE  DRU_KASSENTAG = 04/04/2008 AND DRU_KASSENNR= 99 AND DRU_TYP = 'G' AND ZAHLUNGSMITTELNR=DRU_ZM_NR 
+					  GROUP BY DRU_KASSENNR,DRU_ZM_NR,DRU_ZM_ART,BEZKURZ,DRU_ART,DRU_ANZAHL 
+					  ORDER BY DRU_KASSENNR
+;
+
+SELECT DISTINCT STATUS_TAB 
+						FROM ZMITTELBESTAND 
+						WHERE STATUS_TAB IS NOT NULL AND KASSENTAG = 04/04/2008 AND KASSENNR = 44
+;
+
+SELECT MAX(KASSENTAG) 
+						FROM ZMITTELBESTAND 
+					  WHERE STATUS_TAB IS NOT NULL AND KASSENTAG <= 10/10/2008 AND KASSENNR = 44
+;
+
+SELECT VOR_ANZAHLUNG, VOR_OFFENERBETRAG, VOR_KASSENTAG 
+ 						FROM VORGANG 
+						WHERE VOR_KASSENTAG <= 10/10/2008AND VOR_KASSENNR = 44 AND VOR_TYP_HPTNR IN (810,811) 
+						ORDER BY VOR_KASSENTAG DESC
+;
+
+SELECT DRU_ANZAHL,DRU_WERT
+						FROM DRUCKDATENTAB 
+						WHERE DRU_TYP= 'g' AND  DRU_KASSENNR= 99 AND DRU_KASSENTAG = 04/04/2008 AND DRU_ZEILENNR = 1
+	;				
+
+SELECT SCHECKDRUCK 
+						FROM SYSADM.SYSTEMEINSTELLUNG 
+						WHERE KASSENNR=  10   OR KASSENNR = 0 
+						ORDER BY KASSENNR DESC																																									
+;
+
+SELECT BETRAG,VORG_UNTERNR 
+						FROM SYSADM.ZAHLUNG 
+						WHERE (ZAHLUNGSMITTELNR = 30) AND (VORGANGSNR= 48)  AND (kassentag = 04/04/2008)AND (KASSENNR=10)
+;
+
+SELECT  BETRAG,BETRAG_FW,BETRAG_KORABF,STATUS,BA_BETRAG,BA_TAGESLOS, BA_FORDAB,KASSENTAG_ACO,VORGANGSNR_ACO,SCHECKNR,KARTENNR, BLZ,KONTONR,TERMINALNR 
+						FROM SYSADM.ZAHLUNG 
+						WHERE (KASSENNR=10) AND (KASSENTAG=04/04/2008) AND (ZAHLUNGSMITTELNR=30) AND (VORGANGSNR= 40)  AND (VORG_UNTERNR= 0)
+;
+
+SELECT VBA.VBA_BA_BETRAG,BELEGTYP,BUCHUNGSTEXT 
+						FROM  SYSADM.BUCHUNGSART BA,  SYSADM.VORGBUCHUNGSART VBA 
+						WHERE ((VBA_TYP_HPTNR= 12) AND (VBA_TYP_TEILNR=0) AND (VBA.VBA_BA_BETRAG = BA.BUCHUNGSART))
+;
+
+SELECT @DECODE(BUCHUNGSTEXT_VK,'',BUCHUNGSTEXT, 
+						BUCHUNGSTEXT_VK), BUCHUNGSART 
+						FROM  SYSADM.BUCHUNGSART BA,  SYSADM.VORGBUCHUNGSART VBA 
+						WHERE (VBA.VBA_TYP_HPTNR=   12  )  AND  (VBA_TYP_TEILNR =   0  )  AND (VBA.VBA_BA_BETRAG = BA.BUCHUNGSART)
+;						
+
+SELECT  DISTINCT zm.BEZEICHNUNG, zm.ZAHLUNGSMITTELART, zm.ZAHLUNGSMITTELNR, zm.FUNKTIONSTASTE 
+						FROM SYSADM.Zahlungsmittel zm,  SYSADM.Zahlung z 
+						WHERE (z.STATUS = 'h') AND (z.Zahlungsmittelnr = zm.Zahlungsmittelnr) 
+						ORDER BY zm.anzeigereihenfolge ASC
+;
+
+SELECT KASSENNR, MAX(VOR_DATUMZEIT) 
+						FROM  SYSADM.ZAHLUNG, SYSADM.VORGANG 
+						WHERE (STATUS =  'h'   ) AND (ZAHLUNGSMITTELNR IN (  40 )) AND (KASSENNR < 99) AND (KASSENNR=VOR_KASSENNR) 
+						GROUP BY 1
+;
+
+SELECT zg.KASSENNR, SUM (zg.BETRAG), SUM (zg.BETRAG_FW), zm.ZAHLUNGSMITTELNR,zm.ANZEIGEREIHENFOLGE 
+						FROM  SYSADM.ZAHLUNG zg,  SYSADM.ZAHLUNGSMITTEL zm,  SYSADM.VORGANG  
+						WHERE (zg.STATUS =  'h'   ) AND (zm.ZAHLUNGSMITTELART != ' G  ') AND (zg.KASSENNR =   4  )  AND (zg.ZAHLUNGSMITTELNR = zm.ZAHLUNGSMITTELNR)    
+						GROUP BY zm.bezeichnung, zg.Kassennr, zm.zahlungsmittelnr, zm.anzeigereihenfolge 
+						ORDER BY zm.anzeigereihenfolge ASC, zg.kassennr
+;
+
+SELECT SUM(@DECODE(BETRAG_KORABF,NULL,BETRAG,BETRAG_KORABF)) 
+						FROM  SYSADM.ZAHLUNG,  SYSADM.VORGANG 
+						WHERE (ZAHLUNGSMITTELNR=   40   )  AND (STATUS =   'H'  ) AND ((BETRAG_KORABF != 0) or (betrag_korabf is null)) AND (KASSENNR =   4  ) 
+;
+
+SELECT  z.ZAHLUNGSMITTELNR,zm.ZAHLUNGSMITTELART, KASSENTAG_ACO,SUM(@DECODE(BETRAG_KORABF,NULL,BETRAG,BETRAG_KORABF)), SUM(BETRAG_FW) 
+						FROM  SYSADM.ZAHLUNG z,  SYSADM.ZAHLUNGSMITTEL zm,  SYSADM.VORGANG 
+						WHERE (STATUS =   'h'  ) AND (((BETRAG >=0) AND (BETRAG_KORABF > 0) OR (BETRAG_KORABF IS NULL)) OR  ((BETRAG < 0 ) AND  (@NULLVALUE(BETRAG_KORABF,0) > 0)) ) AND (z.ZAHLUNGSMITTELNR=zm.ZAHLUNGSMITTELNR) 
+						GROUP BY KASSENTAG_ACO,z.ZAHLUNGSMITTELNR, zm.ZAHLUNGSMITTELART 
+						ORDER BY KASSENTAG_ACO,z.ZAHLUNGSMITTELNR
+;
+
+SELECT  z.KASSENTAG,z.ZAHLUNGSMITTELNR,z.VORGANGSNR,z.VORG_UNTERNR 
+						FROM  SYSADM.ZAHLUNG z,  SYSADM.VORGANG 
+						WHERE (STATUS =   'g' ) AND (KASSENNR =   4   )  AND ((BETRAG_KORABF != 0) OR (BETRAG_KORABF IS NULL))
+;
+
+SELECT BEZEICHNUNG, ZAHLUNGSMITTELART,HOECHSTGRENZE, ZAHLUNGSMITTELNR, FUNKTIONSTASTE, KURS, UMRECHNUNG, BEZKURZ  
+						FROM SYSADM.Zahlungsmittel z 
+						WHERE(Anzeige_in_Erlosab = 'J' OR z.ZahlungsmittelArt = 'F') AND(((   10/10/2008    >= GueltigVon) AND ( 10/10/2000   <= GueltigBis)) OR((  10/10/2000   >= GueltigVon) AND (GueltigBis IS NULL)) OR ((GueltigVon IS NULL) AND (  gueltigbis   <= 10/10/2008)) OR ((GueltigVon IS NULL) AND (GueltigBis IS NULL))) 
+						ORDER BY Anzeigereihenfolge
+;
+SELECT BETRAG_KORABF,BETRAG,KASSENTAG,VORGANGSNR 
+						FROM SYSADM.ZAHLUNG 
+						WHERE (KASSENNR= 1) AND (ZAHLUNGSMITTELNR= 30) AND (STATUS IS NULL) AND ((BETRAG_KORABF != 0) OR (BETRAG_KORABF IS NULL)) 
+						ORDER BY KASSENTAG,VORGANGSNR
+;
+
+SELECT BETRAG,KASSENTAG 
+						FROM SYSADM.ZMITTELBESTAND 
+						WHERE (KASSENNR=  6  ) AND (ZAHLUNGSMITTELNR= 41  ) 
+						AND KASSENTAG=(select max(kassentag) 
+							from zmittelbestand 
+							where zahlungsmittelnr=  41   AND KASSENNR =  6  )
+;
+
+SELECT BETRAG 
+						FROM SYSADM.ZAHLUNG 
+						WHERE (KASSENNR= 1) AND (ZAHLUNGSMITTELNR= 30)
+;
+
+SELECT BETRAG,BETRAG_FW,KASSENTAG 
+					FROM SYSADM.ZMITTELBESTAND 
+					WHERE (KASSENNR= 6  ) AND (ZAHLUNGSMITTELNR=  41  ) AND (KASSENTAG=(select max(KASSENTAG) 
+										from  SYSADM.ZMITTELBESTAND 
+										where zahlungsmittelnr=  41   AND KASSENNR =  6  ))
+;
+
+SELECT BETRAG,BETRAG_FW 
+						FROM SYSADM.ZAHLUNG 
+						WHERE (KASSENNR= 1)    AND (ZAHLUNGSMITTELNR= 30)
+;
+
+SELECT  KASSENTAG,VORGANGSNR,VORG_UNTERNR 
+						FROM SYSADM.ZAHLUNG 
+						WHERE (ZAHLUNGSMITTELNR =   30  )  AND (STATUS IS NULL)  AND (KASSENNR =   1   ) AND ((BETRAG >=0 AND (BETRAG_KORABF > 0 OR BETRAG_KORABF IS NULL)) OR  (BETRAG < 0  AND  @NULLVALUE(BETRAG_KORABF,0) > 0))
+;
+
+SELECT @DECODE(BETRAG_KORABF,NULL,BETRAG,BETRAG_KORABF) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE (ZAHLUNGSMITTELNR =   30   )  AND (STATUS IS NULL) AND (KASSENNR =  1  ) AND ((BETRAG >=0 AND (BETRAG_KORABF > 0 OR BETRAG_KORABF IS NULL)) OR  (BETRAG < 0  AND  @NULLVALUE(BETRAG_KORABF,0) > 0))
+;
+
+SELECT BETRAG 
+						FROM  SYSADM.ZAHLUNG, SYSADM.VORGANG 
+						WHERE (STATUS =   'h'   ) AND (ZAHLUNGSMITTELNR =   30   ) AND (KASSENNR =   1  )  
+;
+
+SELECT @DECODE(BETRAG_KORABF,NULL,BETRAG,BETRAG_KORABF) 
+						FROM  SYSADM.ZAHLUNG, SYSADM.VORGANG 
+						WHERE (ZAHLUNGSMITTELNR =   30   )  AND (STATUS =  'h'   ) AND ((BETRAG_KORABF != 0) or (betrag_korabf is null)) AND (KASSENNR =   1   ) 
+;
+
+SELECT  BETRAG,BETRAG_FW,BETRAG_KORABF,STATUS,BA_BETRAG,BA_TAGESLOS, BA_FORDAB,KASSENTAG_ACO,VORGANGSNR_ACO,SCHECKNR,KARTENNR, BLZ,KONTONR,TERMINALNR,ZAHLUNGSMITTELART 
+						FROM SYSADM.ZAHLUNG z, SYSADM.ZAHLUNGSMITTEL zm 
+						WHERE (KASSENNR =   1   )  AND (KASSENTAG=    04/04/2008   )  AND (z.ZAHLUNGSMITTELNR=    30  )  AND (VORGANGSNR=    48   )  AND (VORG_UNTERNR=    0   )  AND (z.ZAHLUNGSMITTELNR=zm.ZAHLUNGSMITTELNR)
+;
+
+
+SELECT KZPOSITIONSART, VKPREIS, TEXT1, WARENNR, WUG, ESTPREIS, MSP, @DECODE(MSP,1,'X','M'), @DECODE(KZMETERKILOWARE,'J','J','N'),KZAUSWEICHNR,SOFORTID,KZPROVISIONSFAEHIG,KZVERGUETUNG, MWSTID 
+						FROM SYSADM.POSITION 
+						WHERE POSNR =   6646806
+;
+
+SELECT MWSTPROZENT  
+						FROM SYSADM.MWST 
+						WHERE MWSTID =   0
+;
+
+SELECT @DECODE(BETRAG_KORABF,NULL,BETRAG,BETRAG_KORABF),KASSENNR, KASSENTAG, VORGANGSNR,VORG_UNTERNR,TERMINALNR,BLZ,SCHECKNR 
+						FROM ZAHLUNG 
+						WHERE (ZAHLUNGSMITTELNR =   30   )  AND (STATUS =  'h' ) AND (TERMINALNR = 0) AND ((BETRAG >=0 AND (BETRAG_KORABF > 0 OR BETRAG_KORABF IS NULL)) OR  (BETRAG < 0  AND  @NULLVALUE(BETRAG_KORABF,0) > 0)) 
+						ORDER BY KASSENTAG,VORGANGSNR,KASSENNR
+;
+
+SELECT TMP_ROW_DATA,TMP_ROWNR,TMP_ROW_FLAG 
+						FROM TEMPTAB  
+						WHERE (TMP_KASSENNR =   1  ) AND (TMP_BEZ1= '  a  ' ) AND (TMP_BEZ2= ' b  ' ) 
+						ORDER BY TMP_ROWNR
+;
+
+SELECT BNR_BELEGNR_SPEZ  
+						FROM BELEGNR 
+						WHERE BNR_KASSENTAG =   04/04/2008
+;
+
+SELECT  DISTINCT BEZEICHNUNG,ZAHLUNGSMITTELNR,ZAHLUNGSMITTELART,BA_ERLOESABF 
+						FROM ZAHLUNGSMITTEL 
+						WHERE (ZAHLUNGSMITTELART = '  g  ' )
+;
+
+SELECT BA_ERLOESABF 
+						FROM ZAHLUNGSMITTEL 
+						WHERE ZAHLUNGSMITTELART = ' G  '
+;
+
+SELECT BUCHUNGSTEXT,BELEGTYP 
+						FROM BUCHUNGSART BA 
+						WHERE (BA.BUCHUNGSART = ' A0  ')
+;
+
+SELECT z.Bezeichnung, z.ZahlungsmittelArt, z.Hoechstgrenze, z.Zahlungsmittelnr, Funktionstaste,BA_ERLOESABF 
+						FROM Zahlungsmittel z 
+						WHERE Anzeige_in_Erlosab = 'J' AND (((10/10/2008 >= GueltigVon) AND (10/10/2000 <= GueltigBis)) OR ((10/10/2008>= GueltigVon) AND (GueltigBis IS NULL)) OR ((GueltigVon IS NULL) AND (10/10/2000 <= GueltigBis)) OR ((GueltigVon IS NULL) AND (GueltigBis IS NULL))) 
+						ORDER BY Anzeigereihenfolge
+	;				
+
+SELECT @DECODE(BETRAG_KORABF,NULL,BETRAG,BETRAG_KORABF) 
+						FROM ZAHLUNG 
+						WHERE (ZAHLUNGSMITTELNR =   30   )  AND (STATUS  = 'H' ) AND ((BETRAG >=0 AND (BETRAG_KORABF > 0 OR BETRAG_KORABF IS NULL)) OR  (BETRAG < 0  AND  @NULLVALUE(BETRAG_KORABF,0) > 0))
+;
+
+SELECT BETRAG 
+						FROM ZMITTELBESTAND 
+						WHERE (ZAHLUNGSMITTELNR= 41    )  AND (KASSENNR =   6  ) AND (KASSENTAG =   04/04/2008 )
+;
+
+SELECT z.KASSENNR,z.KASSENTAG,z.VORGANGSNR,z.VORG_UNTERNR, z.TERMINALNR,z.ZAHLUNGSMITTELNR,zm.ZAHLUNGSMITTELART 
+						FROM ZAHLUNG z , ZAHLUNGSMITTEL zm 
+						WHERE (STATUS =  'h'  ) AND (z.ZAHLUNGSMITTELNR IN   (30) )  AND (z.ZAHLUNGSMITTELNR = zm.ZAHLUNGSMITTELNR)
+;
+
+SELECT BEZEICHNUNG 
+						FROM ZAHLUNGSMITTEL 
+						WHERE ZAHLUNGSMITTELART='  G  '
+;
+
+SELECT  BETRAG,BETRAG_FW,BETRAG_KORABF,STATUS,BA_BETRAG,BA_TAGESLOS, BA_FORDAB,KASSENTAG_ACO,VORGANGSNR_ACO,SCHECKNR,KARTENNR, BLZ,KONTONR 
+						FROM ZAHLUNG 
+						WHERE (KASSENNR =   1   )  AND (KASSENTAG=    04/04/2008  )  AND (ZAHLUNGSMITTELNR=    30   )  AND (VORGANGSNR=    41 )  AND (VORG_UNTERNR=    0  )  AND (TERMINALNR=    0   )
+;
+
+SELECT SUM(BETRAG) , SUM (BETRAG_FW) 
+						FROM SYSADM.ZMITTELBESTAND 
+						WHERE(KASSENNR= 6 ) AND  (ZAHLUNGSMITTELNR=  41 ) AND  
+						KASSENTAG=(SELECT MAX(KASSENTAG) 
+												FROM SYSADM.ZMITTELBESTAND  
+												WHERE KASSENNR=  6  )
+;
+
+SELECT SUM(BETRAG) , SUM (BETRAG_FW) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE(KASSENNR=  6  ) AND  
+						(ZAHLUNGSMITTELNR=  41 ) AND  
+						KASSENTAG > (SELECT MAX(KASSENTAG) 
+												FROM SYSADM.ZMITTELBESTAND  
+												WHERE KASSENNR=  6 )
+;
+
+SELECT BEZKURZ, KURS, UMRECHNUNG, ZAHLUNGSMITTELNR, KZFREMDWAEHRUNG 
+						FROM SYSADM.ZAHLUNGSMITTEL 
+						WHERE (ZAHLUNGSMITTELART='  H ') AND ((( 10/10/2008  >= GueltigVon) AND ( 10/10/2000 <= GueltigBis)) OR (( 10/10/2008 >= GueltigVon) AND (GueltigBis IS NULL)) OR ((GueltigVon IS NULL) AND ( 10/10/2000 <= GueltigBis)) OR ((GueltigVon IS NULL) AND (GueltigBis IS NULL))) AND ((KURS > 0) AND NOT KURS IS NULL) AND  ((UMRECHNUNG > 0) AND NOT UMRECHNUNG IS NULL) 
+						ORDER BY ANZEIGEREIHENFOLGE ASC
+;
+
+SELECT VBA.VBA_BA_BETRAG,BELEGTYP,BUCHUNGSTEXT 
+						FROM SYSADM.BUCHUNGSART BA, SYSADM.VORGBUCHUNGSART VBA 
+						WHERE ((VBA_TYP_HPTNR=   12  )  AND (VBA_TYP_TEILNR=   0  )) AND (VBA.VBA_BA_BETRAG = BA.BUCHUNGSART)
+;
+
+SELECT  SUM(VOR_BETRAG - VOR_RABATTBETRAG1 - VOR_RABATTBETRAG2) 
+						FROM SYSADM.VORGANG v, SYSADM.VORGBUCHUNGSART vba
+						WHERE   (VOR_TYP_HPTNR < 100) AND (VOR_TYP_HPTNR NOT IN (16,17,19,22,25,35,36)) AND (VBA_VORGANGSART IN ('V','S','R')) AND (VBA_TYP_HPTNR=VOR_TYP_HPTNR) AND (VBA_TYP_TEILNR=VOR_TYP_TEILNR)
+;
+
+SELECT SUM(VOR_BETRAG - VOR_RABATTBETRAG1 - VOR_RABATTBETRAG2) 
+						FROM SYSADM.VORGANG 
+						WHERE   (VOR_TYP_HPTNR IN (  12  ))
+;
+
+SELECT BEL_BELEGTEXT 
+						FROM BELEGE 
+						WHERE BEL_KASSENTAG= 04/04/2008 AND BEL_KASSENNR= 1 AND BEL_VORGANGSNR= 1 AND BEL_BELEGNR= 1
+;
+
+SELECT * 
+						FROM SYSADM.ZAHLUNG  
+						WHERE KASSENNR= 2 AND KASSENTAG= 04/04/2008
+;
+
+SELECT BETRAG 
+						FROM SYSADM.ZAHLUNG 
+						WHERE BETRAG <> 0 AND KASSENTAG = 04/04/2008 AND KASSENNR BETWEEN 1 AND 98
+;
+
+SELECT MAX(KASSENTAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR= 99 AND KASSENTAG < 10/10/2008
+;
+
+SELECT MAX(KASSENTAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR= 99 
+						AND KASSENTAG < (SELECT MAX(KASSENTAG) 
+												FROM SYSADM.ZAHLUNG 
+												WHERE (BETRAG IS NOT NULL AND BETRAG<>0 AND KASSENNR=99))
+;
+
+SELECT KASSENTAG 
+						FROM SYSADM.ZMITTELBESTAND 
+						WHERE (KASSENNR=99 AND STATUS_TAB='A')
+;
+
+SELECT COUNT(*) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE kassentag >=  (SELECT MAX(KASSENTAG) 
+												FROM SYSADM.ZMITTELBESTAND 
+												WHERE KASSENNR BETWEEN 1 AND 98) AND kassentag  >= 10/10/2007
+;					
+
+SELECT SUM(KBB_EINGANG),SUM(KBB_AUSGANG),SUM(KBB_MWST) 
+						FROM SYSADM.KBBUCHUNGEN 
+						WHERE KBB_KASSENNR= 99 AND KBB_KASSENTAG= 04/04/2008
+;
+
+SELECT SUM(KBB_EINGANG),SUM(KBB_AUSGANG),SUM(KBB_MWST) 
+						FROM SYSADM.KBBUCHUNGEN 
+						WHERE KBB_KASSENTAG= 04/04/2008
+;
+
+SELECT SUM(DRU_WERT) 
+						FROM SYSADM.DRUCKDATENTAB 
+						WHERE DRU_KASSENNR= 3 AND DRU_TYP='K'  AND DRU_KASSENTAG= 04/04/2008
+;
+
+SELECT COUNT(VOP_VK_PREIS) 
+						FROM SYSADM.VORGANGSPOSITION 
+						WHERE VOP_KASSENNR = 1 AND VOP_KZ_AUSWEICHNR='J' AND (VOP_POSNR_ORIG <= 0 OR VOP_POSNR_ORIG IS NULL)
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR = 1 AND KASSENTAG > 10/10/2000 AND KASSENTAG <= 10/10/2008 AND (BA_BETRAG IN  ('E13')   )
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR = 1 AND KASSENTAG > 10/10/2000 AND KASSENTAG <= 10/10/2008 AND (BA_TAGESLOS IN  ('E2') )
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR = 1 AND KASSENTAG > 10/10/2000 AND KASSENTAG <= 10/10/2008 AND BA_FORDAB IN ('A9')
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR = 99 AND KASSENTAG > 10/10/2000 AND (BA_BETRAG IN  ('E13'))
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR = 99 AND KASSENTAG > 10/10/2000 AND (BA_TAGESLOS IN ('E2'))
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR = 99 AND KASSENTAG > 10/10/2000 AND BA_FORDAB IN  ('A9')
+;
+SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE BETRAG != 0 AND Z.BA_BETRAG IN ('E13') AND Z.KASSENNR =  1 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <=  10/10/2008 
+						UNION 
+						SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  BETRAG != 0 AND Z.BA_BETRAG IN ('E12')    AND Z.KASSENNR=99 AND Z.KASSENTAG > 01/01/2008
+;
+								
+SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE BETRAG != 0 AND Z.BA_BETRAG IN ('e13') AND Z.KASSENNR = 1 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008
+						UNION 
+						SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  BETRAG != 0 AND Z.BA_BETRAG IN ('e13') AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2007
+;
+
+SELECT SUM(VOR_BETRAG),COUNT(VOR_BETRAG) 
+						FROM SYSADM.VORGBUCHUNGSART,SYSADM.VORGANG 
+						WHERE VOR_KASSENNR= 4 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR= VBA_TYP_HPTNR AND VOR_TYP_TEILNR=VBA_TYP_TEILNR
+;
+
+SELECT VORGANGSNR,KASSENNR 
+						FROM SYSADM.ZAHLUNG,SYSADM.VORGANG 
+						WHERE(BA_BETRAG   In ('e13')   OR BA_TAGESLOS   In ('e2')  ) AND KASSENNR BETWEEN 1 AND 99  AND KASSENNR = VOR_KASSENNR AND KASSENTAG = VOR_KASSENTAG AND VORGANGSNR = VOR_VORGANGSNR AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR <=899 
+						GROUP BY VORGANGSNR,KASSENNR
+;
+
+SELECT VORGANGSNR,KASSENNR 
+						FROM SYSADM.ZAHLUNG,SYSADM.VORGANG 
+						WHERE(BA_FORDAB   In ('a9')  ) AND KASSENNR = VOR_KASSENNR AND KASSENNR BETWEEN 1 AND   99  AND KASSENTAG = VOR_KASSENTAG AND VORGANGSNR = VOR_VORGANGSNR AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR <=899 
+						GROUP BY VORGANGSNR,KASSENNR
+;
+
+SELECT COUNT (DISTINCT VORGANGSNR) 
+						FROM SYSADM.ZAHLUNG,SYSADM.VORGANG 
+						WHERE(BA_BETRAG   In ('E13')   OR BA_TAGESLOS   In ('e2')  ) AND KASSENNR = VOR_KASSENNR AND KASSENTAG = VOR_KASSENTAG AND VORGANGSNR = VOR_VORGANGSNR AND VOR_KASSENNR= 1 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR <=899
+;
+
+SELECT COUNT (DISTINCT VORGANGSNR) 
+						FROM SYSADM.ZAHLUNG,SYSADM.VORGANG 
+						WHERE(BA_FORDAB in ('a9')  ) AND KASSENNR = VOR_KASSENNR AND KASSENTAG = VOR_KASSENTAG AND VORGANGSNR = VOR_VORGANGSNR AND VOR_KASSENNR= 1 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR <=899
+;
+
+SELECT COUNT (DISTINCT VORGANGSNR) 
+						FROM SYSADM.ZAHLUNG,SYSADM.VORGANG 
+						WHERE(BA_BETRAG  in ('e13')   OR BA_TAGESLOS  in ('e12')  OR BA_FORDAB in ('a9')  ) AND KASSENNR = VOR_KASSENNR AND KASSENTAG = VOR_KASSENTAG AND VORGANGSNR = VOR_VORGANGSNR AND VOR_KASSENNR=1 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR <=899
+;
+						
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZMITTELBESTAND ZMB, SYSADM.ZAHLUNGSMITTEL ZM 
+						WHERE ZM.ZAHLUNGSMITTELART NOT IN ('X') AND ZM.ZAHLUNGSMITTELNR = ZMB.ZAHLUNGSMITTELNR AND ZMB.KASSENNR = 3 AND  ZMB.KASSENTAG= 04/04/2008
+;
+
+SELECT KAB_KASSENBESTAND 
+						FROM SYSADM.KASSENBESTAND 
+						WHERE KAB_KASSENNR = 3 AND KAB_KASSENTAG = (SELECT MAX(KAB_KASSENTAG) 
+												FROM SYSADM.KASSENBESTAND 
+												WHERE KAB_KASSENNR = 3AND KAB_KASSENTAG < 05/05/2008)
+;
+
+SELECT SUM(VOR_AZ_MWST) 
+						FROM SYSADM.VORGANG 
+						WHERE VOR_KASSENTAG= 04/04/2008 AND VOR_KASSENNR BETWEEN 1 AND   100   AND (VOR_VORGANGSNR || VOR_KASSENNR) IN 
+						(SELECT VORGANGSNR || KASSENNR 
+												FROM SYSADM.ZAHLUNG 
+												WHERE KASSENNR BETWEEN 1 AND   100  AND KASSENTAG= 04/04/2008 AND BA_BETRAG='  e2  ')
+;								
+
+SELECT SUM(VOR_AZ_MWST) 
+						FROM SYSADM.VORGANG 
+						WHERE VOR_KASSENTAG= 04/04/2008 AND VOR_KASSENNR= 2 AND VOR_VORGANGSNR IN 
+												(SELECT VORGANGSNR 
+												FROM SYSADM.ZAHLUNG 
+												WHERE KASSENNR= 4 AND KASSENTAG= 04/04/2008 AND BA_BETRAG=' e2 ')
+;
+
+
+SELECT BUCHUNGSTEXT 
+						FROM SYSADM.BUCHUNGSART 
+						WHERE BUCHUNGSART='  A0  '
+;
+
+SELECT VBA_BA_BETRAG 
+						FROM SYSADM.VORGBUCHUNGSART 
+						WHERE VBA_TYP_HPTNR=  12 AND VBA_TYP_TEILNR=  0
+;
+
+SELECT DRU_WERT,DRU_ART 
+						FROM SYSADM.DRUCKDATENTAB 
+						WHERE DRU_TYP='G' AND DRU_ZEILENNR= 1  AND DRU_KASSENNR=99
+;
+
+SELECT VORGANGSNR 
+						FROM SYSADM.ZMITTELBESTAND 
+						WHERE KASSENTAG= 04/04/2008 AND KASSENNR= 3 AND STATUS_TAB='Z'
+;
+
+SELECT BEL_BELEGNR 
+						FROM SYSADM.BELEGE 
+						WHERE BEL_KASSENTAG= 04/04/2008 AND BEL_KASSENNR= 1 AND BEL_VORGANGSNR=2
+;
+
+SELECT DISTINCT VOR_TYP_HPTNR,VOR_BEZUGSNR,VOR_KREDITNR,VOR_BETRAG 
+						FROM SYSADM.VORGANG 
+						WHERE VOR_KASSENNR = 2 AND VOR_KASSENTAG = 04/04/2008 AND VOR_TYP_HPTNR IN (800,801,804,805)
+;
+
+SELECT DISTINCT KREDITNR,BEZUGSNR,ERLOES,KORREKTUR 
+						 FROM SYSADM.KREDITZINSEN 
+						 WHERE KASSENTAG = 04/04/2008 AND KZVERARB = 'N'
+;
+
+SELECT VOR_TYP_HPTNR,VOR_KUNDENNR,VKD_PLZ,VKD_NAME,VOR_BETRAG 
+						FROM SYSADM.VORGANG,SYSADM.VORGKUNDENDATEN 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG = 04/04/2008 AND VOR_TYP_HPTNR IN (101,207) AND VKD_KASSENTAG = VOR_KASSENTAG AND VKD_KASSENNR = VOR_KASSENNR AND VKD_VORGANGSNR = VOR_VORGANGSNR
+;
+
+SELECT VOR_TYP_HPTNR,VOR_KUNDENNR,VKD_PLZ,VKD_NAME,VOR_BETRAG 
+						FROM SYSADM.VORGANG,SYSADM.VORGKUNDENDATEN 
+						WHERE VOR_KASSENNR = 2 AND VOR_KASSENTAG = 04/04/2008 AND VOR_TYP_HPTNR IN (101,207) AND VKD_KASSENTAG = VOR_KASSENTAG AND VKD_KASSENNR = VOR_KASSENNR AND VKD_VORGANGSNR = VOR_VORGANGSNR
+;
+
+SELECT VOR_KUNDENNR,VOR_QAUFNR_UMS,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG),VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,0,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (18,19,21,22,24,25) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR 
+							UNION ALL 
+						SELECT VOR_KUNDENNR,VOA_QAUFNR_ERF,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG),VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOA_ANZAHLUNG,0,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART,SYSADM.VORGAUFTRAG 
+						WHERE VOR_TYP_HPTNR=16 AND VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR AND VORGANG.VOR_KASSENTAG = VORGAUFTRAG.VOA_KASSENTAG(+) AND VORGANG.VOR_KASSENNR = VORGAUFTRAG.VOA_KASSENNR(+) AND VORGANG.VOR_VORGANGSNR = VORGAUFTRAG.VOA_VORGANGSNR(+) 
+						ORDER BY 2
+;
+
+SELECT VOR_KUNDENNR,VOR_QAUFNR_UMS,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG),VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,0,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR= 2 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (18,19,21,22,24,25) AND VOR_TYP_HPTNR = VBA_TYP_HPTNR AND VOR_TYP_TEILNR = VBA_TYP_TEILNR 
+							UNION ALL 
+						SELECT VOR_KUNDENNR,VOA_QAUFNR_ERF,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG),VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOA_ANZAHLUNG,0,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART,SYSADM.VORGAUFTRAG 
+						WHERE VOR_TYP_HPTNR=16 AND VOR_KASSENNR= 2 AND VOR_KASSENTAG= 04/04/2008 AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR AND VORGANG.VOR_KASSENTAG = VORGAUFTRAG.VOA_KASSENTAG(+) AND VORGANG.VOR_KASSENNR = VORGAUFTRAG.VOA_KASSENNR(+) AND VORGANG.VOR_VORGANGSNR = VORGAUFTRAG.VOA_VORGANGSNR(+) 
+						ORDER BY 2
+;
+
+SELECT VOR_BEZUGSNR,VOR_KREDITNR,VOR_KASSENTAG, VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOR_ANZAHLUNG,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (35,37,40) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR
+;
+
+SELECT VOR_BEZUGSNR,VOR_KREDITNR,VOR_KASSENTAG, VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOR_ANZAHLUNG,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR=2 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (35,37,40) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR
+;
+
+SELECT VOR_KUNDENNR,VOR_AUFTRAGSNR,VOR_KASSENTAG, VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOR_ANZAHLUNG,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (4,8,12,27,31) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR
+;
+
+SELECT VOR_KUNDENNR,VOR_AUFTRAGSNR,VOR_KASSENTAG,VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOR_ANZAHLUNG,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR= 2 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (4,8,12,27,31) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR
+;
+
+SELECT VOR_KUNDENNR,VOR_QAUFNR_UMS,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG),VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,0,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (20,23,26) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR 
+							UNION ALL 
+						SELECT VOR_KUNDENNR,VOA_QAUFNR_ERF,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG), VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOA_ANZAHLUNG,0,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART,SYSADM.VORGAUFTRAG 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR=17 AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR AND VORGANG.VOR_KASSENTAG = VORGAUFTRAG.VOA_KASSENTAG(+) AND VORGANG.VOR_KASSENNR = VORGAUFTRAG.VOA_KASSENNR(+) AND VORGANG.VOR_VORGANGSNR = VORGAUFTRAG.VOA_VORGANGSNR(+) 
+						ORDER BY 2
+;
+
+SELECT VOR_KUNDENNR,VOR_QAUFNR_UMS,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG), VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,0,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR= 2 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (20,23,26) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR 
+							UNION ALL 
+						SELECT VOR_KUNDENNR,VOA_QAUFNR_ERF,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG), VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOA_ANZAHLUNG,0,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART,SYSADM.VORGAUFTRAG 
+						WHERE VOR_KASSENNR= 2 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR=17 AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR  AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR AND VORGANG.VOR_KASSENTAG = VORGAUFTRAG.VOA_KASSENTAG(+) AND VORGANG.VOR_KASSENNR = VORGAUFTRAG.VOA_KASSENNR(+) AND VORGANG.VOR_VORGANGSNR = VORGAUFTRAG.VOA_VORGANGSNR(+) 
+						ORDER BY 2
+;
+
+SELECT VOR_KUNDENNR,VOR_AUFTRAGSNR,VOR_KASSENTAG, VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOR_ANZAHLUNG,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (5,6,7,9,10,11,13,14,15,28,29,30,32,33,34) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR  AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR
+;
+
+SELECT VOR_KUNDENNR,VOR_AUFTRAGSNR,VOR_KASSENTAG,VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOR_ANZAHLUNG,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART, VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR= 2 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (5,6,7,9,10,11,13,14,15,28,29,30,32,33,34) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR
+;
+
+SELECT VOR_BEZUGSNR,VOR_KREDITNR,VOR_KASSENTAG,VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOR_ANZAHLUNG,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART, VBA_VORGANGSTYP 
+						FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART 
+						WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR IN (36,38,39,41,42) AND VORGANG.VOR_TYP_HPTNR = VORGBUCHUNGSART.VBA_TYP_HPTNR  AND VORGANG.VOR_TYP_TEILNR = VORGBUCHUNGSART.VBA_TYP_TEILNR
+;
+
+SELECT COUNT(*)  
+						FROM KBBUCHUNGEN 
+						WHERE KBB_BUCHUNGSART IN( 'a4' ) AND KBB_KASSENNR= 99 AND KBB_KASSENTAG= 04/04/2008
+;
+
+SELECT COUNT (DISTINCT VORGANGSNR) 
+						FROM SYSADM.ZAHLUNG,SYSADM.VORGANG 
+						WHERE(BA_BETRAG  in ('e13')   OR BA_TAGESLOS  in ('e12')  OR BA_FORDAB in ('a9')  ) AND KASSENNR = VOR_KASSENNR AND KASSENTAG = VOR_KASSENTAG AND VORGANGSNR = VOR_VORGANGSNR AND VOR_KASSENNR=1 AND VOR_KASSENTAG= 04/04/2008 AND VOR_TYP_HPTNR <=899
+;
+SELECT KBB_BELEGNR, VOR_RABATTBETRAG1, VOR_RABATTBETRAG2, VOR_NACHLASSBETRAG, VOR_BEARBGEB, VOR_NNGEB, VOR_BETRAG, VOR_RABATTNR1, VOR_RABATTNR2 
+						FROM KBBUCHUNGEN, VORGANG 
+						WHERE KBB_BUCHUNGSART IN( 'A4' ) AND KBB_KASSENNR= 99 AND KBB_KASSENNR = VOR_KASSENNR AND KBB_KASSENTAG = 04/04/2008 AND KBB_KASSENTAG = VOR_KASSENTAG AND KBB_VORGANGSNR = VOR_VORGANGSNR AND VOR_TYP_HPTNR IN ( 901 )
+;
+
+SELECT KBB_BELEGNR, VOR_RABATTBETRAG1, VOR_RABATTBETRAG2, VOR_NACHLASSBETRAG, VOR_BEARBGEB, VOR_NNGEB,VOR_BETRAG, VOR_RABATTNR1, VOR_RABATTNR2 
+						FROM KBBUCHUNGEN, VORGANG 
+						WHERE KBB_BUCHUNGSART IN ('A4') and KBB_KASSENNR= 99 AND KBB_KASSENNR = VOR_KASSENNR AND KBB_KASSENTAG= 04/04/2008 AND KBB_KASSENTAG = VOR_KASSENTAG AND VOR_TYP_HPTNR IN ( 901 ) 
+;
+
+SELECT KBB_BELEGNR, KBB_VERWENDUNGSZW1, KBB_EINGANG, KBB_AUSGANG, KBB_MWST 
+						FROM SYSADM.KBBUCHUNGEN,SYSADM.BUCHUNGSART 
+						WHERE KBB_KASSENTAG = 04/04/2008 AND KBB_BUCHUNGSART=BUCHUNGSART AND ( (KBB_VORGANGSNR<> 1) OR  (KBB_VORGANGSNR= 2 )) 
+						ORDER BY KBB_BELEGNR
+;
+
+SELECT KBB_BELEGNR, KBB_VERWENDUNGSZW1, KBB_EINGANG, KBB_AUSGANG, KBB_MWST 
+						FROM SYSADM.KBBUCHUNGEN,SYSADM.BUCHUNGSART 
+						WHERE KBB_KASSENTAG = 04/04/2008 AND KBB_BUCHUNGSART=BUCHUNGSART  
+						ORDER BY KBB_BELEGNR
+;
+
+SELECT MAX(KAB_KASSENTAG) 
+						FROM SYSADM.KASSENBESTAND 
+						WHERE  KAB_KASSENTAG < 05/05/2008
+;
+
+SELECT DRU_ZEILENNR, DRU_WERT, DRU_ANZAHL,DRU_ART  
+						FROM SYSADM.DRUCKDATENTAB 
+						WHERE DRU_TYP='K' AND  DRU_KASSENNR= 3 AND DRU_KASSENTAG= 04/04/2008 AND @NULLVALUE(DRU_WERT,0) != 0 AND DRU_ZEILENNR NOT IN (97,98) 
+						ORDER BY DRU_ZEILENNR
+;
+
+SELECT DISTINCT DRU_WERT,DRU_ANZAHL,DRU_ART 
+						FROM SYSADM.DRUCKDATENTAB 
+						WHERE DRU_TYP='K' AND DRU_ZEILENNR=  1 AND DRU_KASSENNR= 3 AND DRU_KASSENTAG= 04/04/2008
+;
+
+SELECT SUM(KBB_EINGANG),SUM(KBB_AUSGANG),COUNT(*) 
+						FROM SYSADM.KBBUCHUNGEN B 
+						WHERE KBB_KASSENNR= 3 AND KBB_KASSENTAG= 04/04/2008 AND @LEFT(KBB_BUCHUNGSART,1)='E' AND KBB_BUCHUNGSART NOT IN ('E1','E2','E3','E4','E13','E14','E22','E48','E49')
+;
+
+SELECT SUM(KBB_EINGANG),SUM(KBB_AUSGANG),COUNT(*) 
+						FROM SYSADM.KBBUCHUNGEN B 
+						WHERE KBB_KASSENNR= 3 AND KBB_KASSENTAG= 04/04/2008 AND @LEFT(KBB_BUCHUNGSART,1)='A' AND KBB_BUCHUNGSART NOT IN ('A1','A2','A3','A4','A5','A6','A8','A9','A10','A20','A21','A22','A49')
+;									
+
+SELECT SUM(KBB_EINGANG)-SUM(KBB_AUSGANG),COUNT(*) 
+						FROM SYSADM.KBBUCHUNGEN B 
+						WHERE KBB_KASSENNR= 3 AND KBB_KASSENTAG = 04/04/2008 AND KBB_BUCHUNGSART IN ('A53','A54','A55','A57','A58')									
+;
+
+SELECT MAX(VOR_KASSENTAG) 
+						FROM SYSADM.VORGANG 
+						WHERE VOR_KASSENNR= 2 AND VOR_TYP_HPTNR=  101
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.BA_BETRAG IN ( 'e13'  ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008
+;										
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.BA_TAGESLOS IN (  'e2'  ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  Z.BA_FORDAB IN (  'a9'  ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2008 AND Z.KASSENTAG <= 10/10/2008
+;
+
+SELECT sum(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  Z.BA_BETRAG IN (  'e13' ) AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2000
+;
+
+SELECT sum(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.BA_TAGESLOS IN (  'e2'  ) 
+						AND Z.KASSENNR=99 
+						AND Z.KASSENTAG > 10/10/2000
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  Z.BA_FORDAB IN (  'a9'  ) AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2000
+;
+
+SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE BETRAG != 0 AND Z.BA_BETRAG IN (  'e13' ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008 
+									UNION 
+						SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  BETRAG != 0 AND Z.BA_BETRAG IN (  'e13'  ) AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2000
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.BA_BETRAG IN (  'e13'  ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.BA_TAGESLOS IN (  'e2'  ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  Z.BA_FORDAB IN (  'a9'  ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008
+;
+
+SELECT sum(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  Z.BA_BETRAG IN (  'e13'  ) AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2000
+;
+
+SELECT sum(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.BA_TAGESLOS IN (  'e2'  ) AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2000
+;
+
+SELECT SUM(BETRAG) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  Z.BA_FORDAB IN (  'a9'  ) AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2000
+;
+																																																																																																																																																											
+SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE BETRAG != 0 AND Z.BA_BETRAG IN (  'e13'  ) AND Z.KASSENNR = 4 AND Z.KASSENTAG > 10/10/2000 AND Z.KASSENTAG <= 10/10/2008 
+							UNION 
+						SELECT DISTINCT (VORGANGSNR||KASSENNR||@DATETOCHAR(KASSENTAG, 'yyyy-mm-dd')) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE  BETRAG != 0 AND Z.BA_BETRAG IN (  'e13'  ) AND Z.KASSENNR=99 AND Z.KASSENTAG > 10/10/2000
+;
+
+SELECT COUNT(*),SUM(VOR_BETRAG) 
+						FROM SYSADM.VORGANG 
+						WHERE VOR_TYP_HPTNR= 901   AND VOR_KASSENNR= 4 AND VOR_KASSENTAG= 04/04/2008
+;
+
+SELECT COUNT(*) 
+						FROM SYSADM.VORGANGSPOSITION 
+						WHERE   VOP_KZ_AUSWEICHNR='J' AND VOP_POSNR_ORIG IS NULL AND VOP_KASSENNR= 4
+;
+
+SELECT BA.ABARBEIT_FOLGE, BA.BUCHUNGSTEXT,  KB.KBB_EINGANG, KB.KBB_AUSGANG, KB.KBB_MWST, KB.KBB_BELEGNR, BA.BUCHUNGSART, V.VOR_VORGANGSNR 
+						FROM SYSADM.Buchungsart BA, SYSADM.KBBuchungen KB, SYSADM.Vorgang V 
+						WHERE BA.BELEGTYP = 'EB' AND BA.BUCHUNGSART = KB.KBB_BUCHUNGSART AND KB.KBB_KASSENTAG = V.VOR_KASSENTAG AND KB.KBB_KASSENNR = V.VOR_KASSENNR AND KB.KBB_VORGANGSNR = V.VOR_VORGANGSNR AND KB.KBB_KASSENTAG = 04/04/2008 AND KB.KBB_KASSENNR = 4 AND @VALUE (@RIGHT (BA.BUCHUNGSART, @LENGTH (BA.BUCHUNGSART) - 1)) >= 1 AND @VALUE (@RIGHT (BA.BUCHUNGSART, @LENGTH (BA.BUCHUNGSART) - 1)) <= 2 AND (@LEFT(BA.BUCHUNGSART, 1) = 'EG' OR BA.BUCHUNGSART ='EA') 
+						ORDER BY KB.KBB_BELEGNR
+;
+
+SELECT SUM(ZMB.BETRAG),SUM(ZMB.BETRAG_FW) 
+						FROM SYSADM.ZMITTELBESTAND ZMB 
+						WHERE ZMB.ZAHLUNGSMITTELNR=  29   AND ZMB.KASSENNR=  1   AND  ZMB.KASSENTAG=(SELECT MAX(KASSENTAG) FROM SYSADM.ZMITTELBESTAND WHERE KASSENNR=  1  )
+;
+
+SELECT SUM(Z.BETRAG),SUM(Z.BETRAG_FW) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.ZAHLUNGSMITTELNR=  29   AND Z.KASSENNR=  1   AND  Z.KASSENTAG >=   10/10/2007
+;
+
+SELECT sum(BETRAG),sum(BETRAG_FW),1 
+						FROM SYSADM.ZMITTELBESTAND ZMB 
+						WHERE ZMB.KASSENTAG = (SELECT MAX(KASSENTAG) FROM SYSADM.ZMITTELBESTAND WHERE KASSENNR=  1 ) AND ZMB.KASSENNR= 1 AND ZMB.ZAHLUNGSMITTELNR = 29
+;
+
+SELECT sum(BETRAG),sum(BETRAG_FW),1 
+						FROM SYSADM.ZMITTELBESTAND ZMB 
+						WHERE ZMB.KASSENTAG = (SELECT MAX(KASSENTAG) FROM SYSADM.ZMITTELBESTAND WHERE KASSENNR=  1  ) AND ZMB.KASSENNR= 1 AND ZMB.ZAHLUNGSMITTELNR= 29
+;
+
+SELECT SUM(BETRAG),SUM(BETRAG_FW) 
+						FROM SYSADM.ZAHLUNG Z 
+						WHERE Z.KASSENTAG >= 05/05/2007 AND Z.KASSENNR=1 AND Z.ZAHLUNGSMITTELNR IN ( 29  )
+;
+
+SELECT BETRAG,BETRAG_FW 
+						FROM ZMITTELBESTAND 
+						WHERE  ZAHLUNGSMITTELNR = 29 AND KASSENTAG = 04/04/2008 AND KASSENNR = 99
+;
+
+SELECT SUM(BETRAG),SUM(BETRAG_FW) 
+						FROM ZAHLUNG 
+						WHERE  ZAHLUNGSMITTELNR = 29 AND KASSENTAG = 04/04/2008 AND KASSENNR = 99
+;
+
+SELECT KAS_KassenNr 
+						FROM Kassen 
+						WHERE KAS_KASSENNR= 0
+;
+
+SELECT KAS_KassenNr 
+						FROM Kassen 
+						WHERE KAS_KASSENNR= 0 AND KAS_STATUS= ''
+;
+
+SELECT MAX(zmb.Kassentag) 
+						FROM zmittelbestand zmb, zahlungsmittel zm 
+						WHERE zmb.KassenNr= 1 AND zmb.zahlungsmittelnr=zm.zahlungsmittelnr AND zm.ZAHLUNGSMITTELART<>'X'
+;
+
+SELECT BETRAG
+						FROM ZMITTELBESTAND 
+						WHERE KASSENNR= 1 AND KASSENTAG= 04/04/2008 AND BETRAG <> 0
+;
+
+SELECT KassenNr 
+						FROM ZAHLUNG  
+						WHERE KASSENNR= 1 AND KASSENTAG > 05/05/2007
+;
+
+SELECT MAX(zmb.Kassentag) 
+						FROM zmittelbestand zmb, zahlungsmittel zm 
+						WHERE zmb.KassenNr BETWEEN 01 AND 98 AND zmb.zahlungsmittelnr=zm.zahlungsmittelnr AND zm.ZAHLUNGSMITTELART<>'X'
+;
+
+SELECT MAX(VOR_KASSENTAG) 
+						FROM VORGANG 
+						WHERE VOR_TYP_HPTNR=904 AND VOR_KASSENNR= 99
+;
+
+SELECT RABATTNR,RABATTBEZ,KASSENTEXT,PROZSATZGANZZAHLIG,KZBONPOSBEZOGEN,KZAUSWERTUNG,KZEINGABEPERSNR 
+						FROM SYSADM.RABATT 
+						WHERE RABATTNR= 1
+;
+															                                                                                                    
+SELECT A.QKUNDNR,A.QAUFNR,A.KZUMSSTORNORUECK,A.POSNR,A.MENGE,A.VKPREIS,A.GESAMTPREIS,A.RABATTBETRAG,A.KZBESTERFRABATT,A.DATUM,A.UHRZEIT,A.LFDNR,B.POSNR 
+						FROM SYSADM.RDXPOSITION A,  SYSADM.POSITION B 
+						WHERE A.POSNR= B.POSNR (+) AND DATUM= 04/04/2008 AND UHRZEIT= 5 AND QKUNDNR= 5 AND QAUFNR= 5 AND KZUMSSTORNORUECK= 'a'  
+						ORDER BY A.LFDNR
+;
+
+SELECT VOR_KASSENTAG,VOR_KASSENNR, VOR_VORGANGSNR, VOR_TYP_HPTNR, VOR_TYP_TEILNR,VOR_DATUMZEIT, VOR_ZAHLUNGSART, VOR_BETRAG, VOR_ANZAHLUNG, VOR_OFFENERBETRAG, VOR_SPESEN,VOR_RATENBETRAG, VOR_AZ_MWST, VOR_RABATTNR1,VOR_RABATTBETRAG1,VOR_RABATTNR2,VOR_RABATTBETRAG2,VOR_PERSNR_RAB,VOR_BEDIENERKENN,VOR_KZ_TAGSTORNO,VOR_KUNDENNR,VOR_AUFTRAGSNR,VOR_QAUFNR_UMS,VOR_BEZUGSNR,VOR_KREDITNR,VOR_ANZAHLUNG_AUFL,VOR_FREIGABEDATUM,VOR_RABATTPROZ1,VOR_RABATTPROZ2,VKD_ANREDEID,VKD_TITEL,VKD_SEX1,VKD_VORNAME1,VKD_SEX2,VKD_VORNAME2,VKD_NAME,VKD_STRASSE,VKD_STIEGENNR,VKD_PLZ,VKD_ORT,VKD_LAND,VKD_TELEFON,VKD_EMAIL,VKD_TELEFAX,VKD_KUNDENART 
+						FROM VORGANG,VORGKUNDENDATEN 
+						WHERE VOR_KASSENTAG= 04/04/2008 AND VOR_KASSENNR= 1 AND VOR_VORGANGSNR= 1 AND VORGANG.VOR_KASSENTAG= VORGKUNDENDATEN.VKD_KASSENTAG(+)AND VORGANG.VOR_KASSENNR= VORGKUNDENDATEN.VKD_KASSENNR(+)AND VORGANG.VOR_VORGANGSNR= VORGKUNDENDATEN.VKD_VORGANGSNR(+)
+;
+
+
+SELECT VOP_KASSENTAG,VOP_KASSENNR,VOP_VORGANGSNR,VOP_VORGANGSZNR,VOP_POSNR,VOP_KZ_POSITIONART,VOP_MENGE,VOP_VK_PREIS,VOP_VK_POSITION,@NULLVALUE(VOP_NACHLASSBETRAG,0),@NULLVALUE(VOP_MWSTPROZENT,0),@NULLVALUE(VOP_NACHLASSPROZ,0),@NULLVALUE(VOP_RABATTNR1,0),@NULLVALUE(VOP_RABATTBETRAG1,0),VOP_RABATTPOSBON1,@NULLVALUE(VOP_RABATTNR2,0),@NULLVALUE(VOP_RABATTBETRAG2,0), VOP_RABATTPOSBON2, VOP_ARTIKELBEZ, VOP_WG, VOP_WUG, VOP_EST_POSITION, VOP_MSP, VOP_KZ_MSP, VOP_KZ_MW, VOP_KZ_AUSWEICHNR, VOP_SOFORTID, VOP_KZ_PROVISION, VOP_KZ_VERGUETFAEH, VOP_KZ_EARTVKPREIS, VOP_KZ_EARTPOSNR, VOP_KZ_RABAUSWERT1, VOP_KZ_RABAUSWERT2, VOP_KZ_UEBERNAUS, VOP_ZUSATZBEZ, VOP_POSNR_ORIG 
+						FROM SYSADM.VORGANGSPOSITION 
+						WHERE VOP_KASSENTAG= 04/04/2008 AND VOP_KASSENNR= 1 AND VOP_VORGANGSNR= 6 
+						ORDER BY VOP_VORGANGSZNR
+;
+
+SELECT Kurzbez 
+						FROM Kundenart 
+						WHERE GruppeId = 1
+;
+
+SELECT MwstProzent 
+						FROM MWST 
+						WHERE MwstId= 1
+;
+
+SELECT @NULLVALUE( KURZBEZ,' ' ) 
+						FROM SYSADM.KUNDENART 
+						WHERE GRUPPEID = 1
+;
+
+SELECT count(*)  
+						FROM SYSADM.TEXTNR  
+						WHERE erfart= 7 AND transtr= 6 AND zahlart= 5 AND RB = 1;
+
+
+SELECT BEL_BELEGNR,BEL_KUNDENNR,BEL_BELEGART,VOR_VORGANGSNR,VOR_KASSENNR,VOR_KASSENTAG,VOR_TYP_HPTNR 
+						FROM VORGANG,BELEGE,VORGANGSPOSITION 
+						WHERE VORGANG.VOR_KASSENNR=BELEGE.BEL_KASSENNR AND VORGANG.VOR_KASSENTAG=BELEGE.BEL_KASSENTAG AND VORGANG.VOR_VORGANGSNR=BELEGE.BEL_VORGANGSNR AND VORGANG.VOR_KASSENTAG=VORGANGSPOSITION.VOP_KASSENTAG(+) AND VORGANG.VOR_KASSENNR=VORGANGSPOSITION.VOP_KASSENNR(+) AND VORGANG.VOR_VORGANGSNR=VORGANGSPOSITION.VOP_VORGANGSNR(+)   
+						ORDER BY VOR_KASSENTAG DESC
+;
+
+SELECT BEL_BELEGNR,BEL_KUNDENNR,BEL_BELEGART,VOR_VORGANGSNR,VOR_KASSENNR,VOR_KASSENTAG,VOR_TYP_HPTNR 
+						FROM VORGANG,BELEGE 
+						WHERE VOR_KASSENNR=BEL_KASSENNR AND VOR_KASSENTAG=BEL_KASSENTAG AND VOR_VORGANGSNR=BEL_VORGANGSNR
+						ORDER BY VOR_KASSENTAG DESC
+
+;
+SELECT DISTINCT VOR_VORGANGSNR,BEL_BELEGNR,VOR_KASSENTAG,BEL_BETRAG,VOR_KASSENNR,VOR_TYP_HPTNR,BEL_BELEGART,BEL_KUNDENNR 
+						FROM VORGANG VOR, BELEGE BEL 
+						WHERE VOR.VOR_KASSENNR=BEL.BEL_KASSENNR AND VOR.VOR_KASSENTAG=BEL.BEL_KASSENTAG AND VOR.VOR_VORGANGSNR=BEL.BEL_VORGANGSNR   
+						ORDER BY VOR.VOR_KASSENTAG DESC
+
+;
+SELECT DISTINCT VOR_VORGANGSNR,BEL_BELEGNR,VOR_KASSENTAG,VOP_POSNR,BEL_BETRAG,VOP_VK_PREIS,VOR_KASSENNR,VOR_TYP_HPTNR,BEL_BELEGART,BEL_KUNDENNR 
+						FROM VORGANG VOR, VORGANGSPOSITION VOP, BELEGE BEL 
+						WHERE VOR.VOR_KASSENNR=VOP.VOP_KASSENNR(+) AND VOR.VOR_KASSENTAG=VOP.VOP_KASSENTAG(+) AND VOR.VOR_VORGANGSNR=VOP.VOP_VORGANGSNR(+) AND VOR.VOR_KASSENNR=BEL.BEL_KASSENNR AND VOR.VOR_KASSENTAG=BEL.BEL_KASSENTAG AND VOR.VOR_VORGANGSNR=BEL.BEL_VORGANGSNR 
+						ORDER BY VOR.VOR_KASSENTAG DESC
+
+;
+SELECT DISTINCT VOR_VORGANGSNR,BEL_BELEGNR,VOR_KASSENTAG,VOP_POSNR,BEL_BETRAG,VOP_VK_PREIS ,VOR_KASSENNR,VOR_TYP_HPTNR,BEL_BELEGART,BEL_KUNDENNR 
+						FROM VORGANG VOR, VORGANGSPOSITION VOP, BELEGE BEL 
+						WHERE VOR.VOR_KASSENNR=VOP.VOP_KASSENNR(+) AND VOR.VOR_KASSENTAG=VOP.VOP_KASSENTAG(+) AND VOR.VOR_VORGANGSNR=VOP.VOP_VORGANGSNR(+) AND VOR.VOR_KASSENNR=BEL.BEL_KASSENNR AND VOR.VOR_KASSENTAG=BEL.BEL_KASSENTAG AND VOR.VOR_VORGANGSNR=BEL.BEL_VORGANGSNR 
+						ORDER BY VOR.VOR_KASSENTAG DESC
+;
+SELECT KASSENNR,KAS_KZ_ANGMELDET,KASSENTAG 
+						FROM SYSADM.ZAHLUNG, SYSADM.KASSEN 
+						WHERE KASSENNR < 99 AND KASSENTAG = 1 AND NOT @NULLVALUE(BETRAG,0)  = 0 AND KASSENNR = KAS_KASSENNR 
+						GROUP BY KASSENNR, KAS_KZ_ANGMELDET, KASSENTAG 
+						HAVING NOT EXISTS (SELECT VOR_KASSENNR 
+						FROM SYSADM.VORGANG 
+						WHERE VOR_TYP_HPTNR = 810 AND VOR_KASSENTAG = KASSENTAG AND VOR_KASSENNR = KASSENNR) 
+						ORDER BY  KASSENNR
+;
+SELECT min(KAB_KASSENTAG) 
+						FROM SYSADM.KASSENBESTAND 
+						WHERE KAB_KASSENNR = 0
+
+;
+SELECT KAB_KASSENBESTAND 
+						FROM SYSADM.KASSENBESTAND 
+						WHERE KAB_KASSENTAG = 0 AND KAB_KASSENNR = 6
+
+;
+SELECT KBB_BELEGNR,KBB_VERWENDUNGSZW1,KBB_EINGANG,KBB_AUSGANG,KBB_MWST 
+						FROM SYSADM.KBBUCHUNGEN 
+						WHERE KBB_KASSENTAG > 10/10/2007
+						ORDER BY KBB_KASSENTAG, KBB_BELEGNR							
+				
+;
+SELECT SUM(KBB_EINGANG), SUM(KBB_AUSGANG), SUM(KBB_MWST) 
+						FROM SYSADM.KBBUCHUNGEN 
+						WHERE KBB_KASSENTAG > 10/10/2007
+
+;
+SELECT B.BUCHUNGSART, B.BUCHUNGSTEXT, B.BELEGTYP 
+						FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG EA, SYSADM.VORGBUCHUNGSART VBA 
+						WHERE EA.KASSENNR= 1 AND EA.BUCHARTSYMBOL=VBA.VBA_BA_BETRAG AND VBA.VBA_TYP_HPTNR BETWEEN 100 AND 199 AND EA.BUCHARTSYMBOL=B.BUCHUNGSART 
+						ORDER BY B.ANZREIHENFOLGEEA
+
+;
+SELECT B.BUCHUNGSART, B.BUCHUNGSTEXT, B.BELEGTYP 
+						FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG EA, SYSADM.VORGBUCHUNGSART VBA 
+						WHERE EA.KASSENNR= 1 AND EA.BUCHARTSYMBOL=VBA.VBA_BA_BETRAG AND VBA.VBA_TYP_HPTNR BETWEEN 200 AND 299 AND EA.BUCHARTSYMBOL=B.BUCHUNGSART 
+						ORDER BY B.ANZREIHENFOLGEEA
+
+;
+SELECT VBA.VBA_TYP_HPTNR,VBA.VBA_TYP_TEILNR 
+						FROM SYSADM.VORGBUCHUNGSART VBA, SYSADM.EINGANGAUSGANG EA 
+						WHERE EA.Kassennr= 1 AND EA.BUCHARTSYMBOL= 'E0' AND EA.BUCHARTSYMBOL=VBA.VBA_BA_BETRAG 
+						ORDER BY VBA_TYP_HPTNR ASC, VBA_TYP_TEILNR DESC
+
+;
+SELECT PFL_MWST,PFL_KOSTENST,PFL_KUNDENNR,PFL_NACHNAME,PFL_VORNAME,PFL_STRASSE,PFL_PLZ,PFL_ORT,PFL_VERWZW1,ANZAHLKASSENBELEGE 
+						FROM SYSADM.BUCHUNGSART 
+						WHERE BUCHUNGSART= 'A0'
+
+;
+SELECT LB.TEXT1,LB.ZEILENNR 
+						FROM SYSADM.LIEFZAHLUNGSBED LB, SYSADM.BUCHUNGSART BA 
+						WHERE  BA.BUCHUNGSART = 'A0' AND BA.TEXTNR_NAME = LB.TEXTNR 
+						ORDER BY ZEILENNR
+
+;
+SELECT LB.TEXT1,LB.ZEILENNR 
+						FROM SYSADM.LIEFZAHLUNGSBED LB, SYSADM.BUCHUNGSART BA 
+						WHERE  BA.BUCHUNGSART = 'A0' AND BA.TEXTNR_ADR = LB.TEXTNR 
+						ORDER BY ZEILENNR
+
+;
+SELECT B.BUCHUNGSART, B.BUCHUNGSTEXT, B.BELEGTYP 
+						FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG EA, SYSADM.VORGBUCHUNGSART VBA 
+						WHERE EA.KASSENNR= 1 AND EA.BUCHARTSYMBOL=VBA.VBA_BA_BETRAG AND VBA.VBA_TYP_HPTNR BETWEEN 100 AND 199 AND EA.BUCHARTSYMBOL=B.BUCHUNGSART 
+						ORDER BY B.ANZREIHENFOLGEEA
+
+;
+SELECT B.BUCHUNGSART, B.BUCHUNGSTEXT, B.BELEGTYP 
+						FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG EA, SYSADM.VORGBUCHUNGSART VBA 
+						WHERE EA.KASSENNR= 1 AND EA.BUCHARTSYMBOL=VBA.VBA_BA_BETRAG AND VBA.VBA_TYP_HPTNR BETWEEN 200 AND 299 AND EA.BUCHARTSYMBOL=B.BUCHUNGSART 
+						ORDER BY B.ANZREIHENFOLGEEA
+
+;
+SELECT VBA.VBA_TYP_HPTNR,VBA.VBA_TYP_TEILNR 
+						from SYSADM.VORGBUCHUNGSART VBA, SYSADM.EINGANGAUSGANG EA 
+						WHERE EA.Kassennr= 1 AND EA.BUCHARTSYMBOL= 'E0' AND EA.BUCHARTSYMBOL=VBA.VBA_BA_BETRAG 
+						ORDER BY VBA_TYP_HPTNR ASC, VBA_TYP_TEILNR DESC
+
+;
+SELECT PFL_MWST,PFL_KOSTENST,PFL_KUNDENNR,PFL_NACHNAME,PFL_VORNAME,PFL_STRASSE,PFL_PLZ,PFL_ORT,PFL_VERWZW1,ANZAHLKASSENBELEGE 
+						FROM SYSADM.BUCHUNGSART 
+						WHERE BUCHUNGSART= 'A0'
+
+;
+SELECT LB.TEXT1,LB.ZEILENNR 
+						FROM SYSADM.LIEFZAHLUNGSBED LB, SYSADM.BUCHUNGSART BA 
+						WHERE  BA.BUCHUNGSART = 'A0' AND BA.TEXTNR_NAME = LB.TEXTNR 
+						ORDER BY ZEILENNR
+
+;
+SELECT LB.TEXT1,LB.ZEILENNR 
+						FROM SYSADM.LIEFZAHLUNGSBED LB, SYSADM.BUCHUNGSART BA 
+						WHERE  BA.BUCHUNGSART = 'A0' AND BA.TEXTNR_ADR = LB.TEXTNR 
+						ORDER BY ZEILENNR
+
+;
+SELECT MAX(VOR_KASSENTAG) 
+						FROM SYSADM.VORGANG 
+						WHERE( VOR_TYP_HPTNR = 810 OR VOR_TYP_HPTNR = 811 ) AND VOR_KASSENNR = 99
+
+;
+SELECT MAX(KASSENTAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR = 1
+
+;
+SELECT MAX(VOR_KASSENTAG) 
+						FROM SYSADM.VORGANG 
+						WHERE( ( VOR_TYP_HPTNR = 810 OR VOR_TYP_HPTNR = 811 ) AND 
+						    VOR_KASSENNR IN (1, 99) ) OR VOR_TYP_HPTNR = 904
+
+;
+Select V.VBA_BA_BETRAG, B.BELEGTYP, B.BUCHUNGSTEXT 
+						from VORGBUCHUNGSART V, BUCHUNGSART B 
+						where V.VBA_BA_BETRAG =  B.BUCHUNGSART AND V.VBA_TYP_HPTNR = 12 AND V.VBA_TYP_TEILNR = 0
+
+                        
+;                       
+SELECT benutzer.userid 
+						FROM benutzer, aktion, rechte 
+						WHERE benutzer.userid=  10   AND benutzer.userid=rechte.userid AND rechte.modulid= 1     AND @RIGHT(@LEFT(rechte.aktionrechte, aktion.rechtpos), 1)='J' AND aktion.aktionbez='  Verkaufskassa_Menu_Funktionen_AusweichARTIKEL_Anzeigen auflösen  '
+
+;
+SELECT VOR_KASSENTAG 
+						FROM VORGANG 
+						WHERE VOR_KASSENNR = 6 AND VOR_DATUMZEIT = (SELECT  MAX(VOR_DATUMZEIT) 
+												FROM VORGANG  
+												WHERE VOR_KASSENNR = 6)
+
+;
+SELECT BEZUGSNR,QKUNDNR,NACHNAME,VORNAME1,TELEPHON,TELEFAX 
+						FROM SYSADM.KUNDE 
+						WHERE BEZUGSNR= 999999
+
+;
+SELECT A.ROWID,A.POSNR,A.EINGANGSNR,A.BNR,A.ZUSATZ,P.TEXT1,A.VKPREIS,A.MENGE,A.FEHLMENGE,A.AUFPOSID,A.STATUS,A.LIEFERTERMIN,A.EINGANGSDATUM,A.ANNAHMEVERWEIGERUN,A.LSNR,@IF(@ISNA(A.LIEFERNACHNAME),'','J'),A.KREDITNR,A.BEMERKUNG
+						FROM SYSADM.AUFPOS A,SYSADM.POSITION P 
+						WHERE BEZUGSNR= 0 AND NOT @NULLVALUE(STATUS,' ') ='E' AND P.POSNR= A.POSNR AND NOT @NULLVALUE(ANNAHMEVERWEIGERUN,' ' ) = 'W' AND NOT @NULLVALUE(MITTEILUNG,' ' ) = 'J' 
+						ORDER BY  A.STATUSNR ASC, A.EINGANGSDATUM DESC
+
+
+;
+SELECT Liefernachname  
+						FROM SYSADM.AUFPOS  
+						WHERE AufPosID = 1 AND BezugsNr = 1 AND EingangsDatum = 10/10/2007 AND EingangsNr = 1  AND PosNr = 123456
+
+;
+SELECT COUNT(*) 
+						FROM KREDITFAELLIGKEIT  
+						WHERE Faelligkeitsdatum <= 10/10/2008 AND Betrag - Bezahlt > 0
+
+
+;
+SELECT KASSENTAG 
+						FROM SYSADM.ZMITTELBESTAND 
+						WHERE KASSENNR = 1 AND  STATUS_TAB= 'Z'
+
+;
+SELECT Count(*) 
+						FROM SYSADM.KASSEN 
+						WHERE KAS_KASSENNR = 1 AND NOT @NULLVALUE( KAS_STATUS,' ') = 'G'
+
+;
+SELECT Count(*) 
+						FROM SYSADM.KASSEN 
+						WHERE KAS_KASSENNR = 1 AND  NOT @NULLVALUE( KAS_KZ_ANGMELDET,' ' ) = 'J'
+
+;
+SELECT COUNT(*) 
+						FROM SYSADM.SYSTEMEINSTELLUNG 
+						WHERE KASSENNR = 1
+
+;
+SELECT GELDLADE_VK, GELDLADE_HK 
+						FROM SYSADM.SYSTEMEINSTELLUNG  
+						WHERE KASSENNR = 1
+
+;
+SELECT KUNDENDATEN 
+						FROM SYSADM.SYSTEMEINSTELLUNG 
+						WHERE KASSENNR = 1
+				
+
+;
+SELECT MAX(BEL_VORGANGSNR) 
+						FROM SYSADM.BELEGE 
+						WHERE BEL_KASSENNR = 1 AND BEL_KASSENTAG= 04/04/2008
+
+;
+SELECT MAX(BEL_BELEGNR) 
+						FROM SYSADM.BELEGE 
+						WHERE BEL_KASSENNR = 1 AND BEL_KASSENTAG= 04/04/2008 AND BEL_VORGANGSNR= 41
+
+;
+SELECT BEL_BELEGART,BEL_KUNDENNR 
+						FROM SYSADM.BELEGE 
+						WHERE BEL_KASSENNR = 1 AND BEL_KASSENTAG= 04/04/2008 AND BEL_VORGANGSNR= 41 AND BEL_BELEGNR= 20
+
+;
+SELECT RABATTNR,KZAUSWERTUNG 
+						FROM SYSADM.RABATT 
+						WHERE KZBESTELLERFRAB = 'N'
+
+;
+SELECT COUNT(*) 
+						FROM SYSADM.VORGANG 
+						WHERE( VOR_TYP_HPTNR = 810 OR VOR_TYP_HPTNR = 811 )AND VOR_KASSENNR = 4 AND VOR_KASSENTAG= 04/04/2008
+
+;
+SELECT Zahlungsart 
+						FROM Kreditkopf 
+						WHERE Kreditnr = 1 AND Bezugsnr = 1
+
+;
+SELECT Nachname 
+						FROM Benutzer 
+						WHERE PersNr= 111122
+
+;
+SELECT utextnr,ztextnr,ltextnr,anzdru,anzdrustorno 
+						FROM textnr 
+						WHERE erfart = 7 AND transtr = 6 AND zahlart = 5 AND rb = 1
+
+;
+SELECT text1,text2 
+						FROM liefzahlungsbed 
+						WHERE textnr = 30
+
+;
+SELECT werbetextzeile4,werbetextzeile5,werbetextzeile6 
+						FROM werbetext 
+						WHERE (KASSENNR =   5) OR (KASSENNR = 0)  
+						ORDER BY KASSENNR DESC
+
+
+;
+
+SELECT nachname 
+						FROM kunde 
+						WHERE qkundnr = 0 
+					
+
+;
+SELECT MAX(VOR_KASSENTAG) 
+						FROM SYSADM.VORGANG 
+						WHERE VOR_TYP_HPTNR = 904 AND VOR_KASSENNR = 99
+
+;
+SELECT MIN(KASSENTAG) 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR < 6
+
+;
+SELECT DISTINCT KASSENTAG 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENTAG > 10/10/2000 AND KASSENNR < 99 AND NOT BETRAG = 0 
+						ORDER BY KASSENTAG
+
+;
+
+SELECT KASSENNR,KASSENTAG 
+						FROM SYSADM.ZAHLUNG 
+						WHERE KASSENNR < 99 AND KASSENTAG = 04/04/2008 AND NOT @NULLVALUE(BETRAG,0)  = 0 
+						GROUP BY KASSENNR, KASSENTAG 
+						HAVING NOT EXISTS (SELECT VOR_KASSENNR 
+												FROM SYSADM.VORGANG 
+												WHERE VOR_TYP_HPTNR = 810 AND VOR_KASSENTAG = KASSENTAG AND VOR_KASSENNR = KASSENNR)
+;
+
+SELECT benutzer.userid 
+						FROM benutzer, aktion, rechte 
+						WHERE benutzer.userid= 10 AND benutzer.userid=rechte.userid AND rechte.modulid=  2 AND @RIGHT(@LEFT(rechte.aktionrechte, aktion.rechtpos), 1)='J' AND aktion.aktionbez='   Verkaufskassa_Menu_Funktionen_AusweichARTIKEL_Anzeigen auflösen '
+
+
+;
+SELECT markt,unternehmen 
+						FROM standort 
+						WHERE (absatzweg= 2 ) AND(stnr= 6)
+
+;
+
+SELECT AvisoPositionen.PosNr, AvisoPositionen.SeitenZeilenNr 
+						FROM AvisoPositionen  
+						WHERE AvisoPositionen.QAufNr = 12834966
+
+;
+SELECT SUM(AvisoWe.Menge) , SUM(AvisoWe.Naturalrabatt) 
+						FROM AvisoWe 
+						WHERE AvisoWe.QAufnr= 12834966 AND AvisoWe.PosNr= 4874368 AND AvisoWe.SeitenZeilenNr= 11 AND AvisoWe.KZStorno NOT LIKE 'S'
+
+;

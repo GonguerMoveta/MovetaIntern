@@ -1,0 +1,3534 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "BouncyCastle.Cryptography/2.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Dart.Ftp/6.1.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DYMO.Connect.SDK/1.4.4.21": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views": "2.80.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "build": {
+          "Build/DYMO.Connect.SDK.targets": {}
+        }
+      },
+      "DYMO.Label/8.5.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        }
+      },
+      "GdPicture/14.2.86": {
+        "type": "package",
+        "dependencies": {
+          "GdPicture.runtimes.windows": "[14.2.86]"
+        },
+        "compile": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "GdPicture.runtimes.windows/14.2.86": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/GdPicture.runtimes.windows.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/GdPicture.NET.14.Imaging.ML.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/GdPicture.NET.14.Imaging.Rendering.Skia.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/GdPicture.NET.14.barcode.1d.reader.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/GdPicture.NET.14.barcode.2d.reader.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/GdPicture.NET.14.filters.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/GdPicture.NET.14.image.gdimgplug.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/GdPicture.NET.14.machine.vision.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/GdPicture.NET.14.twain.client.64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.Imaging.ML.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.Imaging.Rendering.Skia.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.barcode.1d.reader.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.barcode.2d.reader.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.filters.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.image.gdimgplug.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.machine.vision.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/GdPicture.NET.14.twain.client.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "MailKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "4.8.0",
+          "System.Formats.Asn1": "8.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "MimeKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Net.Http",
+          "System.Security"
+        ],
+        "compile": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      },
+      "ShellBrowser.Core/7.1.0.357": {
+        "type": "package",
+        "compile": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ShellBrowser.NET/7.1.0.357": {
+        "type": "package",
+        "dependencies": {
+          "ShellBrowser.Core": "[7.1.0.357, 7.2.0)"
+        },
+        "compile": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.8",
+          "SkiaSharp.NativeAssets.macOS": "2.88.8",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.macOS.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.Win32.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SkiaSharp.Views/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2",
+          "SkiaSharp.Views.Gtk2": "2.80.2",
+          "SkiaSharp.Views.WPF": "2.80.2",
+          "SkiaSharp.Views.WindowsForms": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Desktop.Common/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Gtk2/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WindowsForms/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0",
+          "OpenTK.GLControl": "3.1.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WPF/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Formats.Asn1/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System.Numerics"
+        ],
+        "compile": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net47/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win": {
+      "BouncyCastle.Cryptography/2.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Dart.Ftp/6.1.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DYMO.Connect.SDK/1.4.4.21": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views": "2.80.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "build": {
+          "Build/DYMO.Connect.SDK.targets": {}
+        }
+      },
+      "DYMO.Label/8.5.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        }
+      },
+      "GdPicture/14.2.86": {
+        "type": "package",
+        "dependencies": {
+          "GdPicture.runtimes.windows": "[14.2.86]"
+        },
+        "compile": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "GdPicture.runtimes.windows/14.2.86": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/GdPicture.runtimes.windows.targets": {}
+        }
+      },
+      "MailKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "4.8.0",
+          "System.Formats.Asn1": "8.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "MimeKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Net.Http",
+          "System.Security"
+        ],
+        "compile": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      },
+      "ShellBrowser.Core/7.1.0.357": {
+        "type": "package",
+        "compile": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ShellBrowser.NET/7.1.0.357": {
+        "type": "package",
+        "dependencies": {
+          "ShellBrowser.Core": "[7.1.0.357, 7.2.0)"
+        },
+        "compile": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.8",
+          "SkiaSharp.NativeAssets.macOS": "2.88.8",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.macOS.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.Win32.targets": {}
+        }
+      },
+      "SkiaSharp.Views/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2",
+          "SkiaSharp.Views.Gtk2": "2.80.2",
+          "SkiaSharp.Views.WPF": "2.80.2",
+          "SkiaSharp.Views.WindowsForms": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Desktop.Common/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Gtk2/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WindowsForms/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0",
+          "OpenTK.GLControl": "3.1.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WPF/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Formats.Asn1/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System.Numerics"
+        ],
+        "compile": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net47/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x64": {
+      "BouncyCastle.Cryptography/2.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Dart.Ftp/6.1.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DYMO.Connect.SDK/1.4.4.21": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views": "2.80.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "build": {
+          "Build/DYMO.Connect.SDK.targets": {}
+        }
+      },
+      "DYMO.Label/8.5.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        }
+      },
+      "GdPicture/14.2.86": {
+        "type": "package",
+        "dependencies": {
+          "GdPicture.runtimes.windows": "[14.2.86]"
+        },
+        "compile": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "GdPicture.runtimes.windows/14.2.86": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/GdPicture.NET.14.Imaging.ML.64.dll": {},
+          "runtimes/win-x64/native/GdPicture.NET.14.Imaging.Rendering.Skia.64.dll": {},
+          "runtimes/win-x64/native/GdPicture.NET.14.barcode.1d.reader.64.dll": {},
+          "runtimes/win-x64/native/GdPicture.NET.14.barcode.2d.reader.64.dll": {},
+          "runtimes/win-x64/native/GdPicture.NET.14.filters.64.dll": {},
+          "runtimes/win-x64/native/GdPicture.NET.14.image.gdimgplug.64.dll": {},
+          "runtimes/win-x64/native/GdPicture.NET.14.machine.vision.64.dll": {},
+          "runtimes/win-x64/native/GdPicture.NET.14.twain.client.64.dll": {}
+        },
+        "build": {
+          "buildTransitive/net462/GdPicture.runtimes.windows.targets": {}
+        }
+      },
+      "MailKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "4.8.0",
+          "System.Formats.Asn1": "8.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "MimeKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Net.Http",
+          "System.Security"
+        ],
+        "compile": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      },
+      "ShellBrowser.Core/7.1.0.357": {
+        "type": "package",
+        "compile": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ShellBrowser.NET/7.1.0.357": {
+        "type": "package",
+        "dependencies": {
+          "ShellBrowser.Core": "[7.1.0.357, 7.2.0)"
+        },
+        "compile": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.8",
+          "SkiaSharp.NativeAssets.macOS": "2.88.8",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.macOS.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.Win32.targets": {}
+        }
+      },
+      "SkiaSharp.Views/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2",
+          "SkiaSharp.Views.Gtk2": "2.80.2",
+          "SkiaSharp.Views.WPF": "2.80.2",
+          "SkiaSharp.Views.WindowsForms": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Desktop.Common/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Gtk2/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WindowsForms/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0",
+          "OpenTK.GLControl": "3.1.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WPF/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Formats.Asn1/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System.Numerics"
+        ],
+        "compile": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net47/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "BouncyCastle.Cryptography/2.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Dart.Ftp/6.1.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Dart.Ftp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DYMO.Connect.SDK/1.4.4.21": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views": "2.80.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DymoSDK.dll": {}
+        },
+        "build": {
+          "Build/DYMO.Connect.SDK.targets": {}
+        }
+      },
+      "DYMO.Label/8.5.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DYMO.Common.dll": {},
+          "lib/net45/DYMO.DLS.Runtime.dll": {},
+          "lib/net45/DYMO.Label.Framework.dll": {},
+          "lib/net45/Interop.DYMOPrintingSupportLib.dll": {}
+        }
+      },
+      "GdPicture/14.2.86": {
+        "type": "package",
+        "dependencies": {
+          "GdPicture.runtimes.windows": "[14.2.86]"
+        },
+        "compile": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/GdPicture.NET.14.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "GdPicture.runtimes.windows/14.2.86": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/GdPicture.NET.14.Imaging.ML.dll": {},
+          "runtimes/win-x86/native/GdPicture.NET.14.Imaging.Rendering.Skia.dll": {},
+          "runtimes/win-x86/native/GdPicture.NET.14.barcode.1d.reader.dll": {},
+          "runtimes/win-x86/native/GdPicture.NET.14.barcode.2d.reader.dll": {},
+          "runtimes/win-x86/native/GdPicture.NET.14.filters.dll": {},
+          "runtimes/win-x86/native/GdPicture.NET.14.image.gdimgplug.dll": {},
+          "runtimes/win-x86/native/GdPicture.NET.14.machine.vision.dll": {},
+          "runtimes/win-x86/native/GdPicture.NET.14.twain.client.dll": {}
+        },
+        "build": {
+          "buildTransitive/net462/GdPicture.runtimes.windows.targets": {}
+        }
+      },
+      "MailKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "MimeKit": "4.8.0",
+          "System.Formats.Asn1": "8.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MailKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "MimeKit/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.4.0",
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Net.Http",
+          "System.Security"
+        ],
+        "compile": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MimeKit.dll": {
+            "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "OpenTK/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenTK.GLControl/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0"
+        },
+        "compile": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net20/OpenTK.GLControl.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      },
+      "ShellBrowser.Core/7.1.0.357": {
+        "type": "package",
+        "compile": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ShellBrowser.NET/7.1.0.357": {
+        "type": "package",
+        "dependencies": {
+          "ShellBrowser.Core": "[7.1.0.357, 7.2.0)"
+        },
+        "compile": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/ShellBrowser.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.8",
+          "SkiaSharp.NativeAssets.macOS": "2.88.8",
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.macOS.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net462/_._": {}
+        },
+        "runtime": {
+          "lib/net462/_._": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/libSkiaSharp.dll": {}
+        },
+        "build": {
+          "buildTransitive/net462/SkiaSharp.NativeAssets.Win32.targets": {}
+        }
+      },
+      "SkiaSharp.Views/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2",
+          "SkiaSharp.Views.Gtk2": "2.80.2",
+          "SkiaSharp.Views.WPF": "2.80.2",
+          "SkiaSharp.Views.WindowsForms": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Desktop.Common/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Desktop.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.Gtk2/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.Gtk.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WindowsForms/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "OpenTK": "3.1.0",
+          "OpenTK.GLControl": "3.1.0",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SkiaSharp.Views.WPF/2.80.2": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Desktop.Common": "2.80.2"
+        },
+        "compile": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/SkiaSharp.Views.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Formats.Asn1/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.5",
+          "System.ValueTuple": "4.5.0"
+        },
+        "frameworkAssemblies": [
+          "System.Numerics"
+        ],
+        "compile": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/System.Formats.Asn1.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net47/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net47/System.ValueTuple.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BouncyCastle.Cryptography/2.4.0": {
+      "sha512": "SwXsAV3sMvAU/Nn31pbjhWurYSjJ+/giI/0n6tCrYoupEK34iIHCuk3STAd9fx8yudM85KkLSVdn951vTng/vQ==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.4.0.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Dart.Ftp/6.1.1.3": {
+      "sha512": "NHCqNQEg2hbrWAv2hQZ/QFKvOKC72WhgQ2iNUVTISthpx5JjpSFwjcvS8+A+DMW+9muiDX4tcmQnnBzxg1C71g==",
+      "type": "package",
+      "path": "dart.ftp/6.1.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dart Nuget Logo.png",
+        "dart.ftp.6.1.1.3.nupkg.sha512",
+        "dart.ftp.nuspec",
+        "lib/net45/Dart.Ftp.dll",
+        "lib/net45/Dart.Ftp.xml",
+        "lib/netstandard2.1/Dart.Ftp.dll",
+        "lib/netstandard2.1/Dart.Ftp.xml",
+        "license.md",
+        "readme.txt"
+      ]
+    },
+    "DYMO.Connect.SDK/1.4.4.21": {
+      "sha512": "JIKFdwytZRobP3Wvx6tV7QRBwZLl45MUyj/wMQsiwY1qGMgZ5mwhHTAKhusijNm7f9lQHCieGVkSeKndTOBB9g==",
+      "type": "package",
+      "path": "dymo.connect.sdk/1.4.4.21",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Build/DYMO.Connect.SDK.targets",
+        "Build/DYMOLib/DYMO.Common.dll",
+        "Build/DYMOLib/DYMO.CrossPlatform.Common.dll",
+        "Build/DYMOLib/DYMO.LabelAPI.dll",
+        "Build/DYMOLib/DYMO.PrinterCommands.dll",
+        "Build/DYMOLib/OSX/native/libdymobarcode.dylib",
+        "Build/DYMOLib/OSX/native/libdymoprintingsupport.dylib",
+        "Build/DYMOLib/OSX/platspec/DYMO.CrossPlatform.Common.PlatformSpecific.dll",
+        "Build/DYMOLib/OSX/platspec/DYMO.LabelAPI.PlatformSpecific.dll",
+        "Build/DYMOLib/Win/DYMO.CrossPlatform.Common.PlatformSpecific.dll",
+        "Build/DYMOLib/Win/DYMO.LabelAPI.PlatformSpecific.dll",
+        "Build/DYMOLib/x64/DYMOPrinting.dll",
+        "Build/DYMOLib/x64/PrintingSupportLibrary.dll",
+        "Build/DYMOLib/x64/libdymobarcode.dll",
+        "Build/DYMOLib/x64/usps4cb.dll",
+        "Build/DYMOLib/x86/DYMOPrinting.dll",
+        "Build/DYMOLib/x86/PrintingSupportLibrary.dll",
+        "Build/DYMOLib/x86/libdymobarcode.dll",
+        "Build/DYMOLib/x86/usps4cb.dll",
+        "LICENSE.txt",
+        "README.txt",
+        "dymo.connect.sdk.1.4.4.21.nupkg.sha512",
+        "dymo.connect.sdk.nuspec",
+        "lib/netstandard2.0/DymoSDK.dll"
+      ]
+    },
+    "DYMO.Label/8.5.1.4": {
+      "sha512": "hLtx2ubPQO9SOeUZ/fmtwioNFobR6Zas/e0CM6BQqOGfS/q4nmJiF7GXl7KZYAFgFpcLHLjkcbMdjOSjINWC9Q==",
+      "type": "package",
+      "path": "dymo.label/8.5.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dymo.label.8.5.1.4.nupkg.sha512",
+        "dymo.label.nuspec",
+        "lib/net45/DYMO.Common.dll",
+        "lib/net45/DYMO.DLS.Runtime.dll",
+        "lib/net45/DYMO.Label.Framework.dll",
+        "lib/net45/Interop.DYMOPrintingSupportLib.dll"
+      ]
+    },
+    "GdPicture/14.2.86": {
+      "sha512": "0VXUyC4V6y/9SgTLRrVWZh9h4NHyEYYcOEOs7rWtQ80isfijMfPNUWAnRTNn3Ps8JfBR/xdvXuEe/gSJACjXdA==",
+      "type": "package",
+      "path": "gdpicture/14.2.86",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gdpicture.14.2.86.nupkg.sha512",
+        "gdpicture.nuspec",
+        "images/icon.png",
+        "lib/net462/GdPicture.NET.14.dll",
+        "lib/net462/GdPicture.NET.14.xml",
+        "lib/netcoreapp3.1/GdPicture.NET.14.Core.dll",
+        "lib/netcoreapp3.1/GdPicture.NET.14.Core.xml",
+        "licenses/LICENSE.md",
+        "tools/Init.ps1",
+        "tools/licenseManager.exe"
+      ]
+    },
+    "GdPicture.runtimes.windows/14.2.86": {
+      "sha512": "EYptTDgfFH02ULRSfM8O2yp+mg3sOCGzGF+cgT9gkjr/WSKQaVUUK/opqeifrZmlZcolTC3LgtyLZcV8JrNsAw==",
+      "type": "package",
+      "path": "gdpicture.runtimes.windows/14.2.86",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net462/GdPicture.runtimes.windows.targets",
+        "buildTransitive/net462/GdPicture.runtimes.windows.targets",
+        "gdpicture.runtimes.windows.14.2.86.nupkg.sha512",
+        "gdpicture.runtimes.windows.nuspec",
+        "images/icon.png",
+        "lib/net462/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "licenses/LICENSE.md",
+        "runtimes/win-x64/native/GdPicture.NET.14.Imaging.ML.64.dll",
+        "runtimes/win-x64/native/GdPicture.NET.14.Imaging.Rendering.Skia.64.dll",
+        "runtimes/win-x64/native/GdPicture.NET.14.barcode.1d.reader.64.dll",
+        "runtimes/win-x64/native/GdPicture.NET.14.barcode.2d.reader.64.dll",
+        "runtimes/win-x64/native/GdPicture.NET.14.filters.64.dll",
+        "runtimes/win-x64/native/GdPicture.NET.14.image.gdimgplug.64.dll",
+        "runtimes/win-x64/native/GdPicture.NET.14.machine.vision.64.dll",
+        "runtimes/win-x64/native/GdPicture.NET.14.twain.client.64.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.Imaging.ML.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.Imaging.Rendering.Skia.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.barcode.1d.reader.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.barcode.2d.reader.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.filters.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.image.gdimgplug.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.machine.vision.dll",
+        "runtimes/win-x86/native/GdPicture.NET.14.twain.client.dll"
+      ]
+    },
+    "MailKit/4.8.0": {
+      "sha512": "zZ1UoM4FUnSFUJ9fTl5CEEaejR0DNP6+FDt1OfXnjg4igZntcir1tg/8Ufd6WY5vrpmvToAjluYqjVM24A+5lA==",
+      "type": "package",
+      "path": "mailkit/4.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/ExchangeOAuth2.md",
+        "docs/FAQ.md",
+        "docs/GMailOAuth2.md",
+        "docs/README.md",
+        "icons/mailkit-50.png",
+        "lib/net462/MailKit.dll",
+        "lib/net462/MailKit.dll.config",
+        "lib/net462/MailKit.pdb",
+        "lib/net462/MailKit.xml",
+        "lib/net47/MailKit.dll",
+        "lib/net47/MailKit.dll.config",
+        "lib/net47/MailKit.pdb",
+        "lib/net47/MailKit.xml",
+        "lib/net48/MailKit.dll",
+        "lib/net48/MailKit.dll.config",
+        "lib/net48/MailKit.pdb",
+        "lib/net48/MailKit.xml",
+        "lib/net6.0/MailKit.dll",
+        "lib/net6.0/MailKit.dll.config",
+        "lib/net6.0/MailKit.pdb",
+        "lib/net6.0/MailKit.xml",
+        "lib/net8.0/MailKit.dll",
+        "lib/net8.0/MailKit.dll.config",
+        "lib/net8.0/MailKit.pdb",
+        "lib/net8.0/MailKit.xml",
+        "lib/netstandard2.0/MailKit.dll",
+        "lib/netstandard2.0/MailKit.dll.config",
+        "lib/netstandard2.0/MailKit.pdb",
+        "lib/netstandard2.0/MailKit.xml",
+        "lib/netstandard2.1/MailKit.dll",
+        "lib/netstandard2.1/MailKit.dll.config",
+        "lib/netstandard2.1/MailKit.pdb",
+        "lib/netstandard2.1/MailKit.xml",
+        "mailkit.4.8.0.nupkg.sha512",
+        "mailkit.nuspec"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json"
+      ]
+    },
+    "MimeKit/4.8.0": {
+      "sha512": "U24wp4LKED+sBRzyrWICE+3bSwptsTrPOcCIXbW5zfeThCNzQx5NCo8Wus+Rmi+EUkQrCwlI/3sVfejeq9tuxQ==",
+      "type": "package",
+      "path": "mimekit/4.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/FAQ.md",
+        "docs/README.md",
+        "icons/mimekit-50.png",
+        "lib/net462/MimeKit.dll",
+        "lib/net462/MimeKit.dll.config",
+        "lib/net462/MimeKit.pdb",
+        "lib/net462/MimeKit.xml",
+        "lib/net47/MimeKit.dll",
+        "lib/net47/MimeKit.dll.config",
+        "lib/net47/MimeKit.pdb",
+        "lib/net47/MimeKit.xml",
+        "lib/net48/MimeKit.dll",
+        "lib/net48/MimeKit.dll.config",
+        "lib/net48/MimeKit.pdb",
+        "lib/net48/MimeKit.xml",
+        "lib/net6.0/MimeKit.dll",
+        "lib/net6.0/MimeKit.dll.config",
+        "lib/net6.0/MimeKit.pdb",
+        "lib/net6.0/MimeKit.xml",
+        "lib/net8.0/MimeKit.dll",
+        "lib/net8.0/MimeKit.dll.config",
+        "lib/net8.0/MimeKit.pdb",
+        "lib/net8.0/MimeKit.xml",
+        "lib/netstandard2.0/MimeKit.dll",
+        "lib/netstandard2.0/MimeKit.dll.config",
+        "lib/netstandard2.0/MimeKit.pdb",
+        "lib/netstandard2.0/MimeKit.xml",
+        "lib/netstandard2.1/MimeKit.dll",
+        "lib/netstandard2.1/MimeKit.dll.config",
+        "lib/netstandard2.1/MimeKit.pdb",
+        "lib/netstandard2.1/MimeKit.xml",
+        "mimekit.4.8.0.nupkg.sha512",
+        "mimekit.nuspec"
+      ]
+    },
+    "NETStandard.Library/2.0.0": {
+      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "type": "package",
+      "path": "netstandard.library/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/NETStandard.Library.targets",
+        "build/netstandard2.0/NETStandard.Library.targets",
+        "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
+        "build/netstandard2.0/ref/System.AppContext.dll",
+        "build/netstandard2.0/ref/System.Collections.Concurrent.dll",
+        "build/netstandard2.0/ref/System.Collections.NonGeneric.dll",
+        "build/netstandard2.0/ref/System.Collections.Specialized.dll",
+        "build/netstandard2.0/ref/System.Collections.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Composition.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.EventBasedAsync.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Primitives.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.TypeConverter.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.dll",
+        "build/netstandard2.0/ref/System.Console.dll",
+        "build/netstandard2.0/ref/System.Core.dll",
+        "build/netstandard2.0/ref/System.Data.Common.dll",
+        "build/netstandard2.0/ref/System.Data.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Contracts.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Debug.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.FileVersionInfo.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Process.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.StackTrace.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TextWriterTraceListener.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tools.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TraceSource.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tracing.dll",
+        "build/netstandard2.0/ref/System.Drawing.Primitives.dll",
+        "build/netstandard2.0/ref/System.Drawing.dll",
+        "build/netstandard2.0/ref/System.Dynamic.Runtime.dll",
+        "build/netstandard2.0/ref/System.Globalization.Calendars.dll",
+        "build/netstandard2.0/ref/System.Globalization.Extensions.dll",
+        "build/netstandard2.0/ref/System.Globalization.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.ZipFile.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.DriveInfo.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Watcher.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.IsolatedStorage.dll",
+        "build/netstandard2.0/ref/System.IO.MemoryMappedFiles.dll",
+        "build/netstandard2.0/ref/System.IO.Pipes.dll",
+        "build/netstandard2.0/ref/System.IO.UnmanagedMemoryStream.dll",
+        "build/netstandard2.0/ref/System.IO.dll",
+        "build/netstandard2.0/ref/System.Linq.Expressions.dll",
+        "build/netstandard2.0/ref/System.Linq.Parallel.dll",
+        "build/netstandard2.0/ref/System.Linq.Queryable.dll",
+        "build/netstandard2.0/ref/System.Linq.dll",
+        "build/netstandard2.0/ref/System.Net.Http.dll",
+        "build/netstandard2.0/ref/System.Net.NameResolution.dll",
+        "build/netstandard2.0/ref/System.Net.NetworkInformation.dll",
+        "build/netstandard2.0/ref/System.Net.Ping.dll",
+        "build/netstandard2.0/ref/System.Net.Primitives.dll",
+        "build/netstandard2.0/ref/System.Net.Requests.dll",
+        "build/netstandard2.0/ref/System.Net.Security.dll",
+        "build/netstandard2.0/ref/System.Net.Sockets.dll",
+        "build/netstandard2.0/ref/System.Net.WebHeaderCollection.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.Client.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.dll",
+        "build/netstandard2.0/ref/System.Net.dll",
+        "build/netstandard2.0/ref/System.Numerics.dll",
+        "build/netstandard2.0/ref/System.ObjectModel.dll",
+        "build/netstandard2.0/ref/System.Reflection.Extensions.dll",
+        "build/netstandard2.0/ref/System.Reflection.Primitives.dll",
+        "build/netstandard2.0/ref/System.Reflection.dll",
+        "build/netstandard2.0/ref/System.Resources.Reader.dll",
+        "build/netstandard2.0/ref/System.Resources.ResourceManager.dll",
+        "build/netstandard2.0/ref/System.Resources.Writer.dll",
+        "build/netstandard2.0/ref/System.Runtime.CompilerServices.VisualC.dll",
+        "build/netstandard2.0/ref/System.Runtime.Extensions.dll",
+        "build/netstandard2.0/ref/System.Runtime.Handles.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.dll",
+        "build/netstandard2.0/ref/System.Runtime.Numerics.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Formatters.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Json.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Xml.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.dll",
+        "build/netstandard2.0/ref/System.Runtime.dll",
+        "build/netstandard2.0/ref/System.Security.Claims.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Algorithms.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Csp.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Encoding.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Primitives.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.X509Certificates.dll",
+        "build/netstandard2.0/ref/System.Security.Principal.dll",
+        "build/netstandard2.0/ref/System.Security.SecureString.dll",
+        "build/netstandard2.0/ref/System.ServiceModel.Web.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.Extensions.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.dll",
+        "build/netstandard2.0/ref/System.Text.RegularExpressions.dll",
+        "build/netstandard2.0/ref/System.Threading.Overlapped.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.Parallel.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.dll",
+        "build/netstandard2.0/ref/System.Threading.Thread.dll",
+        "build/netstandard2.0/ref/System.Threading.ThreadPool.dll",
+        "build/netstandard2.0/ref/System.Threading.Timer.dll",
+        "build/netstandard2.0/ref/System.Threading.dll",
+        "build/netstandard2.0/ref/System.Transactions.dll",
+        "build/netstandard2.0/ref/System.ValueTuple.dll",
+        "build/netstandard2.0/ref/System.Web.dll",
+        "build/netstandard2.0/ref/System.Windows.dll",
+        "build/netstandard2.0/ref/System.Xml.Linq.dll",
+        "build/netstandard2.0/ref/System.Xml.ReaderWriter.dll",
+        "build/netstandard2.0/ref/System.Xml.Serialization.dll",
+        "build/netstandard2.0/ref/System.Xml.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlSerializer.dll",
+        "build/netstandard2.0/ref/System.Xml.dll",
+        "build/netstandard2.0/ref/System.dll",
+        "build/netstandard2.0/ref/mscorlib.dll",
+        "build/netstandard2.0/ref/netstandard.dll",
+        "build/netstandard2.0/ref/netstandard.xml",
+        "lib/netstandard1.0/_._",
+        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.nuspec"
+      ]
+    },
+    "OpenTK/3.1.0": {
+      "sha512": "xoP5kb81lRSY5RzbntaFA9yXK+aGF5SLShhns55MyZtxtNafIxRH5KvRTFss/N653brTzE+AfepjKsbMexYlBQ==",
+      "type": "package",
+      "path": "opentk/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/OpenTK.dll.config",
+        "lib/net20/OpenTK.dll",
+        "lib/net20/OpenTK.pdb",
+        "lib/net20/OpenTK.xml",
+        "opentk.3.1.0.nupkg.sha512",
+        "opentk.nuspec"
+      ]
+    },
+    "OpenTK.GLControl/3.1.0": {
+      "sha512": "BjDzF+MhJd2LaZYzkXmgkzzXgHAko/Iur4rGy6+DPdZA1Jcc0X6jXZ6QsUsjlLRNzgevO7uAj2h1TqX7sguaYg==",
+      "type": "package",
+      "path": "opentk.glcontrol/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/OpenTK.GLControl.dll",
+        "lib/net20/OpenTK.GLControl.pdb",
+        "lib/net20/OpenTK.GLControl.xml",
+        "opentk.glcontrol.3.1.0.nupkg.sha512",
+        "opentk.glcontrol.nuspec"
+      ]
+    },
+    "PPJ-WinForms-2023/4.9.6": {
+      "sha512": "TdFVkHSppyDC1Jnau7u+TzbYRduyYbjcD8BCzFsJNqePgAa4aJPgHpud12w3ThieHBeQWA77yEJ1cLC781X25w==",
+      "type": "package",
+      "path": "ppj-winforms-2023/4.9.6",
+      "files": [
+        ".nupkg.metadata",
+        "EULA-PPJ-v6.txt",
+        "images/ppj.png",
+        "lib/net48/C1.Win.4.dll",
+        "lib/net48/C1.Win.C1FlexGrid.4.dll",
+        "lib/net48/C1.Win.C1Ribbon.4.dll",
+        "lib/net48/Hunspellx64.dll",
+        "lib/net48/Hunspellx86.dll",
+        "lib/net48/PPJ.Runtime.49.dll",
+        "lib/net48/PPJ.Runtime.49.xml",
+        "lib/net48/PPJ.Runtime.DDE.49.dll",
+        "lib/net48/PPJ.Runtime.DDE.49.xml",
+        "lib/net48/PPJ.Runtime.Reports.49.dll",
+        "lib/net48/PPJ.Runtime.Reports.LL.49.dll",
+        "lib/net48/PPJ.Runtime.Reports.RS.49.dll",
+        "lib/net48/PPJ.Runtime.Reports.ST.49.dll",
+        "lib/net48/PPJ.Runtime.Vis.49.dll",
+        "lib/net48/PPJ.Runtime.Vis.49.xml",
+        "lib/net48/PPJ.Runtime.XSal.49.dll",
+        "lib/net48/PPJ.Runtime.XSal.49.xml",
+        "lib/net48/SkinSoft.VisualStyler.dll",
+        "lib/net48/de/PPJ.Runtime.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Design.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll",
+        "lib/net48/de/PPJ.Web.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Design.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Vis.49.resources.dll",
+        "lib/net48/de/PPJ.Web.XSal.49.resources.dll",
+        "lib/net48/fr/PPJ.Web.Design.49.resources.dll",
+        "lib/net48/it/PPJ.Web.Design.49.resources.dll",
+        "lib/net48/pt/PPJ.Web.Design.49.resources.dll",
+        "ppj-winforms-2023.4.9.6.nupkg.sha512",
+        "ppj-winforms-2023.nuspec"
+      ]
+    },
+    "ShellBrowser.Core/7.1.0.357": {
+      "sha512": "GENQGO/m8ODy4JAOHsIfUARkeHeStDAFfyxT6gArSLrHpwQ8jJalrdi3T4RZIlHKGZv4pnwtOFNVZQqRZqgKsw==",
+      "type": "package",
+      "path": "shellbrowser.core/7.1.0.357",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net47/ShellBrowser.Core.dll",
+        "lib/net47/ShellBrowser.Core.xml",
+        "lib/net6.0-windows7.0/ShellBrowser.Core.dll",
+        "lib/net6.0-windows7.0/ShellBrowser.Core.xml",
+        "readme.md",
+        "shellbrowser.core.7.1.0.357.nupkg.sha512",
+        "shellbrowser.core.nuspec"
+      ]
+    },
+    "ShellBrowser.NET/7.1.0.357": {
+      "sha512": "jlVUOHW0HwuRqmuEMQ4D+MdnGjBX1wwUVMcXbN//1opd+Ads8eByMKGp+ElKf5D+8DCizx/lqw8Gzt3mynWq2g==",
+      "type": "package",
+      "path": "shellbrowser.net/7.1.0.357",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Tools/VisualStudioToolsManifest.xml",
+        "lib/net47/ShellBrowser.dll",
+        "lib/net47/ShellBrowser.xml",
+        "lib/net6.0-windows7.0/ShellBrowser.dll",
+        "lib/net6.0-windows7.0/ShellBrowser.xml",
+        "readme.md",
+        "shellbrowser.net.7.1.0.357.nupkg.sha512",
+        "shellbrowser.net.nuspec"
+      ]
+    },
+    "SkiaSharp/2.88.8": {
+      "sha512": "bRkp3uKp5ZI8gXYQT57uKwil1uobb2p8c69n7v5evlB/2JNcMAXVcw9DZAP5Ig3WSvgzGm2YSn27UVeOi05NlA==",
+      "type": "package",
+      "path": "skiasharp/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "interactive-extensions/dotnet/SkiaSharp.DotNet.Interactive.dll",
+        "lib/monoandroid1.0/SkiaSharp.dll",
+        "lib/monoandroid1.0/SkiaSharp.pdb",
+        "lib/monoandroid1.0/SkiaSharp.xml",
+        "lib/net462/SkiaSharp.dll",
+        "lib/net462/SkiaSharp.pdb",
+        "lib/net462/SkiaSharp.xml",
+        "lib/net6.0-android30.0/SkiaSharp.dll",
+        "lib/net6.0-android30.0/SkiaSharp.pdb",
+        "lib/net6.0-android30.0/SkiaSharp.xml",
+        "lib/net6.0-ios13.6/SkiaSharp.dll",
+        "lib/net6.0-ios13.6/SkiaSharp.pdb",
+        "lib/net6.0-ios13.6/SkiaSharp.xml",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.dll",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.pdb",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.xml",
+        "lib/net6.0-macos10.15/SkiaSharp.dll",
+        "lib/net6.0-macos10.15/SkiaSharp.pdb",
+        "lib/net6.0-macos10.15/SkiaSharp.xml",
+        "lib/net6.0-tizen7.0/SkiaSharp.dll",
+        "lib/net6.0-tizen7.0/SkiaSharp.pdb",
+        "lib/net6.0-tizen7.0/SkiaSharp.xml",
+        "lib/net6.0-tvos13.4/SkiaSharp.dll",
+        "lib/net6.0-tvos13.4/SkiaSharp.pdb",
+        "lib/net6.0-tvos13.4/SkiaSharp.xml",
+        "lib/net6.0/SkiaSharp.dll",
+        "lib/net6.0/SkiaSharp.pdb",
+        "lib/net6.0/SkiaSharp.xml",
+        "lib/netcoreapp3.1/SkiaSharp.dll",
+        "lib/netcoreapp3.1/SkiaSharp.pdb",
+        "lib/netcoreapp3.1/SkiaSharp.xml",
+        "lib/netstandard1.3/SkiaSharp.dll",
+        "lib/netstandard1.3/SkiaSharp.pdb",
+        "lib/netstandard1.3/SkiaSharp.xml",
+        "lib/netstandard2.0/SkiaSharp.dll",
+        "lib/netstandard2.0/SkiaSharp.pdb",
+        "lib/netstandard2.0/SkiaSharp.xml",
+        "lib/netstandard2.1/SkiaSharp.dll",
+        "lib/netstandard2.1/SkiaSharp.pdb",
+        "lib/netstandard2.1/SkiaSharp.xml",
+        "lib/tizen40/SkiaSharp.dll",
+        "lib/tizen40/SkiaSharp.pdb",
+        "lib/tizen40/SkiaSharp.xml",
+        "lib/uap10.0.10240/SkiaSharp.dll",
+        "lib/uap10.0.10240/SkiaSharp.pdb",
+        "lib/uap10.0.10240/SkiaSharp.xml",
+        "lib/uap10.0.16299/SkiaSharp.dll",
+        "lib/uap10.0.16299/SkiaSharp.pdb",
+        "lib/uap10.0.16299/SkiaSharp.xml",
+        "lib/xamarinios1.0/SkiaSharp.dll",
+        "lib/xamarinios1.0/SkiaSharp.pdb",
+        "lib/xamarinios1.0/SkiaSharp.xml",
+        "lib/xamarinmac2.0/SkiaSharp.dll",
+        "lib/xamarinmac2.0/SkiaSharp.pdb",
+        "lib/xamarinmac2.0/SkiaSharp.xml",
+        "lib/xamarintvos1.0/SkiaSharp.dll",
+        "lib/xamarintvos1.0/SkiaSharp.pdb",
+        "lib/xamarintvos1.0/SkiaSharp.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.pdb",
+        "lib/xamarinwatchos1.0/SkiaSharp.xml",
+        "skiasharp.2.88.8.nupkg.sha512",
+        "skiasharp.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.macOS/2.88.8": {
+      "sha512": "6Kn5TSkKlfyS6azWHF3Jk2sW5C4jCE5uSshM/5AbfFrR+5n6qM5XEnz9h4VaVl7LTxBvHvMkuPb/3bpbq0vxTw==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.macos/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.macOS.targets",
+        "build/net6.0-macos10.15/SkiaSharp.NativeAssets.macOS.targets",
+        "build/xamarinmac2.0/SkiaSharp.NativeAssets.macOS.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.macOS.targets",
+        "buildTransitive/net6.0-macos10.15/SkiaSharp.NativeAssets.macOS.targets",
+        "buildTransitive/xamarinmac2.0/SkiaSharp.NativeAssets.macOS.targets",
+        "lib/net462/_._",
+        "lib/net6.0-macos10.15/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "lib/xamarinmac2.0/_._",
+        "runtimes/osx/native/libSkiaSharp.dylib",
+        "skiasharp.nativeassets.macos.2.88.8.nupkg.sha512",
+        "skiasharp.nativeassets.macos.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.Win32/2.88.8": {
+      "sha512": "O9QXoWEXA+6cweR4h3BOnwMz+pO9vL9mXdjLrpDd0w1QzCgWmLQBxa1VgySDITiH7nQndrDG1h6937zm9pLj1Q==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.win32/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.Win32.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.Win32.targets",
+        "lib/net462/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/win-arm64/native/libSkiaSharp.dll",
+        "runtimes/win-x64/native/libSkiaSharp.dll",
+        "runtimes/win-x86/native/libSkiaSharp.dll",
+        "skiasharp.nativeassets.win32.2.88.8.nupkg.sha512",
+        "skiasharp.nativeassets.win32.nuspec"
+      ]
+    },
+    "SkiaSharp.Views/2.80.2": {
+      "sha512": "qOvmMOZ2lkT6BTbmSNjsA46ugUeo6X6Vonok5RE3rYWpCEFxB1FvBqbKoaLY5XpdLWzyS3qinAuT2JLSyoPRvg==",
+      "type": "package",
+      "path": "skiasharp.views/2.80.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/monoandroid1.0/SkiaSharp.Views.Android.dll",
+        "lib/monoandroid1.0/SkiaSharp.Views.Android.xml",
+        "lib/net462/SkiaSharp.Views.Desktop.dll",
+        "lib/net462/SkiaSharp.Views.Desktop.xml",
+        "lib/tizen40/SkiaSharp.Views.Tizen.dll",
+        "lib/tizen40/SkiaSharp.Views.Tizen.xml",
+        "lib/uap10.0/SkiaSharp.Views.UWP.dll",
+        "lib/uap10.0/SkiaSharp.Views.UWP.xml",
+        "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll",
+        "lib/xamarinios1.0/SkiaSharp.Views.iOS.xml",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Mac.dll",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Mac.xml",
+        "lib/xamarintvos1.0/SkiaSharp.Views.tvOS.dll",
+        "lib/xamarintvos1.0/SkiaSharp.Views.tvOS.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.xml",
+        "runtimes/win10-arm/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "skiasharp.views.2.80.2.nupkg.sha512",
+        "skiasharp.views.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Desktop.Common/2.80.2": {
+      "sha512": "0vBvweMysgl1wgjuTQUhdJMD5z5nBjtYqmnHPeX+qHfkc336Wj2L3jEqwmGb0YP+RV47gFGz0EzMAW6szZch9w==",
+      "type": "package",
+      "path": "skiasharp.views.desktop.common/2.80.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net462/SkiaSharp.Views.Desktop.Common.dll",
+        "lib/net462/SkiaSharp.Views.Desktop.Common.xml",
+        "lib/netcoreapp3.0/SkiaSharp.Views.Desktop.Common.dll",
+        "lib/netcoreapp3.0/SkiaSharp.Views.Desktop.Common.xml",
+        "lib/netstandard2.0/SkiaSharp.Views.Desktop.Common.dll",
+        "lib/netstandard2.0/SkiaSharp.Views.Desktop.Common.xml",
+        "skiasharp.views.desktop.common.2.80.2.nupkg.sha512",
+        "skiasharp.views.desktop.common.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Gtk2/2.80.2": {
+      "sha512": "sLTJUvFcCDGrOb0okw56AIN6DGEVRxa+sNyHmlSYNW1Bv5RzlX+ySV5HDDY2R/iauW6TCBZSYwjuvBUFA5r+mQ==",
+      "type": "package",
+      "path": "skiasharp.views.gtk2/2.80.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net462/SkiaSharp.Views.Gtk.dll",
+        "lib/net462/SkiaSharp.Views.Gtk.xml",
+        "skiasharp.views.gtk2.2.80.2.nupkg.sha512",
+        "skiasharp.views.gtk2.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.WindowsForms/2.80.2": {
+      "sha512": "m6CT6+8uv60lELUMp7Nolt92ZxiY4f9bW25vxpWvNQmno9aGLsU2DCHiKSkouB666ybixHp6fZeSQadNBVtpcQ==",
+      "type": "package",
+      "path": "skiasharp.views.windowsforms/2.80.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net462/SkiaSharp.Views.WindowsForms.dll",
+        "lib/net462/SkiaSharp.Views.WindowsForms.xml",
+        "lib/netcoreapp3.0/SkiaSharp.Views.WindowsForms.dll",
+        "lib/netcoreapp3.0/SkiaSharp.Views.WindowsForms.xml",
+        "skiasharp.views.windowsforms.2.80.2.nupkg.sha512",
+        "skiasharp.views.windowsforms.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.WPF/2.80.2": {
+      "sha512": "Fzo2+MNwHDh9Cob8sk7OO26kp3bhofjXMwlEK8IncF1ehu9hi3sH9iQDJrue9a88VEJJ+yyLISPUFcmXlGHSyQ==",
+      "type": "package",
+      "path": "skiasharp.views.wpf/2.80.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net462/SkiaSharp.Views.WPF.dll",
+        "lib/net462/SkiaSharp.Views.WPF.xml",
+        "lib/netcoreapp3.0/SkiaSharp.Views.WPF.dll",
+        "lib/netcoreapp3.0/SkiaSharp.Views.WPF.xml",
+        "skiasharp.views.wpf.2.80.2.nupkg.sha512",
+        "skiasharp.views.wpf.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "type": "package",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Formats.Asn1/8.0.1": {
+      "sha512": "XqKba7Mm/koKSjKMfW82olQdmfbI5yqeoLV/tidRp7fbh5rmHAQ5raDI/7SU0swTzv+jgqtUGkzmFxuUg0it1A==",
+      "type": "package",
+      "path": "system.formats.asn1/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Formats.Asn1.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Formats.Asn1.targets",
+        "lib/net462/System.Formats.Asn1.dll",
+        "lib/net462/System.Formats.Asn1.xml",
+        "lib/net6.0/System.Formats.Asn1.dll",
+        "lib/net6.0/System.Formats.Asn1.xml",
+        "lib/net7.0/System.Formats.Asn1.dll",
+        "lib/net7.0/System.Formats.Asn1.xml",
+        "lib/net8.0/System.Formats.Asn1.dll",
+        "lib/net8.0/System.Formats.Asn1.xml",
+        "lib/netstandard2.0/System.Formats.Asn1.dll",
+        "lib/netstandard2.0/System.Formats.Asn1.xml",
+        "system.formats.asn1.8.0.1.nupkg.sha512",
+        "system.formats.asn1.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "type": "package",
+      "path": "system.memory/4.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.5.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "DYMO.Connect.SDK >= 1.4.4.21",
+      "DYMO.Label >= 8.5.1.4",
+      "Dart.Ftp >= 6.1.1.3",
+      "GdPicture >= 14.2.86",
+      "MailKit >= 4.8.0",
+      "MimeKit >= 4.8.0",
+      "PPJ-WinForms-2023 >= 4.9.6",
+      "ShellBrowser.NET >= 7.1.0.357",
+      "SkiaSharp >= 2.88.8"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Gongue\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\EDV\\Moveta.Int.L0008\\Moveta.Intern\\Moveta.Intern.csproj",
+      "projectName": "Moveta.Intern",
+      "projectPath": "F:\\EDV\\Moveta.Int.L0008\\Moveta.Intern\\Moveta.Intern.csproj",
+      "packagesPath": "C:\\Users\\Gongue\\.nuget\\packages\\",
+      "outputPath": "F:\\EDV\\Moveta.Int.L0008\\Moveta.Intern\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Gongue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\PPJ-Framework.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Text Control GmbH\\NuGetPackages": {},
+        "C:\\Program Files\\IceTeaGroup\\PPJ\\Framework\\2023\\nuget\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "dependencies": {
+          "DYMO.Connect.SDK": {
+            "target": "Package",
+            "version": "[1.4.4.21, )"
+          },
+          "DYMO.Label": {
+            "target": "Package",
+            "version": "[8.5.1.4, )"
+          },
+          "Dart.Ftp": {
+            "target": "Package",
+            "version": "[6.1.1.3, )"
+          },
+          "GdPicture": {
+            "target": "Package",
+            "version": "[14.2.86, )"
+          },
+          "MailKit": {
+            "target": "Package",
+            "version": "[4.8.0, )"
+          },
+          "MimeKit": {
+            "target": "Package",
+            "version": "[4.8.0, )"
+          },
+          "PPJ-WinForms-2023": {
+            "target": "Package",
+            "version": "[4.9.6, )"
+          },
+          "ShellBrowser.NET": {
+            "target": "Package",
+            "version": "[7.1.0.357, )"
+          },
+          "SkiaSharp": {
+            "target": "Package",
+            "version": "[2.88.8, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

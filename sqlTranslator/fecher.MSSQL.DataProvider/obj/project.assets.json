@@ -1,0 +1,219 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "fecher.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "compile": {
+          "bin/placeholder/fecher.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.Common.dll": {}
+        }
+      },
+      "fecher.SqlTranslator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "dependencies": {
+          "fecher.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win": {
+      "fecher.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "compile": {
+          "bin/placeholder/fecher.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.Common.dll": {}
+        }
+      },
+      "fecher.SqlTranslator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "dependencies": {
+          "fecher.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-arm64": {
+      "fecher.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "compile": {
+          "bin/placeholder/fecher.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.Common.dll": {}
+        }
+      },
+      "fecher.SqlTranslator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "dependencies": {
+          "fecher.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x64": {
+      "fecher.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "compile": {
+          "bin/placeholder/fecher.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.Common.dll": {}
+        }
+      },
+      "fecher.SqlTranslator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "dependencies": {
+          "fecher.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "fecher.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "compile": {
+          "bin/placeholder/fecher.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.Common.dll": {}
+        }
+      },
+      "fecher.SqlTranslator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8",
+        "dependencies": {
+          "fecher.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fecher.SqlTranslator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "fecher.Common/1.0.0": {
+      "type": "project",
+      "path": "../fecher.Common/fecher.Common.csproj",
+      "msbuildProject": "../fecher.Common/fecher.Common.csproj"
+    },
+    "fecher.SqlTranslator/1.0.0": {
+      "type": "project",
+      "path": "../fecher.SqlTranslator/fecher.SqlTranslator.csproj",
+      "msbuildProject": "../fecher.SqlTranslator/fecher.SqlTranslator.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "fecher.Common >= 1.0.0",
+      "fecher.SqlTranslator >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\rhenneboehle\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\fecher.MSSQL.DataProvider.csproj",
+      "projectName": "fecher.MSSQL.DataProvider",
+      "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\fecher.MSSQL.DataProvider.csproj",
+      "packagesPath": "C:\\Users\\rhenneboehle\\.nuget\\packages\\",
+      "outputPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.MSSQL.DataProvider\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\rhenneboehle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\PPJ-Framework.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\IceTeaGroup\\PPJ\\Framework\\2023\\nuget\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "projectReferences": {
+            "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj": {
+              "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.Common\\fecher.Common.csproj"
+            },
+            "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\fecher.SqlTranslator.csproj": {
+              "projectPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\sqlTranslator\\fecher.SqlTranslator\\fecher.SqlTranslator.csproj"
+            }
+          }
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net48": {}
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

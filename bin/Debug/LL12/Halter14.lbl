@@ -1,0 +1,260 @@
+[Label description]
+[Description]
+ Text=? (default)
+ FileVersion=7
+ Units=SCM-Units
+ Metric=0
+ TextQuote.Start=1
+ TextQuote.End=1
+ RepresentationCode.CondStart=171
+ RepresentationCode.CondSep=166
+ RepresentationCode.CondEnd=187
+ RepresentationCode.Tab=247
+ RepresentationCode.Ret=182
+ RepresentationCode.PhantomSpace=2
+ RepresentationCode.LockNextChar=3
+ RepresentationCode.ExprSep=164
+ LCID=7
+ Created=12.10.2006, 14:49:32
+ CreatedByApp=cbi30.exe [3.0.0-PTF3, Build 13344]
+ CreatedByDLL=CMLL11.DLL [11,15,0,0 (06-04-24 10:35)]
+ CreatedByUser=Keuer on KEUER
+ LastModified=30.10.2007, 14:01:33
+ LastModifiedByApp=TVN.EXE []
+ LastModifiedByDLL=CMLL12.DLL [12,11,0,0 (07-05-11 09:32)]
+ LastModifiedByUser=Keuer on KEUER
+ CreatedByCallFrom=cmll12o.ocx
+[Layout]
+ P1.Template=9633 LaserPrint Special, weiﬂ, A4(210 x 297 mm) |105.0|42.4|0.0|0.0|2|7|1050,424,0,0,2,7,0,0
+ P2.Template=9633 LaserPrint Special, weiﬂ, A4(210 x 297 mm) |105.0|42.4|0.0|0.0|2|7|1050,424,0,0,2,7,0,0
+ xOffset=0
+ yOffset=0
+ xSize=105000
+ ySize=42400
+ P1.xOffset=0
+ P1.yOffset=0
+ P1.xSize=105000
+ P1.ySize=42400
+ P2.xOffset=0
+ P2.yOffset=0
+ P2.xSize=105000
+ P2.ySize=42400
+ P1.nPaperFormat=9
+ P1.xPaperSize=210000
+ P1.yPaperSize=297000
+ P1.ForcePaperFormat=TRUE
+ P2.nPaperFormat=9
+ P2.xPaperSize=210000
+ P2.yPaperSize=297000
+ P2.ForcePaperFormat=TRUE
+ xGrid=1000
+ yGrid=1000
+ GridShow=FALSE
+ GridSnap=FALSE
+ PhysicalPage=TRUE
+ P1.PhysicalPage=TRUE
+ P2.PhysicalPage=TRUE
+ Orientation=1
+ P1.Orientation=1
+ P2.Orientation=1
+ EnhancedExpressions=TRUE
+ EnhancedOldExpressions=FALSE
+ Decimals=2
+ xDist=105000
+ yDist=42400
+ nRows=7
+ nCols=2
+ P1.xDist=105000
+ P1.yDist=42400
+ P1.nRows=7
+ P1.nCols=2
+ P2.xDist=105000
+ P2.yDist=42400
+ P2.nRows=7
+ P2.nCols=2
+ PrintOrder=0
+ P1.PrintOrder=0
+ P2.PrintOrder=0
+ DefFont={(0,0,0),12.000000,-16,0,0,0,400,0,0,0,0,4,0,5,0,Arial}
+ HelpLines.Horizontal=
+ HelpLines.Vertical=
+ PDF.MaxOutlineDepth=2
+ DefaultSize.Objecttype1=(0,0,76000,25300)
+ ObjectCount=1
+[UserSection]
+
+[SumVariables]
+[Layer]
+ Name=Basis
+ Condition=
+ WorkspaceColor=(0,0,0)
+ Visible=TRUE
+ LayerID=0
+[Layer]
+ Name=Erste Seite
+ Condition=Page() = 1
+ WorkspaceColor=(0,128,64)
+ Visible=TRUE
+ LayerID=1
+[Layer]
+ Name=Folgeseiten
+ Condition=Page() <> 1
+ WorkspaceColor=(0,0,255)
+ Visible=TRUE
+ LayerID=2
+[Object]
+ ObjectID=1
+ ObjectName=Text
+ Locked=FALSE
+ LinkID=1
+ LinkToID=0
+ LinkMode=32
+ LinkTest=-25329
+ LayerID=0
+ GroupID=0
+ Identifier=Adresse.Name1
+ Condition=True
+ UserLocked=False
+ WrapBefore=False
+ Position/Left=6500
+ Position/Top=5400
+ Position/Width=76000
+ Position/Height=25300
+ Direction=0
+ bFill=False
+ BkColor=RGB(0,0,0)
+ Frame/Layout=0
+ Frame/Left/Line=False
+ Frame/Top/Line=False
+ Frame/Right/Line=False
+ Frame/Bottom/Line=False
+ bPageWrap=False
+ bBottomAligned=False
+ [@Lines]
+  {
+  [Lines]
+   {
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=False
+	 FaceName="Arial"
+	 GdiCharSet=0
+	 Size=8.0
+	 Width=0
+	 Bold=False
+	 Italic=False
+	 Underline=False
+	 Strikeout=False
+	 Color=LL.Color.Black
+	 PitchAndFamily=34
+	 OutPrecision=3
+	 }
+	Align=2
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=1
+	PageWrapAllowed=True
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Str$(ArztNr,0) + "/H" + Str$(HalterNr,0)
+	Tab=0
+	TabAlign=0
+	}
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=True
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=3
+	PageWrapAllowed=False
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Adresse.Name1
+	Tab=0
+	TabAlign=0
+	}
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=True
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=3
+	PageWrapAllowed=False
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Adresse.Name2
+	Tab=0
+	TabAlign=0
+	}
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=True
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=3
+	PageWrapAllowed=False
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Adresse.Strasse
+	Tab=0
+	TabAlign=0
+	}
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=True
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=3
+	PageWrapAllowed=False
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	Text=Adresse.Ort
+	Tab=0
+	TabAlign=0
+	}
+   }
+  }
+[UserVariables]
+[Parameters]
+ [@Parameters]
+  {
+  [Parameters]
+   {
+   LL.ProjectDescription=? (default)
+   }
+  }
+[UsedIdentifiers]
+ Variables=Adresse.Name1;Adresse.Name2;Adresse.Ort;Adresse.Strasse;ArztNr;HalterNr

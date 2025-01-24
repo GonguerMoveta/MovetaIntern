@@ -1,0 +1,92 @@
+Select   A.Name1, A.Name2, A.Name3, A.Strasse, A.Pfach,
+A.LandNr, A.OrtPlz, A.PfachPlz, A.Ort, A.IhrZeichen, A.UnserZeichen, K.KdLieferantNr, A.KdNr, A.Versandart,
+A.Vortext, A.Waehrung, A.LiefSprache, A.Text1, A.ZahlBedNr, A.Datum, A.RabAnz, A.Proforma,
+A.LieferDatum, A.LieferKW, A.LiefBedNr, A.VertNr1, A.LiefName1, A.LiefName2, A.LiefName3, A.LiefStrasse, A.LiefOrtPlz,
+A.LiefOrt, A.LiefLandNr, A.KWDrucken, K.DebitorenNr, @NULLVALUE(A.AnsprTelefonNr,A.TelefonNr), @NULLVALUE(A.AnsprFaxNr,
+A.FaxNr),  A.AenderungsDruck, A.AngNr, A.AnsprName, AN.Text, A.AuftrArt, A.Abschlag1, A.Abschlag2, A.Abschlag3, A.WerkNr,
+A.Abladestelle, A.SpeditionNr, K.Sachbearbeiter, A.LieferZeit, A.MWSTNR, K.ABZBST,
+A.RName1, A.RName2, A.RName3, A.RStrasse, A.RPfach, A.RLandNr, A.ROrtPlz, A.RPfachPlz, A.ROrt, A.LiefBedText,
+A.LIEFADRNR, K.REILN, K.EMPFANGSILN, @NULLVALUE(A.AnsprTelex, A.Telexnr), A.WerkNrEigen, A.BestimmungsOrt,
+K.STEUERNR, K.LAENDERNR, K.FINANZAMT, K.EGID
+FROM  AUFTRAG A, KUNDE K, ANREDEN AN
+INTO :sRGName1, :sRGName2, :sRGName3, :sRGStrasse, :sRGPostfach, :sRGLandKz, :sRGOrtPlz, :sRGPostfachPlz,
+:sRGOrt, :sIhrZeichen, :sUnserZeichen, :sLieferantNr, :nKundenNr, :sVersandart, :sRechGutVortext, :sWaehrung,
+:sSprache, :sSchlusstext1, :sZahlBedNr, :dtRGDatum, :nRabattAnzahl, :sProforma, :dtAuftrLieferDatum,
+:nAuftrLieferKW, :sLiefBedNr, :sVertNr, :sLiefName1, :sLiefName2, :sLiefName3, :sLiefStrasse, :sLiefOrtPlz ,:sLiefOrt, :sLiefLandNr,
+:sKwDrucken, :sDebNr, :sTelefon, :sTeleFax, :sAendDruck, :nAngNr, :sAnsprPartner, :sAnrede, :sAuftragsArt, :nAbschlag1,
+:nAbschlag2, :nAbschlag3, :sWerkNr, :sAbladestelle, :sSpeditionNr, :sSachbearbeiter, :sAuftrLieferZeit, :sKopfMWSTNR, :sABZBST,
+:sRPName1, :sRPName2, :sRPName3, :sRPStrasse, :sRPPostfach, :sRPLandKz, :sRPOrtPlz, :sRPPostfachPlz, :sRPOrt, :sLiefBed,
+:nLiefAdrNr, :sRechnungsILN, :sEmpfangsILN, :sAnsprEmail, :sWerkNrEigen, :sBestimmungsOrt, :sKdSteuerNr, :nKdSteuerLaenderNr, :sKdFinanzamt,
+:sKIDNr
+WHERE  (A.KdNr = K.KdNr) AND (A.AuftrNr = :nRGAkt) and AN.Anrede(+) = A.Anrede;
+
+SELECT B.BUCHUNGSART,B.BUCHUNGSTEXT,
+  @DECODE(E.KASSENNR,NULL,0,1)   
+  FROM SYSADM.BUCHUNGSART B, SYSADM.EINGANGAUSGANG E
+  WHERE (B.BUCHUNGSART= E.BUCHARTSYMBOL(+)) AND
+  (E.KASSENNR(+) = @p0) AND
+  ( KASSENART='HV' OR KASSENART= 'HK' ) AND
+  (B.KZ_EA_MASKE = 'J')
+  ORDER BY ABARBEIT_FOLGE;
+
+select  
+@IF(Lieferdifferenz.DiffMenge,ELS.SollMenge+Lieferdifferenz.DiffMenge, ELS.SollMenge),
+@IF(Lieferdifferenz.DiffMenge,ELS.SollMenge+Lieferdifferenz.DiffMenge, ELS.SollMenge)
+from els, lieferdifferenz, position
+WHERE 
+ELS.LieferscheinNr =  Lieferdifferenz.LieferscheinNr (+) 
+AND  ELS.KZLieferPapier = Lieferdifferenz.KZLieferpapier (+)
+AND ELS.PosNr = Lieferdifferenz.PosNr (+)
+AND 'Z' = Lieferdifferenz.KZHerkunft (+)
+AND ELS.KZLieferPapier =  'LS'
+AND ELS.LieferscheinNr = 57384984
+AND       (ELS.Status NOT LIKE 'Erl' or 1=0)
+AND Position.POSNR = ELS.PosNr  
+ORDER BY ELS.ZeilenNr;
+
+SELECT VOR_KUNDENNR,VOR_QAUFNR_UMS,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG),
+ VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,0,VOR_BETRAG,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP
+FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART
+WHERE VOR_KASSENNR BETWEEN 1 AND 99 AND
+ VOR_TYP_HPTNR IN (18,19,21,22,24,25)
+ AND VOR_TYP_HPTNR = VBA_TYP_HPTNR
+ AND VOR_TYP_TEILNR = VBA_TYP_TEILNR
+UNION ALL
+SELECT VOR_KUNDENNR,VOA_QAUFNR_ERF,@NULLVALUE(VOR_FREIGABEDATUM,VOR_KASSENTAG),
+ VBA_VORGANGSART,VOR_ANZAHLUNG_AUFL,VOA_ANZAHLUNG,0,VOR_RATENBETRAG,VOR_ZAHLUNGSART,VBA_VORGANGSTYP
+FROM SYSADM.VORGANG,SYSADM.VORGBUCHUNGSART,SYSADM.VORGAUFTRAG
+WHERE VOR_TYP_HPTNR=16 AND
+ VOR_KASSENNR BETWEEN 1 AND 99 AND
+  VOR_TYP_HPTNR = VBA_TYP_HPTNR  AND
+ VOR_TYP_TEILNR = VBA_TYP_TEILNR AND
+ SYSADM.VORGANG.VOR_KASSENTAG = SYSADM.VORGAUFTRAG.VOA_KASSENTAG(+) AND
+ SYSADM.VORGANG.VOR_KASSENNR = SYSADM.VORGAUFTRAG.VOA_KASSENNR(+) AND
+ SYSADM.VORGANG.VOR_VORGANGSNR = SYSADM.VOGAUFTRAG.VOA_VORGANGSNR(+)
+ORDER BY 2;
+
+SELECT aktionstamm.bestellnr,
+ aktionstamm.bestellgroesse,
+ position.posnr,
+ position.text1,
+ position.warennr, 
+ @TRIM(position.groessenzusatz), 
+ position.vkpreis
+FROM position, aktionstamm
+WHERE position.posnr = aktionstamm.posnr(+)
+ AND (@LICS(position.text1) LIKE @LICS('d%') 
+   OR @UPPER(position.text1) LIKE @UPPER('d%'))
+ORDER BY position.posnr, position.text1 ASC;
+
+SELECT R.PosNr, P.Text1, P.VKPreis, R.Menge, G.Bezeichnung, G.RetourengrundNr, R.Bemerkung, P.Lagerortzentrale, R.Erfassdatum 
+      FROM retoure R, position P, retourengrund G, retourekopf K 
+      WHERE P.PosNr = R.PosNr AND R.Retourengrund = G.RetourengrundNr (+) AND P.KZWarenart = G.KZWarenart (+) AND R.LSKennung LIKE 'w' AND K.LSKennung LIKE 'w' AND R.RetourenNr = 20063213 AND K.RetourenNr = 20063347
+      ORDER BY R.Zeilennr;
+
+SELECT KASSENNR 
+      FROM SYSADM.ZAHLUNG, SYSADM.VORGANG 
+      WHERE KASSENNR < 99 AND KASSENTAG = 04/04/2008 AND NOT BETRAG = 0 AND NOT VORGANG.VOR_TYP_HPTNR(+) = 810 AND 
+ZAHLUNG.KASSENNR = VORGANG.VOR_KASSENNR(+) AND ZAHLUNG.KASSENTAG = VORGANG.VOR_KASSENTAG(+);         
+
+
+
+

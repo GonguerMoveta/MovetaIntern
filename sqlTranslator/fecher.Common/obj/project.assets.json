@@ -1,0 +1,582 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win": {
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x64": {
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "PPJ-WinForms-2023/4.9.6": {
+        "type": "package",
+        "compile": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "runtime": {
+          "lib/net48/C1.Win.4.dll": {},
+          "lib/net48/C1.Win.C1FlexGrid.4.dll": {},
+          "lib/net48/C1.Win.C1Ribbon.4.dll": {},
+          "lib/net48/Hunspellx64.dll": {},
+          "lib/net48/Hunspellx86.dll": {},
+          "lib/net48/PPJ.Runtime.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.DDE.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.Reports.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.LL.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.RS.49.dll": {},
+          "lib/net48/PPJ.Runtime.Reports.ST.49.dll": {},
+          "lib/net48/PPJ.Runtime.Vis.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/PPJ.Runtime.XSal.49.dll": {
+            "related": ".xml"
+          },
+          "lib/net48/SkinSoft.VisualStyler.dll": {}
+        },
+        "resource": {
+          "lib/net48/de/PPJ.Runtime.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Design.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.Vis.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/de/PPJ.Web.XSal.49.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net48/fr/PPJ.Web.Design.49.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net48/it/PPJ.Web.Design.49.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net48/pt/PPJ.Web.Design.49.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PPJ-WinForms-2023/4.9.6": {
+      "sha512": "TdFVkHSppyDC1Jnau7u+TzbYRduyYbjcD8BCzFsJNqePgAa4aJPgHpud12w3ThieHBeQWA77yEJ1cLC781X25w==",
+      "type": "package",
+      "path": "ppj-winforms-2023/4.9.6",
+      "files": [
+        ".nupkg.metadata",
+        "EULA-PPJ-v6.txt",
+        "images/ppj.png",
+        "lib/net48/C1.Win.4.dll",
+        "lib/net48/C1.Win.C1FlexGrid.4.dll",
+        "lib/net48/C1.Win.C1Ribbon.4.dll",
+        "lib/net48/Hunspellx64.dll",
+        "lib/net48/Hunspellx86.dll",
+        "lib/net48/PPJ.Runtime.49.dll",
+        "lib/net48/PPJ.Runtime.49.xml",
+        "lib/net48/PPJ.Runtime.DDE.49.dll",
+        "lib/net48/PPJ.Runtime.DDE.49.xml",
+        "lib/net48/PPJ.Runtime.Reports.49.dll",
+        "lib/net48/PPJ.Runtime.Reports.LL.49.dll",
+        "lib/net48/PPJ.Runtime.Reports.RS.49.dll",
+        "lib/net48/PPJ.Runtime.Reports.ST.49.dll",
+        "lib/net48/PPJ.Runtime.Vis.49.dll",
+        "lib/net48/PPJ.Runtime.Vis.49.xml",
+        "lib/net48/PPJ.Runtime.XSal.49.dll",
+        "lib/net48/PPJ.Runtime.XSal.49.xml",
+        "lib/net48/SkinSoft.VisualStyler.dll",
+        "lib/net48/de/PPJ.Runtime.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.DDE.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Design.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.LL.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.RS.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Reports.ST.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.Vis.49.resources.dll",
+        "lib/net48/de/PPJ.Runtime.XSal.49.resources.dll",
+        "lib/net48/de/PPJ.Web.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Design.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.LL.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.RS.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Reports.ST.49.resources.dll",
+        "lib/net48/de/PPJ.Web.Vis.49.resources.dll",
+        "lib/net48/de/PPJ.Web.XSal.49.resources.dll",
+        "lib/net48/fr/PPJ.Web.Design.49.resources.dll",
+        "lib/net48/it/PPJ.Web.Design.49.resources.dll",
+        "lib/net48/pt/PPJ.Web.Design.49.resources.dll",
+        "ppj-winforms-2023.4.9.6.nupkg.sha512",
+        "ppj-winforms-2023.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "PPJ-WinForms-2023 >= 4.9.6"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Gongue\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\fecher.Common.csproj",
+      "projectName": "fecher.Common",
+      "projectPath": "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\fecher.Common.csproj",
+      "packagesPath": "C:\\Users\\Gongue\\.nuget\\packages\\",
+      "outputPath": "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Gongue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\PPJ-Framework.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Text Control GmbH\\NuGetPackages": {},
+        "C:\\Program Files\\IceTeaGroup\\PPJ\\Framework\\2023\\nuget\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "dependencies": {
+          "PPJ-WinForms-2023": {
+            "target": "Package",
+            "version": "[4.9.6, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

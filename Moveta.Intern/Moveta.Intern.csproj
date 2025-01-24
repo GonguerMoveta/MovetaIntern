@@ -1,0 +1,1962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12E885E9-7E31-4C9D-8C4D-DD195B095B30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Moveta.Intern</RootNamespace>
+    <AssemblyName>Moveta.Intern</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tvn.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Moveta.Intern.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ForPreTest|AnyCPU'">
+    <OutputPath>..\bin\ForPreTest\</OutputPath>
+    <DefineConstants>TRACE;FECHER</DefineConstants>
+    <Optimize>true</Optimize>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.4">
+      <HintPath>..\libraries\ppjfw\C1.Win.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.4">
+      <HintPath>..\libraries\ppjfw\C1.Win.C1FlexGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Ribbon.4">
+      <HintPath>..\libraries\ppjfw\C1.Win.C1Ribbon.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MT4.8">
+      <HintPath>..\libraries\MT4.8.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.DDE.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.DDE.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Design.2019">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Design.2019.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Design.2022">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Design.2022.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Design.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Design.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Reports.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Reports.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Reports.LL.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Reports.LL.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Reports.RS.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Reports.RS.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Reports.ST.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Reports.ST.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.Vis.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.Vis.49.dll</HintPath>
+    </Reference>
+    <Reference Include="PPJ.Runtime.XSal.49">
+      <HintPath>..\libraries\ppjfw\PPJ.Runtime.XSal.49.dll</HintPath>
+    </Reference>
+    <Reference Include="SkinSoft.VisualStyler">
+      <HintPath>..\libraries\ppjfw\SkinSoft.VisualStyler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Classes\cBTRegistry.cs" />
+    <Compile Include="Classes\cfBase64.cs" />
+    <Compile Include="Classes\CMLL24RLib_ILlRtfCtrl.cs" />
+    <Compile Include="Classes\CMLL24RLib_LlRtfCtrl.cs" />
+    <Compile Include="Classes\DartFtp_Certificate.cs" />
+    <Compile Include="Classes\DartFtp_CertificateStore.cs" />
+    <Compile Include="Classes\DartFtp_DartStrings.cs" />
+    <Compile Include="Classes\DartFtp_Ftp.cs" />
+    <Compile Include="Classes\DartFtp_ICertificate.cs" />
+    <Compile Include="Classes\DartFtp_ICertificates.cs" />
+    <Compile Include="Classes\DartFtp_ICertificateStore.cs" />
+    <Compile Include="Classes\DartFtp_IDartStrings.cs" />
+    <Compile Include="Classes\DartFtp_IFtp.cs" />
+    <Compile Include="Classes\DartFtp_IListEntries.cs" />
+    <Compile Include="Classes\DartFtp_IListEntry.cs" />
+    <Compile Include="Classes\DartFtp_ListEntries.cs" />
+    <Compile Include="Classes\DartFtp_ListEntry.cs" />
+    <Compile Include="Classes\Dymo_DymoAddIn.cs" />
+    <Compile Include="Classes\Dymo_DymoLabels.cs" />
+    <Compile Include="Classes\Dymo_IDymoAddIn.cs" />
+    <Compile Include="Classes\Dymo_IDymoAddIn5.cs" />
+    <Compile Include="Classes\Dymo_IDymoLabels.cs" />
+    <Compile Include="Classes\fcStructPoint.cs" />
+    <Compile Include="Classes\fcStructRectangle.cs" />
+    <Compile Include="Classes\fcStructSize.cs" />
+    <Compile Include="Classes\Fiskaly.cs" />
+    <Compile Include="Classes\FiskalyAmountsPerPaymentType.cs" />
+    <Compile Include="Classes\FiskalyAmountsPerVatRate.cs" />
+    <Compile Include="Classes\FiskalyClient.cs" />
+    <Compile Include="Classes\FiskalyClientList.cs" />
+    <Compile Include="Classes\FiskalyClientList_V2.cs" />
+    <Compile Include="Classes\FiskalyClient_V2.cs" />
+    <Compile Include="Classes\FiskalyExport.cs" />
+    <Compile Include="Classes\FiskalyExportList.cs" />
+    <Compile Include="Classes\FiskalyExportList_V2.cs" />
+    <Compile Include="Classes\FiskalyExport_V2.cs" />
+    <Compile Include="Classes\FiskalyLinks.cs" />
+    <Compile Include="Classes\FiskalyLog.cs" />
+    <Compile Include="Classes\FiskalyMetadata.cs" />
+    <Compile Include="Classes\FiskalyRaw.cs" />
+    <Compile Include="Classes\FiskalyReceipt.cs" />
+    <Compile Include="Classes\FiskalySchema.cs" />
+    <Compile Include="Classes\FiskalySignature.cs" />
+    <Compile Include="Classes\FiskalyStandardV1.cs" />
+    <Compile Include="Classes\FiskalyTransaction.cs" />
+    <Compile Include="Classes\FiskalyTransactionList.cs" />
+    <Compile Include="Classes\FiskalyTransactionList_V2.cs" />
+    <Compile Include="Classes\FiskalyTransaction_V2.cs" />
+    <Compile Include="Classes\FiskalyTSS.cs" />
+    <Compile Include="Classes\FiskalyTSSList.cs" />
+    <Compile Include="Classes\FiskalyTSSList_V2.cs" />
+    <Compile Include="Classes\FiskalyTSS_V2.cs" />
+    <Compile Include="Classes\FiskalyXML.cs" />
+    <Compile Include="Classes\GdTwain2_dummy.cs" />
+    <Compile Include="Classes\GdTwain2_Twain.cs" />
+    <Compile Include="Classes\GdTwain2__dummy.cs" />
+    <Compile Include="Classes\GdTwain2__Twain.cs" />
+    <Compile Include="Classes\gwcCommonControlClass.cs" />
+    <Compile Include="Classes\ListLabel_ListLabel.cs" />
+    <Compile Include="Classes\ListLabel__DLul.cs" />
+    <Compile Include="Classes\MailService.cs" />
+    <Compile Include="Classes\SalMail.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamBrowseForFolderX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamDriveList.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamFileListX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamFileOperation.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamFolderComboX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamNetConnectionDialog.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamNetDisconnectDialog.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamPathEditX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamPathLabel.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamSearchOptionsX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamSelectionListX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamShellChangeNotifierX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamShellComboX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamShellLinkX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamShellList.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamShellTreeX.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamSystemShellView.cs" />
+    <Compile Include="Classes\ShellBrowser_IJamThumbnailImageX.cs" />
+    <Compile Include="Classes\ShellBrowser_IStrings.cs" />
+    <Compile Include="Classes\ShellBrowser_JamBrowseForFolder.cs" />
+    <Compile Include="Classes\ShellBrowser_JamDriveList.cs" />
+    <Compile Include="Classes\ShellBrowser_JamFileList.cs" />
+    <Compile Include="Classes\ShellBrowser_JamFileOperation.cs" />
+    <Compile Include="Classes\ShellBrowser_JamFolderCombo.cs" />
+    <Compile Include="Classes\ShellBrowser_JamNetConnectionDialog.cs" />
+    <Compile Include="Classes\ShellBrowser_JamNetDisconnectDialog.cs" />
+    <Compile Include="Classes\ShellBrowser_JamPathEdit.cs" />
+    <Compile Include="Classes\ShellBrowser_JamPathLabel.cs" />
+    <Compile Include="Classes\ShellBrowser_JamSearchOptions.cs" />
+    <Compile Include="Classes\ShellBrowser_JamSelectionList.cs" />
+    <Compile Include="Classes\ShellBrowser_JamShellChangeNotifier.cs" />
+    <Compile Include="Classes\ShellBrowser_JamShellCombo.cs" />
+    <Compile Include="Classes\ShellBrowser_JamShellLink.cs" />
+    <Compile Include="Classes\ShellBrowser_JamShellList.cs" />
+    <Compile Include="Classes\ShellBrowser_JamShellTree.cs" />
+    <Compile Include="Classes\ShellBrowser_JamSystemShellView.cs" />
+    <Compile Include="Classes\ShellBrowser_JamThumbnailImage.cs" />
+    <Compile Include="Classes\TD60.cs" />
+    <Compile Include="Classes\Tx4oleLib_ILicManager.cs" />
+    <Compile Include="Classes\Tx4oleLib_IStyle.cs" />
+    <Compile Include="Classes\Tx4oleLib_IStyles.cs" />
+    <Compile Include="Classes\Tx4oleLib_IXMLElement.cs" />
+    <Compile Include="Classes\Tx4oleLib_IXMLElements.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXButtonBar.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXLicenseManager.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXRuler.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXStatusBar.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXStyle.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXStyles.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXTextControl.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXXMLElement.cs" />
+    <Compile Include="Classes\Tx4oleLib_TXXMLElements.cs" />
+    <Compile Include="Classes\Tx4oleLib__DTX4OLE.cs" />
+    <Compile Include="Classes\Tx4oleLib__DTXBBAR.cs" />
+    <Compile Include="Classes\Tx4oleLib__DTXRULER.cs" />
+    <Compile Include="Classes\Tx4oleLib__DTXSBAR.cs" />
+    <Compile Include="Controls\AX_CMLL24RLib_LlRtfCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_DartFtp_Ftp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_GdTwain2_Twain.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ListLabel_ListLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamBrowseForFolder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamDriveList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamFileList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamFileOperation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamFolderCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamNetConnectionDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamNetDisconnectDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamPathEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamPathLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamShellChangeNotifier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamShellCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamShellLink.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamShellList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamShellTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamSystemShellView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_ShellBrowser_JamThumbnailImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_Tx4oleLib_TXButtonBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_Tx4oleLib_TXRuler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_Tx4oleLib_TXStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AX_Tx4oleLib_TXTextControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cccMsctlsProgressBar32.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cQuickGraph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cQuickGraph.designer.cs">
+      <DependentUpon>cQuickGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FCRibbonFormWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FCRibbonFormWindow.designer.cs">
+      <DependentUpon>FCRibbonFormWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FCQuickTabsRibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FCQuickTabsRibbonParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FCQuickTabsRibbonParentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAbout.Designer.cs">
+      <DependentUpon>dlgAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgAbschVor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAbschVor.Designer.cs">
+      <DependentUpon>dlgAbschVor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgAbwAss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAbwAss.Designer.cs">
+      <DependentUpon>dlgAbwAss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgAnschrift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgAnschrift.Designer.cs">
+      <DependentUpon>dlgAnschrift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgBeihilfeEin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgBeihilfeEin.Designer.cs">
+      <DependentUpon>dlgBeihilfeEin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgBenutzerFE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgBenutzerFE.Designer.cs">
+      <DependentUpon>dlgBenutzerFE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgBEZRetoure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgBEZRetoure.Designer.cs">
+      <DependentUpon>dlgBEZRetoure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgDatum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgDatum.Designer.cs">
+      <DependentUpon>dlgDatum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgDiskEinRechNr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgDiskEinRechNr.Designer.cs">
+      <DependentUpon>dlgDiskEinRechNr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgdivDruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgdivDruck.Designer.cs">
+      <DependentUpon>dlgdivDruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgDM.Designer.cs">
+      <DependentUpon>dlgDM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgDruckUtil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgDruckUtil.Designer.cs">
+      <DependentUpon>dlgDruckUtil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEDAGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEDAGV.Designer.cs">
+      <DependentUpon>dlgEDAGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinCopies.Designer.cs">
+      <DependentUpon>dlgEinCopies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinDat.Designer.cs">
+      <DependentUpon>dlgEinDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinDat2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinDat2.Designer.cs">
+      <DependentUpon>dlgEinDat2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinNumber.Designer.cs">
+      <DependentUpon>dlgEinNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinStr2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinStr2.Designer.cs">
+      <DependentUpon>dlgEinStr2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinString.Designer.cs">
+      <DependentUpon>dlgEinString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinString1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinString1.Designer.cs">
+      <DependentUpon>dlgEinString1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinStringScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinStringScan.Designer.cs">
+      <DependentUpon>dlgEinStringScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgEinTabelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgEinTabelle.Designer.cs">
+      <DependentUpon>dlgEinTabelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgLaufwerk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgLaufwerk.Designer.cs">
+      <DependentUpon>dlgLaufwerk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgLlDruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgLlDruck.Designer.cs">
+      <DependentUpon>dlgLlDruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgMahnVor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgMahnVor.Designer.cs">
+      <DependentUpon>dlgMahnVor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgMBDruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgMBDruck.Designer.cs">
+      <DependentUpon>dlgMBDruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgMBKalenderVor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgMBKalenderVor.Designer.cs">
+      <DependentUpon>dlgMBKalenderVor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgMBKalenderVorDruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgMBKalenderVorDruck.Designer.cs">
+      <DependentUpon>dlgMBKalenderVorDruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgMS.Designer.cs">
+      <DependentUpon>dlgMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgPWChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgPWChange.Designer.cs">
+      <DependentUpon>dlgPWChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgQOLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgQOLogin.Designer.cs">
+      <DependentUpon>dlgQOLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgSalden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgSalden.Designer.cs">
+      <DependentUpon>dlgSalden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgSqlErrorAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgSqlErrorAction.Designer.cs">
+      <DependentUpon>dlgSqlErrorAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgText.Designer.cs">
+      <DependentUpon>dlgText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgTextHalter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgTextHalter.Designer.cs">
+      <DependentUpon>dlgTextHalter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgTextPRundDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgTextPRundDM.Designer.cs">
+      <DependentUpon>dlgTextPRundDM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgTextundDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgTextundDM.Designer.cs">
+      <DependentUpon>dlgTextundDM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgUserCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgUserCredentials.Designer.cs">
+      <DependentUpon>dlgUserCredentials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgVADetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgVADetail.Designer.cs">
+      <DependentUpon>dlgVADetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgVorschuss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgVorschuss.Designer.cs">
+      <DependentUpon>dlgVorschuss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgZahlInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgZahlInfo.Designer.cs">
+      <DependentUpon>dlgZahlInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dlgZinsen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dlgZinsen.Designer.cs">
+      <DependentUpon>dlgZinsen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbrBearb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbrBearb.Designer.cs">
+      <DependentUpon>frmAbrBearb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbrDateiX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbrDateiX.Designer.cs">
+      <DependentUpon>frmAbrDateiX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbrFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbrFTP.Designer.cs">
+      <DependentUpon>frmAbrFTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbrHalter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbrHalter.Designer.cs">
+      <DependentUpon>frmAbrHalter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbschVor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbschVor.Designer.cs">
+      <DependentUpon>frmAbschVor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAerzte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAerzte.Designer.cs">
+      <DependentUpon>frmAerzte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAnwBeleg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAnwBeleg.Designer.cs">
+      <DependentUpon>frmAnwBeleg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmArztVorgaben.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmArztVorgaben.Designer.cs">
+      <DependentUpon>frmArztVorgaben.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAusbatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAusbatch.Designer.cs">
+      <DependentUpon>frmAusbatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBankZahl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBankZahl.Designer.cs">
+      <DependentUpon>frmBankZahl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBenutzer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBenutzer.Designer.cs">
+      <DependentUpon>frmBenutzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBEZDaten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBEZDaten.Designer.cs">
+      <DependentUpon>frmBEZDaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBEZStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBEZStamm.Designer.cs">
+      <DependentUpon>frmBEZStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBrAktiErf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBrAktiErf.Designer.cs">
+      <DependentUpon>frmBrAktiErf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBriefVari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBriefVari.Designer.cs">
+      <DependentUpon>frmBriefVari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuchAbgleich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuchAbgleich.Designer.cs">
+      <DependentUpon>frmBuchAbgleich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuchMB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuchMB.Designer.cs">
+      <DependentUpon>frmBuchMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBuKo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuKo.Designer.cs">
+      <DependentUpon>frmBuKo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDATEVStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDATEVStamm.Designer.cs">
+      <DependentUpon>frmDATEVStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDatLoe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDatLoe.Designer.cs">
+      <DependentUpon>frmDatLoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiskAbr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiskAbr.Designer.cs">
+      <DependentUpon>frmDiskAbr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDiskEin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiskEin.Designer.cs">
+      <DependentUpon>frmDiskEin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDruMa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDruMa.Designer.cs">
+      <DependentUpon>frmDruMa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDruMahnProtokoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDruMahnProtokoll.Designer.cs">
+      <DependentUpon>frmDruMahnProtokoll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDSGVOLoesch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDSGVOLoesch.Designer.cs">
+      <DependentUpon>frmDSGVOLoesch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDublPruef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDublPruef.Designer.cs">
+      <DependentUpon>frmDublPruef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDublPruef2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDublPruef2.Designer.cs">
+      <DependentUpon>frmDublPruef2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDYMODruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDYMODruck.Designer.cs">
+      <DependentUpon>frmDYMODruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEDA.Designer.cs">
+      <DependentUpon>frmEDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEE.Designer.cs">
+      <DependentUpon>frmEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEL.Designer.cs">
+      <DependentUpon>frmEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEUUeberw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEUUeberw.Designer.cs">
+      <DependentUpon>frmEUUeberw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFeiertage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFeiertage.Designer.cs">
+      <DependentUpon>frmFeiertage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFiBu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFiBu.Designer.cs">
+      <DependentUpon>frmFiBu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGerichte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGerichte.Designer.cs">
+      <DependentUpon>frmGerichte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGewinnErm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGewinnErm.Designer.cs">
+      <DependentUpon>frmGewinnErm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGraph.Designer.cs">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHalter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHalter.Designer.cs">
+      <DependentUpon>frmHalter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHalterAnl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHalterAnl.Designer.cs">
+      <DependentUpon>frmHalterAnl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHalterDoppelt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHalterDoppelt.Designer.cs">
+      <DependentUpon>frmHalterDoppelt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHalterFehlend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHalterFehlend.Designer.cs">
+      <DependentUpon>frmHalterFehlend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHalterKopieren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHalterKopieren.Designer.cs">
+      <DependentUpon>frmHalterKopieren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInfoSasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInfoSasse.Designer.cs">
+      <DependentUpon>frmInfoSasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInfoZahlAusbuch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInfoZahlAusbuch.Designer.cs">
+      <DependentUpon>frmInfoZahlAusbuch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInvent.Designer.cs">
+      <DependentUpon>frmInvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInventHaendler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInventHaendler.Designer.cs">
+      <DependentUpon>frmInventHaendler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmJahresSummen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmJahresSummen.Designer.cs">
+      <DependentUpon>frmJahresSummen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKA.Designer.cs">
+      <DependentUpon>frmKA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKontierungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKontierungen.Designer.cs">
+      <DependentUpon>frmKontierungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLoad.Designer.cs">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogbuch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogbuch.Designer.cs">
+      <DependentUpon>frmLogbuch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMahn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMahn.Designer.cs">
+      <DependentUpon>frmMahn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMahntexte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMahntexte.Designer.cs">
+      <DependentUpon>frmMahntexte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMahnVor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMahnVor.Designer.cs">
+      <DependentUpon>frmMahnVor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmManAbr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManAbr.Designer.cs">
+      <DependentUpon>frmManAbr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmManLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManLE.Designer.cs">
+      <DependentUpon>frmManLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMB.Designer.cs">
+      <DependentUpon>frmMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMBAktiErf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMBAktiErf.Designer.cs">
+      <DependentUpon>frmMBAktiErf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMBErf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMBErf.Designer.cs">
+      <DependentUpon>frmMBErf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMBKalender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMBKalender.Designer.cs">
+      <DependentUpon>frmMBKalender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMBKalenderVor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMBKalenderVor.Designer.cs">
+      <DependentUpon>frmMBKalenderVor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMBKEinzeldruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMBKEinzeldruck.Designer.cs">
+      <DependentUpon>frmMBKEinzeldruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMCSuche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMCSuche.Designer.cs">
+      <DependentUpon>frmMCSuche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMonatsAbschl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMonatsAbschl.Designer.cs">
+      <DependentUpon>frmMonatsAbschl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMycoBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMycoBH.Designer.cs">
+      <DependentUpon>frmMycoBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMycoLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMycoLE.Designer.cs">
+      <DependentUpon>frmMycoLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNamenstest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNamenstest.Designer.cs">
+      <DependentUpon>frmNamenstest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNegativerSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNegativerSaldo.Designer.cs">
+      <DependentUpon>frmNegativerSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNegativsalden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNegativsalden.Designer.cs">
+      <DependentUpon>frmNegativsalden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOPDisk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOPDisk.Designer.cs">
+      <DependentUpon>frmOPDisk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPDFAnzeige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPDFAnzeige.Designer.cs">
+      <DependentUpon>frmPDFAnzeige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPRGrafik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPRGrafik.Designer.cs">
+      <DependentUpon>frmPRGrafik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrintIds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrintIds.Designer.cs">
+      <DependentUpon>frmPrintIds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProzReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProzReg.Designer.cs">
+      <DependentUpon>frmProzReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRaZa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRaZa.Designer.cs">
+      <DependentUpon>frmRaZa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRechAb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRechAb.Designer.cs">
+      <DependentUpon>frmRechAb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRechAusb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRechAusb.Designer.cs">
+      <DependentUpon>frmRechAusb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRechAusbRueck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRechAusbRueck.Designer.cs">
+      <DependentUpon>frmRechAusbRueck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRechNachdruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRechNachdruck.Designer.cs">
+      <DependentUpon>frmRechNachdruck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRechPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRechPos.Designer.cs">
+      <DependentUpon>frmRechPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRechProtneu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRechProtneu.Designer.cs">
+      <DependentUpon>frmRechProtneu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRechVonBisStorno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRechVonBisStorno.Designer.cs">
+      <DependentUpon>frmRechVonBisStorno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRetouren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRetouren.Designer.cs">
+      <DependentUpon>frmRetouren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRgSuchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRgSuchen.Designer.cs">
+      <DependentUpon>frmRgSuchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRISER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRISER.Designer.cs">
+      <DependentUpon>frmRISER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRR.Designer.cs">
+      <DependentUpon>frmRR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRueckErst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRueckErst.Designer.cs">
+      <DependentUpon>frmRueckErst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSerienbrief.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSerienbrief.Designer.cs">
+      <DependentUpon>frmSerienbrief.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSerienbriefH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSerienbriefH.Designer.cs">
+      <DependentUpon>frmSerienbriefH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSonderSuche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSonderSuche.Designer.cs">
+      <DependentUpon>frmSonderSuche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmsonstBuch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmsonstBuch.Designer.cs">
+      <DependentUpon>frmsonstBuch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSpeMa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSpeMa.Designer.cs">
+      <DependentUpon>frmSpeMa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSpeRg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSpeRg.Designer.cs">
+      <DependentUpon>frmSpeRg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStamm.Designer.cs">
+      <DependentUpon>frmStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStatAbrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStatAbrg.Designer.cs">
+      <DependentUpon>frmStatAbrg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStatBenutzer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStatBenutzer.Designer.cs">
+      <DependentUpon>frmStatBenutzer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStatTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStatTK.Designer.cs">
+      <DependentUpon>frmStatTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStatVariabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStatVariabel.Designer.cs">
+      <DependentUpon>frmStatVariabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSteuerExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSteuerExport.Designer.cs">
+      <DependentUpon>frmSteuerExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSteuerExportA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSteuerExportA.Designer.cs">
+      <DependentUpon>frmSteuerExportA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSupportLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSupportLog.Designer.cs">
+      <DependentUpon>frmSupportLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTagebuch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTagebuch.Designer.cs">
+      <DependentUpon>frmTagebuch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmtblMahnungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmtblMahnungen.Designer.cs">
+      <DependentUpon>frmtblMahnungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmText.Designer.cs">
+      <DependentUpon>frmText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTKSuch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTKSuch.Designer.cs">
+      <DependentUpon>frmTKSuch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTSK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTSK.Designer.cs">
+      <DependentUpon>frmTSK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTSKBeihilfen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTSKBeihilfen.Designer.cs">
+      <DependentUpon>frmTSKBeihilfen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTSKWaisen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTSKWaisen.Designer.cs">
+      <DependentUpon>frmTSKWaisen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTSKZahl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTSKZahl.Designer.cs">
+      <DependentUpon>frmTSKZahl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTVNOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTVNOnline.Designer.cs">
+      <DependentUpon>frmTVNOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTVSNrLw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTVSNrLw.Designer.cs">
+      <DependentUpon>frmTVSNrLw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUeberw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUeberw.Designer.cs">
+      <DependentUpon>frmUeberw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUeberwListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUeberwListe.Designer.cs">
+      <DependentUpon>frmUeberwListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUebFibuBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUebFibuBH.Designer.cs">
+      <DependentUpon>frmUebFibuBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUebOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUebOP.Designer.cs">
+      <DependentUpon>frmUebOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVersicherungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVersicherungen.Designer.cs">
+      <DependentUpon>frmVersicherungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVETAemter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVETAemter.Designer.cs">
+      <DependentUpon>frmVETAemter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVKZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVKZ.Designer.cs">
+      <DependentUpon>frmVKZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmZahlHalter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmZahlHalter.Designer.cs">
+      <DependentUpon>frmZahlHalter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmZettel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmZettel.Designer.cs">
+      <DependentUpon>frmZettel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmZust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmZust.Designer.cs">
+      <DependentUpon>frmZust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblArzt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblArzt.Designer.cs">
+      <DependentUpon>tblArzt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblHalter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblHalter.Designer.cs">
+      <DependentUpon>tblHalter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblHistorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblHistorie.Designer.cs">
+      <DependentUpon>tblHistorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblMahnungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblMahnungen.Designer.cs">
+      <DependentUpon>tblMahnungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblStamm.Designer.cs">
+      <DependentUpon>tblStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblUeberw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblUeberw.Designer.cs">
+      <DependentUpon>tblUeberw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblVN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblVN.Designer.cs">
+      <DependentUpon>tblVN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblZahlungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblZahlungen.Designer.cs">
+      <DependentUpon>tblZahlungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals\Const.cs" />
+    <Compile Include="Globals\Ext.cs" />
+    <Compile Include="Globals\Int.cs" />
+    <Compile Include="Globals\Var.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="appicon.ico" />
+    <EmbeddedResource Include="Controls\FCRibbonFormWindow.resx">
+      <DependentUpon>FCRibbonFormWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgAbout.resx">
+      <DependentUpon>dlgAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgDatum.resx">
+      <DependentUpon>dlgDatum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgdivDruck.resx">
+      <DependentUpon>dlgdivDruck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgEinDat.resx">
+      <DependentUpon>dlgEinDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgEinDat2.resx">
+      <DependentUpon>dlgEinDat2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgMahnVor.resx">
+      <DependentUpon>dlgMahnVor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dlgSalden.resx">
+      <DependentUpon>dlgSalden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAerzte.resx">
+      <DependentUpon>frmAerzte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBankZahl.resx">
+      <DependentUpon>frmBankZahl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBenutzer.resx">
+      <DependentUpon>frmBenutzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBuchAbgleich.resx">
+      <DependentUpon>frmBuchAbgleich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBuchMB.resx">
+      <DependentUpon>frmBuchMB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEL.resx">
+      <DependentUpon>frmEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGewinnErm.resx">
+      <DependentUpon>frmGewinnErm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGraph.resx">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHalter.resx">
+      <DependentUpon>frmHalter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInfoSasse.resx">
+      <DependentUpon>frmInfoSasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInfoZahlAusbuch.resx">
+      <DependentUpon>frmInfoZahlAusbuch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogbuch.resx">
+      <DependentUpon>frmLogbuch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmManLE.resx">
+      <DependentUpon>frmManLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPRGrafik.resx">
+      <DependentUpon>frmPRGrafik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRgSuchen.resx">
+      <DependentUpon>frmRgSuchen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRR.resx">
+      <DependentUpon>frmRR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSpeMa.resx">
+      <DependentUpon>frmSpeMa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStatBenutzer.resx">
+      <DependentUpon>frmStatBenutzer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStatTK.resx">
+      <DependentUpon>frmStatTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStatVariabel.resx">
+      <DependentUpon>frmStatVariabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSteuerExport.resx">
+      <DependentUpon>frmSteuerExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTagebuch.resx">
+      <DependentUpon>frmTagebuch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVKZ.resx">
+      <DependentUpon>frmVKZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmZettel.resx">
+      <DependentUpon>frmZettel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="sql.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_document3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarmclock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_closed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cabinet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_flow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_area.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_dot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_line.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock_forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_panel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_floppy_disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_scroll.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_check_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_pinned.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth_location.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth_network.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder3_document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gearwheels.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_into.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_euro.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic_wand.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying_glass.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_sealed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_coin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_coins.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_refund.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moneybag_euro.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_brush.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanner.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection_view.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tables.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_headset.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_monitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workplace.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Access key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\np.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_new.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_new.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cube_blue_preferences.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_preferences.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin_red.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_marked.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_gear.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_pulse.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_plain_new.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_find.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_preferences.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_document.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document_plain.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_view.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_view3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_disk3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_out.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_disk2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanner_view.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanner.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\painting_up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\painting_down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_preferences.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Message2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card file.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Credit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d bar chart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hystory.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Case history.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Questionnaire.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scheduled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hot documents.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TVNSKLEI.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INFOI.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOEBP.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEUBP.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="syscolumns.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="systables.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dart.Ftp">
+      <Version>6.1.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="DYMO.Connect.SDK">
+      <Version>1.4.4.21</Version>
+    </PackageReference>
+    <PackageReference Include="DYMO.Label">
+      <Version>8.5.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="GdPicture">
+      <Version>14.2.86</Version>
+    </PackageReference>
+    <PackageReference Include="MailKit">
+      <Version>4.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="MimeKit">
+      <Version>4.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="PPJ-WinForms-2023">
+      <Version>4.9.6</Version>
+    </PackageReference>
+    <PackageReference Include="ShellBrowser.NET">
+      <Version>7.1.0.357</Version>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp">
+      <Version>2.88.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tvn.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /d /i /y /e  $(ProjectDir)..\Skins\*.* $(TargetDir)Skins</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

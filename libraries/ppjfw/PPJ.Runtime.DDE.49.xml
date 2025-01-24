@@ -1,0 +1,798 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PPJ.Runtime.DDE.49</name>
+    </assembly>
+    <members>
+        <member name="T:PPJ.Runtime.DDE.DDEClient">
+            <summary>
+            DDE Client class.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.#cctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.#ctor(System.IntPtr,System.String,System.String,System.Int32)">
+            <summary>
+            Cannot create an instance of this class directly.
+            Must use DDEClient.Connect().
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Finalize">
+            <summary>
+            Destructor.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEClient.Service">
+            <summary>
+            Returns the service name connected to this client.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEClient.Topic">
+            <summary>
+            Returns the topic name connected to this client.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEClient.Timeout">
+            <summary>
+            Gets/Sets the timeout for DDE transactions.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Connect(System.String,System.String,System.Int32)">
+            <summary>
+            Initiates a DDE session with a server.
+            </summary>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Advise(System.String)">
+            <summary>
+            Starts receiving notifications when a data item has changed.
+            </summary>
+            <param name="item"></param>		
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Unadvise(System.String)">
+            <summary>
+            Stops receiving data notifications for the specified item.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.RequestData(System.String)">
+            <summary>
+            Requests the content of the specified data item.
+            </summary>
+            <param name="item"></param>		
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Execute(System.String)">
+            <summary>
+            Requests the execution of a command.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Send(System.String,System.String)">
+            <summary>
+            Sends unsolicited data to the server.
+            </summary>
+            <param name="item"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Terminate">
+            <summary>
+            Terminates the DDE session.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.DDECallback(System.Int32,System.Int32,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+            <summary>
+            DDEML callback function.
+            </summary>
+            <param name="uType"></param>
+            <param name="uFmt"></param>
+            <param name="hConv"></param>
+            <param name="hsz1"></param>
+            <param name="hsz2"></param>
+            <param name="hData"></param>
+            <param name="dwData1"></param>
+            <param name="dwData2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.XTypAdvData(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_ADVDATA.
+            </summary>
+            <param name="hConv"></param>
+            <param name="uFmt"></param>
+            <param name="itemHandle"></param>
+            <param name="hData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.XTypDisconnect(System.IntPtr)">
+            <summary>
+            Process XTYP_DISCONNECT.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEClient.Terminated">
+            <summary>
+            Terminated event
+            </summary>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEClient.ItemChanged">
+            <summary>
+            ItemChanged event
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEClient.Dispose">
+            <summary>
+            Disconnect and remove from the list.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.DDEEventHandler">
+            <summary>
+            Delegate for handling DDE events.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.DDEEventArgs">
+            <summary>
+            Arguments for DDE events.
+            </summary>
+        </member>
+        <member name="F:PPJ.Runtime.DDE.DDEEventArgs.Empty">
+            <summary>
+            empty value
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEEventArgs.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEEventArgs.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="item"></param>
+            <param name="command"></param>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEEventArgs.Item">
+            <summary>
+            Item
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEEventArgs.Command">
+            <summary>
+            Command
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEEventArgs.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEEventArgs.Handled">
+            <summary>
+            Handled
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.DDEException">
+            <summary>
+            DDEException thrown by the DDEClient and DDEServer classes.
+            The exception is automatically initialized using DdeGetLastError.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEException.Error">
+            <summary>
+            Returns the DDEML error code.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEException.Message">
+            <summary>
+            Returns the description corresponding to the DDEML error.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.DDEError">
+            <summary>
+            DDEML error types.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.DDEML">
+            <summary>
+            DDE Management Library declarations.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.DDEServer">
+            <summary>
+            DDE server class.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.#cctor">
+            <summary>
+            Class constructor
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.#ctor(System.String,System.String)">
+            <summary>
+            Cannot create an instance of this class directly.
+            Must use DDEClient.Connect().
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.Finalize">
+            <summary>
+            Destructor.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.DDECallback(System.Int32,System.Int32,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+            <summary>
+            DDEML callback function.
+            </summary>
+            <param name="uType"></param>
+            <param name="uFmt"></param>
+            <param name="hConv"></param>
+            <param name="hsz1"></param>
+            <param name="hsz2"></param>
+            <param name="hData"></param>
+            <param name="dwData1"></param>
+            <param name="dwData2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypConnect(System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_CONNECT.
+            Confirms the connection request if there is a server registered with the
+            specified service/topic.
+            </summary>
+            <param name="hService"></param>
+            <param name="hTopic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypConnectConfirm(System.IntPtr,System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_CONNECT_CONFIRM.
+            Adds the connection handle to the server identified by service/topic.
+            </summary>
+            <param name="hConv"></param>
+            <param name="hService"></param>
+            <param name="hTopic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypRequest(System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_REQUEST.
+            Generates the DataRequest event and returns the data set by the implementation.
+            </summary>
+            <param name="hConv"></param>
+            <param name="hItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypAdvStart(System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_ADVSTART.
+            Generates the AdviseStart event.
+            </summary>
+            <param name="hConv"></param>
+            <param name="hItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypAdvStop(System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_ADVSTOP.
+            Generates the AdviseStop event.
+            </summary>
+            <param name="hConv"></param>
+            <param name="hItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypAdvReq(System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_ADVREQ.
+            Generates the DataRequest event for each client that is registered as a hot link.
+            </summary>
+            <param name="hConv"></param>
+            <param name="hItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypExecute(System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_EXECUTE.
+            Generates the ExecuteRequest event.
+            </summary>
+            <param name="hConv"></param>
+            <param name="hData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypPoke(System.IntPtr,System.IntPtr,System.IntPtr)">
+            <summary>
+            Process XTYP_POKE.
+            Generates the PokeRequest event.
+            </summary>
+            <param name="hConv"></param>
+            <param name="hItem"></param>
+            <param name="hData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.XTypDisconnect(System.IntPtr)">
+            <summary>
+            Process XTYP_DISCONNECT.
+            Removes the connection handle from the server.
+            </summary>
+            <param name="hConv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.FindServer(System.String,System.String)">
+            <summary>
+            Returns the instance of DDEServer associated with the service/topic.
+            </summary>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.FindServer(System.IntPtr,System.IntPtr)">
+            <summary>
+            Returns the instance of DDEServer associated with the service/topic.
+            </summary>
+            <param name="serviceHandle"></param>
+            <param name="topicHandle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.FindServer(System.IntPtr)">
+            <summary>
+            Returns the instance of DDEServer associated with the connection.
+            </summary>
+            <param name="connection"></param>		
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.GetString(System.IntPtr)">
+            <summary>
+            Retrieves the string from the dde handle.
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEServer.Service">
+            <summary>
+            Returns the service name for this server.
+            </summary>
+        </member>
+        <member name="P:PPJ.Runtime.DDE.DDEServer.Topic">
+            <summary>
+            Returns the topic name for this server.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.Start(System.String,System.String)">
+            <summary>
+            Starts a server for the specified server/topic.
+            If a server with the same server/topic already exists, returns
+            the existing instance.
+            </summary>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.Stop">
+            <summary>
+            Terminates all the connections and closes the server.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.ItemChanged(System.String)">
+            <summary>
+            Informs the connected clients with a hot link to the specified item
+            that the data has changed.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEServer.DataRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEServer.UpdateRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEServer.ExecuteRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEServer.PokeRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEServer.AdviseStart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:PPJ.Runtime.DDE.DDEServer.AdviseStop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.DDEServer.Dispose">
+            <summary>
+            Disconnect and remove from the list.
+            </summary>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.SalDDE">
+            <summary>
+            Summary description for SalDDE.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.AddAtom(PPJ.Runtime.SalString)">
+            <summary>
+            Adds a string to the global atom table and creates a new atom to identify the string.
+            </summary>
+            <param name="stringToAdd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.Alloc">
+            <summary>
+            Allocates a memory handle for WM_DDE_Data or WM_DDE_Poke message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.DeleteAtom(PPJ.Runtime.SalNumber)">
+            <summary>
+            Decrements an atom's reference count.
+            </summary>
+            <param name="atomToDelete">The atom to delete.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.Extract(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalWindowHandle@,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Extracts the sender's window handle and the data in the lParam parameter upon receipt
+            of a Windows DDE message.
+            </summary>
+            <param name="msg">The DDE message being processed.</param>
+            <param name="wParam">The word parameter of the DDE message.</param>
+            <param name="lParam">The long parameter of the DDE message.</param>
+            <param name="sender">The sender's window handle.</param>
+            <param name="lowlParam">The low-order word of lParam.</param>
+            <param name="highlParam">The high-order word of lParam.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.ExtractCmd(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@,PPJ.Runtime.SalNumber)">
+            <summary>
+            Extracts the command string referenced by the lParam of a
+            WM_DDE_Execute message.
+            </summary>
+            <param name="handle">The memory handle for the command string.</param>
+            <param name="command">The command string.</param>
+            <param name="commandSize">The maximum size of the command string.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.ExtractDataText(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalString@,PPJ.Runtime.SalNumber)">
+            <summary>
+            Extracts the data referenced by the low-order word of the lParam in a WM_DDE_Data
+            or WM_DDE_Poke message.
+            </summary>
+            <param name="handle">The handle of the memory object that contains the data and other information.</param>
+            <param name="status">The status word.</param>
+            <param name="data">The data.</param>
+            <param name="dataSize">The size of the data buffer.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.ExtractOptions(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber@,PPJ.Runtime.SalNumber@)">
+            <summary>
+            Extracts the data referenced by the options value of SalDDEExtract in a WM_DDE_Advise
+            message.
+            </summary>
+            <param name="options">The handle to the global memory object that specifies how the data is sent.</param>
+            <param name="flags">The status word.</param>
+            <param name="format">The CF_Text data format.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.FindAtom(PPJ.Runtime.SalString)">
+            <summary>
+            Searches the global atom table and returns the atom associated with the given string.
+            </summary>
+            <param name="topicString">The string to search for.</param>
+            <returns>nAtom</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.Free(PPJ.Runtime.SalNumber)">
+            <summary>
+            Frees a memory handle allocated by SalDDEAlloc for WM_DDE_Data or WM_DDE_Poke
+            messages.
+            </summary>
+            <param name="memory">The memory handle to free.</param>
+            <returns>nHandle</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.GetAtomName(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@,PPJ.Runtime.SalNumber)">
+            <summary>
+            Returns the string associated with an atom.
+            </summary>
+            <param name="atom">The atom number.</param>
+            <param name="atomName">The string associated with nAtom.</param>
+            <param name="stringLength">Specify the maximum length of sAtomName.</param>
+            <returns>nAtomSize</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.GetExecuteString(PPJ.Runtime.SalNumber)">
+            <summary>
+            Converts the lParam of the SAM_DDE_ClientExecute message to a command string.
+            </summary>
+            <param name="msglParam"></param>
+            <returns>sCommand</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.Post(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber,PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Posts a WM_DDE_* messages except: WM_DDE_Initiate and WM_DDE_Ack.
+            </summary>
+            <param name="wndReceiver"></param>
+            <param name="message"></param>
+            <param name="wndSender"></param>
+            <param name="lowlParam"></param>
+            <param name="hnighlParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.Request(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString@)">
+            <summary>
+            Asks a server to send data.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="service"></param>
+            <param name="serverTopic"></param>
+            <param name="serverItem"></param>
+            <param name="timeout"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.Send(PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber,PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sends a WM_DDE_* message.
+            </summary>
+            <param name="receiver"></param>
+            <param name="message"></param>
+            <param name="sender"></param>
+            <param name="lowlParam"></param>
+            <param name="highlParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SendAll(PPJ.Runtime.SalNumber,PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Broadcasts a WM_DDE_* message.
+            </summary>
+            <param name="message"></param>
+            <param name="sender"></param>
+            <param name="lowlParam"></param>
+            <param name="highlParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SendAll(PPJ.Runtime.SalNumber,PPJ.Runtime.SalWindowHandle,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Broadcasts a WM_DDE_* message with a given Timeout
+            </summary>
+            <param name="message"></param>
+            <param name="sender"></param>
+            <param name="lowlParam"></param>
+            <param name="highlParam"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SendExecute(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString)">
+            <summary>
+            Executes a DDE command on the server.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <param name="item"></param>
+            <param name="timeout"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SendToClient(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Sends data to the client.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="data"></param>
+            <param name="clientID"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SetCmd(PPJ.Runtime.SalNumber,PPJ.Runtime.SalString)">
+            <summary>
+            Assigns a command string to the data referenced by the high-order word of the lParam
+            in a WM_DDE_Execute message.
+            </summary>
+            <param name="highlParam">The handle to the command block that contains the command string.</param>
+            <param name="command">The command to execute.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SetDataText(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalString)">
+            <summary>
+            Assigns a value to the data referenced by the low-order word of the lParam in a WM_DDE_Data
+            or WM_DDE_Poke message.
+            </summary>
+            <param name="numData">The handle to the memory object that contains the data and other information.</param>
+            <param name="status">The status word.</param>
+            <param name="strData">The value to assign.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SetData(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,System.Byte[],System.Int32)">
+            <summary>
+            Sets DDEdata from a byte array with given format		
+            </summary>
+            <param name="handle">The handle to the memory object that contains the data and other information.</param>
+            <param name="status">The status word.</param>
+            <param name="format">The format</param>
+            <param name="data">The data to assign.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SetOptions(PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber,PPJ.Runtime.SalNumber)">
+            <summary>
+            Assigns a value to the data referenced by the low-order word of the lParam in a WM_DDE_Advise
+            message.
+            </summary>
+            <param name="options">The handle to the memory object that specifies how the data is to be sent.</param>
+            <param name="flags">The status word.</param>
+            <param name="format">The CF_* data format.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.StartServer(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalString)">
+            <summary>
+            Creates a DDE server for the specified service, topic and item.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.StartSession(System.Windows.Forms.Control,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalString,PPJ.Runtime.SalNumber)">
+            <summary>
+            Starts a hot link conversation with a server application.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <param name="item"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.StopServer(System.Windows.Forms.Control)">
+            <summary>
+            Stops the DDE server associated with the specified control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.StopSession(System.Windows.Forms.Control)">
+            <summary>
+            Ends a hot link conversation with a server application.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns>bOk</returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.MakeLParam(System.Int32,System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            Constructs the LParam to send in WM_DDE_* messages.
+            </summary>
+            <param name="msg"></param>
+            <param name="lo"></param>
+            <param name="hi"></param>
+            <param name="packed"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.SalDDE.SalDDEClient">
+            <summary>
+            Wraps the DDEClient class to support binding to controls.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEClient.Connect(System.Windows.Forms.Control,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Connects to the specified server/topic and starts a hot link with the specified item.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <param name="item"></param>
+            <param name="timeout"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEClient.Disconnect(System.Windows.Forms.Control)">
+            <summary>
+            Disconnects and frees all the DDE clients associated with the control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEClient.ctrl_Disposed(System.Object,System.EventArgs)">
+            <summary>
+            Free the DDEClient associated with the disposed control.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEClient.client_ItemChanged(System.Object,PPJ.Runtime.DDE.DDEEventArgs)">
+            <summary>
+            Processes advise notifications from the client.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:PPJ.Runtime.DDE.SalDDE.SalDDEServer">
+            <summary>
+            Wraps the DDEServer class to support binding to controls.
+            </summary>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.Start(System.Windows.Forms.Control,System.String,System.String,System.String)">
+            <summary>
+            Starts a DDE server for the specified service/topic/item.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="service"></param>
+            <param name="topic"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.Stop(System.Windows.Forms.Control)">
+            <summary>
+            Closes all the servers associated with the control.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.UpdateItem(System.Windows.Forms.Control,System.String)">
+            <summary>
+            Sends the updated data to all connected hot links.
+            </summary>
+            <param name="ctrl">Target control on which to execute the call.</param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.ctrl_Disposed(System.Object,System.EventArgs)">
+            <summary>
+            Free the DDEClient associated with the disposed control.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.server_DataRequest(System.Object,PPJ.Runtime.DDE.DDEEventArgs)">
+            <summary>
+            Process data requests from the clients connected to this server.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.server_ExecuteRequest(System.Object,PPJ.Runtime.DDE.DDEEventArgs)">
+            <summary>
+            Process execute requests from the clients.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.server_AdviseStart(System.Object,PPJ.Runtime.DDE.DDEEventArgs)">
+            <summary>
+            Process hot links requests for the specified item.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.server_AdviseStop(System.Object,PPJ.Runtime.DDE.DDEEventArgs)">
+            <summary>
+            Process hot links requests for the specified item.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:PPJ.Runtime.DDE.SalDDE.SalDDEServer.server_UpdateRequest(System.Object,PPJ.Runtime.DDE.DDEEventArgs)">
+            <summary>
+            Processes UpdateRequest events generated in response to a call to ItemChanged.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>

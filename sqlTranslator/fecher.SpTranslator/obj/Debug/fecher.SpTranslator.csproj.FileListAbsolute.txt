@@ -1,0 +1,7 @@
+F:\EDV\Moveta.Int.L0008\sqlTranslator\bin\Debug\fecher.SpTranslator.dll
+F:\EDV\Moveta.Int.L0008\sqlTranslator\bin\Debug\fecher.SpTranslator.pdb
+F:\EDV\Moveta.Int.L0008\sqlTranslator\fecher.SpTranslator\obj\Debug\fecher.SpTranslator.csproj.AssemblyReference.cache
+F:\EDV\Moveta.Int.L0008\sqlTranslator\fecher.SpTranslator\obj\Debug\fecher.SpTranslator.csproj.CoreCompileInputs.cache
+F:\EDV\Moveta.Int.L0008\sqlTranslator\fecher.SpTranslator\obj\Debug\fecher.SpTranslator.csproj.CopyComplete
+F:\EDV\Moveta.Int.L0008\sqlTranslator\fecher.SpTranslator\obj\Debug\fecher.SpTranslator.dll
+F:\EDV\Moveta.Int.L0008\sqlTranslator\fecher.SpTranslator\obj\Debug\fecher.SpTranslator.pdb

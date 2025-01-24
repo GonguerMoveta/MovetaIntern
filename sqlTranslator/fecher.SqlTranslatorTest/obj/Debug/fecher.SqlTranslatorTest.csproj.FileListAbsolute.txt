@@ -1,0 +1,15 @@
+D:\Projekte\Test\bin\Debug\SQLTranslatorTest.exe.config
+D:\Projekte\Test\bin\Debug\SQLTranslatorTest.exe
+D:\Projekte\Test\bin\Debug\SQLTranslatorTest.pdb
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\fecher.SqlTranslatorTest.csproj.AssemblyReference.cache
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\SQLTranslatorTest.MainForm.resources
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\SQLTranslatorTest.TestConnectionForm.resources
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\SQLTranslatorTest.Forms.ViewForm.resources
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\SQLTranslatorTest.Properties.Resources.resources
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\fecher.SqlTranslatorTest.csproj.GenerateResource.cache
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\fecher.SqlTranslatorTest.csproj.CoreCompileInputs.cache
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\fecher.S.7828B939.Up2Date
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\SQLTranslatorTest.exe
+D:\Projekte\Test\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\SQLTranslatorTest.pdb
+F:\EDV\Moveta.Int.L0008\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\fecher.SqlTranslatorTest.csproj.AssemblyReference.cache
+F:\EDV\Moveta.Int.L0008\sqlTranslator\fecher.SqlTranslatorTest\obj\Debug\fecher.SqlTranslatorTest.csproj.SuggestedBindingRedirects.cache

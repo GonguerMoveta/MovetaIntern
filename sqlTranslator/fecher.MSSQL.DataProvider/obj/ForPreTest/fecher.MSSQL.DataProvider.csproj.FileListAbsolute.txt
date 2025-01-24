@@ -1,0 +1,7 @@
+D:\Projekte\Moveta\repos\Moveta\bin\ForPreTest\fecher.MSSQL.DataProvider.dll
+D:\Projekte\Moveta\repos\Moveta\bin\ForPreTest\fecher.MSSQL.DataProvider.pdb
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.MSSQL.DataProvider\obj\ForPreTest\fecher.MSSQL.DataProvider.csproj.AssemblyReference.cache
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.MSSQL.DataProvider\obj\ForPreTest\fecher.MSSQL.DataProvider.csproj.CoreCompileInputs.cache
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.MSSQL.DataProvider\obj\ForPreTest\fecher.M.4C3BE207.Up2Date
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.MSSQL.DataProvider\obj\ForPreTest\fecher.MSSQL.DataProvider.dll
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.MSSQL.DataProvider\obj\ForPreTest\fecher.MSSQL.DataProvider.pdb

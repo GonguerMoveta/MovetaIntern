@@ -1,0 +1,231 @@
+﻿[File Card description]
+[Description]
+ Text=List & Label Projektdatei
+ FileVersion=14
+ RootTable=
+ Units=SCM-Units
+ Metric=0
+ TextQuote.Start=1
+ TextQuote.End=1
+ RepresentationCode.CondStart=171
+ RepresentationCode.CondSep=166
+ RepresentationCode.CondEnd=187
+ RepresentationCode.Tab=247
+ RepresentationCode.Ret=182
+ RepresentationCode.PhantomSpace=8203
+ RepresentationCode.LockNextChar=8288
+ RepresentationCode.ExprSep=164
+ LCID=1031
+ UserVars.ManualSortOrder=1
+ Created=02.10.2008, 09:48:57
+ CreatedByApp=CBI15.EXE [1.5.1-PTF6, Build 12290]
+ CreatedByDLL=CMLL13.DLL [13,12,0,0 (08-06-10 15:10)]
+ CreatedByUser=Keuer on KEUER
+ LastModified=12.12.2017, 15:03:19
+ LastModifiedByApp=CBI61.EXE [6.1-SP4, Build 38114M]
+ LastModifiedByDLL=CMLL22.DLL [22.4.2017.19508 (17-07-09 08:08)F]
+ LastModifiedByUser=keuer on PCKEUER
+ CreatedByCallFrom=cdlli61.dll
+[Layout]
+ P1.Template=3651 Universal Etiketten, 52,5 x 29,7mm |52.5|29.7|0.0|0.0|4|10|525,297,0,0,4,10,0,0
+ xGrid=1000
+ yGrid=1000
+ GridShow=FALSE
+ GridSnap=FALSE
+ EnhancedExpressions=TRUE
+ EnhancedOldExpressions=FALSE
+ Decimals=2
+ RealDataPreviewPageLimit=2
+ DefFont={(0,0,0),12.000000,-16,0,0,0,400,0,0,0,0,4,0,0,0,Arial}
+ HelpLines.Horizontal=
+ HelpLines.Vertical=
+ PDF.MaxOutlineDepth=2
+ PDF.MaxOutlineDepth.IDX=3
+ ObjectCount=1
+[UserSection]
+ 
+[SumVariables]
+[Layer]
+ Name=Basis
+ Condition=
+ WorkspaceColor=(0,0,0)
+ Visible=TRUE
+ LayerID=0
+[Layer]
+ Name=Erste Seite
+ Condition=Page() = 1
+ WorkspaceColor=(0,128,64)
+ Visible=TRUE
+ LayerID=1
+[Layer]
+ Name=Folgeseiten
+ Condition=Page() <> 1
+ WorkspaceColor=(0,0,255)
+ Visible=TRUE
+ LayerID=2
+[ProjectTemplates]
+ [@ProjectTemplates]
+  {
+  [ProjectTemplates]
+   {
+   }
+  }
+[Object]
+ ObjectID=1
+ ObjectName=Text
+ Locked=FALSE
+ LinkUUID={67124E86-480A-491C-A9C6-36ECD48BE4A9}
+ LinkMode=32
+ LayerID=0
+ LayerCond=
+ GroupUUID=
+ Identifier=KUNDEN.VOR_UND_ZUNAME
+ Condition=True
+ UserLocked=False
+ WrapBefore=False
+ bPageWrap=False
+ ExportAsPicture=False
+ Position/Left=4200
+ Position/Top=800
+ Position/Width=39800
+ Position/Height=20300
+ Direction=0
+ bFill=0
+ Frame/Layout=0
+ Frame/Left/Spacing=600
+ Frame/Left/Line=False
+ Frame/Top/Spacing=600
+ Frame/Top/Line=False
+ Frame/Right/Spacing=600
+ Frame/Right/Line=False
+ Frame/Bottom/Spacing=600
+ Frame/Bottom/Line=False
+ PDFLevel=0
+ PDFText=
+ IndexPDFLevel=0
+ IndexPDFText=
+ IssueCondition=True
+ Link.URL=
+ Animation=""
+ bBottomAligned=False
+ [@Lines]
+  {
+  [Lines]
+   {
+   [Line]
+	{
+	[Font]
+	 {
+	 Default=True
+	 FaceName=Null()
+	 GdiCharSet=Null()
+	 Size=Null()
+	 Width=#Null()
+	 Bold=Null()
+	 Italic=Null()
+	 Underline=Null()
+	 Strikeout=Null()
+	 Color=Null()
+	 PitchAndFamily=Null()
+	 OutPrecision=Null()
+	 }
+	Align=0
+	Adjusted=False
+	Uneraseable=False
+	LineWrap=1
+	PageWrapAllowed=True
+	ForceWrap=True
+	SpaceOptimization=True
+	Spacing.Paragraph=0
+	Spacing.Line=0
+	OutputFormatter=
+	Condition=True
+	[ConditionalFormatter]
+	 {
+	 }
+	Text=Adresse.Name1 + Cond( Adresse.Name2 = "", "", Chr$(13)) + Adresse.Name2 + Chr$(13) + Adresse.Strasse + Chr$(13) + Adresse.Ort + Chr$(13) + Adresse.Land
+	Tab=0
+	TabAlign=0
+	}
+   }
+  }
+[UserVariables]
+[Parameters]
+ [@Parameters]
+  {
+  [Parameters]
+   {
+   LL.ActiveLayout=Standard-Layout
+   LL.ProjectDescription=List & Label Projektdatei
+   }
+  }
+[UsedIdentifiers]
+ Variables=Adresse.Land;Adresse.Name1;Adresse.Name2;Adresse.Ort;Adresse.Strasse
+[PageLayouts]
+ [@PageLayouts]
+  {
+  [PageLayouts]
+   {
+   [PageLayout]
+	{
+	DisplayName=
+	Condition=True
+	SourceTray=0
+	ForcePaperFormat=True
+	UsePhysicalPaper=False
+	PaperFormat=9
+	PaperFormat.cx=210000
+	PaperFormat.cy=297000
+	PaperFormat.Orientation=1
+	Copies=1
+	Duplex=0
+	Collate=0
+	FitPage=False
+	Layout.Size.cx=52500
+	Layout.Size.cy=29700
+	Layout.Distance.cx=0
+	Layout.Distance.cy=0
+	Layout.Count.x=4
+	Layout.Count.y=10
+	Layout.Offset.x=0
+	Layout.Offset.y=0
+	LayoutPrintOrder=0
+	ShowInPrintDialog=True
+	}
+   }
+  }
+[ExtendedInfo]
+ [@ExtendedInfos]
+  {
+  [UserDefinedDesignScheme]
+   {
+   [Foreground]
+	{
+	Color=(188,221,161)
+	Color=(154,201,73)
+	Color=(135,165,101)
+	Color=(235,93,129)
+	Color=(75,152,184)
+	Color=(91,179,213)
+	Color=(171,214,226)
+	Color=(153,153,153)
+	Color=(102,102,102)
+	Color=(204,204,204)
+	}
+   [Background]
+	{
+	Color=(251,251,251)
+	Color=(204,204,204)
+	Color=(77,77,77)
+	Color=(51,51,51)
+	FillMode=1
+	}
+   }
+  [AutoTranslationTable.ID]
+   {
+   1={67124E86-480A-491C-A9C6-36ECD48BE4A9}
+   }
+  [UIDescriptions]
+   {
+   }
+  }

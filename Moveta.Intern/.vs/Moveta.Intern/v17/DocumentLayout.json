@@ -1,0 +1,176 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|d:\\projekte\\moveta\\repos\\moveta\\moveta.intern\\globals\\ext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|solutionrelative:globals\\ext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|d:\\projekte\\moveta\\repos\\moveta\\moveta.intern\\forms\\frmrgsuchen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|solutionrelative:forms\\frmrgsuchen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|d:\\projekte\\moveta\\repos\\moveta\\moveta.intern\\classes\\cbtregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|solutionrelative:classes\\cbtregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|d:\\projekte\\moveta\\repos\\moveta\\moveta.intern\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|solutionrelative:forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|d:\\projekte\\moveta\\repos\\moveta\\moveta.intern\\forms\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|solutionrelative:forms\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\forms\\frmtext.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|solutionrelative:forms\\frmtext.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\forms\\frmload.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12E885E9-7E31-4C9D-8C4D-DD195B095B30}|Moveta.Intern.csproj|solutionrelative:forms\\frmload.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmText.Designer.cs",
+              "DocumentMoniker": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmText.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\frmText.Designer.cs",
+              "ToolTip": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmText.Designer.cs",
+              "RelativeToolTip": "Forms\\frmText.Designer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvxYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T11:49:56.13Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmLoad.Designer.cs",
+              "DocumentMoniker": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmLoad.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\frmLoad.Designer.cs",
+              "ToolTip": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmLoad.Designer.cs",
+              "RelativeToolTip": "Forms\\frmLoad.Designer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwD0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T11:39:41.709Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmMain.Designer.cs",
+              "DocumentMoniker": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmMain.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\frmMain.Designer.cs",
+              "ToolTip": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmMain.Designer.cs",
+              "RelativeToolTip": "Forms\\frmMain.Designer.cs",
+              "ViewState": "AgIAAAwCAAAAAAAAAAAAABYCAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T13:40:04.856Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmRgSuchen.cs",
+              "DocumentMoniker": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmRgSuchen.cs",
+              "RelativeDocumentMoniker": "Forms\\frmRgSuchen.cs",
+              "ToolTip": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmRgSuchen.cs",
+              "RelativeToolTip": "Forms\\frmRgSuchen.cs",
+              "ViewState": "AgIAADsKAAAAAAAAAAAewFsKAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T10:16:34.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmMain.cs",
+              "RelativeDocumentMoniker": "Forms\\frmMain.cs",
+              "ToolTip": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Forms\\frmMain.cs",
+              "RelativeToolTip": "Forms\\frmMain.cs",
+              "ViewState": "AgIAAOgDAAAAAAAAAAAwwAYEAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T08:56:12.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "cBTRegistry.cs",
+              "DocumentMoniker": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Classes\\cBTRegistry.cs",
+              "RelativeDocumentMoniker": "Classes\\cBTRegistry.cs",
+              "ToolTip": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Classes\\cBTRegistry.cs",
+              "RelativeToolTip": "Classes\\cBTRegistry.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T08:55:56.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ext.cs",
+              "DocumentMoniker": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Globals\\Ext.cs",
+              "RelativeDocumentMoniker": "Globals\\Ext.cs",
+              "ToolTip": "D:\\Projekte\\Moveta\\repos\\Moveta\\Moveta.Intern\\Globals\\Ext.cs",
+              "RelativeToolTip": "Globals\\Ext.cs",
+              "ViewState": "AgIAADAEAAAAAAAAAAAjwPgDAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T08:55:26.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

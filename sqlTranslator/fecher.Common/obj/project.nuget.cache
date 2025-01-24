@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eajpAU0loquPfqufnJY52rkObJ+pV212oVj1zPFqU6XgXrQrio/fRF0jJ0eXYopkv+P0TjM6KpqHJt/+ZZpZyQ==",
+  "success": true,
+  "projectFilePath": "F:\\EDV\\Moveta.Int.L0008\\sqlTranslator\\fecher.Common\\fecher.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gongue\\.nuget\\packages\\ppj-winforms-2023\\4.9.6\\ppj-winforms-2023.4.9.6.nupkg.sha512"
+  ],
+  "logs": []
+}

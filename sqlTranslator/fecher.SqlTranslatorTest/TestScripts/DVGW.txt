@@ -1,0 +1,216 @@
+SELECT vorg.s_laborkz,vorg.s_labornr,vorg_recnr,vorg_az || vaz_verf||vorg_zart,vorg_zart,vorg_lfd_nr,vorg_vsta_recnr,vorg_adr_recnr,vorg_antrag,vorg_postdate,vorg_vzar_recnr,vorg_re_adr_recnr FROM vorg,vaz,vopv,v_tmp000033679_002 WHERE VORG_RECNR = VAZ_VORG_RECNR AND vorg_vzbr_recnr = 1 AND vorg_vzar_recnr = 8 AND vorg_recnr = vopv_vorg_recnr AND adr_recnr = vorg_adr_recnr AND vorg_vsta_recnr IN (18,19,20,357) AND @UPPER(VAZ_VERF) LIKE 'N%' AND VORG_LFD_JAHR = 2011
+UNION 
+SELECT DISTINCT VORG.S_LABORKZ, VORG.S_LABORNR, VORG_RECNR, VORG_AZ || VAZ_VERF||VORG_ZART, VORG_ZART, VORG_LFD_NR, VORG_VSTA_RECNR, VORG_ADR_RECNR, VORG_ANTRAG, VORG_POSTDATE, VORG_VZAR_RECNR, VORG_RE_ADR_RECNR FROM vorg, vaz, vopv, v_tmp000033679_002 WHERE 
+VORG_RECNR = VAZ_VORG_RECNR
+AND VORG_VZBR_RECNR = 1
+AND VORG_VZAR_RECNR = 8
+AND v_tmp000033679_002.ADR_RECNR = vorg_adr_recnr
+AND VORG_VSTA_RECNR IN (18,19,20,357)
+AND @UPPER(VAZ_VERF) LIKE 'N%'
+AND VORG_LFD_JAHR = 2011 
+AND vorg_recnr = vopv_vorg_recnr (+)
+AND VOPV_PDIS_RECNR IS NULL ORDER BY 4;
+
+SELECT DISTINCT
+vstf.vsta_recnr, vsza_start.vsza_vsta_recnr,
+vsza_detail.vsza_man_kz, vsza_start.vsza_vzar_recnr,
+vsza_detail.vsza_vsta_recnr, vsza_start.vsza_vzbr_recnr
+FROM vsza vsza_start, vstf , vsza vsza_detail
+WHERE vsza_start.vsza_recnr = vstf.vsza_recnr
+AND vsza_start.vsza_vzar_recnr = vsza_detail.vsza_vzar_recnr
+AND vsza_start.vsza_vzbr_recnr = vsza_detail.vsza_vzbr_recnr
+AND vstf.vsta_recnr = vsza_detail.vsza_vsta_recnr (+)
+ORDER BY 1,2,3,4;
+
+SELECT vorg_recnr, @MID(vaz_az,2,11), vorg_antrag, zert_regid, zert_aenderung, zert_ablauf, 
+@RIGHT(vaz_az, 3), zert_recnr 
+FROM vorg, vaz, zert, vsta v 
+WHERE vaz_vorg_recnr = vorg_recnr AND zert_vorg_recnr(+) = vorg_recnr AND vorg_vsta_recnr = v.vsta_recnr 
+AND vaz_vzvf_recnr != 100
+AND vorg_fa_recnr = 100 AND vorg_zart !='W' AND NOT (v.vsta_code >= 97 AND zert_recnr is null) ORDER BY 8,2;
+
+
+SELECT VOPV.S_CREATEDATE, VOPV.S_EDITDATE, VOPV.S_EXPORTDATE, VOPV.S_LABORKZ, VOPV.S_LABORNR, VOPV.S_LASTUSER, VOPV.S_RESPONSUSER, VOPV.S_WORKSTATUS, 
+VOPV.ROWID, VOPV_VORG_RECNR, VOPV_PDIS_RECNR, VOPV_SORT, ZEPV_ZERT_RECNR, ZEPV_VZVF_RECNR, PDIS_ADR_RECNR, PDIS_PVAR_RECNR 
+FROM VOPV, PDIS, ZEPV 
+WHERE vopv_pdis_recnr = pdis_recnr
+AND pdis_recnr = zepv_pdis_recnr(+)
+AND zepv_zert_recnr IS NULL AND vopv_vorg_recnr =34474 ORDER BY VOPV_SORT;
+
+
+SELECT 
+ZEPV_RECNR, @IF(@ISNA( zepv_sort),1000, zepv_sort), 
+ZEPV_VZVF_RECNR, ZEPV_ZERT_RECNR, ZEPV_PDIS_RECNR, 
+ZEPV_FERTIG_KZ, PDIS_RECNR, PDIS_ADR_RECNR, PDIS_PVAR_RECNR, 
+ZEPV_SORT 
+FROM 
+vopv, pdis, zepv 
+WHERE 
+vopv_pdis_recnr = pdis_recnr AND 
+pdis_pvar_recnr IN ( 20628, 29105, 29122) AND 
+pdis_recnr = zepv_pdis_recnr(+) AND ( 
+( zepv_zert_recnr IS NULL AND pdis_recnr NOT IN ( 29668) ) OR
+( zepv_vzvf_recnr = 2 AND zepv_zert_recnr = 27195 AND zepv_pdis_recnr IN ( 29668) ) ) AND 
+vopv_vorg_recnr =37240 AND EXISTS (
+SELECT 
+NULL
+FROM 
+zepv b1, pdis b2
+WHERE 
+b1.zepv_pdis_recnr = pdis_recnr AND 
+b1.zepv_pdis_recnr = b2.pdis_recnr AND 
+b2.pdis_pvar_recnr = pdis_pvar_recnr AND 
+b1.zepv_vzvf_recnr = 3 ) 
+ORDER BY 2, vopv_sort;
+
+
+SELECT  VOPV.S_CREATEDATE, VOPV.S_EDITDATE, VOPV.S_EXPORTDATE, VOPV.S_LABORKZ, VOPV.S_LABORNR, VOPV.S_LASTUSER, VOPV.S_RESPONSUSER, VOPV.S_WORKSTATUS, VOPV.ROWID, VOPV_VORG_RECNR, VOPV_PDIS_RECNR, VOPV_SORT, ZEPV_ZERT_RECNR, ZEPV_VZVF_RECNR, PDIS_ADR_RECNR, PDIS_PVAR_RECNR FROM VOPV, PDIS, ZEPV WHERE vopv_pdis_recnr = pdis_recnr
+AND pdis_recnr = zepv_pdis_recnr(+)
+
+AND ( ( zepv_zert_recnr IS NULL AND pdis_recnr NOT IN ( 2958) )
+OR
+( zepv_pdis_recnr IN ( 2958)
+AND zepv_vzvf_recnr IN (1,7) AND zepv_zert_recnr IN ( 9219) )
+) AND vopv_vorg_recnr =38338 ORDER BY VOPV_SORT;
+
+
+SELECT  ZEPV_RECNR, @IF(@ISNA( zepv_sort),1000, zepv_sort), ZEPV_VZVF_RECNR, ZEPV_ZERT_RECNR, ZEPV_PDIS_RECNR, ZEPV_FERTIG_KZ, PDIS_RECNR, PDIS_ADR_RECNR, PDIS_PVAR_RECNR, ZEPV_SORT FROM vopv, pdis, zepv WHERE vopv_pdis_recnr = pdis_recnr
+AND pdis_pvar_recnr IN ( 21894, 21895)
+AND pdis_recnr = zepv_pdis_recnr(+)
+AND zepv_zert_recnr IS NULL AND vopv_vorg_recnr =38550 AND EXISTS (
+SELECT NULL
+FROM zepv b1, pdis b2
+WHERE b1.zepv_pdis_recnr = pdis_recnr
+AND b1.zepv_pdis_recnr = b2.pdis_recnr
+AND b2.pdis_pvar_recnr = pdis_pvar_recnr
+AND b1.zepv_vzvf_recnr = 3
+) ORDER BY 2, vopv_sort;
+
+
+SELECT   PROD.S_CREATEDATE, PROD.S_EDITDATE, PROD.S_EXPORTDATE, PROD.S_LABORKZ, PROD.S_LABORNR, PROD.S_LASTUSER, PROD.S_RESPONSUSER, PROD.S_WORKSTATUS,  PROD_RECNR,  PVAR_RECNR, PUGR_RECNR, PGRP_RECNR, PGRP_TEXT,  PUGR_PRODCODE, PUGR_TEXT, PVAR_HDLBEZEICHG, PROD_ID, PROD_ID_ENGL, PROD.S_LABORKZ FROM PROD, PUGR, PGRP, PVAR WHERE pgrp_recnr = pugr_pgrp_recnr
+AND pugr_recnr = prod_pugr_recnr
+AND prod_recnr = pvar_prod_recnr(+)
+AND ( PUGR_INAKTIV_KZ IS NULL OR PUGR_INAKTIV_KZ = 0)
+AND ( pvar_inaktiv_kz = 0 OR pvar_inaktiv_kz IS NULL ) AND UPPER(PROD_ID) LIKE 'HARRY%' AND PUGR_GE_KZ = 1 ORDER BY pgrp_typ asc, pugr_prodcode asc;
+
+SELECT 
+pdis_pvar_recnr, 
+pdis_adr_recnr,
+pvar_hdlbezeichg,
+@Trim( fa_fa1 || ' ' || fa_fa2 ),
+adr_betrieb,
+adr_ort
+FROM vopv, pdis, zepv,
+pvar, adr, fa
+WHERE vopv_vorg_recnr =36661 AND EXISTS (
+SELECT NULL
+FROM zepv b1, pdis b2
+WHERE b1.zepv_pdis_recnr = pdis_recnr
+AND b1.zepv_pdis_recnr = b2.pdis_recnr
+AND b2.pdis_pvar_recnr = pdis_pvar_recnr
+AND b1.zepv_vzvf_recnr = 3
+) AND vopv_pdis_recnr = pdis_recnr
+AND pdis_pvar_recnr IN ( 28572, 28727)
+AND pdis_recnr = zepv_pdis_recnr(+)
+AND ( ( zepv_zert_recnr IS NULL AND pdis_recnr NOT IN ( 29045, 29236) )
+OR
+( zepv_vzvf_recnr = 3 AND zepv_zert_recnr = 26852 AND zepv_pdis_recnr IN ( 29045, 29236) )
+)
+AND pdis_pvar_recnr = pvar_recnr
+AND pdis_adr_recnr = adr_recnr
+AND adr_fa_recnr = fa_recnr
+AND zepv_pdis_recnr = pdis_recnr
+AND zepv_zert_recnr = 26852
+ORDER BY zepv_sort, vopv_sort;
+
+SELECT
+                pvar_recnr, pvar_hdlbezeichg, 
+                pvar_modtext, pvar_modtext_engl, 
+                pvar_bemerkung, pugr_prodcode,
+                pvar_modtext_it 
+FROM   pvar, prod, pugr 
+WHERE pvar_recnr IN ( SELECT DISTINCT pdis_pvar_recnr FROM vopv, pdis, zepv WHERE vopv_vorg_recnr =38546 AND EXISTS (
+                SELECT  NULL
+                FROM   zepv b1, pdis b2
+                WHERE b1.zepv_pdis_recnr = pdis_recnr
+                AND      b1.zepv_pdis_recnr = b2.pdis_recnr
+                AND      b2.pdis_pvar_recnr = pdis_pvar_recnr
+                AND      b1.zepv_vzvf_recnr = 3
+) 
+ AND     vopv_pdis_recnr IN (SELECT zepv_pdis_recnr FROM zepv WHERE zepv_zert_recnr = 27264 )  AND vopv_pdis_recnr = pdis_recnr
+
+AND pdis_pvar_recnr IN ( 21894, 21895)
+AND pdis_recnr = zepv_pdis_recnr(+)
+
+AND ( ( zepv_zert_recnr IS NULL AND pdis_recnr NOT IN ( 29735, 29736) )
+OR
+( zepv_vzvf_recnr = 4 AND zepv_zert_recnr = 27265 AND zepv_pdis_recnr IN ( 29735, 29736) )
+) ) 
+AND      prod_recnr = pvar_prod_recnr 
+AND      pugr_recnr = prod_pugr_recnr 
+AND      ( pvar_inaktiv_kz = 0 or pvar_inaktiv_kz is null )
+ORDER BY           pvar_recnr ASC;
+
+SELECT DISTINCT pgea_recnr, pgea_code
+FROM pgea 
+WHERE pgea_recnr IN (
+SELECT puin_pgea_recnr
+FROM puin, ldia
+WHERE puin_pugr_recnr = 5 
+AND puin_pgea_recnr = ldia_pgea_recnr(+)
+AND ldia_pgea_recnr IS NULL
+UNION
+SELECT puin_pgea_recnr
+FROM puin, ldia, ilpa
+WHERE puin_pugr_recnr = 5 
+AND puin_pgea_recnr = ldia_pgea_recnr
+AND ilpa_pugr_recnr = 5 
+AND ilpa_i_ldia_recnr = ldia_pgea_recnr
+AND ilpa_l_ldia_recnr = ldia_glkz_recnr
+AND ldia_glkz_recnr IN ( 1,5,10,12,13,14,17,16,19,20,23,25,26,32,33,34,39) 
+)
+ORDER BY 1;
+
+SELECT zert_regid, zert_akkr_kz,  b.vlab_aufdate, b.vlab_prfort, @TRIM(fa_fa1 || ' ' || fa_fa2),
+                               @DECODE(adr_bereich, null, adr_betrieb, adr_bereich)  || ', ' || adr_strasse || ', ' || adr_plz || ' ' || adr_ort,  u.vaz_az,  u.vaz_recnr, u.vaz_vzvf_recnr,
+                               adr_lg_fa_recnr,  adr_recnr, b.vlab_termintime, fa_recnr, b.vlab_minuw, b.vlab_maxuw, adr_plz 
+                FROM   vaz u, vlab b, zesv , zert, fa, adr 
+                
+                WHERE                 b.vlab_vaz_recnr = u.vaz_recnr
+                AND      b.vlab_adr_recnr = zesv_adr_recnr AND zesv_zert_recnr = zert_recnr 
+                AND      u.vaz_vzvf_recnr = zert_vzvf_recnr
+                AND      @RIGHT(vaz_az,1) = 'W' 
+                AND      b.vlab_qual_recnr != 99
+                AND      zesv_adr_recnr = adr_recnr AND adr_fa_recnr = fa_recnr 
+                                AND 
+                               zert_recnr IN (SELECT   c.zert_recnr
+                               FROM                   vlab v, zert c, zscop, zesv s, zaua, vaz z
+                               WHERE                 zscop_vaz_recnr = z.vaz_recnr
+                               AND                      v.vlab_vaz_recnr = z.vaz_recnr
+                               AND                      zscop_zesv_recnr = s.zesv_recnr
+                               AND                      s.zesv_zert_recnr = c.zert_recnr
+                               AND                      (c.zert_akkr_kz = 1 OR zert_vzvf_recnr = 75)
+                               AND                      zert_w_ext_kz = 0
+                               AND                      c.zert_vzvf_recnr IN (10)
+                               AND                      v.vlab_zaua_recnr = zaua_recnr 
+                               AND                      @RIGHT(z.vaz_az, 1) != 'I'
+                               AND                      (zaua_uwrelev_kz = 1 OR @RIGHT(z.vaz_az,1) = 'E') 
+                               GROUP BY          1
+                               HAVING Max(v.vlab_aufdate) + 2 DAYS > SYSDATETIME ) UNION
+                SELECT @STRING(@VALUE(NULL),0), 0,  b.vlab_aufdate, b.vlab_prfort, @TRIM(fa_fa1 || ' ' || fa_fa2),
+                               @DECODE(adr_bereich, null, adr_betrieb, adr_bereich)  || ', ' || adr_strasse || ', ' || adr_plz || ' ' || adr_ort,  u.vaz_az,  u.vaz_recnr, u.vaz_vzvf_recnr,
+                               adr_lg_fa_recnr, adr_recnr, b.vlab_termintime, fa_recnr, b.vlab_minuw, b.vlab_maxuw, adr_plz 
+                FROM   vaz u, vlab b,  fa, adr 
+                WHERE                 b.vlab_vaz_recnr = u.vaz_recnr
+                AND      b.vlab_adr_recnr = adr_recnr 
+                AND      b.vlab_qual_recnr != 99
+                AND      u.vaz_vzvf_recnr IN (10) 
+                AND       adr_fa_recnr = fa_recnr 
+                AND @RIGHT(u.vaz_az,1) != 'W'
+                               AND (b.vlab_aufdate > SYSDATETIME)  ORDER BY  3, 7
+
+
+ 
+
+
+

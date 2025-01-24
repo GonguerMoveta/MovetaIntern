@@ -1,0 +1,5 @@
+D:\Projekte\Moveta\repos\Moveta\bin\ForPreTest\fecher.SqlTranslator.dll
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.SqlTranslator\obj\ForPreTest\fecher.SqlTranslator.csproj.AssemblyReference.cache
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.SqlTranslator\obj\ForPreTest\fecher.SqlTranslator.csproj.CoreCompileInputs.cache
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.SqlTranslator\obj\ForPreTest\fecher.S.D448DB07.Up2Date
+D:\Projekte\Moveta\repos\Moveta\sqlTranslator\fecher.SqlTranslator\obj\ForPreTest\fecher.SqlTranslator.dll

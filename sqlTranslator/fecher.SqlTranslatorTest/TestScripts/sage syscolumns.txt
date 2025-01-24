@@ -1,0 +1,69 @@
+Select NAME into :sColumnName from sysadm.syscolumns where TBNAME = :sTabelle and TBCREATOR = :SqlUser order By Name
+
+SELECT C.Name, P.Feldart FROM SYSADM.SysColumns C, ProtKonfigFeld P INTO :sFeldname, :sFeldart WHERE C.TBName = :sTabelle AND P.Tabelle = C.TBName AND P.Feldname = C.Name AND P.FeldArt IN ('N', 'S', 'L', 'Z') ORDER BY C.ColNo
+
+SELECT C.Name, P1.Feldart, @DECODE(P1.Feldart, 'N', 1, 'S', 1, 'L', 1, 'Z', 1, 2) FROM SYSADM.SysColumns C, ProtKonfigFeld P1 INTO :sFeldname, :sFeldart, :nOrder WHERE C.TBName = :sTabelle AND C.ColType NOT LIKE '%LONG%' AND P1.Tabelle(+) = C.TBName AND P1.Feldname(+) = C.Name AND NOT EXISTS (SELECT 2 FROM ProtKonfigFeld P2 WHERE P2.Tabelle = C.TBName AND P2.Feldname = C.Name AND P2.FeldArt = 'A') ORDER BY 3, C.ColNo
+
+SELECT C.Name, P.Feldart, @DECODE(P.Feldart, 'N', 1, 'S', 1, 'L', 1, 'Z', 1, 2) FROM SYSADM.SysColumns C, ProtKonfigFeld P INTO :sFeldname, :sFeldart, :nOrder WHERE C.TBName = :sTabelle AND C.ColType NOT LIKE '%LONG%' AND P.Tabelle = C.TBName AND P.Feldname = C.Name AND P.FeldArt NOT IN ('A', 'F') ORDER BY 3, C.ColNo
+
+SELECT ColType, Length FROM SYSADM.SysColumns INTO :sTyp, :nLaenge WHERE TbName = :sTabelle AND Name = :sFeldname
+
+Select Name, Coltype, Length, Scale, Nulls from sysadm.syscolumns where tbname=" + locals.sHochkomma + locals.sTabelleAlt + locals.sHochkomma + " AND TbCreator = @UPPER(:SqlUser) " + " Into :sName, :sColtype, :nLength, :nScale, :sNulls ORDER BY ColNo
+
+SELECT COLTYPE,LENGTH,SCALE,NULLS FROM SYSADM.SYSCOLUMNS INTO :sType, :nTLaenge, :nTScale, :sTNulls WHERE TBNAME = @UPPER(:sTabelle) and Name = @UPPER(:sSpalte)
+
+SELECT Tbname,  C.Name
+FROM sysadm.Syscolumns C, sysadm.systables T
+WHERE tbname = T.Name AND TYPE ='T' AND T.creator =:sSchema
+AND C.Name
+IN ('ARTNR','ARTIKELNR','TEILENR','APLNR','STULINR','STUELINR','MATERIALNR','STLAPLNR'
+  ,'BETRMITTELNR','WERKZEUGNR','WKZNR','EINSATZ','ERGAENZUNGSNR'
+  ,'ZUSATZSTOFFNR1','ZUSATZSTOFFNR2','ZUSATZSTOFFNR3','ZUSATZSTOFFNR4','REGENERAT' )
+UNION
+SELECT Tbname,  C.Name
+FROM sysadm.Syscolumns C, sysadm.systables T
+WHERE tbname = T.Name AND TYPE ='T'  AND T.creator =:sSchema
+AND (   (C.Name ='RABATTNR1' AND tbname not like 'EINRECHKO%' )
+OR(C.Name IN('SETNR','SETTEIL') AND TbName !='AUFTRPOS' )
+OR (C.Name IN('VERPACKNR') AND TbName NOT IN('TMP_AFORUECK','AFORUECK','PLANSTAFFELN','PLANZAHLEN')	 )
+OR (C.Name IN('MATNR') AND TbName NOT IN('INTRAKONFIG')	 ))
+INTO :tblAUM_TableMitArtNr.colAUM_TbName, :tblAUM_TableMitArtNr.colAUM_ColName
+
+
+SELECT Tbname,  C.Name
+FROM sysadm.Syscolumns C, sysadm.systables T
+WHERE tbname = T.Name AND TYPE ='T' AND T.creator =:sSchema
+AND C.Name
+IN ('ARTNR','ARTIKELNR','TEILENR','APLNR','STULINR','STUELINR','MATERIALNR','MATNR','STLAPLNR'
+,'BETRMITTELNR','WERKZEUGNR','WKZNR','EINSATZ','ERGAENZUNGSNR'
+,'ZUSATZSTOFFNR1','ZUSATZSTOFFNR2','ZUSATZSTOFFNR3','ZUSATZSTOFFNR4','REGENERAT' )
+UNION
+SELECT Tbname,  C.Name
+FROM sysadm.Syscolumns C, sysadm.systables T
+WHERE tbname = T.Name AND TYPE ='T'  AND T.creator =:sSchema
+AND (    (C.Name ='RABATTNR1' AND tbname !='EINRECHKO')
+OR (C.Name IN('SETNR','SETTEIL') AND TbName !='AUFTRPOS')
+OR (C.Name IN('VERPACKNR') AND TbName NOT IN('TMP_AFORUECK','AFORUECK','PLANSTAFFELN','PLANZAHLEN')	)
+OR (C.Name IN('MATNR') AND TbName NOT IN('INTRAKONFIG')	))
+INTO :tblSPS_Tabellen.colSPS_Namen, :tblSPS_Tabellen.colSPS_Attribut
+
+SELECT	Name,
+@DECODE(ColType,
+'CHAR'    , 'Char',
+'VARCHAR' , 'Char',
+'LONGVAR' , 'LongChar',
+'FLOAT'   , 'Numeric',
+'INTEGER' , 'Numeric',
+'SMALLINT', 'Numeric',
+'DECIMAL' , 'Numeric',
+'TIMESTMP', 'Date',
+'TIME'    , 'Date',
+'DATE'    , 'Date')
+FROM sysadm.SysColumns
+INTO	:sColName,
+:sColType
+WHERE TbName = '" + psTable.ToUpper() + "'
+ORDER BY ColNo"
+
+
+SELECT Name FROM sysadm.SysTables INTO :sTable WHERE Name LIKE 'QUER%' ORDER BY Name DESC

@@ -1,0 +1,264 @@
+High:0006: Check if temp var is assigned back to table column's handle and remove it if the case. It causes problem only when temp var is assigned back to a column and not a handle. Also, TblQueryFocus returns different results when table has no rows (for Gupta 0, for .NET TBL_MinRow). 2
+High:0009: Method called with the same reference parameter 1
+High:0019: Check how WM_SETTEXT message is used; If this message is sent to a label control, you only need to Refresh() the control after WM_SETTEXT was sent 4
+High:0028: Controls with the same name, which differ only in their case, will generate an exception in the designer 1
+High:0035: If it is called from SAM_Create, SalHideWindow can lead to wrong behavior. Set Opacity = 0. 1
+High:0040: Sending WM_SYSCOMMAND message to a form, having wParam as SC_MAXIMIZE, SC_MINIMIZE or SC_RESTORE does not work. Use .NET FormWindowState property instead.
+    In SAM_Create nothing has to be changed because setting the WindowState is not working here. 1
+High:0049: In Gupta, the wParam value in SAM_SetFocus message of a SalTableColumn control is the column handle that gains the focus. Set wParam accordingly. 1
+High:0069: EM_LIMITTEXT is not working in .NET and it must be replaced with MaxLength property. 2
+Low:0036: Use function names as Entry Point 14
+Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow. 20
+Normal:0001: Check if error codes match 2
+Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well 8
+Normal:0017: Cannot use WM_NEXTDLGCTL; instead, call Control.SelectNextControl() 4
+Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception 11
+Normal:0030: @IF will return String type; use @VALUE(@IF(...)) if you need to return a Number 1
+Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column. 26
+Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete. 13
+Normal:0054: SetWindowLong is not working when it is used to change form properties. Replace when possible with .NET properties. 3
+Normal:0068: The “hhh”, “H” and “HH” time formats will return a different result in .NET. Check CA documentation. 1
+
+Estimated time to fix the found issues: Min=34 Max= 34.15 hours
+-------------------------------------------------------
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\App.cs
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 2917
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Classes\Fiskaly.cs
+      Normal:0068: The “hhh”, “H” and “HH” time formats will return a different result in .NET. Check CA documentation.  line: 430
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Classes\gwcCommonControlClass.cs
+      Normal:0054: SetWindowLong is not working when it is used to change form properties. Replace when possible with .NET properties.  line: 131
+      Normal:0054: SetWindowLong is not working when it is used to change form properties. Replace when possible with .NET properties.  line: 149
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\dlgEinStr2.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 104
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\dlgLlDruck.cs
+      Normal:0030: @IF will return String type; use @VALUE(@IF(...)) if you need to return a Number  line: 5200
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\dlgSqlErrorAction.cs
+      Normal:0001: Check if error codes match  line: 147
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmAbrBearb.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 194
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 194
+      High:0006: Check if temp var is assigned back to table column's handle and remove it if the case. It causes problem only when temp var is assigned back to a column and not a handle. Also, TblQueryFocus returns different results when table has no rows (for Gupta 0, for .NET TBL_MinRow).  line: 821
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmAbrHalter.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 110
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 110
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmAbschVor.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 111
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 111
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmAerzte.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 961
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 1044
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 1182
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 3510
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmAnwBeleg.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 99
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmBenutzer.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 94
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 207
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmBEZStamm.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 97
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 382
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmBrAktiErf.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 380
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmBriefVari.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 537
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 958
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmBriefVari.Designer.cs
+      High:0028: Controls with the same name, which differ only in their case, will generate an exception in the designer  line: 62
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmDATEVStamm.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 97
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 326
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmDiskEin.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 1063
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmGewinnErm.cs
+      High:0006: Check if temp var is assigned back to table column's handle and remove it if the case. It causes problem only when temp var is assigned back to a column and not a handle. Also, TblQueryFocus returns different results when table has no rows (for Gupta 0, for .NET TBL_MinRow).  line: 488
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmHalter.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 840
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 3034
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmInvent.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 119
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 143
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmInventHaendler.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 93
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmKontierungen.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 98
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 367
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMahnVor.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 103
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 103
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMain.cs
+      High:0035: If it is called from SAM_Create, SalHideWindow can lead to wrong behavior. Set Opacity = 0.  line: 856
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmManLE.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 416
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 423
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMB.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 284
+      High:0049: In Gupta, the wParam value in SAM_SetFocus message of a SalTableColumn control is the column handle that gains the focus. Set wParam accordingly.  line: 410
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 410
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMBErf.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 1015
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 1056
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 1637
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMBKalender.cs
+      High:0040: Sending WM_SYSCOMMAND message to a form, having wParam as SC_MAXIMIZE, SC_MINIMIZE or SC_RESTORE does not work. Use .NET FormWindowState property instead.
+    In SAM_Create nothing has to be changed because setting the WindowState is not working here.  line: 274
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMBKalenderVor.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 111
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 111
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMycoBH.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 106
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmMycoLE.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 109
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmReport.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 107
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmRgSuchen.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 4030
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmRR.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 403
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmSerienbrief.cs
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 454
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 614
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmSerienbriefH.cs
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 331
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmSpeRg.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 275
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmStatVariabel.cs
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 374
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmTSK.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 124
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 3068
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 3451
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 3787
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 4111
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 4408
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 4721
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 5026
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 5383
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 5736
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 6041
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 6342
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 6463
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 6764
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 7084
+      Low:0044: In Gupta, when SalTblDeleteRow is called, the focus is set to the previous row (if any) and ContextRow is set on TBL_TempRow.  line: 7388
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmTVNOnline.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 95
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmUeberw.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 200
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmVersicherungen.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 93
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmVETAemter.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 95
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\frmZettel.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 478
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\tblArzt.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 211
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\tblHalter.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 143
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Forms\tblStamm.cs
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 93
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 93
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Globals\Const.cs
+      Normal:0017: Cannot use WM_NEXTDLGCTL; instead, call Control.SelectNextControl()  line: 800
+      High:0019: Check how WM_SETTEXT message is used; If this message is sent to a label control, you only need to Refresh() the control after WM_SETTEXT was sent  line: 4087
+      Normal:0017: Cannot use WM_NEXTDLGCTL; instead, call Control.SelectNextControl()  line: 4097
+      High:0069: EM_LIMITTEXT is not working in .NET and it must be replaced with MaxLength property.  line: 4495
+      High:0069: EM_LIMITTEXT is not working in .NET and it must be replaced with MaxLength property.  line: 4510
+      High:0019: Check how WM_SETTEXT message is used; If this message is sent to a label control, you only need to Refresh() the control after WM_SETTEXT was sent  line: 4855
+      High:0019: Check how WM_SETTEXT message is used; If this message is sent to a label control, you only need to Refresh() the control after WM_SETTEXT was sent  line: 5167
+      High:0019: Check how WM_SETTEXT message is used; If this message is sent to a label control, you only need to Refresh() the control after WM_SETTEXT was sent  line: 5257
+      Normal:0017: Cannot use WM_NEXTDLGCTL; instead, call Control.SelectNextControl()  line: 5273
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Globals\Ext.cs
+      Normal:0054: SetWindowLong is not working when it is used to change form properties. Replace when possible with .NET properties.  line: 6200
+      Low:0036: Use function names as Entry Point  line: 7286
+      Low:0036: Use function names as Entry Point  line: 7320
+      Low:0036: Use function names as Entry Point  line: 7633
+      Low:0036: Use function names as Entry Point  line: 7726
+      Low:0036: Use function names as Entry Point  line: 7728
+      Low:0036: Use function names as Entry Point  line: 7730
+      Low:0036: Use function names as Entry Point  line: 7732
+      Low:0036: Use function names as Entry Point  line: 7734
+      Low:0036: Use function names as Entry Point  line: 7736
+      Low:0036: Use function names as Entry Point  line: 7738
+      Low:0036: Use function names as Entry Point  line: 7740
+      Low:0036: Use function names as Entry Point  line: 7742
+      Low:0036: Use function names as Entry Point  line: 7827
+      Low:0036: Use function names as Entry Point  line: 7831
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Globals\Int.cs
+      Normal:0001: Check if error codes match  line: 99
+      High:0009: Method called with the same reference parameter  line: 615
+      Normal:0017: Cannot use WM_NEXTDLGCTL; instead, call Control.SelectNextControl()  line: 4024
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Sicherung\frmBenutzer.cs
+      Normal:0045: SalTblSetFocusCell has a different implementation in .NET when focus has to be set on disabled column.  line: 92
+      Normal:0046: SetFocus() on a control in the form's SAM_Create message handler is not working. Set focus in the form's SAM_CreateComplete.  line: 205
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Sicherung\frmRgSuchen.cs
+      Normal:0027: Accessing objects in SAM_Destroy using App.object will generate null reference exception  line: 4030
+
+D:\Projekte\Moveta\repos\Moveta\Moveta.Intern\Sicherung\frmStatVariabel.cs
+      Normal:0016: To delete the content of the file, use the Sys.OF_Create flag as well  line: 372
+
