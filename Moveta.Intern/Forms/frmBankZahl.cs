@@ -3572,7 +3572,7 @@ ORDER BY rpmwst desc, rpla desc"))
 				nSumHB = 0;
 				this.dtBuchDat = dtDatum;
 				// 21.12.10
-				Int.SqlImmedSel("SELECT sum(hbdm) INTO :frmBankZahl.nDMHB FROM hb WHERE hbrznr =" + nPRZNr.ToString(0));
+				Int.SqlImmedSel("SELECT sum(hbdm) INTO :frmBankZahl.nDMHB FROM hb WHERE hbcode LIKE \'Zi%\' AND hbrznr = " + nPRZNr.ToString(0));
 				// 12.01.11 F829 +  or nDMHB > 0
 				if (nDMHB == SalNumber.Null || nDMHB > 0) 
 				{
@@ -3605,11 +3605,11 @@ VALUES
 INSERT INTO TK
 ( tkarztnr, tksa, tkjournalnr, tkbuchtext, tkhalternr, tkrechnr, tkbelnr, tkbeldat,
 tkkontonr, tkrechdm, tkkzhaben, tktavst, tkdmzaleis, tkdmzaarzn, tkdmzamahn, tkdmzazins,
-tkdmzamwst, tkprozmwst, tkkzzahl, tkdmporto, tkdmabr, tksoll, tkhaben )
+tkdmzamwst, tkprozmwst, tkkzzahl, tkdmporto, tkdmabr, tksoll, tkhaben,tkkontocode )
 VALUES
 ( " + nRZArztNr.ToString(0) + " , 1, 0, :frmBankZahl.strBuchText, " + nRZHalterNr.ToString(0) + " , NULL, " + nAuszug.ToString(0) + @" , :frmBankZahl.dtBuchDat ,
 0, 0, 1, 0, 0, 0, 0, :frmBankZahl.nBuchDM ,
-0, 0, 2, 0, 0, 0, :frmBankZahl.nBuchDM )");
+0, 0, 2, 0, 0, 0, :frmBankZahl.nBuchDM ), \'Zahlg-bezHalterZins\");
 					// TA
 					// TVN
 					// 14.04.14 Ä1046

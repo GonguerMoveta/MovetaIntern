@@ -28,6 +28,8 @@ using PPJ.Runtime.Vis;
 using PPJ.Runtime.Windows;
 using PPJ.Runtime.Windows.QO;
 using PPJ.Runtime.XSal;
+using PPJ.Porting.Util.RS.ObjectModel;
+using PPJ.Runtime.Scripting;
 
 namespace Moveta.Intern
 {
@@ -146,6 +148,7 @@ ORDER BY aarztnr"))
 					PalNextRow();
 					nFetchNeg = hSqlNeg.FetchNext();
 				}
+				Int.SqlConnection(ref this.hSqlNeg);
 				hSqlNeg.Disconnect();
 				Sal.HideWindow(bkgdBW);
 				tblNeg.ShowWindow();
@@ -292,6 +295,11 @@ WHERE @yearbeg(akdatum) = @yearbeg(sysdate)-2 years and aktyp='RG' and aktypdeta
 FROM tka
 WHERE tkafall=99 and tkaarztnr IN (" + strAndereNummern + ")")) 
 					{
+					}
+					if (Int.SqlImmedSel(@"SELECT MAX(tkabeldat), SUM(tksoll) INTO :frmNegativerSaldo.dtBelDate, :frmNegativerSaldo.nBelVJ 
+FROM tka
+WHERE(tkafall = 99 or tkabuchtext like \'Softwarenutzung%\') and tkaarztnr IN (" +  strAndereNummern +")"))
+				    {
 					}
 					// Call SqlExecut( hSqlAbrVJ, 'Holen der Abrechnungssumme VJ' )
 					// Call SqlFetchNext( hSqlAbrVJ, nFetch )

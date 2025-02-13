@@ -622,7 +622,7 @@ WHERE tkaarztnr = " + locals.nArztNr.ToString(0) + " AND tkadruckdatum = :dlgdiv
 						}
 						if (strTKKontoCode.Right(1) == "-") 
 						{
-							if (strTKKontoCode == "RgErst-") 
+							if (strTKKontoCode == "RgErst-" || strTKKontoCode == "RechAusb-Rg") 
 							{
 								strTKKontoCode = "RgErst-FordMitgl";
 								nDM = nTKDMAbr;
