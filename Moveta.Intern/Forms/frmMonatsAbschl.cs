@@ -259,10 +259,10 @@ namespace Moveta.Intern
 					// 08.01.24 + tkkontocode
 					Int.SqlImmed(@"INSERT INTO TKA (tkaarztnr, tkasa, tkajournalnr, tkabuchtext, tkahalternr, tkarechnr, tkabelnr,
 tkabeldat, tkakontonr, tkarechdm, tkakzhaben, tkatavst, tkadmzaleis, tkadmzaarzn, tkadmzamahn,
-tkadmzamwst, tkaprozmwst, tkakzzahl, tkadmporto, tkadmabr, tkadmzazins, tksoll, tkhaben, tkareverse, tkadruckdatum, tkareverseversion, tkadmmahn, tkakontocode)
+tkadmzamwst, tkaprozmwst, tkakzzahl, tkadmporto, tkadmabr, tkadmzazins, tksoll, tkhaben, tkareverse, tkadruckdatum, tkareverseversion, tkadmmahn, tkakontocode,tkafall)
 SELECT tkarztnr, tksa, tkjournalnr, tkbuchtext, tkhalternr, tkrechnr, tkbelnr,
 tkbeldat, tkkontonr, tkrechdm, tkkzhaben, tktavst, tkdmzaleis, tkdmzaarzn, tkdmzamahn,
-tkdmzamwst, tkprozmwst, tkkzzahl, tkdmporto, tkdmabr, tkdmzazins, tksoll, tkhaben, tkreverse, SYSDATE, tkreverseversion, tkdmmahn, tkkontocode
+tkdmzamwst, tkprozmwst, tkkzzahl, tkdmporto, tkdmabr, tkdmzazins, tksoll, tkhaben, tkreverse, SYSDATE, tkreverseversion, tkdmmahn, tkkontocode,tkfall
 FROM tk ");
 					Sal.WaitCursor(false);
 					this.SetStatusBarText("TK kopiert !");

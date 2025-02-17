@@ -593,10 +593,10 @@ WHERE(tkafall = 99 or tkabuchtext like \'Softwarenutzung%\') and tkaarztnr IN ("
 							Int.SqlImmedX(@"INSERT INTO TK
 (tkarztnr, tksa, tkjournalnr, tkbuchtext, tkhalternr, tkrechnr, tkbelnr, tkbeldat,
 tkkontonr, tkdmabr, tkkzhaben, tktavst, tkdmzaleis, tkdmzaarzn, tkdmzamahn, tkdmzazins,
-tkdmzamwst, tkprozmwst, tkkzzahl, tkdmporto, tkrechdm, tksoll, tkhaben)
+tkdmzamwst, tkprozmwst, tkkzzahl, tkdmporto, tkrechdm, tksoll, tkhaben,tkfall)
 VALUES (:frmNegativerSaldo.tblNeg.colArztNr, 0, 0, :frmNegativerSaldo.strBuchText, 0, 0, 0,
 SYSDATE, :frmNegativerSaldo.nErloesKonto, 0, 0, :frmNegativerSaldo.nMwSt, 0, 0, 0, 0, 0, 0, 0, 0, :frmNegativerSaldo.nBrutto,
-:frmNegativerSaldo.nBrutto, 0)");
+:frmNegativerSaldo.nBrutto, 0,99)");
 						}
 						else
 						{
